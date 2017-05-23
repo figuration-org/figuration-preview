@@ -32,6 +32,11 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/figuration-preview/assets/js/vendor/jquery.min.js"><\/script>')</script>
 
+<!-- MutationObserver Polyfill -->
+
+  <script src="/figuration-preview/assets/js/MutationObserver.min.js"></script>
+
+
 <!-- Core JS -->
 
   <script src="/figuration-preview/dist/js/figuration.js"></script>
@@ -113,7 +118,7 @@
         </div>
     </div>
 
-    <main class="container">
+    <main class="container" role="main">
         <div class="row">
             <div class="col-12 col-md-3 cf-sidebar">
                 <nav class="cf-links">
@@ -245,7 +250,7 @@
                     
                 </h1>
 
-                <p><strong>Figuration v3.0.0-alpha.2</strong> is available for download in several ways. Choose from the options below get what you need.</p>
+                <p><strong>Figuration v3.0.0-alpha.3</strong> is available for download in several ways. Choose from the options below get what you need.</p>
 
 <h2 class="no_toc" id="contents">Contents</h2>
 
@@ -276,7 +281,7 @@
 
         </div>
         <div class="card-footer text-sm-center">
-<a href="https://github.com/cast-org/figuration/releases/download/v3.0.0-alpha.2/figuration-v3.0.0-alpha.2-dist.zip" class="btn btn-info" onclick="ga('send', 'event', 'Get Started', 'Download', 'Download compiled 3.0.0-alpha.2');">Download Figuration</a>
+<a href="https://github.com/cast-org/figuration/releases/download/v3.0.0-alpha.3/figuration-v3.0.0-alpha.3-dist.zip" class="btn btn-info" onclick="ga('send', 'event', 'Get Started', 'Download', 'Download compiled 3.0.0-alpha.3');">Download Figuration</a>
         </div> <!-- /.card-footer -->
       </div> <!-- /.card -->
     </div>
@@ -289,7 +294,7 @@
 
         </div>
         <div class="card-footer text-sm-center">
-<a href="https://github.com/cast-org/figuration/archive/v3.0.0-alpha.2.zip" class="btn" onclick="ga('send', 'event', 'Get Started', 'Download', 'Download source 3.0.0-alpha.2');">Download source</a>
+<a href="https://github.com/cast-org/figuration/archive/v3.0.0-alpha.3.zip" class="btn" onclick="ga('send', 'event', 'Get Started', 'Download', 'Download source 3.0.0-alpha.3');">Download source</a>
         </div> <!-- /.card-footer -->
       </div> <!-- /.card -->
     </div>  <!-- /.col -->
@@ -304,11 +309,11 @@
 
 <p>Install Figuration in your Node powered apps with <a href="https://www.npmjs.com/package/figuration">the npm package</a>:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install figuration@3.0.0-alpha.2</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install figuration@3.0.0-alpha.3</code></pre></figure>
 
 <h3 id="yarn">Yarn</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">yarn add figuration@3.0.0-alpha.2</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">yarn add figuration@3.0.0-alpha.3</code></pre></figure>
 
 <p>Within the download you’ll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You’ll see something like this:</p>
 
@@ -356,7 +361,7 @@
 
     <footer class="cf-footer">
     <div class="container">
-        Current version: 3.0.0-alpha.2
+        Current version: 3.0.0-alpha.3
         <ul class="footer-links">
             <li><a href="https://github.com/cast-org/figuration">GitHub Project</a></li>
             <li><a href="https://github.com/cast-org/figuration/issues">Issues</a></li>

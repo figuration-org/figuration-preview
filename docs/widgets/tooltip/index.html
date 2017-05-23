@@ -32,6 +32,11 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/figuration-preview/assets/js/vendor/jquery.min.js"><\/script>')</script>
 
+<!-- MutationObserver Polyfill -->
+
+  <script src="/figuration-preview/assets/js/MutationObserver.min.js"></script>
+
+
 <!-- Core JS -->
 
   <script src="/figuration-preview/dist/js/figuration.js"></script>
@@ -113,7 +118,7 @@
         </div>
     </div>
 
-    <main class="container">
+    <main class="container" role="main">
         <div class="row">
             <div class="col-12 col-md-3 cf-sidebar">
                 <nav class="cf-links">
@@ -755,7 +760,7 @@ function myTipAlign(tip, trigger) {
         <td>If the <code>dispose</code> method should be called when the tooltip is hidden. This will remove the tooltip from the DOM.</td>
     </tr>
     <tr>
-        <td>activate</td>
+        <td>show</td>
         <td>boolean</td>
         <td>false</td>
         <td>Show the tooltip automatically at the end of initialization. This will force the <code>trigger</code> option to a setting of <code>'click'</code>.</td>
@@ -906,7 +911,7 @@ function myTipAlign(tip, trigger) {
 
     <footer class="cf-footer">
     <div class="container">
-        Current version: 3.0.0-alpha.2
+        Current version: 3.0.0-alpha.3
         <ul class="footer-links">
             <li><a href="https://github.com/cast-org/figuration">GitHub Project</a></li>
             <li><a href="https://github.com/cast-org/figuration/issues">Issues</a></li>

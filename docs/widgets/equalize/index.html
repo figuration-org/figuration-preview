@@ -32,6 +32,11 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/figuration-preview/assets/js/vendor/jquery.min.js"><\/script>')</script>
 
+<!-- MutationObserver Polyfill -->
+
+  <script src="/figuration-preview/assets/js/MutationObserver.min.js"></script>
+
+
 <!-- Core JS -->
 
   <script src="/figuration-preview/dist/js/figuration.js"></script>
@@ -113,7 +118,7 @@
         </div>
     </div>
 
-    <main class="container">
+    <main class="container" role="main">
         <div class="row">
             <div class="col-12 col-md-3 cf-sidebar">
                 <nav class="cf-links">
@@ -388,6 +393,7 @@
       <li><a href="#basic" id="markdown-toc-basic">Basic</a></li>
       <li><a href="#nested-equalize" id="markdown-toc-nested-equalize">Nested Equalize</a></li>
       <li><a href="#row-equalize" id="markdown-toc-row-equalize">Row Equalize</a></li>
+      <li><a href="#stacked-equalize" id="markdown-toc-stacked-equalize">Stacked Equalize</a></li>
     </ul>
   </li>
   <li><a href="#usage" id="markdown-toc-usage">Usage</a>    <ul>
@@ -589,6 +595,43 @@
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
+<h3 id="stacked-equalize">Stacked Equalize</h3>
+
+<p>When using <code class="highlighter-rouge">stack</code> mode, when items are stacked, they will all be given the same height, regardless of their top offset.</p>
+
+<div class="cf-example" data-example-id="">
+<div data-cfw="equalize" data-cfw-equalize-target=".card" data-cfw-equalize-stack="true">
+    <div class="card card-body">
+        <h4>Card 1</h4>
+        One
+    </div>
+    <div class="card card-body">
+        <h4>Card 2</h4>
+        Two<br />Two
+
+    </div>
+    <div class="card card-body">
+        <h4>Card 3</h4>
+        Three<br />Three<br />Three
+    </div>
+</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">data-cfw=</span><span class="s">"equalize"</span> <span class="na">data-cfw-equalize-target=</span><span class="s">".card"</span> <span class="na">data-cfw-equalize-stack=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h4&gt;</span>Card 1<span class="nt">&lt;/h4&gt;</span>
+        One
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h4&gt;</span>Card 2<span class="nt">&lt;/h4&gt;</span>
+        Two<span class="nt">&lt;br&gt;</span>Two
+
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h4&gt;</span>Card 3<span class="nt">&lt;/h4&gt;</span>
+        Three<span class="nt">&lt;br&gt;</span>Three<span class="nt">&lt;br&gt;</span>Three
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
 <h2 id="usage">Usage</h2>
 
 <h3 id="via-data-attributes">Via Data Attributes</h3>
@@ -713,7 +756,7 @@
 
     <footer class="cf-footer">
     <div class="container">
-        Current version: 3.0.0-alpha.2
+        Current version: 3.0.0-alpha.3
         <ul class="footer-links">
             <li><a href="https://github.com/cast-org/figuration">GitHub Project</a></li>
             <li><a href="https://github.com/cast-org/figuration/issues">Issues</a></li>

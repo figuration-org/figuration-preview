@@ -32,6 +32,11 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/figuration-preview/assets/js/vendor/jquery.min.js"><\/script>')</script>
 
+<!-- MutationObserver Polyfill -->
+
+  <script src="/figuration-preview/assets/js/MutationObserver.min.js"></script>
+
+
 <!-- Core JS -->
 
   <script src="/figuration-preview/dist/js/figuration.js"></script>
@@ -113,7 +118,7 @@
         </div>
     </div>
 
-    <main class="container">
+    <main class="container" role="main">
         <div class="row">
             <div class="col-12 col-md-3 cf-sidebar">
                 <nav class="cf-links">
@@ -420,6 +425,8 @@
       <li><a href="#robust-audio-player" id="markdown-toc-robust-audio-player">Robust Audio Player</a></li>
       <li><a href="#video-example" id="markdown-toc-video-example">Video Example</a></li>
       <li><a href="#interactive-transcript" id="markdown-toc-interactive-transcript">Interactive Transcript</a></li>
+      <li><a href="#audio-description" id="markdown-toc-audio-description">Audio Description</a></li>
+      <li><a href="#transcript-description" id="markdown-toc-transcript-description">Transcript Description</a></li>
     </ul>
   </li>
   <li><a href="#usage" id="markdown-toc-usage">Usage</a>    <ul>
@@ -446,8 +453,8 @@
 <div data-cfw="player">
     <div class="player" role="region" aria-label="audio player" data-cfw-player="player">
         <span class="player-control" data-cfw-player="control">
-            <button type="button" class="btn player-play" data-cfw-player="play" title="Play" aria-label="Play"><span class="fa fa-fw fa-play" aria-hidden="true"></span></button>
-            <button type="button" class="btn player-pause" data-cfw-player="pause" title="Pause" aria-label="Pause"><span class="fa fa-fw fa-pause" aria-hidden="true"></span></button>
+            <button type="button" class="btn" data-cfw-player="play" title="Play" aria-label="Play"><span class="fa fa-fw fa-play" aria-hidden="true"></span></button>
+            <button type="button" class="btn" data-cfw-player="pause" title="Pause" aria-label="Pause"><span class="fa fa-fw fa-pause" aria-hidden="true"></span></button>
         </span>
         <span class="player-time" data-cfw-player="time">
             <span class="player-time-current" data-cfw-player="time-current"></span>
@@ -460,7 +467,7 @@
             <button type="button" class="btn player-mute-on" title="Unmute" aria-label="Unmute"><span class="fa fa-fw fa-volume-off" aria-hidden="true"></span></button>
             <button type="button" class="btn player-mute-off" title="Mute" aria-label="Mute"><span class="fa fa-fw fa-volume-up" aria-hidden="true"></span></button>
         </span>
-        <button type="button" class="btn player-loop" title="Repeat" aria-label="Repeat" data-cfw-player="loop"><span class="fa fa-fw fa-refresh" aria-hidden="true"></span></button>
+        <button type="button" class="btn" title="Repeat" aria-label="Repeat" data-cfw-player="loop"><span class="fa fa-fw fa-refresh" aria-hidden="true"></span></button>
     </div>
     <audio controls="">
         <source src="/figuration-preview/assets/audio/Drumroll-Heigh-hoo.mp3" type="audio/mpeg" />
@@ -473,8 +480,8 @@
 <span class="nt">&lt;div</span> <span class="na">data-cfw=</span><span class="s">"player"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"player"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-label=</span><span class="s">"audio player"</span> <span class="na">data-cfw-player=</span><span class="s">"player"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-control"</span> <span class="na">data-cfw-player=</span><span class="s">"control"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-play"</span> <span class="na">data-cfw-player=</span><span class="s">"play"</span> <span class="na">title=</span><span class="s">"Play"</span> <span class="na">aria-label=</span><span class="s">"Play"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-play"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-pause"</span> <span class="na">data-cfw-player=</span><span class="s">"pause"</span> <span class="na">title=</span><span class="s">"Pause"</span> <span class="na">aria-label=</span><span class="s">"Pause"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-pause"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw-player=</span><span class="s">"play"</span> <span class="na">title=</span><span class="s">"Play"</span> <span class="na">aria-label=</span><span class="s">"Play"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-play"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw-player=</span><span class="s">"pause"</span> <span class="na">title=</span><span class="s">"Pause"</span> <span class="na">aria-label=</span><span class="s">"Pause"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-pause"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
         <span class="nt">&lt;/span&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-time"</span> <span class="na">data-cfw-player=</span><span class="s">"time"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-time-current"</span> <span class="na">data-cfw-player=</span><span class="s">"time-current"</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -487,7 +494,7 @@
             <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-mute-on"</span> <span class="na">title=</span><span class="s">"Unmute"</span> <span class="na">aria-label=</span><span class="s">"Unmute"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-volume-off"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
             <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-mute-off"</span> <span class="na">title=</span><span class="s">"Mute"</span> <span class="na">aria-label=</span><span class="s">"Mute"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-volume-up"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
         <span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-loop"</span> <span class="na">title=</span><span class="s">"Repeat"</span> <span class="na">aria-label=</span><span class="s">"Repeat"</span> <span class="na">data-cfw-player=</span><span class="s">"loop"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-refresh"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">title=</span><span class="s">"Repeat"</span> <span class="na">aria-label=</span><span class="s">"Repeat"</span> <span class="na">data-cfw-player=</span><span class="s">"loop"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-refresh"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;audio</span> <span class="na">controls</span><span class="nt">&gt;</span>
         <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"/figuration-preview/assets/audio/Drumroll-Heigh-hoo.mp3"</span> <span class="na">type=</span><span class="s">"audio/mpeg"</span> <span class="nt">/&gt;</span>
@@ -505,9 +512,9 @@
 <div data-cfw="player">
     <div class="player" role="region" aria-label="audio player" data-cfw-player="player">
         <span class="player-control" data-cfw-player="control">
-            <button type="button" class="btn player-play" data-cfw-player="play" title="Play" aria-label="Play"><span class="fa fa-fw fa-play" aria-hidden="true"></span></button>
-            <button type="button" class="btn player-pause" data-cfw-player="pause" title="Pause" aria-label="Pause"><span class="fa fa-fw fa-pause" aria-hidden="true"></span></button>
-            <button type="button" class="btn player-stop" data-cfw-player="stop" title="Stop" aria-label="Stop"><span class="fa fa-fw fa-stop" aria-hidden="true"></span></button>
+            <button type="button" class="btn" data-cfw-player="play" title="Play" aria-label="Play"><span class="fa fa-fw fa-play" aria-hidden="true"></span></button>
+            <button type="button" class="btn" data-cfw-player="pause" title="Pause" aria-label="Pause"><span class="fa fa-fw fa-pause" aria-hidden="true"></span></button>
+            <button type="button" class="btn" data-cfw-player="stop" title="Stop" aria-label="Stop"><span class="fa fa-fw fa-stop" aria-hidden="true"></span></button>
         </span>
         <span class="player-time" data-cfw-player="time">
             <span class="player-time-remainder" data-cfw-player="time-remainder"></span>
@@ -523,7 +530,7 @@
         <span class="player-volume" data-cfw-player="volume">
             <label>Volume slider<input type="text" /></label>
         </span>
-        <button type="button" class="btn player-loop" title="Repeat" aria-label="Repeat" data-cfw-player="loop"><span class="fa fa-fw fa-refresh"></span></button>
+        <button type="button" class="btn" title="Repeat" aria-label="Repeat" data-cfw-player="loop"><span class="fa fa-fw fa-refresh"></span></button>
     </div>
     <audio controls="">
         <source src="/figuration-preview/assets/audio/Ambient_Acoustic-StrangerEight.mp3" type="audio/mpeg" />
@@ -536,9 +543,9 @@
 <span class="nt">&lt;div</span> <span class="na">data-cfw=</span><span class="s">"player"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"player"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-label=</span><span class="s">"audio player"</span> <span class="na">data-cfw-player=</span><span class="s">"player"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-control"</span> <span class="na">data-cfw-player=</span><span class="s">"control"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-play"</span> <span class="na">data-cfw-player=</span><span class="s">"play"</span> <span class="na">title=</span><span class="s">"Play"</span> <span class="na">aria-label=</span><span class="s">"Play"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-play"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-pause"</span> <span class="na">data-cfw-player=</span><span class="s">"pause"</span> <span class="na">title=</span><span class="s">"Pause"</span> <span class="na">aria-label=</span><span class="s">"Pause"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-pause"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-stop"</span> <span class="na">data-cfw-player=</span><span class="s">"stop"</span> <span class="na">title=</span><span class="s">"Stop"</span> <span class="na">aria-label=</span><span class="s">"Stop"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-stop"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw-player=</span><span class="s">"play"</span> <span class="na">title=</span><span class="s">"Play"</span> <span class="na">aria-label=</span><span class="s">"Play"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-play"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw-player=</span><span class="s">"pause"</span> <span class="na">title=</span><span class="s">"Pause"</span> <span class="na">aria-label=</span><span class="s">"Pause"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-pause"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw-player=</span><span class="s">"stop"</span> <span class="na">title=</span><span class="s">"Stop"</span> <span class="na">aria-label=</span><span class="s">"Stop"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-stop"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
         <span class="nt">&lt;/span&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-time"</span> <span class="na">data-cfw-player=</span><span class="s">"time"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-time-remainder"</span> <span class="na">data-cfw-player=</span><span class="s">"time-remainder"</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -554,7 +561,7 @@
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-volume"</span> <span class="na">data-cfw-player=</span><span class="s">"volume"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;label&gt;</span>Volume slider<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;&lt;/label&gt;</span>
         <span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-loop"</span> <span class="na">title=</span><span class="s">"Repeat"</span> <span class="na">aria-label=</span><span class="s">"Repeat"</span> <span class="na">data-cfw-player=</span><span class="s">"loop"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-refresh"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">title=</span><span class="s">"Repeat"</span> <span class="na">aria-label=</span><span class="s">"Repeat"</span> <span class="na">data-cfw-player=</span><span class="s">"loop"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-refresh"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;audio</span> <span class="na">controls</span><span class="nt">&gt;</span>
         <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"/figuration-preview/assets/audio/Ambient_Acoustic-StrangerEight.mp3"</span> <span class="na">type=</span><span class="s">"audio/mpeg"</span> <span class="nt">/&gt;</span>
@@ -580,9 +587,9 @@
         <div class="player row" role="region" aria-label="video player" data-cfw-player="player">
             <div class="col-md-6">
                 <span class="player-control" data-cfw-player="control">
-                    <button type="button" class="btn player-play" data-cfw-player="play" title="Play" aria-label="Play"><span class="fa fa-fw fa-play" aria-hidden="true"></span></button>
-                    <button type="button" class="btn player-pause" data-cfw-player="pause" title="Pause" aria-label="Pause"><span class="fa fa-fw fa-pause" aria-hidden="true"></span></button>
-                    <button type="button" class="btn player-stop" data-cfw-player="stop" title="Stop" aria-label="Stop"><span class="fa fa-fw fa-stop" aria-hidden="true"></span></button>
+                    <button type="button" class="btn" data-cfw-player="play" title="Play" aria-label="Play"><span class="fa fa-fw fa-play" aria-hidden="true"></span></button>
+                    <button type="button" class="btn" data-cfw-player="pause" title="Pause" aria-label="Pause"><span class="fa fa-fw fa-pause" aria-hidden="true"></span></button>
+                    <button type="button" class="btn" data-cfw-player="stop" title="Stop" aria-label="Stop"><span class="fa fa-fw fa-stop" aria-hidden="true"></span></button>
                 </span>
                 <span class="player-time" data-cfw-player="time">
                     <span class="player-time-current" data-cfw-player="time-current"></span>
@@ -600,8 +607,8 @@
                 <span class="player-volume" data-cfw-player="volume">
                     <label>Volume slider<input type="text" /></label>
                 </span>
-                <button type="button" class="btn player-loop" title="Repeat" aria-label="Repeat" data-cfw-player="loop"><span class="fa fa-fw fa-refresh" aria-hidden="true"></span></button>
-                <button type="button" class="btn player-caption" data-cfw-player="caption" title="Closed captions" aria-label="Closed captions"><span class="fa fa-fw fa-cc" aria-hidden="true"></span></button>
+                <button type="button" class="btn" title="Repeat" aria-label="Repeat" data-cfw-player="loop"><span class="fa fa-fw fa-refresh" aria-hidden="true"></span></button>
+                <button type="button" class="btn" data-cfw-player="caption" title="Closed captions" aria-label="Closed captions"><span class="fa fa-fw fa-cc" aria-hidden="true"></span></button>
                 <span class="player-fullscreen" data-cfw-player="fullscreen">
                     <button type="button" class="btn player-fullscreen-on" title="Exit fullscreen" aria-label="Exit fullscreen"><span class="fa fa-fw fa-arrows-alt" aria-hidden="true"></span></button>
                     <button type="button" class="btn player-fullscreen-off" title="Fullscreen" aria-label="Fullscreen"><span class="fa fa-fw fa-arrows-alt" aria-hidden="true"></span></button>
@@ -626,9 +633,9 @@
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"player row"</span>  <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-label=</span><span class="s">"video player"</span> <span class="na">data-cfw-player=</span><span class="s">"player"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-6"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-control"</span> <span class="na">data-cfw-player=</span><span class="s">"control"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-play"</span> <span class="na">data-cfw-player=</span><span class="s">"play"</span> <span class="na">title=</span><span class="s">"Play"</span> <span class="na">aria-label=</span><span class="s">"Play"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-play"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
-                    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-pause"</span> <span class="na">data-cfw-player=</span><span class="s">"pause"</span> <span class="na">title=</span><span class="s">"Pause"</span> <span class="na">aria-label=</span><span class="s">"Pause"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-pause"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
-                    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-stop"</span> <span class="na">data-cfw-player=</span><span class="s">"stop"</span> <span class="na">title=</span><span class="s">"Stop"</span> <span class="na">aria-label=</span><span class="s">"Stop"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-stop"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw-player=</span><span class="s">"play"</span> <span class="na">title=</span><span class="s">"Play"</span> <span class="na">aria-label=</span><span class="s">"Play"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-play"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw-player=</span><span class="s">"pause"</span> <span class="na">title=</span><span class="s">"Pause"</span> <span class="na">aria-label=</span><span class="s">"Pause"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-pause"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw-player=</span><span class="s">"stop"</span> <span class="na">title=</span><span class="s">"Stop"</span> <span class="na">aria-label=</span><span class="s">"Stop"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-stop"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
                 <span class="nt">&lt;/span&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-time"</span> <span class="na">data-cfw-player=</span><span class="s">"time"</span><span class="nt">&gt;</span>
                     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-time-current"</span> <span class="na">data-cfw-player=</span><span class="s">"time-current"</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -646,8 +653,8 @@
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-volume"</span> <span class="na">data-cfw-player=</span><span class="s">"volume"</span><span class="nt">&gt;</span>
                     <span class="nt">&lt;label&gt;</span>Volume slider<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;&lt;/label&gt;</span>
                 <span class="nt">&lt;/span&gt;</span>
-                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-loop"</span> <span class="na">title=</span><span class="s">"Repeat"</span> <span class="na">aria-label=</span><span class="s">"Repeat"</span> <span class="na">data-cfw-player=</span><span class="s">"loop"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-refresh"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
-                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-caption"</span> <span class="na">data-cfw-player=</span><span class="s">"caption"</span> <span class="na">title=</span><span class="s">"Closed captions"</span> <span class="na">aria-label=</span><span class="s">"Closed captions"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-cc"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">title=</span><span class="s">"Repeat"</span> <span class="na">aria-label=</span><span class="s">"Repeat"</span> <span class="na">data-cfw-player=</span><span class="s">"loop"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-refresh"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw-player=</span><span class="s">"caption"</span> <span class="na">title=</span><span class="s">"Closed captions"</span> <span class="na">aria-label=</span><span class="s">"Closed captions"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-cc"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-fullscreen"</span> <span class="na">data-cfw-player=</span><span class="s">"fullscreen"</span><span class="nt">&gt;</span>
                     <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-fullscreen-on"</span> <span class="na">title=</span><span class="s">"Exit fullscreen"</span> <span class="na">aria-label=</span><span class="s">"Exit fullscreen"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-arrows-alt"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
                     <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-fullscreen-off"</span> <span class="na">title=</span><span class="s">"Fullscreen"</span> <span class="na">aria-label=</span><span class="s">"Fullscreen"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-arrows-alt"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
@@ -664,7 +671,7 @@
 <div class="cf-example" data-example-id="">
 <p><small>Source: <a href="https://videos.pexels.com/videos/tourists-looking-at-niagara-falls-333">Tourists Looking at Niagara Falls</a></small></p>
 
-<div data-cfw="player" data-cfw-player-transcript="0" class="video-wrapper">
+<div data-cfw="player" data-cfw-player-transcript="0" class="video-wrapper" role="region" aria-label="video player">
     <div class="embed-fluid">
         <video poster="/figuration-preview/assets/video/niagara_falls.jpg" controls="">
             <source src="/figuration-preview/assets/video/niagara_falls.mp4" type="video/mp4" />
@@ -677,9 +684,9 @@
         <div class="player row" role="region" aria-label="video player" data-cfw-player="player">
             <div class="col-md-6">
                 <span class="player-control" data-cfw-player="control">
-                    <button type="button" class="btn player-play" data-cfw-player="play" title="Play" aria-label="Play"><span class="fa fa-fw fa-play" aria-hidden="true"></span></button>
-                    <button type="button" class="btn player-pause" data-cfw-player="pause" title="Pause" aria-label="Pause"><span class="fa fa-fw fa-pause" aria-hidden="true"></span></button>
-                    <button type="button" class="btn player-stop" data-cfw-player="stop" title="Stop" aria-label="Stop"><span class="fa fa-fw fa-stop" aria-hidden="true"></span></button>
+                    <button type="button" class="btn" data-cfw-player="play" title="Play" aria-label="Play"><span class="fa fa-fw fa-play" aria-hidden="true"></span></button>
+                    <button type="button" class="btn" data-cfw-player="pause" title="Pause" aria-label="Pause"><span class="fa fa-fw fa-pause" aria-hidden="true"></span></button>
+                    <button type="button" class="btn" data-cfw-player="stop" title="Stop" aria-label="Stop"><span class="fa fa-fw fa-stop" aria-hidden="true"></span></button>
                 </span>
                 <span class="player-time" data-cfw-player="time">
                     <span class="player-time-current" data-cfw-player="time-current"></span>
@@ -697,8 +704,8 @@
                 <span class="player-volume" data-cfw-player="volume">
                     <label>Volume slider<input type="text" /></label>
                 </span>
-                <button type="button" class="btn player-caption" data-cfw-player="caption" title="Closed captions" aria-label="Closed captions"><span class="fa fa-fw fa-cc" aria-hidden="true"></span></button>
-                <button type="button" class="btn player-transcript" data-cfw-player="transcript" title="Transcript captions" aria-label="Closed captions"><span class="fa fa-fw fa-file-text-o" aria-hidden="true"></span></button>
+                <button type="button" class="btn" data-cfw-player="caption" title="Closed captions" aria-label="Closed captions"><span class="fa fa-fw fa-cc" aria-hidden="true"></span></button>
+                <button type="button" class="btn" data-cfw-player="transcript" title="Transcript captions" aria-label="Closed captions"><span class="fa fa-fw fa-file-text-o" aria-hidden="true"></span></button>
                 <span class="player-fullscreen" data-cfw-player="fullscreen">
                     <button type="button" class="btn player-fullscreen-on" title="Exit fullscreen" aria-label="Exit fullscreen"><span class="fa fa-fw fa-arrows-alt" aria-hidden="true"></span></button>
                     <button type="button" class="btn player-fullscreen-off" title="Fullscreen" aria-label="Fullscreen"><span class="fa fa-fw fa-arrows-alt" aria-hidden="true"></span></button>
@@ -710,7 +717,7 @@
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;&lt;small&gt;</span>Source: <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://videos.pexels.com/videos/tourists-looking-at-niagara-falls-333"</span><span class="nt">&gt;</span>Tourists Looking at Niagara Falls<span class="nt">&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">data-cfw=</span><span class="s">"player"</span> <span class="na">data-cfw-player-transcript=</span><span class="s">"0"</span> <span class="na">class=</span><span class="s">"video-wrapper"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">data-cfw=</span><span class="s">"player"</span> <span class="na">data-cfw-player-transcript=</span><span class="s">"0"</span> <span class="na">class=</span><span class="s">"video-wrapper"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-label=</span><span class="s">"video player"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"embed-fluid"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;video</span> <span class="na">poster=</span><span class="s">"/figuration-preview/assets/video/niagara_falls.jpg"</span> <span class="na">controls</span><span class="nt">&gt;</span>
             <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"/figuration-preview/assets/video/niagara_falls.mp4"</span> <span class="na">type=</span><span class="s">"video/mp4"</span> <span class="nt">/&gt;</span>
@@ -723,9 +730,9 @@
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"player row"</span>  <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-label=</span><span class="s">"video player"</span> <span class="na">data-cfw-player=</span><span class="s">"player"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-6"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-control"</span> <span class="na">data-cfw-player=</span><span class="s">"control"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-play"</span> <span class="na">data-cfw-player=</span><span class="s">"play"</span> <span class="na">title=</span><span class="s">"Play"</span> <span class="na">aria-label=</span><span class="s">"Play"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-play"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
-                    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-pause"</span> <span class="na">data-cfw-player=</span><span class="s">"pause"</span> <span class="na">title=</span><span class="s">"Pause"</span> <span class="na">aria-label=</span><span class="s">"Pause"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-pause"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
-                    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-stop"</span> <span class="na">data-cfw-player=</span><span class="s">"stop"</span> <span class="na">title=</span><span class="s">"Stop"</span> <span class="na">aria-label=</span><span class="s">"Stop"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-stop"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw-player=</span><span class="s">"play"</span> <span class="na">title=</span><span class="s">"Play"</span> <span class="na">aria-label=</span><span class="s">"Play"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-play"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw-player=</span><span class="s">"pause"</span> <span class="na">title=</span><span class="s">"Pause"</span> <span class="na">aria-label=</span><span class="s">"Pause"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-pause"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw-player=</span><span class="s">"stop"</span> <span class="na">title=</span><span class="s">"Stop"</span> <span class="na">aria-label=</span><span class="s">"Stop"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-stop"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
                 <span class="nt">&lt;/span&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-time"</span> <span class="na">data-cfw-player=</span><span class="s">"time"</span><span class="nt">&gt;</span>
                     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-time-current"</span> <span class="na">data-cfw-player=</span><span class="s">"time-current"</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -743,13 +750,143 @@
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-volume"</span> <span class="na">data-cfw-player=</span><span class="s">"volume"</span><span class="nt">&gt;</span>
                     <span class="nt">&lt;label&gt;</span>Volume slider<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;&lt;/label&gt;</span>
                 <span class="nt">&lt;/span&gt;</span>
-                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-caption"</span> <span class="na">data-cfw-player=</span><span class="s">"caption"</span> <span class="na">title=</span><span class="s">"Closed captions"</span> <span class="na">aria-label=</span><span class="s">"Closed captions"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-cc"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
-                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-transcript"</span> <span class="na">data-cfw-player=</span><span class="s">"transcript"</span> <span class="na">title=</span><span class="s">"Transcript captions"</span> <span class="na">aria-label=</span><span class="s">"Closed captions"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-file-text-o"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw-player=</span><span class="s">"caption"</span> <span class="na">title=</span><span class="s">"Closed captions"</span> <span class="na">aria-label=</span><span class="s">"Closed captions"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-cc"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw-player=</span><span class="s">"transcript"</span> <span class="na">title=</span><span class="s">"Transcript captions"</span> <span class="na">aria-label=</span><span class="s">"Closed captions"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-file-text-o"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-fullscreen"</span> <span class="na">data-cfw-player=</span><span class="s">"fullscreen"</span><span class="nt">&gt;</span>
                     <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-fullscreen-on"</span> <span class="na">title=</span><span class="s">"Exit fullscreen"</span> <span class="na">aria-label=</span><span class="s">"Exit fullscreen"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-arrows-alt"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
                     <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn player-fullscreen-off"</span> <span class="na">title=</span><span class="s">"Fullscreen"</span> <span class="na">aria-label=</span><span class="s">"Fullscreen"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-arrows-alt"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
                 <span class="nt">&lt;/span&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h3 id="audio-description">Audio Description</h3>
+
+<p>Improve accessibility for blind and visually impaired users by including an audio description with your video. Extend the <code class="highlighter-rouge">&lt;source&gt;</code> elements with a <code class="highlighter-rouge">data-src-describe=""</code> attribute pointing to the video source that contains the additional narration  description. Also add a control with a <code class="highlighter-rouge">data-cfw-player="description"</code> attribute.  This will allow the user to toggle the audio description version of the video on and off.</p>
+
+<div class="cf-example" data-example-id="">
+<div data-cfw="player" data-cfw-player-media-describe="true" class="video-wrapper" role="region" aria-label="video player">
+    <div class="embed-fluid">
+        <video poster="/figuration-preview/assets/video/niagara_falls.jpg" controls="">
+            <source src="/figuration-preview/assets/video/niagara_falls.mp4" data-src-describe="/figuration-preview/assets/video/niagara_falls-describe-en.mp4" />
+        </video>
+    </div>
+    <div class="player-wrapper">
+        <div class="player" data-cfw-player="player">
+            <span class="player-control mr-0_5" data-cfw-player="control">
+                <button type="button" class="btn btn-default" data-cfw-player="play" title="Play" aria-label="Play"><span class="fa fa-fw fa-play"></span></button>
+                <button type="button" class="btn btn-default" data-cfw-player="pause" title="Pause" aria-label="Pause"><span class="fa fa-fw fa-pause"></span></button>
+            </span>
+            <span class="player-time mr-0_5" data-cfw-player="time">
+                <span class="player-time-current" data-cfw-player="time-current"></span>
+                <span class="player-seek" data-cfw-player="seek">
+                	<label>Seek slider<input type="text" /></label>
+                </span>
+                <span class="player-time-duration" data-cfw-player="time-duration"></span>
+            </span>
+            <span class="player-describe" data-cfw-player="description">
+                <button type="button" class="btn btn-default on active" title="Turn Off Audio Description" aria-label="Turn Off Audio Description"><span class="fa fa-fw fa-audio-description"></span></button>
+                <button type="button" class="btn btn-default off" title="Turn On Audio Description" aria-label="Turn On Audio Description"><span class="fa fa-fw fa-audio-description"></span></button>
+            </span>
+        </div>
+    </div>
+</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">data-cfw=</span><span class="s">"player"</span> <span class="na">data-cfw-player-media-describe=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"video-wrapper"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-label=</span><span class="s">"video player"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"embed-fluid"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;video</span> <span class="na">poster=</span><span class="s">"/figuration-preview/assets/video/niagara_falls.jpg"</span> <span class="na">controls</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"/figuration-preview/assets/video/niagara_falls.mp4"</span> <span class="na">data-src-describe=</span><span class="s">"/figuration-preview/assets/video/niagara_falls-describe-en.mp4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/video&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"player-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"player"</span> <span class="na">data-cfw-player=</span><span class="s">"player"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-control mr-0_5"</span> <span class="na">data-cfw-player=</span><span class="s">"control"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">data-cfw-player=</span><span class="s">"play"</span> <span class="na">title=</span><span class="s">"Play"</span> <span class="na">aria-label=</span><span class="s">"Play"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-play"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">data-cfw-player=</span><span class="s">"pause"</span> <span class="na">title=</span><span class="s">"Pause"</span> <span class="na">aria-label=</span><span class="s">"Pause"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-pause"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+            <span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-time mr-0_5"</span> <span class="na">data-cfw-player=</span><span class="s">"time"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-time-current"</span> <span class="na">data-cfw-player=</span><span class="s">"time-current"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-seek"</span> <span class="na">data-cfw-player=</span><span class="s">"seek"</span><span class="nt">&gt;</span>
+                	<span class="nt">&lt;label&gt;</span>Seek slider<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;&lt;/label&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-time-duration"</span> <span class="na">data-cfw-player=</span><span class="s">"time-duration"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-describe"</span> <span class="na">data-cfw-player=</span><span class="s">"description"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default on active"</span> <span class="na">title=</span><span class="s">"Turn Off Audio Description"</span> <span class="na">aria-label=</span><span class="s">"Turn Off Audio Description"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-audio-description"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default off"</span> <span class="na">title=</span><span class="s">"Turn On Audio Description"</span> <span class="na">aria-label=</span><span class="s">"Turn On Audio Description"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-audio-description"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+            <span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h3 id="transcript-description">Transcript Description</h3>
+
+<p>Further improve accessibility for blind and visually impaired users by including the audio description narration within the interactive transcript. Add a <code class="highlighter-rouge">&lt;track kind="descriptions"&gt;</code>with the content of the description narration.  Also add matching <code class="highlighter-rouge">srclang</code> attributes to both the caption (or subtitle) track, and to the descriptions track.  For example, to specify the English language, use <code class="highlighter-rouge">srclang="en"</code> on both elements.</p>
+
+<div class="cf-example" data-example-id="">
+<div data-cfw="player" data-cfw-player-transcript="0" data-cfw-player-media-describe="true" class="video-wrapper" role="region" aria-label="video player">
+    <div class="embed-fluid">
+        <video poster="/figuration-preview/assets/video/niagara_falls.jpg" controls="">
+            <source src="/figuration-preview/assets/video/niagara_falls.mp4" data-src-describe="/figuration-preview/assets/video/niagara_falls-describe-en.mp4" />
+            <track src="/figuration-preview/assets/video/niagara_falls-en.vtt" label="English" kind="subtitles" srclang="en" default="" />
+            <track src="/figuration-preview/assets/video/niagara_falls-es.vtt" label="Espa&ntilde;ol" kind="subtitles" srclang="es" />
+            <track src="/figuration-preview/assets/video/niagara_falls-describe-en.vtt" label="English Description" kind="descriptions" srclang="en" />
+            <track src="/figuration-preview/assets/video/niagara_falls-describe-es.vtt" label="Descripción Espa&ntilde;ola" kind="descriptions" srclang="es" />
+        </video>
+    </div>
+    <div class="player-wrapper">
+        <div class="player" data-cfw-player="player">
+            <span class="player-control mr-0_5" data-cfw-player="control">
+                <button type="button" class="btn btn-default" data-cfw-player="play" title="Play" aria-label="Play"><span class="fa fa-fw fa-play"></span></button>
+                <button type="button" class="btn btn-default" data-cfw-player="pause" title="Pause" aria-label="Pause"><span class="fa fa-fw fa-pause"></span></button>
+            </span>
+            <span class="player-time mr-0_5" data-cfw-player="time">
+                <span class="player-time-current" data-cfw-player="time-current"></span>
+                <span class="player-seek" data-cfw-player="seek">
+                	<label>Seek slider<input type="text" /></label>
+                </span>
+                <span class="player-time-duration" data-cfw-player="time-duration"></span>
+            </span>
+            <span class="player-describe mr-0_25" data-cfw-player="description">
+                <button type="button" class="btn btn-default on active" title="Turn Off Audio Description" aria-label="Turn Off Audio Description"><span class="fa fa-fw fa-audio-description"></span></button>
+                <button type="button" class="btn btn-default off" title="Turn On Audio Description" aria-label="Turn On Audio Description"><span class="fa fa-fw fa-audio-description"></span></button>
+            </span>
+            <button type="button" class="btn btn-default mr-0_25" data-cfw-player="caption" title="Closed Captions" aria-label="Closed Captions"><span class="fa fa-fw fa-cc"></span></button>
+            <button type="button" class="btn btn-default" data-cfw-player="transcript" title="Transcript" aria-label="Transcript"><span class="fa fa-fw fa-file-text-o"></span></button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">data-cfw=</span><span class="s">"player"</span> <span class="na">data-cfw-player-transcript=</span><span class="s">"0"</span> <span class="na">data-cfw-player-media-describe=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"video-wrapper"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-label=</span><span class="s">"video player"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"embed-fluid"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;video</span> <span class="na">poster=</span><span class="s">"/figuration-preview/assets/video/niagara_falls.jpg"</span> <span class="na">controls</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"/figuration-preview/assets/video/niagara_falls.mp4"</span> <span class="na">data-src-describe=</span><span class="s">"/figuration-preview/assets/video/niagara_falls-describe-en.mp4"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;track</span> <span class="na">src=</span><span class="s">"/figuration-preview/assets/video/niagara_falls-en.vtt"</span> <span class="na">label=</span><span class="s">"English"</span> <span class="na">kind=</span><span class="s">"subtitles"</span> <span class="na">srclang=</span><span class="s">"en"</span> <span class="na">default</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;track</span> <span class="na">src=</span><span class="s">"/figuration-preview/assets/video/niagara_falls-es.vtt"</span> <span class="na">label=</span><span class="s">"Espa&amp;ntilde;ol"</span> <span class="na">kind=</span><span class="s">"subtitles"</span> <span class="na">srclang=</span><span class="s">"es"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;track</span> <span class="na">src=</span><span class="s">"/figuration-preview/assets/video/niagara_falls-describe-en.vtt"</span> <span class="na">label=</span><span class="s">"English Description"</span> <span class="na">kind=</span><span class="s">"descriptions"</span> <span class="na">srclang=</span><span class="s">"en"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;track</span> <span class="na">src=</span><span class="s">"/figuration-preview/assets/video/niagara_falls-describe-es.vtt"</span> <span class="na">label=</span><span class="s">"Descripción Espa&amp;ntilde;ola"</span> <span class="na">kind=</span><span class="s">"descriptions"</span> <span class="na">srclang=</span><span class="s">"es"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/video&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"player-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"player"</span> <span class="na">data-cfw-player=</span><span class="s">"player"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-control mr-0_5"</span> <span class="na">data-cfw-player=</span><span class="s">"control"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">data-cfw-player=</span><span class="s">"play"</span> <span class="na">title=</span><span class="s">"Play"</span> <span class="na">aria-label=</span><span class="s">"Play"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-play"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">data-cfw-player=</span><span class="s">"pause"</span> <span class="na">title=</span><span class="s">"Pause"</span> <span class="na">aria-label=</span><span class="s">"Pause"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-pause"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+            <span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-time mr-0_5"</span> <span class="na">data-cfw-player=</span><span class="s">"time"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-time-current"</span> <span class="na">data-cfw-player=</span><span class="s">"time-current"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-seek"</span> <span class="na">data-cfw-player=</span><span class="s">"seek"</span><span class="nt">&gt;</span>
+                	<span class="nt">&lt;label&gt;</span>Seek slider<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;&lt;/label&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-time-duration"</span> <span class="na">data-cfw-player=</span><span class="s">"time-duration"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"player-describe mr-0_25"</span> <span class="na">data-cfw-player=</span><span class="s">"description"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default on active"</span> <span class="na">title=</span><span class="s">"Turn Off Audio Description"</span> <span class="na">aria-label=</span><span class="s">"Turn Off Audio Description"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-audio-description"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default off"</span> <span class="na">title=</span><span class="s">"Turn On Audio Description"</span> <span class="na">aria-label=</span><span class="s">"Turn On Audio Description"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-audio-description"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+            <span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default mr-0_25"</span> <span class="na">data-cfw-player=</span><span class="s">"caption"</span> <span class="na">title=</span><span class="s">"Closed Captions"</span> <span class="na">aria-label=</span><span class="s">"Closed Captions"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-cc"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">data-cfw-player=</span><span class="s">"transcript"</span> <span class="na">title=</span><span class="s">"Transcript"</span> <span class="na">aria-label=</span><span class="s">"Transcript"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fa fa-fw fa-file-text-o"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
@@ -922,6 +1059,10 @@
         </td>
     </tr>
     <tr>
+        <td>description</td>
+        <td>Audio description toggle button.</td>
+    </tr>
+    <tr>
         <td>fullscreen</td>
         <td>Fullscreen toggle button. Currently only supported for <code>&lt;video&gt;</code> elements.</td>
     </tr>
@@ -953,6 +1094,12 @@
 </thead>
 <tbody>
     <tr>
+        <td>mediaDescribe</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>Use the description media source.</td>
+    </tr>
+    <tr>
         <td>transcript</td>
         <td>integer</td>
         <td>-1</td>
@@ -963,6 +1110,12 @@
         <td>booelan</td>
         <td>true</td>
         <td>If the transcript should automatically scroll to keep the current caption in the visible area.</td>
+    </tr>
+    <tr>
+        <td>transcriptDescribe</td>
+        <td>booelan</td>
+        <td>true</td>
+        <td>If the transcript should show the matching <code>descriptions</code> track for the currently active transcript.</td>
     </tr>
     <tr>
         <td>transcriptOption</td>
@@ -1022,6 +1175,14 @@
 <h4 class="no_toc" id="cfw_playerscriptset-trackid"><code class="highlighter-rouge">.CFW_Player('scriptSet', trackID)</code></h4>
 
 <p>Change the transcript track.  <code class="highlighter-rouge">trackID</code> is the 0-indexed array of track items defined in the <code class="highlighter-rouge">&lt;video&gt;</code> element. Setting <code class="highlighter-rouge">trackID</code> to <code class="highlighter-rouge">-1</code> will turn off the transcript.</p>
+
+<h4 class="no_toc" id="cfw_playerfullscreen"><code class="highlighter-rouge">.CFW_Player('fullscreen')</code></h4>
+
+<p>Toggle the fullscreen mode of the player.</p>
+
+<h4 class="no_toc" id="cfw_playerdescription"><code class="highlighter-rouge">.CFW_Player('description')</code></h4>
+
+<p>Toggle the use of the audio description video source.</p>
 
 <h4 class="no_toc" id="cfw_playerdispose"><code class="highlighter-rouge">.CFW_Player('dispose')</code></h4>
 
@@ -1093,7 +1254,7 @@
 
     <footer class="cf-footer">
     <div class="container">
-        Current version: 3.0.0-alpha.2
+        Current version: 3.0.0-alpha.3
         <ul class="footer-links">
             <li><a href="https://github.com/cast-org/figuration">GitHub Project</a></li>
             <li><a href="https://github.com/cast-org/figuration/issues">Issues</a></li>

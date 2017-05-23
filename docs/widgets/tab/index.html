@@ -32,6 +32,11 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/figuration-preview/assets/js/vendor/jquery.min.js"><\/script>')</script>
 
+<!-- MutationObserver Polyfill -->
+
+  <script src="/figuration-preview/assets/js/MutationObserver.min.js"></script>
+
+
 <!-- Core JS -->
 
   <script src="/figuration-preview/dist/js/figuration.js"></script>
@@ -113,7 +118,7 @@
         </div>
     </div>
 
-    <main class="container">
+    <main class="container" role="main">
         <div class="row">
             <div class="col-12 col-md-3 cf-sidebar">
                 <nav class="cf-links">
@@ -410,6 +415,7 @@
   </li>
   <li><a href="#accessibility" id="markdown-toc-accessibility">Accessibility</a>    <ul>
       <li><a href="#keyboard-navigation" id="markdown-toc-keyboard-navigation">Keyboard Navigation</a></li>
+      <li><a href="#aria-and-role-attributes" id="markdown-toc-aria-and-role-attributes">ARIA and Role Attributes</a></li>
     </ul>
   </li>
 </ul>
@@ -700,6 +706,12 @@
     </dd>
 </dl>
 
+<h3 id="aria-and-role-attributes">ARIA and Role Attributes</h3>
+
+<p>Dynamic tabbed interfaces, as described in the <a href="https://www.w3.org/TR/wai-aria-practices/#tabpanel"><abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices</a>, require <code class="highlighter-rouge">role="tablist"</code>, <code class="highlighter-rouge">role="tab"</code>, <code class="highlighter-rouge">role="tabpanel"</code>, and additional <code class="highlighter-rouge">aria-</code> attributes in order to convey their structure, functionality and current state to users of assistive technologies (such as screen readers).</p>
+
+<p>All of these requirements are automatically added by the Tab widget, and will update automatically as the user interacts with the tabbed interface.</p>
+
             </div>
         </div>
 
@@ -710,7 +722,7 @@
 
     <footer class="cf-footer">
     <div class="container">
-        Current version: 3.0.0-alpha.2
+        Current version: 3.0.0-alpha.3
         <ul class="footer-links">
             <li><a href="https://github.com/cast-org/figuration">GitHub Project</a></li>
             <li><a href="https://github.com/cast-org/figuration/issues">Issues</a></li>

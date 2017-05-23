@@ -32,6 +32,11 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/figuration-preview/assets/js/vendor/jquery.min.js"><\/script>')</script>
 
+<!-- MutationObserver Polyfill -->
+
+  <script src="/figuration-preview/assets/js/MutationObserver.min.js"></script>
+
+
 <!-- Core JS -->
 
   <script src="/figuration-preview/dist/js/figuration.js"></script>
@@ -113,7 +118,7 @@
         </div>
     </div>
 
-    <main class="container">
+    <main class="container" role="main">
         <div class="row">
             <div class="col-12 col-md-3 cf-sidebar">
                 <nav class="cf-links">
@@ -407,7 +412,14 @@
       <li><a href="#menu-dividers" id="markdown-toc-menu-dividers">Menu Dividers</a></li>
       <li><a href="#disabled-menu-items" id="markdown-toc-disabled-menu-items">Disabled Menu Items</a></li>
       <li><a href="#active-menu-items" id="markdown-toc-active-menu-items">Active Menu Items</a></li>
+      <li><a href="#submenus" id="markdown-toc-submenus">Submenus</a></li>
       <li><a href="#back-menu-items" id="markdown-toc-back-menu-items">‘Back’ Menu Items</a></li>
+      <li><a href="#special-items" id="markdown-toc-special-items">Special Items</a>        <ul>
+          <li><a href="#buttons" id="markdown-toc-buttons">Buttons</a></li>
+          <li><a href="#checkbox-and-radio-inputs" id="markdown-toc-checkbox-and-radio-inputs">Checkbox and Radio Inputs</a></li>
+          <li><a href="#textual-inputs" id="markdown-toc-textual-inputs">Textual Inputs</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li><a href="#variants" id="markdown-toc-variants">Variants</a>    <ul>
@@ -433,7 +445,9 @@
 
 <h2 id="overview">Overview</h2>
 
-<p>The Dropdown widget in Figuration is primarily designed for menus and navigation.  Not a container for forms or editable content, such as a login or registration.  You might want to consider using the <a href="/figuration-preview/widgets/popover/">Popover widget</a> instead, or reworking the workflow or interface design.</p>
+<p>Wrap the dropdown’s toggle (your button or link) and the dropdown menu within <code class="highlighter-rouge">.dropdown</code>, or another element that declares <code class="highlighter-rouge">position: relative;</code>. Dropdowns can be triggered from <code class="highlighter-rouge">&lt;a&gt;</code> or <code class="highlighter-rouge">&lt;button&gt;</code> elements.</p>
+
+<p>Because of the support for nested dropdown menus, it is currently <strong>required to use a <code class="highlighter-rouge">ul</code> element</strong> to build your dropdown menus.</p>
 
 <h2 id="examples">Examples</h2>
 
@@ -468,8 +482,6 @@
 <h3 id="basic-dropdown">Basic Dropdown</h3>
 
 <p>Wrap the dropdown’s trigger and the dropdown menu within <code class="highlighter-rouge">.dropdown</code>, or another element that declares <code class="highlighter-rouge">position: relative;</code>. Then, add the menu’s HTML.</p>
-
-<p>Because of the support for nested dropdown menus, it is currently <strong>required to use a <code class="highlighter-rouge">ul</code> element</strong> to build your dropdown menus.</p>
 
 <div class="cf-example" data-example-id="">
 <div class="dropdown">
@@ -677,6 +689,47 @@
   <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></div>
 
+<h3 id="submenus">Submenus</h3>
+
+<p>You can nest submenus by adding a nested list along side it’s toggle.</p>
+
+<div class="cf-example" data-example-id="">
+<div class="dropdown">
+        <button type="button" class="btn btn-info dropdown-toggle" data-cfw="dropdown">
+            Dropdown
+        </button>
+        <ul class="dropdown-menu">
+            <li class="dropdown-header">Sample Header</li>
+            <li><a href="#">Action</a></li>
+            <li>
+                <a href="#">Something else here</a>
+                <ul>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Another action</a></li>
+        </ul>
+    </div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info dropdown-toggle"</span> <span class="na">data-cfw=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+            Dropdown
+        <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>Sample Header<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;ul&gt;</span>
+                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></code></pre></div>
+
 <h3 id="back-menu-items">‘Back’ Menu Items</h3>
 
 <p>Using the <a href="#options"><code class="highlighter-rouge">backlink</code> option</a>, you can have ‘back’ menu items automatically inserted into all submenus.  These links will close the current submenu and move focus back onto the parent menu item.  This can be useful if the parent menu/submenu item is being hidden, or obscured by the current submenu.</p>
@@ -732,6 +785,148 @@
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Disabled item<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h3 id="special-items">Special Items</h3>
+
+<p>The Dropdown widget in Figuration is primarily designed for menus and navigation, not a container for forms or editable content, such as a login or registration.  You might want to consider using the <a href="/figuration-preview/widgets/popover/">Popover widget</a> instead, or reworking the workflow or interface design.</p>
+
+<p>However, there is some support for handling <code class="highlighter-rouge">&lt;input&gt;</code> and <code class="highlighter-rouge">&lt;textarea&gt;</code> items within the parent <code class="highlighter-rouge">.dropdown</code> container, and within the menu itself.  Each of these special items require the use of the <code class="highlighter-rouge">.dropdown-item</code> helper class, when inside the menu, to adjust their layout and become available to the dropdown menu keyboard navigation.</p>
+
+<h4 id="buttons">Buttons</h4>
+
+<p>You can optionally use <code class="highlighter-rouge">&lt;button&gt;</code> elements in your dropdowns instead of just <code class="highlighter-rouge">&lt;a&gt;</code>s.</p>
+
+<div class="cf-example" data-example-id="">
+<div class="dropdown">
+  <button type="button" class="btn dropdown-toggle" data-cfw="dropdown" data-cfw-dropdown-backlink="true">
+    Dropdown
+  </button>
+  <ul class="dropdown-menu">
+    <li><button type="button" class="dropdown-item">Regular button</button></li>
+    <li><button type="button" class="dropdown-item active">Active button</button></li>
+    <li><button type="button" class="dropdown-item">Another button</button></li>
+    <li class="dropdown-divider"></li>
+    <li><button type="button" class="dropdown-item disabled">Disabled button</button></li>
+    <li><button type="button" class="dropdown-item" disabled="">Disabled button</button></li>
+  </ul>
+</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn dropdown-toggle"</span> <span class="na">data-cfw=</span><span class="s">"dropdown"</span> <span class="na">data-cfw-dropdown-backlink=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+    Dropdown
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>Regular button<span class="nt">&lt;/button&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"dropdown-item active"</span><span class="nt">&gt;</span>Active button<span class="nt">&lt;/button&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>Another button<span class="nt">&lt;/button&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"dropdown-item disabled"</span><span class="nt">&gt;</span>Disabled button<span class="nt">&lt;/button&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled button<span class="nt">&lt;/button&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h4 id="checkbox-and-radio-inputs">Checkbox and Radio Inputs</h4>
+
+<p>Checkbox and radio inputs are allowed, but only <strong>one per menu item</strong>.</p>
+
+<div class="cf-example" data-example-id="">
+<div class="dropdown">
+  <button type="button" class="btn dropdown-toggle" data-cfw="dropdown" data-cfw-dropdown-backlink="true">
+    Dropdown
+  </button>
+  <ul class="dropdown-menu">
+    <li><label class="dropdown-item form-check-label"><input type="checkbox" class="form-check-input" /> Checkbox 1</label></li>
+    <li><label class="dropdown-item form-check-label"><input type="checkbox" class="form-check-input" /> Checkbox 2</label></li>
+    <li><label class="dropdown-item form-check-label"><input type="checkbox" class="form-check-input" /> Checkbox 3</label></li>
+  </ul>
+</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn dropdown-toggle"</span> <span class="na">data-cfw=</span><span class="s">"dropdown"</span> <span class="na">data-cfw-dropdown-backlink=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+    Dropdown
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;label</span> <span class="na">class=</span><span class="s">"dropdown-item form-check-label"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"form-check-input"</span><span class="nt">&gt;</span> Checkbox 1<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;label</span> <span class="na">class=</span><span class="s">"dropdown-item form-check-label"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"form-check-input"</span><span class="nt">&gt;</span> Checkbox 2<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;label</span> <span class="na">class=</span><span class="s">"dropdown-item form-check-label"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"form-check-input"</span><span class="nt">&gt;</span> Checkbox 3<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<div class="cf-example" data-example-id="">
+<div class="dropdown">
+  <button type="button" class="btn dropdown-toggle" data-cfw="dropdown" data-cfw-dropdown-backlink="true">
+    Dropdown
+  </button>
+  <ul class="dropdown-menu">
+    <li><label class="dropdown-item form-check-label"><input type="radio" name="dropradio" class="form-check-input" /> Radio 1</label></li>
+    <li><label class="dropdown-item form-check-label"><input type="radio" name="dropradio" class="form-check-input" /> Radio 2</label></li>
+    <li><label class="dropdown-item form-check-label"><input type="radio" name="dropradio" class="form-check-input" /> Radio 3</label></li>
+  </ul>
+</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn dropdown-toggle"</span> <span class="na">data-cfw=</span><span class="s">"dropdown"</span> <span class="na">data-cfw-dropdown-backlink=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+    Dropdown
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;label</span> <span class="na">class=</span><span class="s">"dropdown-item form-check-label"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"dropradio"</span> <span class="na">class=</span><span class="s">"form-check-input"</span><span class="nt">&gt;</span> Radio 1<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;label</span> <span class="na">class=</span><span class="s">"dropdown-item form-check-label"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"dropradio"</span> <span class="na">class=</span><span class="s">"form-check-input"</span><span class="nt">&gt;</span> Radio 2<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;label</span> <span class="na">class=</span><span class="s">"dropdown-item form-check-label"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"dropradio"</span> <span class="na">class=</span><span class="s">"form-check-input"</span><span class="nt">&gt;</span> Radio 3<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h4 id="textual-inputs">Textual Inputs</h4>
+
+<p>Add <code class="highlighter-rouge">&lt;input type="text"&gt;</code> or <code class="highlighter-rouge">textarea</code> items to your dropdown menu.  Other types of <a href="/figuration-preview/content/forms/#textual-inputs">textual inputs</a> have not been tested, and may cause issues.  Again, use only <strong>one per menu item</strong>.</p>
+
+<p>Since keyboard navigation needs to change once you enter one of these elements, for ease of editing, they use the <kbd>tab</kbd> key to navigate out.</p>
+
+<div class="cf-example" data-example-id="">
+<div class="dropdown">
+  <button type="button" class="btn dropdown-toggle" data-cfw="dropdown" data-cfw-dropdown-backlink="true">
+    Dropdown
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li>
+      <label class="dropdown-item">
+        <span class="sr-only">Example input</span>
+        <input type="text" class="form-control" placeholder="text input" />
+      </label>
+    </li>
+    <li><a href="#">Action</a></li>
+    <li>
+      <label class="dropdown-item">
+        <span class="sr-only">Example textarea</span>
+        <textarea class="form-control" placeholder="textarea"></textarea>
+      </label>
+    </li>
+    <li><a href="#">Action</a></li>
+  </ul>
+</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn dropdown-toggle"</span> <span class="na">data-cfw=</span><span class="s">"dropdown"</span> <span class="na">data-cfw-dropdown-backlink=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+    Dropdown
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Example input<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"text input"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Example textarea<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"textarea"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <h2 id="variants">Variants</h2>
@@ -1130,6 +1325,7 @@
     </dt>
     <dd>
         Closes the currently focused menu, and moves focus to the next focusable items in the document.
+        If current focus is on an input or textarea in the menu, the focus moves to the next focusable item in the menu.
     </dd>
     <dt>
         <kbd>enter</kbd>
@@ -1149,18 +1345,22 @@
     </dt>
     <dd>
         Moves focus to the previous or next item in the menu list.
+        If current focus is in a textarea, the text caret will move accordingly.
+        If current focus is on a checkbox or radio input, moves focus to the previous or next item in the menu list.
     </dd>
     <dt>
         <kbd title="right arrow" aria-label="right arrow"><span class="fa fa-arrow-right" aria-hidden="true"></span></kbd>
     </dt>
     <dd>
         Opens the submenu if one exists.
+        If current focus is in a text input or textarea, the text caret will move accordingly.
     </dd>
     <dt>
         <kbd title="left arrow" aria-label="left arrow"><span class="fa fa-arrow-left" aria-hidden="true"></span></kbd>
     </dt>
     <dd>
         Closes the currently focused submenu, and returns focus back to the triggering element.  If there are no submenus open, focus will be returned to the main trigger.
+        If current focus is in a text input or textarea, the text caret will move accordingly.
     </dd>
 </dl>
 
@@ -1174,7 +1374,7 @@
 
     <footer class="cf-footer">
     <div class="container">
-        Current version: 3.0.0-alpha.2
+        Current version: 3.0.0-alpha.3
         <ul class="footer-links">
             <li><a href="https://github.com/cast-org/figuration">GitHub Project</a></li>
             <li><a href="https://github.com/cast-org/figuration/issues">Issues</a></li>
