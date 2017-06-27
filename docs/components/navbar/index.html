@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta name="description" content="CAST Figuration - A feature rich, responsive, mobile first, accessible, front-end framework inspired by Bootstrap.">
+<meta name="description" content="CAST Figuration - A feature rich, responsive, mobile first, accessible, front-end framework.">
 
 <title>
   
@@ -21,6 +21,7 @@
   <link href="/figuration-preview/dist/css/figuration.css" rel="stylesheet">
 
 
+<!-- Algolia DocSearch CSS -->
 
 
 <!-- Docs CSS -->
@@ -68,46 +69,64 @@
     <a class="skipnav" href="#content">Skip to main content</a>
 
     <header class="navbar navbar-expand-lg navbar-dark print-hide cf-header">
-    <nav class="container">
-        <a class="navbar-brand" href="/figuration-preview/">CAST Figuration</a>
-        <button class="navbar-toggle" type="button" data-cfw="collapse" data-cfw-collapse-target="#cf-topnav" aria-label="Toggle navigation">
-            <span class="icon-menu" aria-hidden="true">&#8801;</span>
-        </button>
-        <div class="navbar-collapse collapse" id="cf-topnav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="/figuration-preview/get-started/quick-start/" class="nav-link ">Get Started</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/figuration-preview/layout/overview/" class="nav-link ">Layout</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/figuration-preview/content/reboot/" class="nav-link ">Content</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/figuration-preview/components/alerts/" class="nav-link active">Components</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/figuration-preview/utilities/borders/" class="nav-link ">Utilities</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/figuration-preview/widgets/overview/" class="nav-link ">Widgets</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/figuration-preview/about/overview/" class="nav-link ">About</a>
-                </li>
-            </ul>
-            
-            <div class="navbar-nav ml-lg-auto">
-                <a href="https://github.com/cast-org/figuration" class="nav-link"><small>GitHub</small></a>
-            </div>
-            
-        </div>
-    </nav> <!-- /.container -->
+    <a class="navbar-brand" href="/figuration-preview/" aria-label="CAST Figuration">
+        <img src="/figuration-preview/assets/brand/figuration-outline.svg" class="navbar-brand-logo" alt="" />
+        <span class="sr-only-xs-down">CAST Figuration</span>
+    </a>
+    <button class="navbar-toggle flex-first mr-0_5" type="button" data-cfw="collapse" data-cfw-collapse-target="#cf-topnav" aria-label="Toggle navigation">
+        <span class="cf-header-menu" aria-hidden="true">&#8801;</span>
+    </button>
+    <div class="navbar-collapse collapse flex-fill flex-last flex-lg-unordered" id="cf-topnav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="/figuration-preview/get-started/quick-start/" class="nav-link ">Get Started</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/layout/overview/" class="nav-link ">Layout</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/content/reboot/" class="nav-link ">Content</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/components/alerts/" class="nav-link active">Components <span class="sr-only">(current section)</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/utilities/borders/" class="nav-link ">Utilities</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/widgets/overview/" class="nav-link ">Widgets</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/about/overview/" class="nav-link ">About</a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="navbar-nav ml-auto cf-header-social">
+        <li class="nav-item">
+            <a href="https://twitter.com/figuration_org" class="nav-link" aria-label="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" focusable="false"  class="cf-header-icon"  >
+  <title>Twitter</title>
+  <path fill="currentColor" d="M512 97.2c-18.84 8.36-39.08 14-60.33 16.55 21.7-13 38.34-33.58 46.2-58.1-20.3 12.03-42.8 20.77-66.72 25.48C412 60.7 384.7 47.96 354.48 47.96c-58 0-105.04 47.03-105.04 105.03 0 8.23.93 16.25 2.72 23.93-87.3-4.38-164.7-46.2-216.5-109.75-9.05 15.5-14.24 33.56-14.24 52.8 0 36.45 18.55 68.6 46.73 87.44-17.2-.54-33.4-5.27-47.57-13.14v1.32c0 50.9 36.2 93.35 84.25 103-8.8 2.4-18.1 3.7-27.68 3.7-6.76 0-13.34-.67-19.76-1.9 13.36 41.73 52.15 72.1 98.12 72.95-35.95 28.18-81.25 44.97-130.46 44.97-8.48 0-16.84-.5-25.06-1.47 46.5 29.8 101.7 47.2 161.02 47.2 193.2 0 298.87-160.07 298.87-298.88 0-4.55-.1-9.08-.32-13.6 20.53-14.8 38.34-33.3 52.42-54.36z"/>
+</svg>
+
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="https://github.com/cast-org/figuration" class="nav-link" aria-label="Github">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false"  class="cf-header-icon"  >
+  <title>GitHub</title>
+  <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.3 6.53 5.47 7.6.4.06.55-.18.55-.4v-1.48c-2.02.37-2.54-.5-2.7-.94-.1-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.62 0 1.07.58 1.22.82.72 1.2 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.77-.2-3.63-.9-3.63-3.95 0-.87.3-1.6.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.2 2.2.83.64-.18 1.32-.27 2-.27.68 0 1.36.1 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.93.08 2.13.5.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.3.25.54.73.54 1.48v2.2c0 .22.15.47.55.4C13.7 14.52 16 11.52 16 8c0-4.42-3.58-8-8-8z"/>
+</svg>
+
+            </a>
+        </li>
+        
+    </ul>
 </header>
 
     <div class="jumbotron jumbotron-full jumbotron-docs">
-        <div class="container">
+        <div class="container-fluid">
             
     <div class="h1">Components</div>
     <p class="lead">
@@ -118,9 +137,9 @@
         </div>
     </div>
 
-    <main class="container" role="main">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-3 cf-sidebar">
+            <div class="col-12 col-md-3 col-xl-2 cf-sidebar">
                 <nav class="cf-links">
 
 
@@ -143,149 +162,162 @@
   
 
   
-    <div class="h4">Components</div>
+    <div class="h4 cf-sidebar-header">Components</div>
     <ul class="nav flex-column">
       
         
 
         
         
+        
 
         <li class="nav-item">
           <a href="/figuration-preview/components/alerts/" class="nav-link ">
-            Alerts
+            Alerts 
           </a>
         </li>
       
         
 
+        
         
         
 
         <li class="nav-item">
           <a href="/figuration-preview/components/badges/" class="nav-link ">
-            Badges
+            Badges 
           </a>
         </li>
       
         
 
+        
         
         
 
         <li class="nav-item">
           <a href="/figuration-preview/components/breadcrumb/" class="nav-link ">
-            Breadcrumb
+            Breadcrumb 
           </a>
         </li>
       
         
 
+        
         
         
 
         <li class="nav-item">
           <a href="/figuration-preview/components/button-group/" class="nav-link ">
-            Button Group
+            Button Group 
           </a>
         </li>
       
         
 
+        
         
         
 
         <li class="nav-item">
           <a href="/figuration-preview/components/cards/" class="nav-link ">
-            Cards
+            Cards 
           </a>
         </li>
       
         
 
+        
         
         
 
         <li class="nav-item">
           <a href="/figuration-preview/components/grid-lines/" class="nav-link ">
-            Grid Lines
+            Grid Lines 
           </a>
         </li>
       
         
 
+        
         
         
 
         <li class="nav-item">
           <a href="/figuration-preview/components/input-group/" class="nav-link ">
-            Input Group
+            Input Group 
           </a>
         </li>
       
         
 
+        
         
         
 
         <li class="nav-item">
           <a href="/figuration-preview/components/jumbotron/" class="nav-link ">
-            Jumbotron
+            Jumbotron 
           </a>
         </li>
       
         
 
+        
         
         
 
         <li class="nav-item">
           <a href="/figuration-preview/components/list-group/" class="nav-link ">
-            List Group
+            List Group 
           </a>
         </li>
       
         
 
+        
         
         
 
         <li class="nav-item">
           <a href="/figuration-preview/components/media-object/" class="nav-link ">
-            Media Object
+            Media Object 
           </a>
         </li>
       
         
 
+        
         
         
 
         <li class="nav-item">
           <a href="/figuration-preview/components/navbar/" class="nav-link active">
-            Navbar
+            Navbar <span class="sr-only">(current page)</span>
           </a>
         </li>
       
         
 
+        
         
         
 
         <li class="nav-item">
           <a href="/figuration-preview/components/navs/" class="nav-link ">
-            Navs
+            Navs 
           </a>
         </li>
       
         
 
+        
         
         
 
         <li class="nav-item">
           <a href="/figuration-preview/components/pagination/" class="nav-link ">
-            Pagination
+            Pagination 
           </a>
         </li>
       
@@ -293,10 +325,23 @@
 
         
         
+        
 
         <li class="nav-item">
           <a href="/figuration-preview/components/progress/" class="nav-link ">
-            Progress
+            Progress 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/components/switch/" class="nav-link ">
+            Switch 
           </a>
         </li>
       
@@ -321,7 +366,11 @@
 </nav>
 
             </div>
-            <div class="col-12 col-md-9 cf-content">
+
+            <div class="d-none d-xl-block col-xl-2 cf-toc">
+            </div>
+
+            <main class="col-12 col-md-9 col-xl-8 cf-content" role="main">
                 <h1 class="cf-title" id="content">
                     Navbar
                     
@@ -499,7 +548,7 @@
       </li>
     </ul>
     <form class="form-inline ml-auto">
-      <input class="form-control" type="text" placeholder="Search" aria-label="Search" />
+      <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search" />
       <button class="btn btn-outline-primary" type="submit">Search</button>
     </form>
   </div>
@@ -524,7 +573,7 @@
       <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline ml-auto"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control mr-0_25"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;/form&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -552,7 +601,7 @@
       </li>
     </ul>
     <form class="form-inline ml-auto">
-      <input class="form-control" type="text" placeholder="Search" aria-label="Search" />
+      <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search" />
       <button class="btn btn-outline-primary" type="submit">Search</button>
     </form>
   </div>
@@ -577,7 +626,7 @@
       <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline ml-auto"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control mr-0_25"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;/form&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -618,7 +667,7 @@
       </li>
     </ul>
     <form class="form-inline ml-auto">
-      <input class="form-control" type="text" placeholder="Search" aria-label="Search" />
+      <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search" />
       <button class="btn btn-outline-primary" type="submit">Search</button>
     </form>
   </div>
@@ -643,7 +692,7 @@
       <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline ml-auto"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control mr-0_25"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;/form&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -867,14 +916,14 @@
 <div class="cf-example" data-example-id="">
 <nav class="navbar navbar-light bg-faded">
   <form class="form-inline">
-    <input class="form-control" type="text" placeholder="Search" aria-label="Search" />
+    <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search" />
     <button class="btn btn-outline-primary" type="submit">Search</button>
   </form>
 </nav>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-light bg-faded"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control mr-0_25"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/form&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
@@ -885,7 +934,7 @@
 <nav class="navbar navbar-light bg-faded flex-between">
   <a href="#" class="navbar-brand">Navbar</a>
   <form class="form-inline">
-    <input class="form-control" type="text" placeholder="Search" aria-label="Search" />
+    <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search" />
     <button class="btn btn-outline-primary" type="submit">Search</button>
   </form>
 </nav>
@@ -893,7 +942,7 @@
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-light bg-faded flex-between"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"navbar-brand"</span><span class="nt">&gt;</span>Navbar<span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control mr-0_25"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/form&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
@@ -924,14 +973,14 @@
 <div class="cf-example" data-example-id="">
 <nav class="navbar navbar-light bg-faded">
   <form class="form-inline">
-    <button type="button" class="btn btn-outline-success">Main button</button>
+    <button type="button" class="btn btn-outline-success mr-0_25">Main button</button>
     <button type="button" class="btn btn-sm align-middle btn-outline-secondary">Smaller button</button>
   </form>
 </nav>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-light bg-faded"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-success"</span><span class="nt">&gt;</span>Main button<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-success mr-0_25"</span><span class="nt">&gt;</span>Main button<span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-sm align-middle btn-outline-secondary"</span><span class="nt">&gt;</span>Smaller button<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/form&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
@@ -1257,7 +1306,7 @@
         </li>
       </ul>
       <form class="form-inline float-right">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search" />
+        <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search" />
         <button class="btn btn-secondary" type="submit">Search</button>
       </form>
     </div>
@@ -1281,7 +1330,7 @@
         </li>
       </ul>
       <form class="form-inline float-right">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search" />
+        <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search" />
         <button class="btn btn-secondary" type="submit">Search</button>
       </form>
     </div>
@@ -1305,7 +1354,7 @@
         </li>
       </ul>
       <form class="form-inline float-right">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search" />
+        <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search" />
         <button class="btn btn-outline-primary" type="submit">Search</button>
       </form>
     </div>
@@ -1397,18 +1446,20 @@
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
 
 
-            </div>
+            </main>
         </div>
 
         <div class="topLink">
             <a href="#content">Top of Page <span class="caret"></span></a>
         </div>
-    </main>
+    </div>
 
     <footer class="cf-footer">
     <div class="container">
-        Current version: 3.0.0-alpha.3
-        <ul class="footer-links">
+        <p class="mb-0">
+            Current version: 3.0.0-beta.1
+        </p>
+        <ul class="footer-links d-inline-block d-sm-block mx-auto mx-sm-0">
             <li><a href="https://github.com/cast-org/figuration">GitHub Project</a></li>
             <li><a href="https://github.com/cast-org/figuration/issues">Issues</a></li>
             <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
@@ -1426,7 +1477,7 @@
 
         <p class="font-weight-bold mb-0_25">Funding generously provided by:</p>
         <div class="media footer-partners">
-            <div class="media-left">
+            <div class="d-flex mr-0_5">
                 <img src="/figuration-preview/assets/img/aem-logo.png" class="media-object" width="40" height="40" alt="AEM logo" />
             </div>
             <div class="media-body">
@@ -1439,6 +1490,6 @@
 </footer>
 
 
-
+    
 </body>
 </html>
