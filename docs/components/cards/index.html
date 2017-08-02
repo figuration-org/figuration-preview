@@ -18,7 +18,7 @@
 
 <!-- Core CSS -->
 
-  <link href="/figuration-preview/dist/css/figuration.css" rel="stylesheet">
+  <link href="/figuration-preview/dist/css/figuration.css" rel="stylesheet" id="cssCore">
 
 
 <!-- Algolia DocSearch CSS -->
@@ -26,7 +26,7 @@
 
 <!-- Docs CSS -->
 
-  <link href="/figuration-preview/assets/css/docs.css" rel="stylesheet">
+  <link href="/figuration-preview/assets/css/docs.css" rel="stylesheet" id="cssDocs">
 
 
 <!-- jQuery -->
@@ -51,8 +51,7 @@
   <script src="/figuration-preview/assets/js/src/docs.js"></script>
 
 
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="/figuration-preview/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- IE emulation mode warning -->
 <script src="/figuration-preview/assets/js/ie-emulation-modes-warning.js"></script>
 
 <script>
@@ -76,7 +75,7 @@
     <button class="navbar-toggle flex-first mr-0_5" type="button" data-cfw="collapse" data-cfw-collapse-target="#cf-topnav" aria-label="Toggle navigation">
         <span class="cf-header-menu" aria-hidden="true">&#8801;</span>
     </button>
-    <div class="navbar-collapse collapse flex-fill flex-last flex-lg-unordered" id="cf-topnav">
+    <div class="navbar-collapse collapse flex-last flex-lg-unordered flex-lg-shrink text-nowrap" id="cf-topnav">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a href="/figuration-preview/get-started/quick-start/" class="nav-link ">Get Started</a>
@@ -96,15 +95,12 @@
             <li class="nav-item">
                 <a href="/figuration-preview/widgets/overview/" class="nav-link ">Widgets</a>
             </li>
-            <li class="nav-item">
-                <a href="/figuration-preview/about/overview/" class="nav-link ">About</a>
-            </li>
         </ul>
     </div>
 
     <ul class="navbar-nav ml-auto cf-header-social">
         <li class="nav-item">
-            <a href="https://twitter.com/figuration_org" class="nav-link" aria-label="Twitter">
+            <a href="https://twitter.com/figuration_org" class="nav-link" aria-label="Twitter" title="Twitter">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" focusable="false"  class="cf-header-icon"  >
   <title>Twitter</title>
   <path fill="currentColor" d="M512 97.2c-18.84 8.36-39.08 14-60.33 16.55 21.7-13 38.34-33.58 46.2-58.1-20.3 12.03-42.8 20.77-66.72 25.48C412 60.7 384.7 47.96 354.48 47.96c-58 0-105.04 47.03-105.04 105.03 0 8.23.93 16.25 2.72 23.93-87.3-4.38-164.7-46.2-216.5-109.75-9.05 15.5-14.24 33.56-14.24 52.8 0 36.45 18.55 68.6 46.73 87.44-17.2-.54-33.4-5.27-47.57-13.14v1.32c0 50.9 36.2 93.35 84.25 103-8.8 2.4-18.1 3.7-27.68 3.7-6.76 0-13.34-.67-19.76-1.9 13.36 41.73 52.15 72.1 98.12 72.95-35.95 28.18-81.25 44.97-130.46 44.97-8.48 0-16.84-.5-25.06-1.47 46.5 29.8 101.7 47.2 161.02 47.2 193.2 0 298.87-160.07 298.87-298.88 0-4.55-.1-9.08-.32-13.6 20.53-14.8 38.34-33.3 52.42-54.36z"/>
@@ -113,13 +109,26 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="https://github.com/cast-org/figuration" class="nav-link" aria-label="Github">
+            <a href="https://github.com/cast-org/figuration" class="nav-link" aria-label="Github" title="GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false"  class="cf-header-icon"  >
   <title>GitHub</title>
   <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.3 6.53 5.47 7.6.4.06.55-.18.55-.4v-1.48c-2.02.37-2.54-.5-2.7-.94-.1-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.62 0 1.07.58 1.22.82.72 1.2 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.77-.2-3.63-.9-3.63-3.95 0-.87.3-1.6.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.2 2.2.83.64-.18 1.32-.27 2-.27.68 0 1.36.1 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.93.08 2.13.5.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.3.25.54.73.54 1.48v2.2c0 .22.15.47.55.4C13.7 14.52 16 11.52 16 8c0-4.42-3.58-8-8-8z"/>
 </svg>
 
             </a>
+        </li>
+        <li class="nav-item dropdown dropdown-menu-reverse">
+            <a href="#" role="button" class="nav-link" aria-label="Settings" title="Settings" data-cfw="dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" focusable="false"  class="cf-header-icon"  >
+  <title>Settings</title>
+  <path fill="currentColor" d="M3.5 0l-.5 1.19c-.1.03-.19.08-.28.13l-1.19-.5-.72.72.5 1.19c-.05.1-.09.18-.13.28l-1.19.5v1l1.19.5c.04.1.08.18.13.28l-.5 1.19.72.72 1.19-.5c.09.04.18.09.28.13l.5 1.19h1l.5-1.19c.09-.04.19-.08.28-.13l1.19.5.72-.72-.5-1.19c.04-.09.09-.19.13-.28l1.19-.5v-1l-1.19-.5c-.03-.09-.08-.19-.13-.28l.5-1.19-.72-.72-1.19.5c-.09-.04-.19-.09-.28-.13l-.5-1.19h-1zm.5 2.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5z"/>
+</svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">Direction</li>
+                <li><button type="button" class="dropdown-item" id="dir-ltr">Left-to-right</button></li>
+                <li><button type="button" class="dropdown-item" id="dir-rtl">Right-to-left</button></li>
+            </ul>
         </li>
         
     </ul>
@@ -759,9 +768,9 @@
     Quote
   </div>
   <div class="card-body">
-    <blockquote class="card-blockquote">
+    <blockquote class="blockquote">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
 </div>
@@ -771,9 +780,9 @@
     Quote
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"card-blockquote"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
     <span class="nt">&lt;/blockquote&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
@@ -902,7 +911,7 @@
   </div>
 </div>
 
-<div class="card text-right" style="width: 20rem;">
+<div class="card text-end" style="width: 20rem;">
   <div class="card-body">
     <h4 class="card-title">Special title treatment</h4>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -926,7 +935,7 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card text-right"</span> <span class="na">style=</span><span class="s">"width: 20rem;"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card text-end"</span> <span class="na">style=</span><span class="s">"width: 20rem;"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Special title treatment<span class="nt">&lt;/h4&gt;</span>
     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>With supporting text below as a natural lead-in to additional content.<span class="nt">&lt;/p&gt;</span>
@@ -1083,7 +1092,7 @@
 
 <h3 id="background-variants">Background Variants</h3>
 
-<p>Cards include their own variant classes for quickly changing the <code class="highlighter-rouge">background-color</code> and <code class="highlighter-rouge">border-color</code> of a card. <strong>Darker colors require the use of <code class="highlighter-rouge">.card-inverse</code>.</strong></p>
+<p>Cards include their own variant classes for quickly changing the <code class="highlighter-rouge">background-color</code> and <code class="highlighter-rouge">border-color</code> of a card. <strong>Darker colors require the use of <code class="highlighter-rouge">.card-inverse</code> or <code class="highlighter-rouge">.text-light</code></strong>.</p>
 
 <div class="cf-callout cf-callout-warning">
 <p class="h5">Conveying Meaning to Assistive Technologies</p>
@@ -1094,82 +1103,92 @@
 <div class="cf-example" data-example-id="">
 <div class="card card-inverse card-primary text-center">
   <div class="card-body">
-    <blockquote class="card-blockquote">
+    <p>This is some text within a card body.</p>
+    <blockquote class="blockquote text-light">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer class="blockquote-footer card-inverse">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
 </div>
 <div class="card card-inverse card-success text-center">
   <div class="card-body">
-    <blockquote class="card-blockquote">
+    <p>This is some text within a card body.</p>
+    <blockquote class="blockquote text-light">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer class="blockquote-footer card-inverse">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
 </div>
 <div class="card card-inverse card-info text-center">
   <div class="card-body">
-    <blockquote class="card-blockquote">
+    <p>This is some text within a card body.</p>
+    <blockquote class="blockquote text-light">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer class="blockquote-footer card-inverse">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
 </div>
 <div class="card card-inverse card-warning text-center">
   <div class="card-body">
-    <blockquote class="card-blockquote">
+    <p>This is some text within a card body.</p>
+    <blockquote class="blockquote text-light">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer class="blockquote-footer card-inverse">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
 </div>
 <div class="card card-inverse card-danger text-center">
   <div class="card-body">
-    <blockquote class="card-blockquote">
+    <p>This is some text within a card body.</p>
+    <blockquote class="blockquote text-light">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer class="blockquote-footer card-inverse">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
 </div>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-inverse card-primary text-center"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"card-blockquote"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>This is some text within a card body.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote text-light"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer card-inverse"</span><span class="nt">&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
     <span class="nt">&lt;/blockquote&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-inverse card-success text-center"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"card-blockquote"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>This is some text within a card body.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote text-light"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer card-inverse"</span><span class="nt">&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
     <span class="nt">&lt;/blockquote&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-inverse card-info text-center"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"card-blockquote"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>This is some text within a card body.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote text-light"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer card-inverse"</span><span class="nt">&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
     <span class="nt">&lt;/blockquote&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-inverse card-warning text-center"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"card-blockquote"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>This is some text within a card body.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote text-light"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer card-inverse"</span><span class="nt">&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
     <span class="nt">&lt;/blockquote&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-inverse card-danger text-center"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"card-blockquote"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>This is some text within a card body.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote text-light"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer card-inverse"</span><span class="nt">&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
     <span class="nt">&lt;/blockquote&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
@@ -1181,98 +1200,98 @@
 <div class="cf-example" data-example-id="">
 <div class="card card-outline-primary text-center">
   <div class="card-body">
-    <blockquote class="card-blockquote">
+    <blockquote class="blockquote">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
 </div>
 <div class="card card-outline-secondary text-center">
   <div class="card-body">
-    <blockquote class="card-blockquote">
+    <blockquote class="blockquote">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
 </div>
 <div class="card card-outline-success text-center">
   <div class="card-body">
-    <blockquote class="card-blockquote">
+    <blockquote class="blockquote">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
 </div>
 <div class="card card-outline-info text-center">
   <div class="card-body">
-    <blockquote class="card-blockquote">
+    <blockquote class="blockquote">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
 </div>
 <div class="card card-outline-warning text-center">
   <div class="card-body">
-    <blockquote class="card-blockquote">
+    <blockquote class="blockquote">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
 </div>
 <div class="card card-outline-danger text-center">
   <div class="card-body">
-    <blockquote class="card-blockquote">
+    <blockquote class="blockquote">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
 </div>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-outline-primary text-center"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"card-blockquote"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
     <span class="nt">&lt;/blockquote&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-outline-secondary text-center"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"card-blockquote"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
     <span class="nt">&lt;/blockquote&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-outline-success text-center"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"card-blockquote"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
     <span class="nt">&lt;/blockquote&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-outline-info text-center"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"card-blockquote"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
     <span class="nt">&lt;/blockquote&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-outline-warning text-center"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"card-blockquote"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
     <span class="nt">&lt;/blockquote&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-outline-danger text-center"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"card-blockquote"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
     <span class="nt">&lt;/blockquote&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
@@ -1310,14 +1329,12 @@
 
 <p>In addition to styling the content within cards, Figuration includes a few options for laying out series of cards.</p>
 
-<p>For the time being, these layout options only apply to small devices and above, so <strong>they are not yet fully responsive</strong>.</p>
-
 <h3 id="card-groups">Card Groups</h3>
 
-<p>Use card groups to render cards as a single, attached element with equal width and height columns. Card groups use <code class="highlighter-rouge">display: flex;</code> to achieve their uniform sizing.</p>
+<p>Use card groups to render cards as a single, attached element with equal width and height columns. Card groups use <code class="highlighter-rouge">display: flex;</code> to achieve their uniform sizing.  Card groups are available with the class syntax of <code class="highlighter-rouge">.card-group{-breakpoint}</code>, such as <code class="highlighter-rouge">.card-group-md</code> to enable the group layout for <code class="highlighter-rouge">md</code> screens and above.</p>
 
 <div class="cf-example" data-example-id="">
-<div class="card-group">
+<div class="card-group-sm">
   <div class="card">
     <img class="card-img-top img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
     <div class="card-body">
@@ -1344,7 +1361,7 @@
   </div>
 </div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-group"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-group-sm"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
@@ -1374,7 +1391,7 @@
 <p>When using card groups with footers, they will not automatically line up.  However, you can use the <a href="/figuration-preview/widgets/equalize">Equalize widget</a> to achieve this layout.</p>
 
 <div class="cf-example" data-example-id="">
-<div class="card-group" data-cfw="equalize" data-cfw-equalize-target=".card-body">
+<div class="card-group-sm" data-cfw="equalize" data-cfw-equalize-target=".card-body">
   <div class="card">
     <img class="card-img-top img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
     <div class="card-body">
@@ -1408,7 +1425,7 @@
   </div>
 </div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-group"</span> <span class="na">data-cfw=</span><span class="s">"equalize"</span> <span class="na">data-cfw-equalize-target=</span><span class="s">".card-body"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-group-sm"</span> <span class="na">data-cfw=</span><span class="s">"equalize"</span> <span class="na">data-cfw-equalize-target=</span><span class="s">".card-body"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
@@ -1444,10 +1461,10 @@
 
 <h3 id="card-decks">Card Decks</h3>
 
-<p>Need a set of equal width and height cards that aren’t attached to one another? Use card decks.</p>
+<p>Need a set of equal width and height cards that aren’t attached to one another? Use card decks, with the class syntax of <code class="highlighter-rouge">.card-deck{-breakpoint}</code>, such as <code class="highlighter-rouge">.card-deck-sm</code> to enable the deck layout for <code class="highlighter-rouge">sm</code> screens and above.</p>
 
 <div class="cf-example" data-example-id="">
-<div class="card-deck">
+<div class="card-deck-sm">
   <div class="card">
     <img class="card-img-top img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
     <div class="card-body">
@@ -1474,7 +1491,7 @@
   </div>
 </div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-deck"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-deck-sm"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
@@ -1504,7 +1521,7 @@
 <p>Just like with card groups, card footers in decks will not automatically line up. Again, the <a href="/figuration-preview/widgets/equalize">Equalize widget</a> can achieve this layout.</p>
 
 <div class="cf-example" data-example-id="">
-<div class="card-deck" data-cfw="equalize" data-cfw-equalize-target=".card-body">
+<div class="card-deck-sm" data-cfw="equalize" data-cfw-equalize-target=".card-body">
   <div class="card">
     <img class="card-img-top img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
     <div class="card-body">
@@ -1538,7 +1555,7 @@
   </div>
 </div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-deck"</span> <span class="na">data-cfw=</span><span class="s">"equalize"</span> <span class="na">data-cfw-equalize-target=</span><span class="s">".card-body"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-deck-sm"</span> <span class="na">data-cfw=</span><span class="s">"equalize"</span> <span class="na">data-cfw-equalize-target=</span><span class="s">".card-body"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
@@ -1607,7 +1624,7 @@
 <span class="o">&lt;/</span><span class="nt">style</span><span class="o">&gt;</span></code></pre></figure>
 
 <div class="cf-example" data-example-id="">
-<div class="card-deck card-deck-col">
+<div class="card-deck-sm card-deck-col">
     <div class="card">
         <img class="card-img-top img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
         <div class="card-body">
@@ -1638,7 +1655,7 @@
     </div>
 </div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-deck card-deck-col"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-deck-sm card-deck-col"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
@@ -1673,10 +1690,12 @@
 
 <p>Cards can be organized into <a href="http://masonry.desandro.com">Masonry</a>-like columns with just CSS by wrapping them in <code class="highlighter-rouge">.card-columns</code>. Cards are ordered from top to bottom and left to right when wrapped in <code class="highlighter-rouge">.card-columns</code>. Card columns use the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts"><code class="highlighter-rouge">column-*</code> CSS properties</a>.</p>
 
+<p>Responsive variants are available with the class syntax of <code class="highlighter-rouge">.card-columns{-breakpoint}</code>, such as <code class="highlighter-rouge">.card-columns-sm</code> to enable the columns layout for <code class="highlighter-rouge">sm</code> screens and above.</p>
+
 <p><strong>Heads up!</strong> Your mileage with card columns may vary. To prevent cards breaking across columns, we set them to <code class="highlighter-rouge">display: inline-table</code>, as <code class="highlighter-rouge">column-break-inside: avoid</code> isn’t a fully supported option yet.</p>
 
 <div class="cf-example" data-example-id="">
-<div class="card-columns">
+<div class="card-columns-sm">
   <div class="card">
     <img class="card-img-top img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
     <div class="card-body">
@@ -1686,9 +1705,9 @@
   </div>
   <div class="card">
     <div class="card-body">
-      <blockquote class="card-blockquote">
+      <blockquote class="blockquote">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        <footer>
+        <footer class="blockquote-footer">
           <small class="text-muted">
             Someone famous in <cite title="Source Title">Source Title</cite>
           </small>
@@ -1706,9 +1725,9 @@
   </div>
   <div class="card card-inverse card-primary text-center">
     <div class="card-body">
-      <blockquote class="card-blockquote">
+      <blockquote class="blockquote text-light">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-        <footer>
+        <footer class="blockquote-footer card-inverse">
           <small>
             Someone famous in <cite title="Source Title">Source Title</cite>
           </small>
@@ -1726,11 +1745,11 @@
   <div class="card">
     <img class="card-img img-fluid" data-src="holder.js/100px260/" alt="Card image" />
   </div>
-  <div class="card text-right">
+  <div class="card text-end">
     <div class="card-body">
-      <blockquote class="card-blockquote">
+      <blockquote class="blockquote">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        <footer>
+        <footer class="blockquote-footer">
           <small class="text-muted">
             Someone famous in <cite title="Source Title">Source Title</cite>
           </small>
@@ -1747,7 +1766,7 @@
   </div>
 </div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-columns"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-columns-sm"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
@@ -1757,9 +1776,9 @@
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"card-blockquote"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;footer&gt;</span>
+        <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>
             Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;</span>
           <span class="nt">&lt;/small&gt;</span>
@@ -1777,9 +1796,9 @@
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-inverse card-primary text-center"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"card-blockquote"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote text-light"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;footer&gt;</span>
+        <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer card-inverse"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;small&gt;</span>
             Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;</span>
           <span class="nt">&lt;/small&gt;</span>
@@ -1797,11 +1816,11 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card text-right"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card text-end"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"card-blockquote"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;footer&gt;</span>
+        <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>
             Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;</span>
           <span class="nt">&lt;/small&gt;</span>
@@ -1818,7 +1837,7 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<p>Card columns can also be extended and customized with some additional code. Shown below is an extension of the <code class="highlighter-rouge">.card-columns</code> class using the same CSS we use—CSS columns— to generate a set of responsive tiers for changing the number of columns.</p>
+<p>Card columns can also be extended and customized with some additional code. Shown below is an extension of the <code class="highlighter-rouge">.card-columns</code> class using Sass to generate a set of responsive tiers for changing the number of CSS columns.</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.card-columns</span> <span class="p">{</span>
   <span class="k">@include</span> <span class="nd">media-breakpoint-only</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span>
@@ -1829,6 +1848,20 @@
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
+<p>If you are using repsonsive variants of the card columns, you may need to include all variations, or a combination, of the responsive <code class="highlighter-rouge">.card-{breakpoint}-columns</code> classes, if it applies to your use-case.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.card-columns</span>
+<span class="nc">.card-columns-sm</span>
+<span class="nc">.card-columns-md</span>
+<span class="nc">.card-columns-lg</span>
+<span class="nc">.card-columns-xl</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">media-breakpoint-only</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nl">column-count</span><span class="p">:</span> <span class="m">4</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">@include</span> <span class="nd">media-breakpoint-only</span><span class="p">(</span><span class="n">xl</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nl">column-count</span><span class="p">:</span> <span class="m">5</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
 
             </main>
         </div>
@@ -1841,9 +1874,10 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 3.0.0-beta.1
+            Current version: 3.0.0-beta.2
         </p>
         <ul class="footer-links d-inline-block d-sm-block mx-auto mx-sm-0">
+            <li><a href="/figuration-preview/about/overview/">About</a></li>
             <li><a href="https://github.com/cast-org/figuration">GitHub Project</a></li>
             <li><a href="https://github.com/cast-org/figuration/issues">Issues</a></li>
             <li><a href="https://twitter.com/figuration_org">Twitter</a></li>

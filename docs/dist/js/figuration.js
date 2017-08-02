@@ -1,5 +1,5 @@
 /*!
- * Figuration (v3.0.0-beta.1)
+ * Figuration (v3.0.0-beta.2)
  * http://figuration.org
  * Copyright 2013-2017 CAST, Inc.
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
@@ -14,14 +14,14 @@ if (typeof jQuery === 'undefined') {
 
 (function($) {
   var version = $.fn.jquery.split(' ')[0].split('.');
-  if ((version[0] < 2 && version[1] < 9) || (version[0] == 1 && version[1] == 9 && version[2] < 1) || (version[0] >= 4)) {
-    throw new Error('CAST Figuration\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0');
+  if ((version[0] == 3 && version[1] == 0 && version[2] < 0) || (version[0] >= 4)) {
+    throw new Error('CAST Figuration\'s JavaScript requires at least jQuery v3.0.0 but less than v4.0.0');
   }
 })(jQuery);
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): util.js
+ * Figuration (v3.0.0-beta.2): util.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -287,6 +287,37 @@ if (typeof jQuery === 'undefined') {
         }
     };
 
+    $.fn.CFW_getScrollbarSide = function() {
+        // Unable to detect side when 0-width scrollbars (such as mobile)
+        // are found.  So we use 'right` side as default (more common case).
+
+        // Hacky support for IE/Edge and their placment of scrollbar on window
+        // for 'rtl' mode.
+        var $node = $(this);
+
+        if ($node.is($('html'))) {
+            var browser = {
+                msedge: /edge\/\d+/i.test(navigator.userAgent),
+                msie: /(msie|trident)/i.test(navigator.userAgent)
+            };
+            var directionVal = window.getComputedStyle($node[0], null).getPropertyValue('direction').toLowerCase();
+            if ((directionVal === 'rtl') && (browser.msedge || browser.msie)) {
+                return 'left';
+            }
+            return 'right';
+        } else {
+            var scrollDiv = document.createElement('div');
+            scrollDiv.setAttribute('style', 'overflow-y: scroll;');
+            var scrollP = document.createElement('p');
+            $(scrollDiv).append(scrollP);
+            $node.append(scrollDiv);
+            var scrollWidth = $.CFW_measureScrollbar();
+            var posLeft = scrollP.getBoundingClientRect().left;
+            $node[0].removeChild(scrollDiv);
+            return (posLeft < scrollWidth) ? 'right' : 'left';
+        }
+    };
+
     $.CFW_throttle = function(fn, threshhold, scope) {
         /* From: http://remysharp.com/2010/07/21/throttling-function-calls/ */
         if (threshhold === undefined) { threshhold = 250; }
@@ -325,7 +356,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): drag.js
+ * Figuration (v3.0.0-beta.2): drag.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -510,7 +541,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): collapse.js
+ * Figuration (v3.0.0-beta.2): collapse.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -540,6 +571,7 @@ if (typeof jQuery === 'undefined') {
     CFW_Widget_Collapse.prototype = {
 
         _init : function() {
+            var $selfRef = this;
             var selector = this.$element.CFW_getSelectorFromChain('collapse', this.settings.target);
             if (!selector) { return; }
             this.$target = $(selector);
@@ -556,12 +588,6 @@ if (typeof jQuery === 'undefined') {
             // Check for presence of trigger id - set if not present
             // var triggerID = this.$element.CFW_getID('cfw-collapse');
 
-            // Add collpase class(es)
-            this.$target.addClass('collapse');
-            if (this.settings.horizontal) {
-                this.$target.addClass('width');
-            }
-
             // A button can control multiple boxes so we need to id each on box individually
             var targetList = '';
 
@@ -576,9 +602,17 @@ if (typeof jQuery === 'undefined') {
             var dimension = this.dimension();
             if (this.$triggers.hasClass('open')) {
                 this.$triggers.attr('aria-expanded', 'true');
-                this.$target.addClass('collapse in')[dimension]('');
+                this.$target.each(function() {
+                    var flexClass = $selfRef._isFlex(this) ? 'in-flex' : 'in';
+                    $(this).addClass('collapse ' + flexClass)[dimension]('');
+                });
             } else {
                 this.$triggers.attr('aria-expanded', 'false');
+                this.$target.addClass('collapse');
+            }
+
+            if (this.settings.horizontal) {
+                this.$target.addClass('width');
             }
 
             // Bind click handler
@@ -756,7 +790,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): dropdown.js
+ * Figuration (v3.0.0-beta.2): dropdown.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -867,8 +901,8 @@ if (typeof jQuery === 'undefined') {
             if (this.settings.backlink && this.settings.backtop) {
                 var $backTop = $('<li class="' + this.c.backLink + '"><a href="#">' + this.settings.backtext + '</a></li>')
                     .prependTo(this.$target);
-                if (this.$target.hasClass('dropdown-menu-left')) {
-                    $backTop.addClass('dropdown-back-left');
+                if (this.$target.hasClass('dropdown-menu-reverse')) {
+                    $backTop.addClass('dropdown-back-reverse');
                 }
             }
 
@@ -879,18 +913,18 @@ if (typeof jQuery === 'undefined') {
                 var subLinkID = $subLink.CFW_getID('cfw-dropdown');
                 // var subMenuID = $subMenu.CFW_getID('cfw-dropdown');
 
-                var $dirNode = $subMenu.closest('.dropdown-menu-left, .dropdown-menu-right');
-                if ($dirNode.hasClass('dropdown-menu-left')) {
-                    $subMenu.closest('li').addClass('dropdown-subalign-left');
+                var $dirNode = $subMenu.closest('.dropdown-menu-reverse, .dropdown-menu-forward');
+                if ($dirNode.hasClass('dropdown-menu-reverse')) {
+                    $subMenu.closest('li').addClass('dropdown-subalign-reverse');
                 } else {
-                    $subMenu.closest('li').addClass('dropdown-subalign-right');
+                    $subMenu.closest('li').addClass('dropdown-subalign-forward');
                 }
 
                 if ($selfRef.settings.backlink) {
                     var $backElm = $('<li class="' + $selfRef.c.backLink + '"><a href="#">' + $selfRef.settings.backtext + '</a></li>')
                         .prependTo($subMenu);
-                    if ($dirNode.hasClass('dropdown-menu-left')) {
-                        $backElm.addClass('dropdown-back-left');
+                    if ($dirNode.hasClass('dropdown-menu-reverse')) {
+                        $backElm.addClass('dropdown-back-reverse');
                     }
                 }
 
@@ -1337,24 +1371,8 @@ if (typeof jQuery === 'undefined') {
         }
     };
 
-    /*
-    $.fn.redraw = function(){
-        $(this).each(function(){
-            var redraw = this.offsetHeight;
-        });
-    };
-    */
-    // Force [lte IE 10] to redraw to correct layout
-    // Also force Edge reflow - using bad UA test and method
-    // TODO: Need to revisit this to find better options
-    // Note: Parent element must be visible in order to redraw
     $.fn.redraw = function() {
-        // if ((document.documentMode || 100) <= 10) {
-        if (document.documentMode !== undefined){
-            return this.hide(0, function() {$(this).show(); $(this).css('display', ''); });
-        } else if (/Edge\/\d+/.test(navigator.userAgent)) {
-            $(this).css('list-style', 'none').css('list-style', '');
-        }
+        return this.offsetHeight;
     };
 
     function Plugin(option) {
@@ -1385,7 +1403,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): tab.js
+ * Figuration (v3.0.0-beta.2): tab.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -1501,6 +1519,9 @@ if (typeof jQuery === 'undefined') {
                 e.preventDefault();
             }
 
+            var inTransition = this.$navElm.data('cfw.tab.inTransition');
+            if (inTransition) { return; }
+
             if (this.$element.hasClass('active')
                 || this.$element.hasClass('disabled')
                 || this.$element[0].hasAttribute('disabled')) {
@@ -1517,6 +1538,8 @@ if (typeof jQuery === 'undefined') {
             if (!this.$element.CFW_trigger('beforeShow.cfw.tab', { relatedTarget: $previous[0] })) {
                 return;
             }
+
+            this.$navElm.data('cfw.tab.inTransition', true);
 
             if ($previous.length) {
                 $previous.attr({
@@ -1594,6 +1617,7 @@ if (typeof jQuery === 'undefined') {
                     $selfRef.$element.CFW_trigger('afterShow.cfw.tab', { relatedTarget: $previous[0] });
                     $node.CFW_mutateTrigger();
                     $prevActive.CFW_mutateTrigger();
+                    $selfRef.$navElm.removeData('cfw.tab.inTransition');
                 }
             }
 
@@ -1638,7 +1662,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): affix.js
+ * Figuration (v3.0.0-beta.2): affix.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -1798,7 +1822,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): tooltip.js
+ * Figuration (v3.0.0-beta.2): tooltip.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -1812,7 +1836,7 @@ if (typeof jQuery === 'undefined') {
 
     CFW_Widget_Tooltip.DEFAULTS = {
         target          : false,            // Target selector
-        placement       : 'top',            // Where to locate tooltip (top/bottom/left/right/auto)
+        placement       : 'top',            // Where to locate tooltip (top/bottom/reverse(left))/forward(right)/auto)
         trigger         : 'hover focus',    // How tooltip is triggered (click/hover/focus/manual)
         animate         : true,             // Should the tooltip fade in and out
         delay : {
@@ -1943,7 +1967,7 @@ if (typeof jQuery === 'undefined') {
                 }
             }
 
-            $tip.removeClass('fade in top bottom left right');
+            $tip.removeClass('fade in top bottom reverse forward');
         },
 
         linkTip : function() {
@@ -2026,6 +2050,8 @@ if (typeof jQuery === 'undefined') {
 
         toggle : function(e) {
             if (e) {
+                e.preventDefault();
+
                 this.inState.click = !this.inState.click;
                 this.follow = true;
 
@@ -2364,12 +2390,13 @@ if (typeof jQuery === 'undefined') {
         locateTip : function() {
             var $tip = this.$target;
 
-            $tip.removeClass('top left bottom right')
+            $tip.removeClass('top reverse bottom forward')
                 .css({ top: 0, left: 0, display: 'block' });
 
             var placement = typeof this.settings.placement == 'function' ?
                 this.settings.placement.call(this, this.$target[0], this.$element[0]) :
                 this.settings.placement;
+            var directionVal = window.getComputedStyle($('html')[0], null).getPropertyValue('direction').toLowerCase();
 
             this._insertTip(placement);
 
@@ -2396,17 +2423,26 @@ if (typeof jQuery === 'undefined') {
 
                 var viewportDim = this.getViewportBounds();
 
-                placement = placement == 'bottom' && pos.bottom + actualHeight > viewportDim.bottom ? 'top'    :
-                            placement == 'top'    && pos.top    - actualHeight < viewportDim.top    ? 'bottom' :
-                            placement == 'right'  && pos.right  + actualWidth  > viewportDim.width  ? 'left'   :
-                            placement == 'left'   && pos.left   - actualWidth  < viewportDim.left   ? 'right'  :
-                            placement;
+                if (directionVal === 'rtl') {
+                    placement = placement == 'bottom'  && pos.bottom + actualHeight > viewportDim.bottom ? 'top'     :
+                                placement == 'top'     && pos.top    - actualHeight < viewportDim.top    ? 'bottom'  :
+                                placement == 'reverse' && pos.left   - actualWidth  > viewportDim.left   ? 'forward' :
+                                placement == 'forward' && pos.right  + actualWidth  < viewportDim.width  ? 'reverse' :
+                                placement;
+
+                } else {
+                    placement = placement == 'bottom'  && pos.bottom + actualHeight > viewportDim.bottom ? 'top'     :
+                                placement == 'top'     && pos.top    - actualHeight < viewportDim.top    ? 'bottom'  :
+                                placement == 'forward' && pos.right  + actualWidth  > viewportDim.width  ? 'reverse' :
+                                placement == 'reverse' && pos.left   - actualWidth  < viewportDim.left   ? 'forward' :
+                                placement;
+                }
 
                 $tip.removeClass(orgPlacement)
                     .addClass(placement);
             }
 
-            var calculatedOffset = this._getCalculatedOffset(placement, pos, actualWidth, actualHeight);
+            var calculatedOffset = this._getCalculatedOffset(placement, pos, actualWidth, actualHeight, directionVal);
 
             this._applyPlacement(calculatedOffset, placement);
         },
@@ -2535,11 +2571,19 @@ if (typeof jQuery === 'undefined') {
             return $.extend({}, elRect, scroll, outerDims, elOffset);
         },
 
-        _getCalculatedOffset : function(placement, pos, actualWidth, actualHeight) {
-            return placement == 'bottom' ? { top: pos.top + pos.height,   left: pos.left + pos.width / 2 - actualWidth / 2 } :
-                   placement == 'top'    ? { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2 } :
-                   placement == 'left'   ? { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth } :
-                /* placement == 'right' */ { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width };
+        _getCalculatedOffset : function(placement, pos, actualWidth, actualHeight, directionVal) {
+            if (directionVal === 'rtl') {
+                return placement == 'bottom'   ? { top: pos.top + pos.height,   left: pos.left + pos.width / 2 - actualWidth / 2 }  :
+                       placement == 'top'      ? { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2 }  :
+                       placement == 'forward'  ? { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth } :
+                    /* placement == 'reverse' */ { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width };
+            } else {
+                return placement == 'bottom'    ? { top: pos.top + pos.height,   left: pos.left + pos.width / 2 - actualWidth / 2 }  :
+                       placement == 'top'       ? { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2 }  :
+                       placement == 'reverse'   ? { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth } :
+                    /* placement == 'forward' */ { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width };
+            }
+
         },
 
         _applyPlacement : function(offset, placement) {
@@ -2620,7 +2664,7 @@ if (typeof jQuery === 'undefined') {
             var viewportPadding = this.settings.padding;
             var viewportDimensions = this.getViewportBounds();
 
-            if (/right|left/.test(placement)) {
+            if (/forward|reverse/.test(placement)) {
                 var topEdgeOffset    = pos.top - viewportPadding;
                 var bottomEdgeOffset = pos.top + viewportPadding + actualHeight;
 
@@ -2755,7 +2799,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): popover.js
+ * Figuration (v3.0.0-beta.2): popover.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -2775,7 +2819,7 @@ if (typeof jQuery === 'undefined') {
     };
 
     CFW_Widget_Popover.DEFAULTS = $.extend({}, $.fn.CFW_Tooltip.Constructor.DEFAULTS, {
-        placement   : 'top',        // Where to locate popover (top/bottom/left/right/auto)
+        placement   : 'top',        // Where to locate popover (top/bottom/reverse(left)/forward(right)/auto)
         trigger     : 'click',      // How popover is triggered (click/hover/focus/manual)
         content     : '',           // Content text/html to be inserted
         drag        : false,        // If the popover should be draggable
@@ -2843,7 +2887,7 @@ if (typeof jQuery === 'undefined') {
             this.enableDrag();
         }
 
-        $tip.removeClass('fade in top bottom left right');
+        $tip.removeClass('fade in top bottom reverse forward');
 
         if (!$title.html()) { $title.hide(); }
 
@@ -3033,7 +3077,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): modal.js
+ * Figuration (v3.0.0-beta.2): modal.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3050,6 +3094,7 @@ if (typeof jQuery === 'undefined') {
         this.$focusLast = null;
         this.isShown = null;
         this.scrollbarWidth = 0;
+        this.scrollbarSide = 'right';
         this.fixedContent = '.fixed-top, .fixed-botton, .is-fixed';
         this.ignoreBackdropClick = false;
 
@@ -3329,6 +3374,7 @@ if (typeof jQuery === 'undefined') {
         checkScrollbar : function() {
             this.bodyIsOverflowing = document.body.clientWidth < window.innerWidth;
             this.scrollbarWidth = $.CFW_measureScrollbar();
+            this.scrollbarSide =  $('html').CFW_getScrollbarSide();
         },
 
         setScrollbar : function() {
@@ -3338,44 +3384,45 @@ if (typeof jQuery === 'undefined') {
                 // Update fixed element padding
                 $(this.fixedContent).each(function() {
                     var $this = $(this);
-                    $this.data('cfw.padding-right', this.style.paddingRight || '');
-                    var padding = parseFloat($this.css('padding-right') || 0);
-                    $this.css('padding-right', padding + $selfRef.scrollbarWidth);
+                    if ($selfRef.scrollbarSide === 'left') {
+                        $this.data('cfw.padding-dim', this.style.paddingLeft || '');
+                    } else {
+                        $this.data('cfw.padding-dim', this.style.paddingRight || '');
+                    }
+                    var padding = parseFloat($this.css('padding-' + $selfRef.scrollbarSide) || 0);
+                    $this.css('padding-' + $selfRef.scrollbarSide, padding + $selfRef.scrollbarWidth);
                 });
 
                 // Update body padding
-                this.$body.data('cfw.padding-right', document.body.style.paddingRight || '');
-                var padding = parseFloat(this.$body.css('padding-right') || 0);
-                this.$body.css('padding-right', padding + this.scrollbarWidth);
+                if (this.scrollbarSide === 'left') {
+                    this.$body.data('cfw.padding-dim', document.body.style.paddingLeft || '');
+                } else {
+                    this.$body.data('cfw.padding-dim', document.body.style.paddingRight || '');
+                }
+                var padding = parseFloat(this.$body.css('padding-' + this.scrollbarSide) || 0);
+                this.$body.css('padding-' + this.scrollbarSide, padding + this.scrollbarWidth);
             }
             this.$target.CFW_trigger('scrollbarSet.cfw.modal');
         },
 
         resetScrollbar : function() {
+            var $selfRef = this;
+
             // Restore fixed element padding
             $(this.fixedContent).each(function() {
                 var $this = $(this);
-                var padding = $this.data('cfw.padding-right');
-                $this.css('padding-right', padding);
-                $this.removeData('cfw.padding-right');
+                var padding = $this.data('cfw.padding-dim');
+                $this.css('padding-' + $selfRef.scrollbarSide, padding);
+                $this.removeData('cfw.padding-dim');
             });
 
             // Restore body padding
-            var padding = this.$body.data('cfw.padding-right');
+            var padding = this.$body.data('cfw.padding-dim');
             if (typeof padding !== undefined) {
-                this.$body.css('padding-right', padding);
-                this.$body.removeData('cfw.padding-right');
+                this.$body.css('padding-' + this.scrollbarSide, padding);
+                this.$body.removeData('cfw.padding-dim');
             }
-        },
-
-        measureScrollbar : function() {
-            var $body = $(document.body);
-            var scrollDiv = document.createElement('div');
-            scrollDiv.className = 'modal-scrollbar-measure';
-            $body.append(scrollDiv);
-            var scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
-            $body[0].removeChild(scrollDiv);
-            return scrollbarWidth;
+            this.$target.CFW_trigger('scrollbarReset.cfw.modal');
         },
 
         backdrop : function(callback) {
@@ -3456,6 +3503,7 @@ if (typeof jQuery === 'undefined') {
             this.$focusLast = null;
             this.isShown = null;
             this.scrollbarWidth = null;
+            this.scrollbarSide = null;
             this.fixedContent = null;
             this.ignoreBackdropClick = null;
             this.settings = null;
@@ -3499,7 +3547,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): accordion.js
+ * Figuration (v3.0.0-beta.2): accordion.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3576,7 +3624,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): tab-responsive.js
+ * Figuration (v3.0.0-beta.2): tab-responsive.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3711,7 +3759,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): slideshow.js
+ * Figuration (v3.0.0-beta.2): slideshow.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3721,13 +3769,19 @@ if (typeof jQuery === 'undefined') {
 
     if (!$.fn.CFW_Tab) throw new Error('CFW_Slideshow requires CFW_Tab');
 
-    var CFW_Widget_Slideshow = function(element) {
+    var CFW_Widget_Slideshow = function(element, options) {
         this.$element = $(element);
         this.$navPrev = this.$element.find('[data-cfw-slideshow-nav="prev"]');
         this.$navNext = this.$element.find('[data-cfw-slideshow-nav="next"]');
-        this.currIndex = 0;
+
+        var parsedData = this.$element.CFW_parseData('slideshow', CFW_Widget_Slideshow.DEFAULTS);
+        this.settings = $.extend({}, CFW_Widget_Slideshow.DEFAULTS, parsedData, options);
 
         this._init();
+    };
+
+    CFW_Widget_Slideshow.DEFAULTS = {
+        loop : false
     };
 
     CFW_Widget_Slideshow.prototype = {
@@ -3736,7 +3790,9 @@ if (typeof jQuery === 'undefined') {
 
             this.$element.attr('data-cfw', 'slideshow');
 
-            if (!this._getTabs().length) { return; }
+            // All tabs - regardless of state
+            var $tabs = this.$element.find('[role="tab"]');
+            if (!$tabs.length) { return; }
 
             // Listen for tabs
             this.$element.on('afterShow.cfw.tab', function() {
@@ -3757,6 +3813,17 @@ if (typeof jQuery === 'undefined') {
                 }
             });
 
+            // If loop, replace keydown handler
+            if (this.settings.loop) {
+                $tabs
+                    .off('keydown.cfw.tab')
+                    .add(this.$navPrev)
+                    .add(this.$navNext)
+                    .on('keydown.cfw.slideshow', function(e) {
+                        $selfRef._actionsKeydown(e);
+                    });
+            }
+
             this.update();
 
             this.$element.CFW_trigger('init.cfw.slideshow');
@@ -3769,6 +3836,10 @@ if (typeof jQuery === 'undefined') {
                 this.$element.CFW_trigger('prev.cfw.slideshow');
                 $tabs.eq(currIndex - 1).CFW_Tab('show');
             }
+            if (this.settings.loop && currIndex === 0) {
+                this.$element.CFW_trigger('prev.cfw.slideshow');
+                $tabs.eq($tabs.length - 1).CFW_Tab('show');
+            }
         },
 
         next : function() {
@@ -3778,6 +3849,10 @@ if (typeof jQuery === 'undefined') {
                 this.$element.CFW_trigger('next.cfw.slideshow');
                 $tabs.eq(currIndex + 1).CFW_Tab('show');
             }
+            if (this.settings.loop && currIndex == ($tabs.length - 1)) {
+                this.$element.CFW_trigger('prev.cfw.slideshow');
+                $tabs.eq(0).CFW_Tab('show');
+            }
         },
 
         update : function() {
@@ -3786,10 +3861,10 @@ if (typeof jQuery === 'undefined') {
 
             var $tabs = this._getTabs();
             var currIndex = this._currIndex($tabs);
-            if (currIndex <= 0) {
+            if (currIndex <= 0 && !this.settings.loop) {
                 this.$navPrev.addClass('disabled');
             }
-            if (currIndex >= $tabs.length - 1) {
+            if (currIndex >= $tabs.length - 1 && !this.settings.loop) {
                 this.$navNext.addClass('disabled');
             }
             this.$element.CFW_trigger('update.cfw.slideshow');
@@ -3804,7 +3879,42 @@ if (typeof jQuery === 'undefined') {
             return $tabs.index($node);
         },
 
+        _actionsKeydown : function(e) {
+            // 37-left, 38-up, 39-right, 40-down
+            var k = e.which;
+            if (!/(37|38|39|40)/.test(k)) { return; }
+
+            e.stopPropagation();
+            e.preventDefault();
+
+            var $tabs = this._getTabs();
+            var index = this._currIndex($tabs);
+
+            if ((k == 38 || k == 37)) { // up & left
+                if (index > 0) {
+                    index--;
+                } else if (index === 0) {
+                    index = $tabs.length - 1;
+                }
+            }
+            if ((k == 39 || k == 40)) { // down & right
+                if (index < $tabs.length - 1) {
+                    index++;
+                } else if (index == $tabs.length - 1) {
+                    index = 0;
+                }
+            }
+            if (!~index) { index = 0; }  // force first item
+
+            var nextTab = $tabs.eq(index);
+            nextTab.CFW_Tab('show').trigger('focus');
+        },
+
         dispose : function() {
+            if (this.settings.loop) {
+                var $tabs = this.$element.find('[role="tab"]');
+                $tabs.off('keydown.cfw.tab');
+            }
             this.$navPrev.off('.cfw.slideshow');
             this.$navNext.off('.cfw.slideshow');
             this.$element
@@ -3814,6 +3924,7 @@ if (typeof jQuery === 'undefined') {
             this.$element = null;
             this.$navPrev = null;
             this.$navNext = null;
+            this.settings = null;
         }
     };
 
@@ -3822,9 +3933,10 @@ if (typeof jQuery === 'undefined') {
         return this.each(function() {
             var $this = $(this);
             var data = $this.data('cfw.Slideshow');
+            var options = typeof option === 'object' && option;
 
             if (!data) {
-                $this.data('cfw.Slideshow', (data = new CFW_Widget_Slideshow(this)));
+                $this.data('cfw.Slideshow', (data = new CFW_Widget_Slideshow(this, options)));
             }
             if (typeof option === 'string') {
                 data[option].apply(data, args);
@@ -3839,7 +3951,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): scrollspy.js
+ * Figuration (v3.0.0-beta.2): scrollspy.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4017,7 +4129,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): alert.js
+ * Figuration (v3.0.0-beta.2): alert.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4144,7 +4256,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): button.js
+ * Figuration (v3.0.0-beta.2): button.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4287,7 +4399,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): lazy.js
+ * Figuration (v3.0.0-beta.2): lazy.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4480,7 +4592,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): slider.js
+ * Figuration (v3.0.0-beta.2): slider.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -5013,7 +5125,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): equalize.js
+ * Figuration (v3.0.0-beta.2): equalize.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -5276,7 +5388,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): player.js
+ * Figuration (v3.0.0-beta.2): player.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -5368,6 +5480,7 @@ if (typeof jQuery === 'undefined') {
         };
         this.trackValid = [];
         this.trackCurrent = -1;
+        this.$captionWrapper = null;
 
         this.$scriptElm = null;
         this.scriptCurrent = -1;
@@ -5592,10 +5705,17 @@ if (typeof jQuery === 'undefined') {
             this.volumeStatus();
             this.loopStatus();
 
-            this.trackList();
-            if (this.type == 'video') {
-                this.trackInit();
+
+            // Check for caption container {
+            var $captionWrapper =  this.$element.find('[data-cfw-player="caption-display"]');
+            if ($captionWrapper.length) {
+                this.$captionWrapper = $captionWrapper;
+                // Hide wrapper to start
+                this.captionDisplayUpdate(null);
             }
+
+            this.trackList();
+            this.trackInit();
             this.scriptInit();
 
             this.$player.addClass('ready');
@@ -6045,7 +6165,7 @@ if (typeof jQuery === 'undefined') {
                 });
 
                 if (this.media.textTracks[0].mode == 'showing') {
-                    $selfRef.trackSet(0);
+                    this.trackSet(0);
                 }
 
             } else {
@@ -6063,6 +6183,13 @@ if (typeof jQuery === 'undefined') {
                 $menu.append($menuItem);
 
                 var tracks = this.media.textTracks;
+
+                for (var j = 0; j < tracks.length; j++) {
+                    if (tracks[j].mode == 'showing') {
+                        this.trackSet(j);
+                    }
+                }
+
                 for (var i = 0; i < this.trackValid.length; i++) {
                     var trackID = this.trackValid[i];
                     $menuItem = $('<li><button type="button" class="dropdown-item" data-cfw-player-track="' + trackID + '">' + tracks[trackID].label + '</button></li>');
@@ -6083,11 +6210,19 @@ if (typeof jQuery === 'undefined') {
         },
 
         trackSet : function(trackID) {
+            var $selfRef = this;
+
             trackID = parseInt(trackID, 10);
 
             var tracks = this.media.textTracks;
             if (tracks.length <= 0) {
                 return;
+            }
+
+            // Disable any previouse cuechange handling
+            if (this.trackCurrent !== -1) {
+                $(this.media.textTracks[this.trackCurrent]).off('cuechange.cfw.player.captionDisplay');
+                this.$media.off('timeupdate.cfw.player.captionDisplay');
             }
 
             this.trackCurrent = trackID;
@@ -6097,7 +6232,36 @@ if (typeof jQuery === 'undefined') {
                     tracks[i].mode = 'hidden';
                 }
                 if (i === trackID) {
-                    tracks[i].mode = 'showing';
+                    // tracks[i].mode = 'showing';
+                    tracks[i].mode = (this.$captionWrapper !== null) ? 'hidden' : 'showing';
+                }
+            }
+
+            // Hook in cuechange handler if using custom captions
+            if (this.trackCurrent !== -1 && this.$captionWrapper !== null) {
+                if (this.media.textTracks[this.trackCurrent].oncuechange !== undefined) {
+                    $(this.media.textTracks[this.trackCurrent])
+                        .on('cuechange.cfw.player.captionDisplay', function() {
+                            $selfRef.captionDisplayUpdate(this.activeCues);
+                        });
+                } else {
+                    // Firefox does not currently support oncuechange event
+                    this.$media
+                        .on('timeupdate.cfw.player.captionDisplay', function() {
+                            var activeCues = $selfRef.media.textTracks[$selfRef.trackCurrent].activeCues;
+                            $selfRef.captionDisplayUpdate(activeCues);
+                        });
+                }
+
+                // Artificially trigger a cuechange - in case already in middle of a cue
+                var cueEvent;
+                if (this.media.textTracks[this.trackCurrent].oncuechange !== undefined) {
+                    cueEvent = $.Event('cuechange');
+                    $(this.media.textTracks[this.trackCurrent]).trigger(cueEvent);
+                } else {
+                    // Firefox
+                    cueEvent = $.Event('timeupdate');
+                    this.$media.trigger(cueEvent);
                 }
             }
 
@@ -6134,13 +6298,12 @@ if (typeof jQuery === 'undefined') {
                     .removeAttr('aria-pressed');
 
                 for (var i = 0; i < tracks.length; i++) {
-                    if (tracks[i].mode == 'showing') {
+                    if (i == this.trackCurrent) {
                         $captionElm.addClass('active');
                         $captionPar.addClass('active');
                         $captionPar.find('[data-cfw-player-track="' + i + '"]')
                             .addClass('active')
                             .attr('aria-pressed', 'true');
-                        this.trackCurrent = i;
                     }
                 }
             }
@@ -6283,7 +6446,7 @@ if (typeof jQuery === 'undefined') {
                 }
             }
 
-            // Disable cuechange handling
+            // Disable any previous cuechange handling
             if (this.scriptCurrent !== -1) {
                 $(this.media.textTracks[this.scriptCurrent]).off('cuechange.cfw.player.transcript');
                 this.$media.off('timeupdate.cfw.player.transcript');
@@ -6384,46 +6547,10 @@ if (typeof jQuery === 'undefined') {
                 return;
             }
 
-            /* Borrowed from:
-             * http://ableplayer.github.io/ableplayer/
-             * https://github.com/ableplayer/ableplayer/blob/master/scripts/transcript.js
-             *
-             * Modified/simplified to handle *basic text string* cues in DOM object format
-             */
             var addCaption = function($div, cap) {
                 var $capSpan = $('<span class="player-transcript-seekpoint player-transcript-caption"></span>');
-
-                var flattenString = function(str) {
-                    var result = [];
-                    if (str === '') {
-                        return result;
-                    }
-                    var openBracket  = str.indexOf('[');
-                    var closeBracket = str.indexOf(']');
-                    var openParen    = str.indexOf('(');
-                    var closeParen   = str.indexOf(')');
-
-                    var hasBrackets = openBracket !== -1 && closeBracket !== -1;
-                    var hasParens = openParen !== -1 && closeParen !== -1;
-
-                    if ((hasParens && hasBrackets && openBracket < openParen) || hasBrackets) {
-                        result = result.concat(flattenString(str.substring(0, openBracket)));
-                        result.push($('<span class="player-transcript-unspoken">' + str.substring(openBracket, closeBracket + 1) + '</span>'));
-                        result = result.concat(flattenString(str.substring(closeBracket + 1)));
-                    } else if (hasParens) {
-                        result = result.concat(flattenString(str.substring(0, openParen)));
-                        result.push($('<span class="player-transcript-unspoken">' + str.substring(openParen, closeParen + 1) + '</span>'));
-                        result = result.concat(flattenString(str.substring(closeParen + 1)));
-                    } else {
-                        result.push(str);
-                    }
-
-
-
-                    return result;
-                };
-
-                $capSpan.append(flattenString(cap.text));
+                var capHTML = cap.getCueAsHTML();
+                $capSpan.append(capHTML);
                 $capSpan.attr({
                     'data-start' : cap.startTime.toString(),
                     'data-end'   : cap.endTime.toString()
@@ -6437,7 +6564,8 @@ if (typeof jQuery === 'undefined') {
                 $descDiv.append('<span class="sr-only">Description: </span>');
 
                 var $descSpan = $('<span class="player-description-seekpoint player-description-caption"></span>');
-                $descSpan.append(desc.text);
+                var descHTML = desc.getCueAsHTML();
+                $descSpan.append(descHTML);
                 $descSpan.attr({
                     'data-start' : desc.startTime.toString(),
                     'data-end'   : desc.endTime.toString()
@@ -6466,6 +6594,9 @@ if (typeof jQuery === 'undefined') {
                         .attr('aria-pressed', 'true');
                 }
             }
+
+            // Remove any existing transcript container
+            this.$element.find('.player-transcript').remove();
 
             // Insert transcript container
             var $newElm = $('<div class="player-transcript"></div>');
@@ -6510,16 +6641,15 @@ if (typeof jQuery === 'undefined') {
             // Hook in cuechange handler
             if (this.media.textTracks[this.scriptCurrent].oncuechange !== undefined) {
                 $(this.media.textTracks[this.scriptCurrent])
-                    .off('cuechange.cfw.player.transcript')
                     .on('cuechange.cfw.player.transcript', function() {
                         $selfRef.scriptHighlight(this.activeCues);
                     });
             } else {
                 // Firefox does not currently support oncuechange event
                 this.$media
-                    .off('timeupdate.cfw.player.transcript')
                     .on('timeupdate.cfw.player.transcript', function() {
-                        $selfRef.scriptHighlight($selfRef.media.textTracks[$selfRef.scriptCurrent].activeCues);
+                        var activeCues = $selfRef.media.textTracks[$selfRef.scriptCurrent].activeCues;
+                        $selfRef.scriptHighlight(activeCues);
                     });
             }
 
@@ -6622,6 +6752,28 @@ if (typeof jQuery === 'undefined') {
                     });
                     this.$element.addClass('player-inactive');
                 }
+            }
+        },
+
+        captionDisplayUpdate : function(activeCues) {
+            if (this.$captionWrapper == null) { return; }
+
+            if (this.trackCurrent === -1 || activeCues === null || activeCues.length <= 0) {
+                // Clear and hide caption area - nothing to show
+                this.$captionWrapper
+                    .attr('aria-hidden', 'true')
+                    .css('display', 'none')
+                    .empty();
+            } else {
+                // Show caption area and update caption
+                var $tmp = $(document.createElement('div'));
+                $tmp.append(activeCues[0].getCueAsHTML());
+
+                var cueHTML = $tmp.html().replace('\n', '<br>');
+                this.$captionWrapper
+                    .removeAttr('aria-hidden')
+                    .css('display', '')
+                    .append(cueHTML);
             }
         },
 
@@ -6805,6 +6957,7 @@ if (typeof jQuery === 'undefined') {
             this.support = null;
             this.trackValid = null;
             this.trackCurrent = null;
+            this.$captionWrapper = null;
             this.$scriptElm = null;
             this.scriptCurrent = null;
             this.scriptCues = null;
@@ -6836,7 +6989,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v3.0.0-beta.1): common.js
+ * Figuration (v3.0.0-beta.2): common.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -6847,6 +7000,7 @@ if (typeof jQuery === 'undefined') {
     var cfwList = {
         '[data-cfw-dismisss="alert"]': 'CFW_Alert',
         '[data-cfw="button"]': 'CFW_Button',
+        '[data-cfw="buttons"]': 'CFW_Button',
         '[data-cfw="collapse"]': 'CFW_Collapse',
         '[data-cfw="dropdown"]': 'CFW_Dropdown',
         '[data-cfw="tab"]': 'CFW_Tab',
