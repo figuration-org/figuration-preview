@@ -1,5 +1,5 @@
 /*!
- * Figuration (v3.0.0-beta.2)
+ * Figuration (v3.0.0)
  * http://figuration.org
  * Copyright 2013-2017 CAST, Inc.
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
@@ -196,6 +196,24 @@ function docsDirection() {
 
 }
 
+function previewModal() {
+    var modalHTML  = '<button class="btn d-none" data-cfw="modal" data-cfw-modal-target="#previewModal" id="previewNotice">Release notice</button>' +
+        '<div class="modal" id="previewModal"><div class="modal-dialog"><div class="modal-content">' +
+        '<div class="modal-header">' +
+        '    <button type="button" class="close" data-cfw-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
+        '    <h4 class="modal-title">Figuration v3.0.0 Released</h4>' +
+        '</div>' +
+        '<div class="modal-body">' +
+        '    <p>Go to the main <a href="http://figuration.org">Figuration site</a> for more details.</p>' +
+        '    <p>Preview docs will be taken offline soon.</p>' +
+        '</div>' +
+        '</div></div></div>';
+
+    $(document.body).prepend(modalHTML);
+    $('#previewNotice').CFW_Modal('show');
+
+}
+
 // Direction for player dropdown menus
 $(document, '[data-cfw="player"]').on('ready.cfw.player', function(e) {
     $(e.target).closest('[data-cfw="player"]').find('.player-caption-wrapper').addClass('dropup dropdown-menu-reverse');
@@ -209,6 +227,7 @@ $(window).ready(function() {
     paletteHex();
     sectionToc();
     docsDirection();
+    previewModal();
 
     // Indeterminate checkbox example
     $('.cf-example-indeterminate [type="checkbox"]').prop('indeterminate', true);
