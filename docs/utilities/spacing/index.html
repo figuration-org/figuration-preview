@@ -30,12 +30,12 @@
 
 
 <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/figuration-preview/assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/figuration-preview/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
 
 <!-- MutationObserver Polyfill -->
 
-  <script src="/figuration-preview/assets/js/MutationObserver.min.js"></script>
+  <script src="/figuration-preview/assets/js/vendor/MutationObserver.min.js"></script>
 
 
 <!-- Core JS -->
@@ -54,28 +54,24 @@
 <!-- IE emulation mode warning -->
 <script src="/figuration-preview/assets/js/ie-emulation-modes-warning.js"></script>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-9130143-15', 'auto');
-  ga('send', 'pageview');
-</script>
+
 
 </head>
 <body>
     <a class="skipnav" href="#content">Skip to main content</a>
 
-    <header class="navbar navbar-expand-lg navbar-dark print-hide cf-header">
+    <div class="v4-warning">
+    v4 is in Alpha! Not ready for Production!
+</div>
+<header class="navbar navbar-expand-lg navbar-dark print-hide cf-header">
     <a class="navbar-brand" href="/figuration-preview/" aria-label="CAST Figuration">
         <img src="/figuration-preview/assets/brand/figuration-outline.svg" class="navbar-brand-logo" alt="" />
         <span class="sr-only-xs-down">CAST Figuration</span>
     </a>
-    <button class="navbar-toggle flex-first mr-0_5" type="button" data-cfw="collapse" data-cfw-collapse-target="#cf-topnav" aria-label="Toggle navigation">
+    <button class="navbar-toggle flex-first me-0_5" type="button" data-cfw="collapse" data-cfw-collapse-target="#cf-topnav" aria-label="Toggle navigation">
         <span class="cf-header-menu" aria-hidden="true">&#8801;</span>
     </button>
-    <div class="navbar-collapse collapse flex-last flex-lg-unordered flex-lg-shrink text-nowrap" id="cf-topnav">
+    <div class="navbar-collapse collapse flex-last flex-lg-unordered text-nowrap" id="cf-topnav">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a href="/figuration-preview/get-started/quick-start/" class="nav-link ">Get Started</a>
@@ -98,7 +94,7 @@
         </ul>
     </div>
 
-    <ul class="navbar-nav ml-auto cf-header-social">
+    <ul class="navbar-nav ms-auto cf-header-social">
         <li class="nav-item">
             <a href="https://twitter.com/figuration_org" class="nav-link" aria-label="Twitter" title="Twitter">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" focusable="false"  class="cf-header-icon"  >
@@ -109,7 +105,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="https://github.com/cast-org/figuration" class="nav-link" aria-label="Github" title="GitHub">
+            <a href="https://github.com/cast-org/figuration/tree/v4-dev" class="nav-link" aria-label="Github" title="GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false"  class="cf-header-icon"  >
   <title>GitHub</title>
   <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.3 6.53 5.47 7.6.4.06.55-.18.55-.4v-1.48c-2.02.37-2.54-.5-2.7-.94-.1-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.62 0 1.07.58 1.22.82.72 1.2 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.77-.2-3.63-.9-3.63-3.95 0-.87.3-1.6.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.2 2.2.83.64-.18 1.32-.27 2-.27.68 0 1.36.1 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.93.08 2.13.5.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.3.25.54.73.54 1.48v2.2c0 .22.15.47.55.4C13.7 14.52 16 11.52 16 8c0-4.42-3.58-8-8-8z"/>
@@ -282,18 +278,6 @@
         
 
         <li class="nav-item">
-          <a href="/figuration-preview/utilities/image-replacement/" class="nav-link ">
-            Image Replacement 
-          </a>
-        </li>
-      
-        
-
-        
-        
-        
-
-        <li class="nav-item">
           <a href="/figuration-preview/utilities/position/" class="nav-link ">
             Position 
           </a>
@@ -308,6 +292,18 @@
         <li class="nav-item">
           <a href="/figuration-preview/utilities/screen-readers/" class="nav-link ">
             Screen Readers 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/utilities/shadows/" class="nav-link ">
+            Shadows 
           </a>
         </li>
       
@@ -399,7 +395,7 @@
 
                 <p>Assign <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are generated from a Sass map with values ranging from <code class="highlighter-rouge">0.25rem</code> to <code class="highlighter-rouge">2rem</code>.</p>
 
-<p>The classes are named using the format: <code class="highlighter-rouge"><span class="p">{</span><span class="err">property</span><span class="p">}{</span><span class="err">sides</span><span class="p">}{</span><span class="err">-breakpoint</span><span class="p">}</span><span class="err">-</span><span class="p">{</span><span class="err">size</span><span class="p">}</span></code>.</p>
+<p>The classes are named using the format: <code class="highlighter-rouge">{property}{sides}{-breakpoint}-{size}</code>.</p>
 
 <p>Where <em>property</em> is one of:</p>
 
@@ -416,10 +412,27 @@
   <li>blank - for classes that set a <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> on all 4 sides of the element</li>
   <li><code class="highlighter-rouge">t</code> - for classes that set <code class="highlighter-rouge">margin-top</code> or <code class="highlighter-rouge">padding-top</code></li>
   <li><code class="highlighter-rouge">b</code> - for classes that set <code class="highlighter-rouge">margin-bottom</code> or <code class="highlighter-rouge">padding-bottom</code></li>
-  <li><code class="highlighter-rouge">l</code> - for classes that set <code class="highlighter-rouge">margin-left</code> or <code class="highlighter-rouge">padding-left</code></li>
-  <li><code class="highlighter-rouge">r</code> - for classes that set <code class="highlighter-rouge">margin-right</code> or <code class="highlighter-rouge">padding-right</code></li>
+  <li><code class="highlighter-rouge">s</code> - for classes that set <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> on the <code class="highlighter-rouge">start</code> side</li>
+  <li><code class="highlighter-rouge">e</code> - for classes that set <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> on the <code class="highlighter-rouge">end</code> side</li>
   <li><code class="highlighter-rouge">x</code> - for classes that set both <code class="highlighter-rouge">*-left</code> and <code class="highlighter-rouge">*-right</code></li>
   <li><code class="highlighter-rouge">y</code> - for classes that set both <code class="highlighter-rouge">*-top</code> and <code class="highlighter-rouge">*-bottom</code></li>
+</ul>
+
+<p>The <em>start/end sides</em> are designated as follows depending on which version of the Figuration CSS you are using.  The default <code class="highlighter-rouge">figuration.*.css</code> uses the <code class="highlighter-rouge">ltr</code> mode, where <code class="highlighter-rouge">figuration-rtl.*.css</code> uses the <code class="highlighter-rouge">rtl</code> mode.</p>
+
+<ul>
+  <li>For <code class="highlighter-rouge">left-to-right</code> mode (<code class="highlighter-rouge">ltr</code> - default);
+    <ul>
+      <li><code class="highlighter-rouge">start</code> refers to the <code class="highlighter-rouge">left</code> side</li>
+      <li><code class="highlighter-rouge">end</code> refers to the <code class="highlighter-rouge">right</code> side</li>
+    </ul>
+  </li>
+  <li>For <code class="highlighter-rouge">right-to-left</code> mode (<code class="highlighter-rouge">rtl</code>);
+    <ul>
+      <li><code class="highlighter-rouge">start</code> refers to the <code class="highlighter-rouge">right</code> side</li>
+      <li><code class="highlighter-rouge">end</code> refers to the <code class="highlighter-rouge">left</code> side</li>
+    </ul>
+  </li>
 </ul>
 
 <p>Where <em>size</em> is one of:</p>
@@ -431,6 +444,7 @@
   <li><code class="highlighter-rouge">1</code> - for classes that set the property to <code class="highlighter-rouge">$spacer</code></li>
   <li><code class="highlighter-rouge">1_5</code> - for classes that set the property to <code class="highlighter-rouge">$spacer * 1.5</code></li>
   <li><code class="highlighter-rouge">2</code> - for classes that set the property to <code class="highlighter-rouge">$spacer * 2</code></li>
+  <li><code class="highlighter-rouge">auto</code> - for classes that set the <code class="highlighter-rouge">margin</code> to auto</li>
 </ul>
 
 <p>(You can add more sizes by adding entries to the <code class="highlighter-rouge">$spacers</code> Sass map variable.)</p>
@@ -441,7 +455,7 @@
   <span class="nl">margin-top</span><span class="p">:</span> <span class="m">0</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nc">.ml-1</span> <span class="p">{</span>
+<span class="nc">.ms-1</span> <span class="p">{</span>
   <span class="nl">margin-left</span><span class="p">:</span> <span class="nv">$spacer</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -483,7 +497,10 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 3.0.0-beta.2
+            Current version: 4.0.0-alpha.1
+        </p>
+        <p>
+            <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>
         </p>
         <ul class="footer-links d-inline-block d-sm-block mx-auto mx-sm-0">
             <li><a href="/figuration-preview/about/overview/">About</a></li>
@@ -492,23 +509,23 @@
             <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
         </ul>
         <p>
-            &copy; 2013-2017 <a href="http://www.cast.org">CAST, Inc.</a>
+            &copy; 2013-2018 <a href="http://www.cast.org/">CAST, Inc.</a>
             <br />
-            Portions: &copy; 2011-2017 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
+            Portions: &copy; 2011-2018 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
         <p>
-            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
-            docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.
+            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/tree/v4-dev/blob/master/LICENSE">MIT</a>,
+            docs <a rel="license" href="https://github.com/cast-org/figuration/tree/v4-dev/blob/master/docs/LICENSE">CC BY 4.0</a>.
         </p>
 
         <hr />
 
         <p class="font-weight-bold mb-0_25">Funding generously provided by:</p>
         <div class="media footer-partners">
-            <div class="d-flex mr-0_5">
+            <div class="d-flex me-0_5">
                 <img src="/figuration-preview/assets/img/aem-logo.png" class="media-object" width="40" height="40" alt="AEM logo" />
             </div>
             <div class="media-body">
-                <span class="h6 partner-title"><a href="http://aem.cast.org">National Center on Accessible Educational Materials at CAST, Inc.</a></span><br />
+                <span class="h6 partner-title"><a href="http://aem.cast.org/">National Center on Accessible Educational Materials at CAST, Inc.</a></span><br />
                 <small>Disclaimer: This does not necessarily represent endorsement by or the policies of the National Center on Accessible Educational Materials, the US Department of Education, and the US Federal Government.</small>
             </div>
         </div>

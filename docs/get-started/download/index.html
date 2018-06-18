@@ -30,12 +30,12 @@
 
 
 <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/figuration-preview/assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/figuration-preview/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
 
 <!-- MutationObserver Polyfill -->
 
-  <script src="/figuration-preview/assets/js/MutationObserver.min.js"></script>
+  <script src="/figuration-preview/assets/js/vendor/MutationObserver.min.js"></script>
 
 
 <!-- Core JS -->
@@ -54,28 +54,24 @@
 <!-- IE emulation mode warning -->
 <script src="/figuration-preview/assets/js/ie-emulation-modes-warning.js"></script>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-9130143-15', 'auto');
-  ga('send', 'pageview');
-</script>
+
 
 </head>
 <body>
     <a class="skipnav" href="#content">Skip to main content</a>
 
-    <header class="navbar navbar-expand-lg navbar-dark print-hide cf-header">
+    <div class="v4-warning">
+    v4 is in Alpha! Not ready for Production!
+</div>
+<header class="navbar navbar-expand-lg navbar-dark print-hide cf-header">
     <a class="navbar-brand" href="/figuration-preview/" aria-label="CAST Figuration">
         <img src="/figuration-preview/assets/brand/figuration-outline.svg" class="navbar-brand-logo" alt="" />
         <span class="sr-only-xs-down">CAST Figuration</span>
     </a>
-    <button class="navbar-toggle flex-first mr-0_5" type="button" data-cfw="collapse" data-cfw-collapse-target="#cf-topnav" aria-label="Toggle navigation">
+    <button class="navbar-toggle flex-first me-0_5" type="button" data-cfw="collapse" data-cfw-collapse-target="#cf-topnav" aria-label="Toggle navigation">
         <span class="cf-header-menu" aria-hidden="true">&#8801;</span>
     </button>
-    <div class="navbar-collapse collapse flex-last flex-lg-unordered flex-lg-shrink text-nowrap" id="cf-topnav">
+    <div class="navbar-collapse collapse flex-last flex-lg-unordered text-nowrap" id="cf-topnav">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a href="/figuration-preview/get-started/quick-start/" class="nav-link active">Get Started <span class="sr-only">(current section)</span></a>
@@ -98,7 +94,7 @@
         </ul>
     </div>
 
-    <ul class="navbar-nav ml-auto cf-header-social">
+    <ul class="navbar-nav ms-auto cf-header-social">
         <li class="nav-item">
             <a href="https://twitter.com/figuration_org" class="nav-link" aria-label="Twitter" title="Twitter">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" focusable="false"  class="cf-header-icon"  >
@@ -109,7 +105,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="https://github.com/cast-org/figuration" class="nav-link" aria-label="Github" title="GitHub">
+            <a href="https://github.com/cast-org/figuration/tree/v4-dev" class="nav-link" aria-label="Github" title="GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false"  class="cf-header-icon"  >
   <title>GitHub</title>
   <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.3 6.53 5.47 7.6.4.06.55-.18.55-.4v-1.48c-2.02.37-2.54-.5-2.7-.94-.1-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.62 0 1.07.58 1.22.82.72 1.2 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.77-.2-3.63-.9-3.63-3.95 0-.87.3-1.6.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.2 2.2.83.64-.18 1.32-.27 2-.27.68 0 1.36.1 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.93.08 2.13.5.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.3.25.54.73.54 1.48v2.2c0 .22.15.47.55.4C13.7 14.52 16 11.52 16 8c0-4.42-3.58-8-8-8z"/>
@@ -289,7 +285,7 @@
                     
                 </h1>
 
-                <p><strong>Figuration v3.0.0-beta.2</strong> is available for download in several ways. Choose from the options below get what you need.</p>
+                <p><strong>Figuration v4.0.0-alpha.1</strong> is available for download in several ways. Choose from the options below get what you need.</p>
 
 <h2 class="no_toc" id="contents">Contents</h2>
 
@@ -313,27 +309,27 @@
   <div class="row mt-2" data-cfw="equalize" data-cfw-equalize-target=".card-footer">
     <div class="col-sm-6">
       <div class="card card-download">
-        <h3 class="h4 card-header card-inverse" style="background-color: #246;">Compiled</h3>
+        <h3 class="h4 card-header text-light" style="background-color: #246;">Compiled</h3>
         <div class="card-body">
 
 <p>Download just the compiled and minified CSS and JavaScript. Doesn’t include any documentation or original source files.</p>
 
         </div>
         <div class="card-footer text-sm-center">
-<a href="https://github.com/cast-org/figuration/releases/download/v3.0.0-beta.2/figuration-v3.0.0-beta.2-dist.zip" class="btn btn-info" onclick="ga('send', 'event', 'Get Started', 'Download', 'Download compiled 3.0.0-beta.2');">Download Figuration</a>
+<a href="https://github.com/cast-org/figuration/releases/download/v4.0.0-alpha.1/figuration-4.0.0-alpha.1-dist.zip" class="btn btn-info" onclick="ga('send', 'event', 'Get Started', 'Download', 'Download compiled 4.0.0-alpha.1');">Download Figuration</a>
         </div> <!-- /.card-footer -->
       </div> <!-- /.card -->
     </div>
     <div class="col-sm-6">
       <div class="card card-download">
-        <h3 class="h4 card-header card-inverse" style="background-color: #246;">Source Files</h3>
+        <h3 class="h4 card-header text-light" style="background-color: #246;">Source Files</h3>
         <div class="card-body">
 
 <p>Download everything: source Sass, JavaScript, and documentation files. <strong>Requires a Sass compiler, <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>, <a href="https://github.com/luisrudge/postcss-flexbugs-fixes">postcss-flexbugs-fixes</a>, and <a href="/figuration-preview/get-started/build-tools/#tooling-setup">some setup</a>.</strong></p>
 
         </div>
         <div class="card-footer text-sm-center">
-<a href="https://github.com/cast-org/figuration/archive/v3.0.0-beta.2.zip" class="btn" onclick="ga('send', 'event', 'Get Started', 'Download', 'Download source 3.0.0-beta.2');">Download source</a>
+<a href="https://github.com/cast-org/figuration/archive/v4.0.0-alpha.1.zip" class="btn" onclick="ga('send', 'event', 'Get Started', 'Download', 'Download source 4.0.0-alpha.1');">Download source</a>
         </div> <!-- /.card-footer -->
       </div> <!-- /.card -->
     </div>  <!-- /.col -->
@@ -346,15 +342,25 @@
 
 <h3 id="npm">npm</h3>
 
-<p>Install Figuration in your Node powered apps with <a href="https://www.npmjs.com/package/figuration">the npm package</a>:</p>
+<p>Install Figuration in your Node.js powered apps with <a href="https://www.npmjs.com/package/figuration">the npm package</a>:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install figuration@3.0.0-beta.2</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm <span class="nb">install </span>figuration@4.0.0-alpha.1</code></pre></figure>
 
 <h3 id="yarn">Yarn</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">yarn add figuration@3.0.0-beta.2</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">yarn add figuration@4.0.0-alpha.1</code></pre></figure>
 
 <p>Within the download you’ll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You’ll see something like this:</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">figuration/
++-- dist/
+|   +-- css/
+|   +-- js/
++-- grunt/
++-- js/
++-- scss/</code></pre></figure>
+
+<p>Basically just the dist, along with the source <code class="highlighter-rouge">js</code> and <code class="highlighter-rouge">scss</code> files, and just enough to build the dist. If you need the docs and all the tests for local dev, then download the source version, or clone the <a href="https://github.com/cast-org/figuration/tree/v4-dev">Figuration repository from GitHub</a>.</p>
 
 <h2 id="whats-included">What’s Included</h2>
 
@@ -365,14 +371,15 @@
 <p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Figuration. You’ll see something like this:</p>
 
 <figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">figuration/
-+-- css/
-|   +-- figuration.css
-|   +-- figuration.css.map
-|   +-- figuration.min.css
-|   +-- figuration.min.css.map
-+-- js/
-    +-- figuration.js
-    +-- figuration.min.js</code></pre></figure>
++-- dist/
+    +-- css/
+    |   +-- figuration.css
+    |   +-- figuration.min.css
+    |   +-- figuration-rtl.css
+    |   +-- figuration-rtl.min.css
+    +-- js/
+        +-- figuration.js
+        +-- figuration.min.js</code></pre></figure>
 
 <p>This is the most basic form of Figuration: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JavaScript (<code class="highlighter-rouge">figuration.*</code>), as well as compiled and minified CSS and JavaScript (<code class="highlighter-rouge">figuration.min.*</code>). CSS <a href="https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps">source maps</a> (<code class="highlighter-rouge">figuration.*.map</code>) are available for use with certain browsers’ developer tools.</p>
 
@@ -385,10 +392,12 @@
 |   +-- css/
 |   +-- js/
 +-- docs/
++-- grunt/
 +-- js/
-+-- scss/</code></pre></figure>
++-- scss/
++-- test/</code></pre></figure>
 
-<p>The <code class="highlighter-rouge">scss/</code>, and <code class="highlighter-rouge">js/</code> folders are the source code for our CSS and JS (respectively). The <code class="highlighter-rouge">dist/</code> folder includes everything listed in the precompiled download section above. The <code class="highlighter-rouge">docs/</code> folder includes the source code for our documentation. Beyond that, any other included file provides support for packages, license information, and development.</p>
+<p>The <code class="highlighter-rouge">scss/</code>, and <code class="highlighter-rouge">js/</code> folders are the source code for our CSS and JavaScript (respectively). The <code class="highlighter-rouge">dist/</code> folder includes everything listed in the precompiled download section above. The <code class="highlighter-rouge">docs/</code> folder includes the source code for our documentation. Beyond that, any other included file provides support for packages, license information, and development.</p>
 
             </main>
         </div>
@@ -401,7 +410,10 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 3.0.0-beta.2
+            Current version: 4.0.0-alpha.1
+        </p>
+        <p>
+            <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>
         </p>
         <ul class="footer-links d-inline-block d-sm-block mx-auto mx-sm-0">
             <li><a href="/figuration-preview/about/overview/">About</a></li>
@@ -410,23 +422,23 @@
             <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
         </ul>
         <p>
-            &copy; 2013-2017 <a href="http://www.cast.org">CAST, Inc.</a>
+            &copy; 2013-2018 <a href="http://www.cast.org/">CAST, Inc.</a>
             <br />
-            Portions: &copy; 2011-2017 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
+            Portions: &copy; 2011-2018 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
         <p>
-            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
-            docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.
+            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/tree/v4-dev/blob/master/LICENSE">MIT</a>,
+            docs <a rel="license" href="https://github.com/cast-org/figuration/tree/v4-dev/blob/master/docs/LICENSE">CC BY 4.0</a>.
         </p>
 
         <hr />
 
         <p class="font-weight-bold mb-0_25">Funding generously provided by:</p>
         <div class="media footer-partners">
-            <div class="d-flex mr-0_5">
+            <div class="d-flex me-0_5">
                 <img src="/figuration-preview/assets/img/aem-logo.png" class="media-object" width="40" height="40" alt="AEM logo" />
             </div>
             <div class="media-body">
-                <span class="h6 partner-title"><a href="http://aem.cast.org">National Center on Accessible Educational Materials at CAST, Inc.</a></span><br />
+                <span class="h6 partner-title"><a href="http://aem.cast.org/">National Center on Accessible Educational Materials at CAST, Inc.</a></span><br />
                 <small>Disclaimer: This does not necessarily represent endorsement by or the policies of the National Center on Accessible Educational Materials, the US Department of Education, and the US Federal Government.</small>
             </div>
         </div>

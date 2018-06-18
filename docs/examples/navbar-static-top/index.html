@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../../dist/css/figuration.min.css">
 
 <!-- jQuery and Figuration JS -->
-<script src="../../assets/js/vendor/jquery.min.js"></script>
+<script src="../../assets/js/vendor/jquery.slim.min.js"></script>
 <script src="../../dist/js/figuration.min.js"></script>
 
 <style>
@@ -23,7 +23,7 @@ body {
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-inverse flex-between">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark flex-between">
     <a href="#" class="navbar-brand">Static Navbar</a>
     <button class="navbar-toggle collapsed" type="button" data-cfw="collapse" data-cfw-collapse-target="#navbarR3">
         <span aria-hidden="true">&#8801;</span>
@@ -41,7 +41,7 @@ body {
                 <a href="#" class="nav-link disabled">Disabled</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-cfw="dropdown">Dropdown</a>
+                <a class="nav-link" href="#" data-cfw="dropdown">Dropdown<span class="caret ms-0_25" aria-hidden="true"></span></a>
                 <div class="dropdown-menu">
                     <a href="#">Action</a>
                     <a href="#">Another action</a>
@@ -49,8 +49,8 @@ body {
                 </div>
             </li>
         </ul>
-        <form class="form-inline ml-auto">
-            <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search">
+        <form class="form-inline ms-auto">
+            <input class="form-control me-0_25" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-info" type="submit">Search</button>
         </form>
     </div>

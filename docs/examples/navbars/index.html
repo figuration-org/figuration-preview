@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../../dist/css/figuration.min.css">
 
 <!-- jQuery and Figuration JS -->
-<script src="../../assets/js/vendor/jquery.min.js"></script>
+<script src="../../assets/js/vendor/jquery.slim.min.js"></script>
 <script src="../../dist/js/figuration.min.js"></script>
 
 <style>
@@ -45,11 +45,11 @@
 
 <h2>Basic Navbars</h2>
 
-<nav class="navbar navbar-light bg-faded">
+<nav class="navbar navbar-light bg-light">
     <button class="navbar-toggle collapsed" type="button" data-cfw="collapse" data-cfw-collapse-target="#navbarB0">
         <span aria-hidden="true">&#8801;</span>
     </button>
-    <a href="#" class="navbar-brand ml-0_5">Basic</a>
+    <a href="#" class="navbar-brand ms-0_5">Basic</a>
 
     <div class="navbar-collapse collapse" id="navbarB0">
         <ul class="navbar-nav">
@@ -63,7 +63,7 @@
                 <a href="#" class="nav-link disabled">Disabled</a>
             </li>
             <li class="nav-item dropdown">
-                <a href="#" role="button" class="nav-link dropdown-toggle" data-cfw="dropdown">Dropdown</a>
+                <a href="#" role="button" class="nav-link" data-cfw="dropdown">Dropdown<span class="caret ms-0_25" aria-hidden="true"></span></a>
                 <div class="dropdown-menu">
                     <a href="#">Action</a>
                     <a href="#">Another action</a>
@@ -72,13 +72,13 @@
             </li>
         </ul>
         <form class="form-inline my-1 my-md-0">
-            <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search">
+            <input class="form-control me-0_25" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-primary" type="submit">Search</button>
         </form>
     </div>
 </nav>
 
-<nav class="navbar navbar-light bg-faded flex-between">
+<nav class="navbar navbar-light bg-light flex-between">
     <a href="#" class="navbar-brand">Basic</a>
     <button class="navbar-toggle collapsed" type="button" data-cfw="collapse" data-cfw-collapse-target="#navbarB1">
         <span aria-hidden="true">&#8801;</span>
@@ -96,7 +96,7 @@
                 <a href="#" class="nav-link disabled">Disabled</a>
             </li>
             <li class="nav-item dropdown">
-                <a href="#" role="button" class="nav-link dropdown-toggle" data-cfw="dropdown">Dropdown</a>
+                <a href="#" role="button" class="nav-link" data-cfw="dropdown">Dropdown<span class="caret ms-0_25" aria-hidden="true"></span></a>
                 <div class="dropdown-menu">
                     <a href="#">Action</a>
                     <a href="#">Another action</a>
@@ -105,7 +105,7 @@
             </li>
         </ul>
         <form class="form-inline my-1 my-md-0">
-            <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search">
+            <input class="form-control me-0_25" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-primary" type="submit">Search</button>
         </form>
     </div>
@@ -113,7 +113,7 @@
 
 <h2>Responsive Navbars</h2>
 
-<nav class="navbar navbar-expand navbar-light bg-faded">
+<nav class="navbar navbar-expand navbar-light bg-light">
     <a href="#" class="navbar-brand">Expand Always</a>
     <button class="navbar-toggle collapsed" type="button" data-cfw="collapse" data-cfw-collapse-target="#navbarR0">
         <span aria-hidden="true">&#8801;</span>
@@ -131,7 +131,7 @@
                 <a href="#" class="nav-link disabled">Disabled</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-cfw="dropdown">Dropdown</a>
+                <a class="nav-link" href="#" data-cfw="dropdown">Dropdown<span class="caret ms-0_25" aria-hidden="true"></span></a>
                 <div class="dropdown-menu">
                     <a href="#">Action</a>
                     <a href="#">Another action</a>
@@ -139,14 +139,14 @@
                 </div>
             </li>
         </ul>
-        <form class="form-inline ml-auto">
-            <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search">
+        <form class="form-inline ms-auto">
+            <input class="form-control me-0_25" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-primary" type="submit">Search</button>
         </form>
     </div>
 </nav>
 
-<nav class="navbar navbar-expand-sm navbar-light bg-faded flex-between">
+<nav class="navbar navbar-expand-sm navbar-light bg-light flex-between">
     <a href="#" class="navbar-brand">Expand at `sm`</a>
     <button class="navbar-toggle collapsed" type="button" data-cfw="collapse" data-cfw-collapse-target="#navbarR1">
         <span aria-hidden="true">&#8801;</span>
@@ -164,7 +164,7 @@
                 <a href="#" class="nav-link disabled">Disabled</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-cfw="dropdown">Dropdown</a>
+                <a class="nav-link" href="#" data-cfw="dropdown">Dropdown<span class="caret ms-0_25" aria-hidden="true"></span></a>
                 <div class="dropdown-menu">
                     <a href="#">Action</a>
                     <a href="#">Another action</a>
@@ -172,14 +172,14 @@
                 </div>
             </li>
         </ul>
-        <form class="form-inline ml-auto">
-            <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search">
+        <form class="form-inline ms-auto">
+            <input class="form-control me-0_25" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-primary" type="submit">Search</button>
         </form>
     </div>
 </nav>
 
-<nav class="navbar navbar-expand-md navbar-light bg-faded flex-between">
+<nav class="navbar navbar-expand-md navbar-light bg-light flex-between">
     <a href="#" class="navbar-brand">Expand at `md`</a>
     <button class="navbar-toggle collapsed" type="button" data-cfw="collapse" data-cfw-collapse-target="#navbarR2">
         <span aria-hidden="true">&#8801;</span>
@@ -197,7 +197,7 @@
                 <a href="#" class="nav-link disabled">Disabled</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-cfw="dropdown">Dropdown</a>
+                <a class="nav-link" href="#" data-cfw="dropdown">Dropdown<span class="caret ms-0_25" aria-hidden="true"></span></a>
                 <div class="dropdown-menu">
                     <a href="#">Action</a>
                     <a href="#">Another action</a>
@@ -205,14 +205,14 @@
                 </div>
             </li>
         </ul>
-        <form class="form-inline ml-auto">
-            <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search">
+        <form class="form-inline ms-auto">
+            <input class="form-control me-0_25" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-primary" type="submit">Search</button>
         </form>
     </div>
 </nav>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-faded flex-between">
+<nav class="navbar navbar-expand-lg navbar-light bg-light flex-between">
     <a href="#" class="navbar-brand">Expand at `lg`</a>
     <button class="navbar-toggle collapsed" type="button" data-cfw="collapse" data-cfw-collapse-target="#navbarR3">
         <span aria-hidden="true">&#8801;</span>
@@ -230,7 +230,7 @@
                 <a href="#" class="nav-link disabled">Disabled</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-cfw="dropdown">Dropdown</a>
+                <a class="nav-link" href="#" data-cfw="dropdown">Dropdown<span class="caret ms-0_25" aria-hidden="true"></span></a>
                 <div class="dropdown-menu">
                     <a href="#">Action</a>
                     <a href="#">Another action</a>
@@ -238,14 +238,14 @@
                 </div>
             </li>
         </ul>
-        <form class="form-inline ml-auto">
-            <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search">
+        <form class="form-inline ms-auto">
+            <input class="form-control me-0_25" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-primary" type="submit">Search</button>
         </form>
     </div>
 </nav>
 
-<nav class="navbar navbar-expand-xl navbar-light bg-faded flex-between">
+<nav class="navbar navbar-expand-xl navbar-light bg-light flex-between">
     <a href="#" class="navbar-brand">Expand at `xl`</a>
     <button class="navbar-toggle collapsed" type="button" data-cfw="collapse" data-cfw-collapse-target="#navbarR4">
         <span aria-hidden="true">&#8801;</span>
@@ -263,7 +263,7 @@
                 <a href="#" class="nav-link disabled">Disabled</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-cfw="dropdown">Dropdown</a>
+                <a class="nav-link" href="#" data-cfw="dropdown">Dropdown<span class="caret ms-0_25" aria-hidden="true"></span></a>
                 <div class="dropdown-menu">
                     <a href="#">Action</a>
                     <a href="#">Another action</a>
@@ -271,8 +271,8 @@
                 </div>
             </li>
         </ul>
-        <form class="form-inline ml-auto">
-            <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search">
+        <form class="form-inline ms-auto">
+            <input class="form-control me-0_25" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-primary" type="submit">Search</button>
         </form>
     </div>
@@ -280,7 +280,7 @@
 
 <h2>Justified Navbar</h2>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-faded flex-between">
+<nav class="navbar navbar-expand-lg navbar-light bg-light flex-between">
     <a href="#" class="navbar-brand">Justified</a>
     <button class="navbar-toggle collapsed" type="button" data-cfw="collapse" data-cfw-collapse-target="#navbarJ0">
         <span aria-hidden="true">&#8801;</span>
@@ -298,7 +298,7 @@
                 <a href="#" class="nav-link disabled">Disabled</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-cfw="dropdown">Dropdown</a>
+                <a class="nav-link" href="#" data-cfw="dropdown">Dropdown<span class="caret ms-0_25" aria-hidden="true"></span></a>
                 <div class="dropdown-menu">
                     <a href="#">Action</a>
                     <a href="#">Another action</a>
@@ -307,7 +307,7 @@
             </li>
         </ul>
         <form class="form-inline">
-            <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search">
+            <input class="form-control me-0_25" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-primary" type="submit">Search</button>
         </form>
     </div>
@@ -315,7 +315,7 @@
 
 <h2>Container Navbar</h2>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-faded flex-between">
+<nav class="navbar navbar-expand-lg navbar-light bg-light flex-between">
     <div class="container">
         <a href="#" class="navbar-brand">Container</a>
         <button class="navbar-toggle collapsed" type="button" data-cfw="collapse" data-cfw-collapse-target="#navbarC0">
@@ -334,7 +334,7 @@
                     <a href="#" class="nav-link disabled">Disabled</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-cfw="dropdown">Dropdown</a>
+                    <a class="nav-link" href="#" data-cfw="dropdown">Dropdown<span class="caret ms-0_25" aria-hidden="true"></span></a>
                     <div class="dropdown-menu">
                         <a href="#">Action</a>
                         <a href="#">Another action</a>
@@ -342,8 +342,8 @@
                     </div>
                 </li>
             </ul>
-            <form class="form-inline ml-auto">
-                <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search">
+            <form class="form-inline ms-auto">
+                <input class="form-control me-0_25" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-primary" type="submit">Search</button>
             </form>
         </div>
@@ -352,7 +352,7 @@
 
 <h2>Centered Navbars</h2>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-faded">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggle collapsed" type="button" data-cfw="collapse" data-cfw-collapse-target="#navbarCO0">
         <span aria-hidden="true">&#8801;</span>
     </button>
@@ -370,7 +370,7 @@
                 <a href="#" class="nav-link disabled">Disabled</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-cfw="dropdown">Dropdown</a>
+                <a class="nav-link" href="#" data-cfw="dropdown">Dropdown<span class="caret ms-0_25" aria-hidden="true"></span></a>
                 <div class="dropdown-menu">
                     <a href="#">Action</a>
                     <a href="#">Another action</a>
@@ -381,7 +381,7 @@
     </div>
 </nav>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-faded">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <button class="navbar-toggle collapsed" type="button" data-cfw="collapse" data-cfw-collapse-target="#navbarCO1">
             <span aria-hidden="true">&#8801;</span>
@@ -400,7 +400,7 @@
                     <a href="#" class="nav-link disabled">Disabled</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-cfw="dropdown">Dropdown</a>
+                    <a class="nav-link" href="#" data-cfw="dropdown">Dropdown<span class="caret ms-0_25" aria-hidden="true"></span></a>
                     <div class="dropdown-menu">
                         <a href="#">Action</a>
                         <a href="#">Another action</a>
@@ -415,7 +415,7 @@
 <div class="container">
     <h2>Navbars in Containers</h2>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-faded flex-between">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light flex-between">
         <a href="#" class="navbar-brand">Expand at `lg`</a>
         <button class="navbar-toggle collapsed" type="button" data-cfw="collapse" data-cfw-collapse-target="#navbarIC0">
             <span aria-hidden="true">&#8801;</span>
@@ -433,7 +433,7 @@
                     <a href="#" class="nav-link disabled">Disabled</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-cfw="dropdown">Dropdown</a>
+                    <a class="nav-link" href="#" data-cfw="dropdown">Dropdown<span class="caret ms-0_25" aria-hidden="true"></span></a>
                     <div class="dropdown-menu">
                         <a href="#">Action</a>
                         <a href="#">Another action</a>
@@ -441,14 +441,14 @@
                     </div>
                 </li>
             </ul>
-            <form class="form-inline ml-auto">
-                <input class="form-control mr-0_25" type="text" placeholder="Search" aria-label="Search">
+            <form class="form-inline ms-auto">
+                <input class="form-control me-0_25" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-primary" type="submit">Search</button>
             </form>
         </div>
     </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-faded">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <button class="navbar-toggle collapsed" type="button" data-cfw="collapse" data-cfw-collapse-target="#navbarIC1">
             <span aria-hidden="true">&#8801;</span>
         </button>
@@ -466,7 +466,7 @@
                     <a href="#" class="nav-link disabled">Disabled</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-cfw="dropdown">Dropdown</a>
+                    <a class="nav-link" href="#" data-cfw="dropdown">Dropdown<span class="caret ms-0_25" aria-hidden="true"></span></a>
                     <div class="dropdown-menu">
                         <a href="#">Action</a>
                         <a href="#">Another action</a>

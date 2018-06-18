@@ -30,12 +30,12 @@
 
 
 <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/figuration-preview/assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/figuration-preview/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
 
 <!-- MutationObserver Polyfill -->
 
-  <script src="/figuration-preview/assets/js/MutationObserver.min.js"></script>
+  <script src="/figuration-preview/assets/js/vendor/MutationObserver.min.js"></script>
 
 
 <!-- Core JS -->
@@ -54,28 +54,24 @@
 <!-- IE emulation mode warning -->
 <script src="/figuration-preview/assets/js/ie-emulation-modes-warning.js"></script>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-9130143-15', 'auto');
-  ga('send', 'pageview');
-</script>
+
 
 </head>
 <body>
     <a class="skipnav" href="#content">Skip to main content</a>
 
-    <header class="navbar navbar-expand-lg navbar-dark print-hide cf-header">
+    <div class="v4-warning">
+    v4 is in Alpha! Not ready for Production!
+</div>
+<header class="navbar navbar-expand-lg navbar-dark print-hide cf-header">
     <a class="navbar-brand" href="/figuration-preview/" aria-label="CAST Figuration">
         <img src="/figuration-preview/assets/brand/figuration-outline.svg" class="navbar-brand-logo" alt="" />
         <span class="sr-only-xs-down">CAST Figuration</span>
     </a>
-    <button class="navbar-toggle flex-first mr-0_5" type="button" data-cfw="collapse" data-cfw-collapse-target="#cf-topnav" aria-label="Toggle navigation">
+    <button class="navbar-toggle flex-first me-0_5" type="button" data-cfw="collapse" data-cfw-collapse-target="#cf-topnav" aria-label="Toggle navigation">
         <span class="cf-header-menu" aria-hidden="true">&#8801;</span>
     </button>
-    <div class="navbar-collapse collapse flex-last flex-lg-unordered flex-lg-shrink text-nowrap" id="cf-topnav">
+    <div class="navbar-collapse collapse flex-last flex-lg-unordered text-nowrap" id="cf-topnav">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a href="/figuration-preview/get-started/quick-start/" class="nav-link ">Get Started</a>
@@ -98,7 +94,7 @@
         </ul>
     </div>
 
-    <ul class="navbar-nav ml-auto cf-header-social">
+    <ul class="navbar-nav ms-auto cf-header-social">
         <li class="nav-item">
             <a href="https://twitter.com/figuration_org" class="nav-link" aria-label="Twitter" title="Twitter">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" focusable="false"  class="cf-header-icon"  >
@@ -109,7 +105,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="https://github.com/cast-org/figuration" class="nav-link" aria-label="Github" title="GitHub">
+            <a href="https://github.com/cast-org/figuration/tree/v4-dev" class="nav-link" aria-label="Github" title="GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false"  class="cf-header-icon"  >
   <title>GitHub</title>
   <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.3 6.53 5.47 7.6.4.06.55-.18.55-.4v-1.48c-2.02.37-2.54-.5-2.7-.94-.1-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.62 0 1.07.58 1.22.82.72 1.2 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.77-.2-3.63-.9-3.63-3.95 0-.87.3-1.6.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.2 2.2.83.64-.18 1.32-.27 2-.27.68 0 1.36.1 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.93.08 2.13.5.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.3.25.54.73.54 1.48v2.2c0 .22.15.47.55.4C13.7 14.52 16 11.52 16 8c0-4.42-3.58-8-8-8z"/>
@@ -334,11 +330,23 @@
   </li>
   <li><a href="#lists" id="markdown-toc-lists">Lists</a>    <ul>
       <li><a href="#unstyled" id="markdown-toc-unstyled">Unstyled</a></li>
-      <li><a href="#inline" id="markdown-toc-inline">Inline</a></li>
+      <li><a href="#styled" id="markdown-toc-styled">Styled</a></li>
       <li><a href="#description-list-alignment" id="markdown-toc-description-list-alignment">Description List Alignment</a></li>
     </ul>
   </li>
-  <li><a href="#responsive-typography" id="markdown-toc-responsive-typography">Responsive Typography</a></li>
+  <li><a href="#responsive-typography" id="markdown-toc-responsive-typography">Responsive Typography</a>    <ul>
+      <li><a href="#common-settings" id="markdown-toc-common-settings">Common Settings</a></li>
+      <li><a href="#fluid-responsive-typography" id="markdown-toc-fluid-responsive-typography">Fluid Responsive Typography</a>        <ul>
+          <li><a href="#settings" id="markdown-toc-settings">Settings</a></li>
+          <li><a href="#safari-issue" id="markdown-toc-safari-issue">Safari Issue</a></li>
+        </ul>
+      </li>
+      <li><a href="#scaled-responsive-typography" id="markdown-toc-scaled-responsive-typography">Scaled Responsive Typography</a>        <ul>
+          <li><a href="#settings-1" id="markdown-toc-settings-1">Settings</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="global-settings">Global Settings</h2>
@@ -348,17 +356,19 @@
 <ul>
   <li>Use a <a href="/figuration-preview/content/reboot/#native-font-stack">native font stack</a> that selects the best <code class="highlighter-rouge">font-family</code> for each OS and device.</li>
   <li>Use the <code class="highlighter-rouge">$font-family-base</code>, <code class="highlighter-rouge">$font-size-base</code>, and <code class="highlighter-rouge">$line-height-base</code> attributes as our typographic base applied to the <code class="highlighter-rouge">&lt;body&gt;</code>.</li>
+  <li>Use <code class="highlighter-rouge">$font-size-base</code> to scale the font size of text across all components.</li>
+  <li>Convert all <code class="highlighter-rouge">font-size</code> CSS rules to <code class="highlighter-rouge">rem</code> units, assuming the typical browser default of <code class="highlighter-rouge">1rem</code>=<code class="highlighter-rouge">16px</code> through the use of our <code class="highlighter-rouge">font-size()</code> Sass mixin.  While <em>highly opinionated</em>, Figuration believes, this offers better accessibility than using <code class="highlighter-rouge">px</code> to define font sizes.</li>
   <li>Set the global link color via <code class="highlighter-rouge">$link-color</code> and apply link underlines only on <code class="highlighter-rouge">:hover</code>.</li>
   <li>Use <code class="highlighter-rouge">$body-bg</code> to set a <code class="highlighter-rouge">background-color</code> on the <code class="highlighter-rouge">&lt;body&gt;</code> (<code class="highlighter-rouge">#fff</code> by default).</li>
 </ul>
 
-<p>These styles can be found within <code class="highlighter-rouge">_reboot.scss</code>, and the global variables are defined in <code class="highlighter-rouge">_settings.scss</code>.</p>
+<p>These styles can be found within <code class="highlighter-rouge">_reboot.scss</code>, and the global variables are defined in <code class="highlighter-rouge">_settings.scss</code>. Make sure to set <code class="highlighter-rouge">$font-size-base</code> using <code class="highlighter-rouge">rem</code> units.</p>
 
 <h2 id="headings">Headings</h2>
 
 <p>All HTML headings, <code class="highlighter-rouge">&lt;h1&gt;</code> through <code class="highlighter-rouge">&lt;h6&gt;</code>, are available.</p>
 
-<div class="cf-example" data-example-id="">
+<div class="cf-example">
 <h1>h1. Example heading</h1>
 <h2>h2. Example heading</h2>
 <h3>h3. Example heading</h3>
@@ -375,7 +385,7 @@
 
 <p><code class="highlighter-rouge">.h1</code> through <code class="highlighter-rouge">.h6</code> classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
 
-<div class="cf-example" data-example-id="">
+<div class="cf-example">
 <p class="h1">h1. Example heading</p>
 <p class="h2">h2. Example heading</p>
 <p class="h3">h3. Example heading</p>
@@ -396,7 +406,7 @@
 
 <p>You can also use the included utility classes to recolor the secondary text.</p>
 
-<div class="cf-example" data-example-id="">
+<div class="cf-example">
 <h3>
   Fancy display heading
   <small class="text-muted">With secondary text</small>
@@ -421,7 +431,7 @@
 
 <p>Make a paragraph stand out by adding <code class="highlighter-rouge">.lead</code>.</p>
 
-<div class="cf-example" data-example-id="">
+<div class="cf-example">
 <p class="lead">
   Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
 </p>
@@ -434,7 +444,7 @@
 
 <p>Styling for common inline HTML5 elements.</p>
 
-<div class="cf-example" data-example-id="">
+<div class="cf-example">
 <p>You can use the mark tag to <mark>highlight</mark> text.</p>
 <p><del>This line of text is meant to be treated as deleted text.</del></p>
 <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
@@ -467,7 +477,7 @@
 
 <p>Add <code class="highlighter-rouge">.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
 
-<div class="cf-example" data-example-id="">
+<div class="cf-example">
 <p><abbr title="attribute">attr</abbr></p>
 <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
 </div>
@@ -478,7 +488,7 @@
 
 <p>For quoting blocks of content from another source within your document. Wrap <code class="highlighter-rouge">&lt;blockquote class="blockquote"&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote.</p>
 
-<div class="cf-example" data-example-id="">
+<div class="cf-example">
 <blockquote class="blockquote">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 </blockquote>
@@ -491,7 +501,7 @@
 
 <p>Add a <code class="highlighter-rouge">&lt;footer class="blockquote-footer"&gt;</code> for identifying the source. Wrap the name of the source work in <code class="highlighter-rouge">&lt;cite&gt;</code>.</p>
 
-<div class="cf-example" data-example-id="">
+<div class="cf-example">
 <blockquote class="blockquote">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -506,7 +516,7 @@
 
 <p>Use <a href="/figuration-preview/utilities/typography/#text-alignment">text alignment utilities</a> to alter the layout of the blockquote.</p>
 
-<div class="cf-example" data-example-id="">
+<div class="cf-example">
 <blockquote class="blockquote text-center">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -517,7 +527,7 @@
   <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
 <span class="nt">&lt;/blockquote&gt;</span></code></pre></div>
 
-<div class="cf-example" data-example-id="">
+<div class="cf-example">
 <blockquote class="blockquote text-end">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -536,65 +546,38 @@
 
 <p>Remove the default <code class="highlighter-rouge">list-style</code> and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.</p>
 
-<div class="cf-example" data-example-id="">
+<div class="cf-example">
 <ul class="list-unstyled">
-  <li>Lorem ipsum dolor sit amet</li>
-  <li>Consectetur adipiscing elit</li>
-  <li>Integer molestie lorem at massa</li>
-  <li>Facilisis in pretium nisl aliquet</li>
-  <li>Nulla volutpat aliquam velit
-    <ul>
-      <li>Phasellus iaculis neque</li>
-      <li>Purus sodales ultricies</li>
-      <li>Vestibulum laoreet porttitor sem</li>
-      <li>Ac tristique libero volutpat at</li>
-    </ul>
-  </li>
-  <li>Faucibus porta lacus fringilla vel</li>
-  <li>Aenean sit amet erat nunc</li>
-  <li>Eget porttitor lorem</li>
+  <li>Unstyled List Item</li>
+  <li>Unstyled List Item
+        <ul>
+            <li>Nested List Item</li>
+            <li>Nested List Item</li>
+        </ul>
+    </li>
+    <li>Unstyled List Item</li>
 </ul>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-unstyled"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Consectetur adipiscing elit<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Integer molestie lorem at massa<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Facilisis in pretium nisl aliquet<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Nulla volutpat aliquam velit
-    <span class="nt">&lt;ul&gt;</span>
-      <span class="nt">&lt;li&gt;</span>Phasellus iaculis neque<span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;</span>Purus sodales ultricies<span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;</span>Vestibulum laoreet porttitor sem<span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;</span>Ac tristique libero volutpat at<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;/ul&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Faucibus porta lacus fringilla vel<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Aenean sit amet erat nunc<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Eget porttitor lorem<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Unstyled List Item<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Unstyled List Item
+        <span class="nt">&lt;ul&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Nested List Item<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Nested List Item<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Unstyled List Item<span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></div>
 
-<h3 id="inline">Inline</h3>
+<h3 id="styled">Styled</h3>
 
-<p>Remove a list’s bullets and apply some light <code class="highlighter-rouge">margin</code> with a combination of two classes, <code class="highlighter-rouge">.list-inline</code> and <code class="highlighter-rouge">.list-inline-item</code>.</p>
-
-<div class="cf-example" data-example-id="">
-<ul class="list-inline">
-  <li class="list-inline-item">Lorem ipsum</li>
-  <li class="list-inline-item">Phasellus iaculis</li>
-  <li class="list-inline-item">Nulla volutpat</li>
-</ul>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-inline"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-inline-item"</span><span class="nt">&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-inline-item"</span><span class="nt">&gt;</span>Phasellus iaculis<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-inline-item"</span><span class="nt">&gt;</span>Nulla volutpat<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+<p>Even more layout and style options are available for lists with Figuration’s <a href="/figuration-preview/components/lists/">list component</a>.  This component includes indented unstyled lists, stylized bulleted and ordered lists, horizontal lists, and lists with dividers between items.</p>
 
 <h3 id="description-list-alignment">Description List Alignment</h3>
 
 <p>Align terms and descriptions horizontally by using our grid system’s predefined classes (or semantic mixins). For longer terms, you can optionally add a <code class="highlighter-rouge">.text-truncate</code> class to truncate the text with an ellipsis.</p>
 
-<div class="cf-example" data-example-id="">
+<div class="cf-example">
 <dl class="row">
   <dt class="col-sm-3">Description lists</dt>
   <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
@@ -643,32 +626,193 @@
 
 <h2 id="responsive-typography">Responsive Typography</h2>
 
-<p><em>Responsive typography</em> refers to scaling text and components by simply adjusting the root element’s <code class="highlighter-rouge">font-size</code> within a series of media queries. Figuration doesn’t do this for you, but it’s fairly easy to add if you need it.</p>
+<p><em>Responsive typography</em> refers to scaling an element’s <code class="highlighter-rouge">font-size</code> within a series of media queries.</p>
 
-<p>Here’s an example of it in practice. Choose whatever <code class="highlighter-rouge">font-size</code>s and media queries you wish.</p>
+<p>Figuration, by default, does not have responsive typography enabled. However, we have included two different methods to enable this functionality.</p>
+<ul>
+  <li><em>Fluid</em> sizing based on the dimensions of the viewport.  Based on the <a href="https://github.com/MartijnCuppens/rfs">Responsive font-size mixin</a> by <a href="https://github.com/MartijnCuppens">Martijn Cuppens</a>.</li>
+  <li><em>Scaled</em> sizing is scaling based on current <a href="/figuration-preview/layout/overview/#responsive-breakpoints">responsive breakpoint</a>.</li>
+</ul>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nt">html</span> <span class="p">{</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="mi">.875rem</span><span class="p">;</span>
+<p>See the <a href="/figuration-preview/get-started/options/#global-options">Global Options</a> on how the enable either method.  <strong>Note that only one of these methods can be enabled at a time.</strong></p>
+
+<p>Benefits of using Figuration’s responsive typography options include:</p>
+<ul>
+  <li>Font sizes will adjust with the size of the device, which can help reduce the chance of overflow for long words.</li>
+  <li>Font sizes of text elements will always remain in relation to one another.</li>
+  <li>The minimum font size (configuration setting) will prevent the font size from becoming too small so readability can be assured.</li>
+  <li>Does not use the <code class="highlighter-rouge">font-size</code> of the <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> element, allowing for a greater level of accessibility for user’s who change the default font size of their browser.</li>
+</ul>
+
+<p>Possible drawbacks include:</p>
+<ul>
+  <li>Can generate a large amount of CSS.  Disabling the <code class="highlighter-rouge">$responsive-font-size-generate-static</code> setting will also help with reducing the overall size of the CSS.  Also using compressing the CSS, with gzip or other methods, will reduce the CSS file size impact due to the large amount of repeating strings.</li>
+</ul>
+
+<h3 id="common-settings">Common Settings</h3>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$responsive-font-size-minimum-size</code></td>
+                <td>font size in <code>px</code> or <code>rem</code></td>
+                <td>1em</td>
+                <td>
+                    <p>Calculated font sizes will never be smaller than this size. However, you can still pass a smaller font size, but then it won't be responsively sized.</p>
+                    <p>For example: <code>font-size(1.5rem)</code> will trigger responsive sizing, with <code>font-size(.875rem)</code> will remain staticly sized at <code>.875rem</code>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><code>$responsive-font-size-generate-static</code></td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>
+                    <p>Generates the <code>.font-size-static</code> utility classes to disable the responsive font sizes for an element and it's descendant elements. This does not apply to font sizes which are inherited from parent elements.</p>
+                    <p>If you are not using these utilities, it would be worthwhile to disable this setting to stop the generation of a potentially large amount of unused CSS.</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="fluid-responsive-typography">Fluid Responsive Typography</h3>
+
+<p>A smooth responsive sizing of text based on the viewport dimensions, by default this is the viewport width <code class="highlighter-rouge">vw</code> dimension.  As the viewport size is reduced, font sizes are</p>
+
+<p>Using Figuration’s default settings, a Sass input:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.element</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">2</span><span class="mi">.5rem</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Will generate the CSS output:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.element</span><span class="o">,</span>
+<span class="nc">.font-size-static</span> <span class="nc">.element</span><span class="o">,</span> <span class="nc">.element.font-size-static</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">2.5rem</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nt">html</span> <span class="p">{</span>
-    <span class="nl">font-size</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nt">html</span> <span class="p">{</span>
-    <span class="nl">font-size</span><span class="p">:</span> <span class="m">1</span><span class="mi">.25rem</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nt">html</span> <span class="p">{</span>
-    <span class="nl">font-size</span><span class="p">:</span> <span class="m">1</span><span class="mi">.75rem</span><span class="p">;</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="p">:</span> <span class="m">75em</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.element</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">1.3rem</span> <span class="err">+</span> <span class="m">1.6vw</span><span class="p">)</span> <span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
+<h4 id="settings">Settings</h4>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$responsive-font-size-fluid-breakpoint</code></td>
+                <td><code>em</code> unit breakpoint dimension</td>
+                <td>75em</td>
+                <td>Above this breakpoint, the font size will be equal to the font size you passed to the mixin; below the breakpoint, the font size will dynamically scale.</td>
+            </tr>
+            <tr>
+                <td><code>$responsive-font-size-fluid-factor</code></td>
+                <td>integer</td>
+                <td>5</td>
+                <td>This value determines the strength of font size resizing. The higher $rfs-factor, the less difference there is between font sizes on small screens. The lower the factor, the less influence the responsive scaling has, which results in bigger font sizes for small screens. <code>$responsive-font-size-fluid-factor</code> must be greater than 1, and setting it to 1 will disable responsive scaling.</td>
+            </tr>
+            <tr>
+                <td><code>$responsive-font-size-fluid-two-dimensional</code></td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Enabling the two dimensional media queries will determine the font size based on the smallest side of the screen with <code>vmin</code>. This prevents the font size from changing if the device toggles between portrait and landscape mode.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 id="safari-issue">Safari Issue</h4>
+<p>There is a known issue with Safari where it does not always recalculate the value of vw in a calc()-function for font-sizes in iframes.
+<a href="https://github.com/MartijnCuppens/rfs#known-issues">More information and a workaround can be found over at Martijn Cuppen’s Responsive font-size mixin</a>.</p>
+
+<h3 id="scaled-responsive-typography">Scaled Responsive Typography</h3>
+
+<p>This variant of the responsive typography uses a stepped scale, making the font scale and sizing consistent across all widths of a breakpoint.</p>
+
+<p>By default the font size is scaled downwards at each decreasing breakpoint level from largest to smallest.</p>
+
+<p>Using Figuration’s default settings, a Sass input:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.element</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">2</span><span class="mi">.5rem</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Will generate the CSS output:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.element</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1.9375rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">36em</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.element</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">2.078125rem</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">48em</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.element</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">2.21875rem</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">62em</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.element</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">2.359375rem</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">75em</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.element</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">2.5rem</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.font-size-static</span> <span class="nc">.element</span><span class="o">,</span> <span class="nc">.element.font-size-static</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">2.5rem</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h4 id="settings-1">Settings</h4>
+
+<p>Scaled responsive typography only has one setting, <code class="highlighter-rouge">$responsive-font-size-scale-factor</code>, a Sass map that aligns with Figuration’s <a href="/figuration-preview/layout/grid/#grid-options">grid breakpoints</a>.  Each breakpoint level gets an associated scaling value.  The following example shows the default settings for the scaling values.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$responsive-font-size-scale-factor</span><span class="p">:</span> <span class="p">(</span>
+    <span class="n">xs</span><span class="o">:</span> <span class="mi">.625</span><span class="o">,</span>
+    <span class="n">sm</span><span class="o">:</span> <span class="mi">.71875</span><span class="o">,</span>
+    <span class="n">md</span><span class="o">:</span> <span class="mi">.8125</span><span class="o">,</span>
+    <span class="n">lg</span><span class="o">:</span> <span class="mi">.90625</span><span class="o">,</span>
+    <span class="n">xl</span><span class="o">:</span> <span class="m">1</span>
+<span class="p">)</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span></code></pre></figure>
+
+<p>It is also possible to change the settings so font size grows as the breakpoint size increases, as shown in the following example.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$responsive-font-size-scale-factor</span><span class="p">:</span> <span class="p">(</span>
+    <span class="n">xs</span><span class="o">:</span> <span class="m">1</span><span class="o">,</span>
+    <span class="n">sm</span><span class="o">:</span> <span class="m">1</span><span class="mi">.09375</span><span class="o">,</span>
+    <span class="n">md</span><span class="o">:</span> <span class="m">1</span><span class="mi">.1875</span><span class="o">,</span>
+    <span class="n">lg</span><span class="o">:</span> <span class="m">1</span><span class="mi">.28125</span><span class="o">,</span>
+    <span class="n">xl</span><span class="o">:</span> <span class="m">1</span><span class="mi">.375</span>
+<span class="p">);</span></code></pre></figure>
 
             </main>
         </div>
@@ -681,7 +825,10 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 3.0.0-beta.2
+            Current version: 4.0.0-alpha.1
+        </p>
+        <p>
+            <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>
         </p>
         <ul class="footer-links d-inline-block d-sm-block mx-auto mx-sm-0">
             <li><a href="/figuration-preview/about/overview/">About</a></li>
@@ -690,23 +837,23 @@
             <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
         </ul>
         <p>
-            &copy; 2013-2017 <a href="http://www.cast.org">CAST, Inc.</a>
+            &copy; 2013-2018 <a href="http://www.cast.org/">CAST, Inc.</a>
             <br />
-            Portions: &copy; 2011-2017 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
+            Portions: &copy; 2011-2018 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
         <p>
-            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
-            docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.
+            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/tree/v4-dev/blob/master/LICENSE">MIT</a>,
+            docs <a rel="license" href="https://github.com/cast-org/figuration/tree/v4-dev/blob/master/docs/LICENSE">CC BY 4.0</a>.
         </p>
 
         <hr />
 
         <p class="font-weight-bold mb-0_25">Funding generously provided by:</p>
         <div class="media footer-partners">
-            <div class="d-flex mr-0_5">
+            <div class="d-flex me-0_5">
                 <img src="/figuration-preview/assets/img/aem-logo.png" class="media-object" width="40" height="40" alt="AEM logo" />
             </div>
             <div class="media-body">
-                <span class="h6 partner-title"><a href="http://aem.cast.org">National Center on Accessible Educational Materials at CAST, Inc.</a></span><br />
+                <span class="h6 partner-title"><a href="http://aem.cast.org/">National Center on Accessible Educational Materials at CAST, Inc.</a></span><br />
                 <small>Disclaimer: This does not necessarily represent endorsement by or the policies of the National Center on Accessible Educational Materials, the US Department of Education, and the US Federal Government.</small>
             </div>
         </div>
