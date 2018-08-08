@@ -105,7 +105,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="https://github.com/cast-org/figuration/tree/v4-dev" class="nav-link" aria-label="Github" title="GitHub">
+            <a href="https://github.com/cast-org/figuration" class="nav-link" aria-label="Github" title="GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false"  class="cf-header-icon"  >
   <title>GitHub</title>
   <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.3 6.53 5.47 7.6.4.06.55-.18.55-.4v-1.48c-2.02.37-2.54-.5-2.7-.94-.1-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.62 0 1.07.58 1.22.82.72 1.2 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.77-.2-3.63-.9-3.63-3.95 0-.87.3-1.6.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.2 2.2.83.64-.18 1.32-.27 2-.27.68 0 1.36.1 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.93.08 2.13.5.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.3.25.54.73.54 1.48v2.2c0 .22.15.47.55.4C13.7 14.52 16 11.52 16 8c0-4.42-3.58-8-8-8z"/>
@@ -307,6 +307,12 @@
     </ul>
   </li>
   <li><a href="#palette-variables" id="markdown-toc-palette-variables">Palette Variables</a></li>
+  <li><a href="#css-variables" id="markdown-toc-css-variables">CSS Variables</a>    <ul>
+      <li><a href="#available-variables" id="markdown-toc-available-variables">Available Variables</a></li>
+      <li><a href="#examples" id="markdown-toc-examples">Examples</a></li>
+      <li><a href="#breakpoint-variables" id="markdown-toc-breakpoint-variables">Breakpoint Variables</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="customizing-options">Customizing Options</h2>
@@ -340,21 +346,27 @@
 <span class="c1">// in your custom setting overrides</span>
 
 <span class="c1">// Required - functions</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/functions"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/functions"</span><span class="p">;</span>
 
 <span class="c1">// Custom - your setting overrides</span>
 <span class="c1">// typically go in this location</span>
 
-<span class="c1">// Required - settings and mixins</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/settings"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/mixins"</span><span class="p">;</span>
+<span class="c1">// Required - settings</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/settings"</span><span class="p">;</span>
+
+<span class="c1">// Custom - your setting removals</span>
+<span class="c1">// typically go in this location</span>
+
+<span class="c1">// Required - mixins</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/mixins"</span><span class="p">;</span>
 
 <span class="c1">// Core and Components</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/reboot"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/typography"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/images"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/buttons"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/grid"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/root"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/reboot"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/typography"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/images"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/buttons"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/grid"</span><span class="p">;</span>
 <span class="nc">...</span></code></pre></figure>
 
 <p>With that setup in place, you can begin to modify any of the Sass variables and maps in your <code class="highlighter-rouge">custom.scss</code>. You can also start to add parts of Figuration under the <code class="highlighter-rouge">// Optional</code> section as needed.</p>
@@ -368,19 +380,19 @@
 <p>Here’s an example that changes the <code class="highlighter-rouge">background-color</code> and <code class="highlighter-rouge">color</code> for the <code class="highlighter-rouge">&lt;body&gt;</code> when importing and compiling Figuration via grunt:</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Required - functions</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/functions"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/functions"</span><span class="p">;</span>
 
 <span class="c1">// Custom - your setting overrides</span>
 <span class="nv">$body-bg</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
 <span class="nv">$body-color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
 
 <span class="c1">// Required - settings and mixins</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/settings"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/mixins"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/settings"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/mixins"</span><span class="p">;</span>
 
 <span class="c1">// Core and Components</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/reboot"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/typography"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/reboot"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/typography"</span><span class="p">;</span>
 <span class="nc">...</span></code></pre></figure>
 
 <p>Repeat as necessary for any variable in Figuration, including the global options below.</p>
@@ -421,19 +433,19 @@
 <p>Also note, that each component will inherit the <code class="highlighter-rouge">$base-colors</code> map, unless previously overridden, before the removal occurs.  This means is you may need to remove the colors again for each component where desired.</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Required - functions</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/functions"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/functions"</span><span class="p">;</span>
 
 <span class="c1">// Required - settings and mixins</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/settings"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/mixins"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/settings"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/mixins"</span><span class="p">;</span>
 
 <span class="c1">// Custom map removals go in this location</span>
 <span class="nv">$base-colors</span><span class="p">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$base-colors</span><span class="o">,</span> <span class="s2">"warning"</span><span class="o">,</span> <span class="s2">"light"</span><span class="o">,</span> <span class="s2">"dark"</span><span class="p">);</span>
 <span class="nv">$btn-colors</span><span class="p">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$btn-colors</span><span class="o">,</span> <span class="s2">"warning"</span><span class="o">,</span> <span class="s2">"light"</span><span class="o">,</span> <span class="s2">"dark"</span><span class="p">);</span>
 
 <span class="c1">// Core and Components</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/reboot"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/typography"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/reboot"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/typography"</span><span class="p">;</span>
 <span class="nc">...</span></code></pre></figure>
 
 <h2 id="global-options">Global Options</h2>
@@ -502,7 +514,12 @@
     <tr>
       <td><code class="highlighter-rouge">$enable-rfs-scale</code></td>
       <td><code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> (default)</td>
-      <td>Enabled the <em>scaled</em> Responsive typography option, which scales element’s <code class="highlighter-rouge">font-size</code> on a per breakpoint basis.  See the <a href="/figuration-preview/content/typography/#responsive-typography">Responsive Typography</a> section for more details.</td>
+      <td>Enables the <em>scaled</em> Responsive typography option, which scales element’s <code class="highlighter-rouge">font-size</code> on a per breakpoint basis.  See the <a href="/figuration-preview/content/typography/#responsive-typography">Responsive Typography</a> section for more details.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-validation-icons</code></td>
+      <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
+      <td>Enables the generation of CSS classes for the optional <code class="highlighter-rouge">background-image</code> icons within textual inputs and some custom forms for validation states.</td>
     </tr>
   </tbody>
 </table>
@@ -585,18 +602,18 @@ Below is the default additional settings for reference.  Try not to confuse the 
 <span class="err">);</span></code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Required - functions</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/functions"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/functions"</span><span class="p">;</span>
 
 <span class="c1">// Required - settings and mixins</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/settings"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/mixins"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/settings"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/mixins"</span><span class="p">;</span>
 
 <span class="c1">// Custom theme addition/removal go in this location</span>
 <span class="nv">$btn-themes</span><span class="p">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$btn-themes</span><span class="o">,</span> <span class="nv">$single-color</span><span class="p">);</span>
 
 <span class="c1">// Core and Components</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/reboot"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/typography"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/reboot"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/typography"</span><span class="p">;</span>
 <span class="nc">...</span></code></pre></figure>
 
 <h3 id="removing-a-theme">Removing a Theme</h3>
@@ -606,18 +623,18 @@ Below is the default additional settings for reference.  Try not to confuse the 
 <p>As before, insert this setting after the <em>Required</em> sections and before the <em>Core and Components</em> section.</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Required - functions</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/functions"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/functions"</span><span class="p">;</span>
 
 <span class="c1">// Required - settings and mixins</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/settings"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/mixins"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/settings"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/mixins"</span><span class="p">;</span>
 
 <span class="c1">// Custom theme addition/removal go in this location</span>
 <span class="nv">$btn-themes</span><span class="p">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="s1">'warning'</span><span class="o">,</span> <span class="s1">'light'</span><span class="o">,</span> <span class="s1">'dark'</span><span class="p">);</span>
 
 <span class="c1">// Core and Components</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/reboot"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/figuration/scss/typography"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/reboot"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/typography"</span><span class="p">;</span>
 <span class="nc">...</span></code></pre></figure>
 
 <h2 id="palette-variables">Palette Variables</h2>
@@ -646,6 +663,64 @@ Below is the default additional settings for reference.  Try not to confuse the 
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$palette-levels</span><span class="p">:</span> <span class="m">50</span> <span class="m">100</span> <span class="m">200</span> <span class="m">300</span> <span class="m">400</span> <span class="m">500</span> <span class="m">600</span> <span class="m">700</span> <span class="m">800</span> <span class="m">900</span><span class="p">;</span></code></pre></figure>
 
+<h2 id="css-variables">CSS Variables</h2>
+
+<p>Figuration includes some <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">CSS custom properties (variables)</a> in its compiled CSS. These provide easy access to commonly used values like the theme colors, breakpoints, and primary font stacks when working in your browser’s Inspector, a code sandbox, or general prototyping.</p>
+
+<h3 id="available-variables">Available Variables</h3>
+
+<p>Here are the variables we include (note that the <code class="highlighter-rouge">:root</code> is required). They’re located in our <code class="highlighter-rouge">_root.scss</code> file.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:root</span> <span class="p">{</span>
+  <span class="py">--color-primary</span><span class="p">:</span> <span class="m">#0055e9</span><span class="p">;</span>
+  <span class="py">--color-secondary</span><span class="p">:</span> <span class="m">#5e7182</span><span class="p">;</span>
+  <span class="py">--color-info</span><span class="p">:</span> <span class="m">#1680a4</span><span class="p">;</span>
+  <span class="py">--color-success</span><span class="p">:</span> <span class="m">#0e8a16</span><span class="p">;</span>
+  <span class="py">--color-warning</span><span class="p">:</span> <span class="m">#f8c223</span><span class="p">;</span>
+  <span class="py">--color-danger</span><span class="p">:</span> <span class="m">#d42314</span><span class="p">;</span>
+  <span class="py">--color-light</span><span class="p">:</span> <span class="m">#eff1f3</span><span class="p">;</span>
+  <span class="py">--color-dark</span><span class="p">:</span> <span class="m">#343e48</span><span class="p">;</span>
+  <span class="py">--color-uibase</span><span class="p">:</span> <span class="m">#5e7182</span><span class="p">;</span>
+  <span class="py">--color-gray</span><span class="p">:</span> <span class="m">#666</span><span class="p">;</span>
+  <span class="py">--breakpoint-xs</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="py">--breakpoint-sm</span><span class="p">:</span> <span class="m">36em</span><span class="p">;</span>
+  <span class="py">--breakpoint-md</span><span class="p">:</span> <span class="m">48em</span><span class="p">;</span>
+  <span class="py">--breakpoint-lg</span><span class="p">:</span> <span class="m">62em</span><span class="p">;</span>
+  <span class="py">--breakpoint-xl</span><span class="p">:</span> <span class="m">75em</span><span class="p">;</span>
+  <span class="py">--font-family-sans-serif</span><span class="p">:</span> <span class="n">-apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span> <span class="s1">"Segoe UI"</span><span class="p">,</span> <span class="n">Roboto</span><span class="p">,</span> <span class="s1">"Helvetica Neue"</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">,</span> <span class="s1">"Apple Color Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Symbol"</span><span class="p">,</span> <span class="s1">"Noto Color Emoji"</span><span class="p">;</span>
+  <span class="py">--font-family-serif</span><span class="p">:</span> <span class="n">Georgia</span><span class="p">,</span> <span class="s1">"Times New Roman"</span><span class="p">,</span> <span class="n">Times</span><span class="p">,</span> <span class="nb">serif</span><span class="p">;</span>
+  <span class="py">--font-family-monospace</span><span class="p">:</span> <span class="n">SFMono-Regular</span><span class="p">,</span> <span class="n">Menlo</span><span class="p">,</span> <span class="n">Monaco</span><span class="p">,</span> <span class="n">Consolas</span><span class="p">,</span> <span class="s1">"Liberation Mono"</span><span class="p">,</span> <span class="s1">"Courier New"</span><span class="p">,</span> <span class="nb">monospace</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="examples">Examples</h3>
+
+<p>CSS variables offer similar flexibility to Sass’s variables, but without the need for compilation before being served to the browser. For example, here we are resetting the font and link styles with CSS variables.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">font</span><span class="p">:</span> <span class="m">1rem</span><span class="p">/</span><span class="m">1.5</span> <span class="n">var</span><span class="p">(</span><span class="n">--font-family-sans-serif</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--color-primary</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="breakpoint-variables">Breakpoint Variables</h3>
+
+<p>While breakpoints are included in the CSS variables (e.g., <code class="highlighter-rouge">--breakpoint-md</code>), <strong>these are not supported in media queries</strong>, but they can still be used <em>within</em> rulesets in media queries. <a href="https://www.w3.org/TR/css-variables-1/#using-variables">Learn more in the spec.</a> The intention of including the breakpoints as CSS variables is for use in JavaScript. See some information about <a href="https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care#working_with_custom_properties_in_javascript">working with custom properties in JavaScript</a>.</p>
+
+<p>Here’s an example of <strong>what’s not supported:</strong></p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--breakpoint-sm</span><span class="p">))</span> <span class="p">{</span>
+  <span class="o">...</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>And here’s an example of <strong>what is supported:</strong></p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">48em</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.custom-element</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--color-primary</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
 
             </main>
         </div>
@@ -658,7 +733,7 @@ Below is the default additional settings for reference.  Try not to confuse the 
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.1
+            Current version: 4.0.0-alpha.2
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>
@@ -674,8 +749,8 @@ Below is the default additional settings for reference.  Try not to confuse the 
             <br />
             Portions: &copy; 2011-2018 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
         <p>
-            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/tree/v4-dev/blob/master/LICENSE">MIT</a>,
-            docs <a rel="license" href="https://github.com/cast-org/figuration/tree/v4-dev/blob/master/docs/LICENSE">CC BY 4.0</a>.
+            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
+            docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.
         </p>
 
         <hr />

@@ -105,7 +105,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="https://github.com/cast-org/figuration/tree/v4-dev" class="nav-link" aria-label="Github" title="GitHub">
+            <a href="https://github.com/cast-org/figuration" class="nav-link" aria-label="Github" title="GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false"  class="cf-header-icon"  >
   <title>GitHub</title>
   <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.3 6.53 5.47 7.6.4.06.55-.18.55-.4v-1.48c-2.02.37-2.54-.5-2.7-.94-.1-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.62 0 1.07.58 1.22.82.72 1.2 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.77-.2-3.63-.9-3.63-3.95 0-.87.3-1.6.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.2 2.2.83.64-.18 1.32-.27 2-.27.68 0 1.36.1 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.93.08 2.13.5.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.3.25.54.73.54 1.48v2.2c0 .22.15.47.55.4C13.7 14.52 16 11.52 16 8c0-4.42-3.58-8-8-8z"/>
@@ -201,14 +201,17 @@
   <li><a href="#color" id="markdown-toc-color">Color</a></li>
   <li><a href="#typography" id="markdown-toc-typography">Typography</a></li>
   <li><a href="#table" id="markdown-toc-table">Table</a></li>
+  <li><a href="#form" id="markdown-toc-form">Form</a></li>
   <li><a href="#grid" id="markdown-toc-grid">Grid</a></li>
   <li><a href="#components" id="markdown-toc-components">Components</a>    <ul>
       <li><a href="#breadbcrumb" id="markdown-toc-breadbcrumb">Breadbcrumb</a></li>
       <li><a href="#button" id="markdown-toc-button">Button</a></li>
       <li><a href="#card" id="markdown-toc-card">Card</a></li>
+      <li><a href="#input-group" id="markdown-toc-input-group">Input Group</a></li>
       <li><a href="#list-group" id="markdown-toc-list-group">List Group</a></li>
       <li><a href="#list" id="markdown-toc-list">List</a></li>
       <li><a href="#pagination" id="markdown-toc-pagination">Pagination</a></li>
+      <li><a href="#switch" id="markdown-toc-switch">Switch</a></li>
     </ul>
   </li>
   <li><a href="#utilities" id="markdown-toc-utilities">Utilities</a>    <ul>
@@ -219,14 +222,17 @@
   <li><a href="#widgets" id="markdown-toc-widgets">Widgets</a>    <ul>
       <li><a href="#button-1" id="markdown-toc-button-1">Button</a></li>
       <li><a href="#lazy" id="markdown-toc-lazy">Lazy</a></li>
+      <li><a href="#slider" id="markdown-toc-slider">Slider</a></li>
+      <li><a href="#player" id="markdown-toc-player">Player</a></li>
     </ul>
   </li>
+  <li><a href="#build-tools" id="markdown-toc-build-tools">Build Tools</a></li>
 </ul>
 
 <h2 id="color">Color</h2>
 <ul>
   <li>Reworked the colors, internal palette system, and consolidated the re-used component colors.</li>
-  <li>Added functions to check, and/or determine the best color, these can be found in ‘/scss/functions/_color-util.scss’.</li>
+  <li>Added functions to check, and/or determine the best color, these can be found in <code class="highlighter-rouge">/scss/functions/_color-util.scss</code>.</li>
   <li>Extended the contextual colors with light and dark contextual variants.  <strong>These variants are not available as palettes</strong> by default.</li>
 </ul>
 
@@ -246,6 +252,31 @@
   <li><code class="highlighter-rouge">.table</code> now creates a visually simple table, borders are controlled through a selection of modifier classes.</li>
   <li><code class="highlighter-rouge">.table-hover</code> and <code class="highlighter-rouge">.table-striped</code> now use a solid gradient color overlayed using <code class="highlighter-rouge">background-image</code> to create their visual state.</li>
   <li><code class="highlighter-rouge">.table-scroll-*</code> has dropped the <code class="highlighter-rouge">down</code> portion of the class name, and is now meant to used as a wrapper to prevent conflict with screen-readers due to the use of <code class="highlighter-rouge">display: block</code>.</li>
+</ul>
+
+<h2 id="form">Form</h2>
+<ul>
+  <li>
+    <p>Rewrote both custom and default checkboxes and radios. Now, both have matching HTML structure (outer <code class="highlighter-rouge">&lt;div&gt;</code> with sibling <code class="highlighter-rouge">&lt;input&gt;</code> and <code class="highlighter-rouge">&lt;label&gt;</code>, and an additional <code class="highlighter-rouge">&lt;label&gt;</code> for custom controls) and the same layout styles (stacked default, inline with modifier class). This allows us to style the label based on the input’s state, simplifying support for the <code class="highlighter-rouge">disabled</code> attribute (previously requiring a parent class) and better support for form validation.</p>
+
+    <p>For custom checkboxes and radios, the re-implemented <code class="highlighter-rouge">.custom-control-indicator</code> has changed to being an additional <code class="highlighter-rouge">&lt;label&gt;</code> element and to use the <code class="highlighter-rouge">.custom-control-label::before</code> for the background and border colors, and <code class="highlighter-rouge">.custom-control-label::after</code> controls the icon.</p>
+
+    <p>In the case of switches the roles are altered to where the <code class="highlighter-rouge">::before</code> pseudo-element becomes the thumb instead of the background, and the <code class="highlighter-rouge">::after</code> becomes the track.</p>
+
+    <p>To make a custom check inline, add <code class="highlighter-rouge">.custom-control-inline</code>.</p>
+  </li>
+  <li>
+    <p>Removed <code class="highlighter-rouge">.col-form-legend</code> in favor of a slightly improved <code class="highlighter-rouge">.col-form-label</code>. This way the sizing variants, such as <code class="highlighter-rouge">.col-form-label-sm</code> and <code class="highlighter-rouge">.col-form-label-lg</code>, can be used on <code class="highlighter-rouge">&lt;legend&gt;</code> elements also.</p>
+  </li>
+  <li>
+    <p>Custom file inputs received a change to their <code class="highlighter-rouge">$custom-file-text</code> Sass variable. It is no longer a nested Sass map and now only powers one string—the <code class="highlighter-rouge">Browse</code> button as that is now the only pseudo-element generated from our Sass. The <code class="highlighter-rouge">Choose file</code> text now comes from the <code class="highlighter-rouge">.custom-file-label</code>.</p>
+  </li>
+  <li>
+    <p>Added custom styling for <code class="highlighter-rouge">input type="range"</code>.  The Slider widget has been removed from Figuration and moved into it’s own repository: <a href="https://github.com/cast-org/figuration-slider">Figuration Slider</a>.</p>
+  </li>
+  <li>
+    <p>Validation icons have been re-implemented.  The <code class="highlighter-rouge">.form-control-icon</code> has been replaced with <code class="highlighter-rouge">.has-validation-icon</code>. The icons are still optional and can now be used with textual <code class="highlighter-rouge">&lt;input class="form-control"&gt;</code>, <code class="highlighter-rouge">&lt;textarea class="form-control"&gt;</code>, and <code class="highlighter-rouge">&lt;select class="custom-select"&gt;</code> elements.  Icons can be used within <code class="highlighter-rouge">.input-groups</code> but they no longer scale with the input sizing.</p>
+  </li>
 </ul>
 
 <h2 id="grid">Grid</h2>
@@ -272,6 +303,20 @@
   <li>Images now need to be wrapped with <code class="highlighter-rouge">.card-img</code> to keep aspect ratio and scaling in check due to flexbox.</li>
 </ul>
 
+<h3 id="input-group">Input Group</h3>
+
+<ul>
+  <li>
+    <p>Input group addons have been revised, simplifying much of the related CSS. Within an addon, place your buttons as they would exist anywhere else, but wrap text in <code class="highlighter-rouge">.input-group-text</code>.</p>
+  </li>
+  <li>
+    <p>Validation styles are now supported, as are multiple inputs (though you can only validate one input per group).</p>
+  </li>
+  <li>
+    <p>Sizing classes must be on the parent <code class="highlighter-rouge">.input-group</code> and not the individual form elements.</p>
+  </li>
+</ul>
+
 <h3 id="list-group">List Group</h3>
 <ul>
   <li>The List Group is no longer a stand-alone component, and is now modifier within the new <a href="/figuration-preview/components/lists/">List component</a>.</li>
@@ -285,6 +330,11 @@
 <h3 id="pagination">Pagination</h3>
 <ul>
   <li>Pagination has been modified with a couple of style modifier classes for greater flexibility.  The use of the <code class="highlighter-rouge">.pagination-group</code> modifier class on the <code class="highlighter-rouge">.pagination</code> element is needed to keep the same look as the older pagination component.</li>
+</ul>
+
+<h3 id="switch">Switch</h3>
+<ul>
+  <li>Dropped Switch component and consolidated with the <code class="highlighter-rouge">.custom-control</code> radio and checkbox controls. Check out the <a href="/figuration-preview/content/forms/#switches">new switch custom control</a>.</li>
 </ul>
 
 <h2 id="utilities">Utilities</h2>
@@ -311,6 +361,21 @@
   <li>Dropped support for jQuery animations as the slim build does not support them.  Added an optional fade-in CSSS animation.</li>
 </ul>
 
+<h3 id="slider">Slider</h3>
+<ul>
+  <li>Dropped the slider widget as a bundled plugin.  This has been replaced with the <code class="highlighter-rouge">.custom-range</code> styled <code class="highlighter-rouge">&lt;input type="range"&gt;</code> element.</li>
+</ul>
+
+<h3 id="player">Player</h3>
+<ul>
+  <li>Dropped support for sliders using the Slider widget, and added support for <code class="highlighter-rouge">&lt;input type="range"&gt;</code> elements.  A few improvements on the accesibility of the sliders were also added.</li>
+</ul>
+
+<h2 id="build-tools">Build Tools</h2>
+<ul>
+  <li>Figuration now requires Node.js v8 or newer if using our build tools.  This is due to the minimum Node.js requirement for <code class="highlighter-rouge">grunt-sass</code>.</li>
+</ul>
+
             </main>
         </div>
 
@@ -322,7 +387,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.1
+            Current version: 4.0.0-alpha.2
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>
@@ -338,8 +403,8 @@
             <br />
             Portions: &copy; 2011-2018 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
         <p>
-            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/tree/v4-dev/blob/master/LICENSE">MIT</a>,
-            docs <a rel="license" href="https://github.com/cast-org/figuration/tree/v4-dev/blob/master/docs/LICENSE">CC BY 4.0</a>.
+            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
+            docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.
         </p>
 
         <hr />

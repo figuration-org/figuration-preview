@@ -105,7 +105,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="https://github.com/cast-org/figuration/tree/v4-dev" class="nav-link" aria-label="Github" title="GitHub">
+            <a href="https://github.com/cast-org/figuration" class="nav-link" aria-label="Github" title="GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false"  class="cf-header-icon"  >
   <title>GitHub</title>
   <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.3 6.53 5.47 7.6.4.06.55-.18.55-.4v-1.48c-2.02.37-2.54-.5-2.7-.94-.1-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.62 0 1.07.58 1.22.82.72 1.2 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.77-.2-3.63-.9-3.63-3.95 0-.87.3-1.6.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.2 2.2.83.64-.18 1.32-.27 2-.27.68 0 1.36.1 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.93.08 2.13.5.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.3.25.54.73.54 1.48v2.2c0 .22.15.47.55.4C13.7 14.52 16 11.52 16 8c0-4.42-3.58-8-8-8z"/>
@@ -305,10 +305,10 @@
 <p>To use our Gruntfile and run our documentation locally, you’ll need a copy of Figuration’s source files, Node.js, and Grunt. Follow these steps and you should be ready to rock:</p>
 
 <ol>
-  <li><a href="https://nodejs.org/download">Download and install Node.js</a>, which we use to manage our dependencies.</li>
+  <li><a href="https://nodejs.org/en/download/">Download and install Node.js</a>, which we use to manage our dependencies.</li>
   <li>Install the Grunt command line tools, <code class="highlighter-rouge">grunt-cli</code>, with <code class="highlighter-rouge">npm install -g grunt-cli</code>.</li>
   <li>Navigate to the root <code class="highlighter-rouge">/figuration</code> directory and run <code class="highlighter-rouge">npm install</code> to install our local dependencies listed in <a href="https://github.com/cast-org/figuration/blob/master/package.json">package.json</a>.</li>
-  <li><a href="https://www.ruby-lang.org/en/documentation/installation/">Install Ruby</a>, install <a href="http://bundler.io/">Bundler</a> with <code class="highlighter-rouge">gem install bundler</code>, and finally run <code class="highlighter-rouge">bundle install</code>. This will install all Ruby dependencies, such as Jekyll and plugins.
+  <li><a href="https://www.ruby-lang.org/en/documentation/installation/">Install Ruby</a>, install <a href="https://bundler.io/">Bundler</a> with <code class="highlighter-rouge">gem install bundler</code>, and finally run <code class="highlighter-rouge">bundle install</code>. This will install all Ruby dependencies, such as Jekyll and plugins.
     <ul>
       <li><strong>Windows users:</strong> Read <a href="https://jekyllrb.com/docs/windows/">this guide</a> to get Jekyll up and running without problems.</li>
     </ul>
@@ -339,11 +339,11 @@
     </tr>
     <tr>
       <td><code class="highlighter-rouge">grunt test</code></td>
-      <td>Runs <a href="https://stylelint.io/">stylelint</a>, <a href="http://jshint.com/">JSHint</a> and <a href="http://qunitjs.com/">QUnit</a> tests headlessly in <a href="http://phantomjs.org/">PhantomJS</a>.</td>
+      <td>Runs <a href="https://stylelint.io/">stylelint</a>, <a href="https://eslint.org/">eslint</a> and <a href="https://qunitjs.com/">QUnit</a> tests headlessly in <a href="http://phantomjs.org/">PhantomJS</a>.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">grunt docs</code></td>
-      <td>Builds and tests CSS, JavaScript, and other assets which are used when running the documentation locally via <code class="highlighter-rouge">jekyll serve</code>.</td>
+      <td>Builds and tests CSS, JavaScript, and other assets which are used when running the documentation locally via <code class="highlighter-rouge">bundle exec jekyll serve</code>.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">grunt watch</code></td>
@@ -360,7 +360,7 @@
 
 <p>Figuration uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> (included in our Gruntfile and build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins.</p>
 
-<p>We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See <a href="https://github.com/cast-org/figuration/blob/v4-dev/package.json"><code class="highlighter-rouge">/package.json</code></a> for details.</p>
+<p>We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. <a href="https://github.com/cast-org/figuration/blob/v4-dev/.browserslistrc">See our <code class="highlighter-rouge">.browserslistrc</code></a> for details.</p>
 
 <h2 id="postcss-flexbugs-fixes">postcss-flexbugs-fixes</h2>
 
@@ -376,7 +376,7 @@
   <li>Open <code class="highlighter-rouge">http://localhost:9001</code> in your browser, and enjoy.</li>
 </ol>
 
-<p>Learn more about using Jekyll by reading its <a href="http://jekyllrb.com/docs/home/">documentation</a>.</p>
+<p>Learn more about using Jekyll by reading its <a href="https://jekyllrb.com/docs/home/">documentation</a>.</p>
 
 <h2 id="troubleshooting">Troubleshooting</h2>
 
@@ -393,7 +393,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.1
+            Current version: 4.0.0-alpha.2
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>
@@ -409,8 +409,8 @@
             <br />
             Portions: &copy; 2011-2018 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
         <p>
-            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/tree/v4-dev/blob/master/LICENSE">MIT</a>,
-            docs <a rel="license" href="https://github.com/cast-org/figuration/tree/v4-dev/blob/master/docs/LICENSE">CC BY 4.0</a>.
+            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
+            docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.
         </p>
 
         <hr />

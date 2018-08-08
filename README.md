@@ -24,16 +24,16 @@ CAST Figuration: A feature rich, responsive, mobile first, accessible, front-end
 
 **Latest Release**
 [![npm version](https://img.shields.io/npm/v/figuration.svg)](https://www.npmjs.com/package/figuration)
-[![CSS size](http://img.badgesize.io/cast-org/figuration/v4.0.0-alpha.1/dist/css/figuration.min.css?label=CSS+size)](https://github.com/cast-org/figuration/tree/v4.0.0-alpha.1/dist/css/figuration.min.css)
-[![CSS gzip size](http://img.badgesize.io/cast-org/figuration/v4.0.0-alpha.1/dist/css/figuration.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/cast-org/figuration/tree/v4.0.0-alpha.1/dist/css/figuration.min.css)
-[![JS size](http://img.badgesize.io/cast-org/figuration/v4.0.0-alpha.1/dist/js/figuration.min.js?label=JS+size)](https://github.com/cast-org/figuration/tree/v4.0.0-alpha.1/dist/js/figuration.min.js)
-[![JS gzip size](http://img.badgesize.io/cast-org/figuration/v4.0.0-alpha.1/dist/js/figuration.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/cast-org/figuration/tree/v4.0.0-alpha.1/dist/js/figuration.min.js)
+[![CSS size](http://img.badgesize.io/cast-org/figuration/v4.0.0-alpha.2/dist/css/figuration.min.css?label=CSS+size)](https://github.com/cast-org/figuration/tree/v4.0.0-alpha.2/dist/css/figuration.min.css)
+[![CSS gzip size](http://img.badgesize.io/cast-org/figuration/v4.0.0-alpha.2/dist/css/figuration.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/cast-org/figuration/tree/v4.0.0-alpha.2/dist/css/figuration.min.css)
+[![JS size](http://img.badgesize.io/cast-org/figuration/v4.0.0-alpha.2/dist/js/figuration.min.js?label=JS+size)](https://github.com/cast-org/figuration/tree/v4.0.0-alpha.2/dist/js/figuration.min.js)
+[![JS gzip size](http://img.badgesize.io/cast-org/figuration/v4.0.0-alpha.2/dist/js/figuration.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/cast-org/figuration/tree/v4.0.0-alpha.2/dist/js/figuration.min.js)
 
 **Dependencies**
-[![peerDependencies Status](https://img.shields.io/david/peer/cast-org/figuration.svg)](https://david-dm.org/cast-org/figuration?type=peer)
-[![devDependencies Status](https://img.shields.io/david/dev/cast-org/figuration.svg)](https://david-dm.org/cast-org/figuration?type=dev)
+[![peerDependencies Status](https://img.shields.io/david/peer/cast-org/figuration/v4-dev.svg)](https://david-dm.org/cast-org/figuration/v4-dev?type=peer)
+[![devDependencies Status](https://img.shields.io/david/dev/cast-org/figuration/v4-dev.svg)](https://david-dm.org/cast-org/figuration/v4-dev?type=dev)
 
-**Build Status**
+**Development Build Status**
 [![Build Status](https://img.shields.io/travis/cast-org/figuration/master.svg)](https://travis-ci.org/cast-org/figuration)
 [![Sauce Labs Test Status](https://saucelabs.com/browser-matrix/figuration.svg)](https://saucelabs.com/u/figuration)
 
@@ -44,10 +44,10 @@ Several quick start options are available:
 
 Nothing has been released yet, as this is a development version.
 
-- [Download the latest release.](https://github.com/cast-org/figuration/archive/v4.0.0-alpha.1.zip)
+- [Download the latest release.](https://github.com/cast-org/figuration/archive/v4.0.0-alpha.2.zip)
 - Clone the repo: `git clone https://github.com/cast-org/figuration.git`
-- Install with [npm](https://www.npmjs.com/): `npm install figuration@4.0.0-alpha.1`
-- Install with [yarn](https://yarnpkg.com/): `yarn add figuration@4.0.0-alpha.1`
+- Install with [npm](https://www.npmjs.com/): `npm install figuration@4.0.0-alpha.2`
+- Install with [yarn](https://yarnpkg.com/): `yarn add figuration@4.0.0-alpha.2`
 
 Read the [Get Started page](http://figuration.org/get-started/quick-start/) for information on the framework, templates, and examples.
 
@@ -74,7 +74,7 @@ We provide compiled CSS and JS (`figuration.*`), as well as compiled and minifie
 
 ## Bugs and Feature Requests
 
-Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/cast-org/figuration/blob/master/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/cast-org/figuration/issues/new).
+Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/cast-org/figuration/tree/v4-dev/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/cast-org/figuration/issues/new).
 
 
 ## Documentation
@@ -84,7 +84,7 @@ Figurations's documentation, included in this repo in the root directory, is bui
 
 ### Running Documentation Locally
 
-1. Run through the [tooling setup](https://github.com/cast-org/figuration/blob/master/docs/get-started/build-tools.md#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
+1. Run through the [tooling setup](https://github.com/cast-org/figuration/tree/v4-dev/docs/get-started/build-tools.md#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
 2. Run `npm install` to install Node.js dependencies.
 4. Run `grunt` (or a specific set of Grunt tasks) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
 5. From the root `/figuration` directory, run `bundle exec jekyll serve` in the command line.
@@ -95,11 +95,11 @@ Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com
 
 ## Contributing
 
-Please read through our [contributing guidelines](https://github.com/cast-org/figuration/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+Please read through our [contributing guidelines](https://github.com/cast-org/figuration/tree/v4-dev/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
 
-Moreover, if your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/cast-org/figuration/tree/master/js/tests). All HTML and CSS should conform to the coding standards.
+If your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/cast-org/figuration/tree/v4-dev/js/tests). All HTML and CSS should conform to the coding standards.
 
-Editor preferences are available in the [editor config](https://github.com/cast-org/figuration/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
+Editor preferences are available in the [editor config](https://github.com/cast-org/figuration/tree/v4-dev/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org>.
 
 
 ## Community
@@ -121,4 +121,4 @@ See [the Releases section of our GitHub project](https://github.com/cast-org/fig
 
 ## Copyright and License
 
-Code and documentation copyright 2013-2018 [CAST, Inc.](http://www.cast.org/) Code released under [the MIT license](https://github.com/cast-org/figuration/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/cast-org/figuration/blob/master/docs/LICENSE).
+Code and documentation copyright 2013-2018 [CAST, Inc.](http://www.cast.org/) Code released under [the MIT license](https://github.com/cast-org/figuration/tree/v4-dev/LICENSE). Docs released under [Creative Commons](https://github.com/cast-org/figuration/tree/v4-dev/docs/LICENSE).

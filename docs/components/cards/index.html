@@ -105,7 +105,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="https://github.com/cast-org/figuration/tree/v4-dev" class="nav-link" aria-label="Github" title="GitHub">
+            <a href="https://github.com/cast-org/figuration" class="nav-link" aria-label="Github" title="GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false"  class="cf-header-icon"  >
   <title>GitHub</title>
   <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.3 6.53 5.47 7.6.4.06.55-.18.55-.4v-1.48c-2.02.37-2.54-.5-2.7-.94-.1-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.62 0 1.07.58 1.22.82.72 1.2 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.77-.2-3.63-.9-3.63-3.95 0-.87.3-1.6.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.2 2.2.83.64-.18 1.32-.27 2-.27.68 0 1.36.1 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.93.08 2.13.5.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.3.25.54.73.54 1.48v2.2c0 .22.15.47.55.4C13.7 14.52 16 11.52 16 8c0-4.42-3.58-8-8-8z"/>
@@ -326,18 +326,6 @@
           </a>
         </li>
       
-        
-
-        
-        
-        
-
-        <li class="nav-item">
-          <a href="/figuration-preview/components/switch/" class="nav-link ">
-            Switch 
-          </a>
-        </li>
-      
     </ul>
   
 
@@ -424,8 +412,8 @@
 
 <div class="cf-example">
 <div class="card" style="max-width: 18rem;">
-  <div class="card-img card-img-top">
-    <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+  <div class="card-img">
+    <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
   </div>
   <div class="card-body">
     <h4 class="card-title">Card title</h4>
@@ -435,8 +423,8 @@
 </div>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span> <span class="na">style=</span><span class="s">"max-width: 18rem;"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -587,12 +575,12 @@
 
 <p>Similar to headers and footers, cards can include top and bottom image caps.</p>
 
-<p>Use <code class="highlighter-rouge">.card-img-top</code> to round over the top corners when placing an image at the top of a card.</p>
+<p>Use <code class="highlighter-rouge">.card-img-top</code> on the image, or embedded element, to round over the top corners when placing an image at the top of a card.</p>
 
 <div class="cf-example">
 <div class="card" style="max-width: 18rem;">
-  <div class="card-img card-img-top">
-    <img class="img-fluid" src="/figuration-preview/assets/img/test.gif" alt="Card image cap" />
+  <div class="card-img">
+    <img class="img-fluid card-img-top" src="/figuration-preview/assets/img/test.gif" alt="Card image cap" />
   </div>
   <div class="card-body">
     <h4 class="card-title">Card title</h4>
@@ -602,8 +590,8 @@
 </div>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span> <span class="na">style=</span><span class="s">"max-width: 18rem;"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"/figuration-preview/assets/img/test.gif"</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"/figuration-preview/assets/img/test.gif"</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -612,7 +600,7 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<p>Use <code class="highlighter-rouge">.card-img-bottom</code> to round over the bottom corners when placing an image at the bottom of a card.</p>
+<p>Use <code class="highlighter-rouge">.card-img-bottom</code> on the image, or embedded element, to round over the bottom corners when placing an image at the bottom of a card.</p>
 
 <div class="cf-example">
 <div class="card" style="max-width: 18rem;">
@@ -621,8 +609,8 @@
     <p class="card-text">Some sample text to build out the size of the card. Lorem ipsum dolor sit amet, consectetur.</p>
     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
   </div>
-  <div class="card-img card-img-bottom">
-    <img class="img-fluid" src="/figuration-preview/assets/img/test.gif" alt="Card image cap" />
+  <div class="card-img">
+    <img class="img-fluid card-img-bottom" src="/figuration-preview/assets/img/test.gif" alt="Card image cap" />
   </div>
 </div>
 </div>
@@ -632,19 +620,19 @@
     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Some sample text to build out the size of the card. Lorem ipsum dolor sit amet, consectetur.<span class="nt">&lt;/p&gt;</span>
     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Last updated 3 mins ago<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-bottom"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"/figuration-preview/assets/img/test.gif"</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-bottom"</span> <span class="na">src=</span><span class="s">"/figuration-preview/assets/img/test.gif"</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <h4 id="image-overlay">Image Overlay</h4>
 
-<p>Turn an image into a card background and overlay your card’s text. The use of <code class="highlighter-rouge">.card-img</code> will round over all corners of the image, and <code class="highlighter-rouge">.card-img-overlay</code> will allow content to overlay the image. Depending on the image, you may or may not need additional styles or utility classes.</p>
+<p>Turn an image into a card background and overlay your card’s text. The use of <code class="highlighter-rouge">.card-img-top</code> and <code class="highlighter-rouge">.card-img-bottom</code> will round over all corners of the image, and <code class="highlighter-rouge">.card-img-overlay</code> will allow content to overlay the image. Depending on the image, you may or may not need additional styles or utility classes.</p>
 
 <div class="cf-example">
 <div class="card text-white" style="max-width: 18rem;">
-  <div class="card-img card-img-top card-img-bottom">
-    <img class="img-fluid" data-src="holder.js/100px225/?text=Image background" alt="Card image" />
+  <div class="card-img">
+    <img class="img-fluid card-img-top card-img-bottom" data-src="holder.js/100px225/?text=Image background" alt="Card image" />
   </div>
   <div class="card-img-overlay">
     <h4 class="card-title">Card title</h4>
@@ -654,8 +642,8 @@
 </div>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card text-white"</span> <span class="na">style=</span><span class="s">"max-width: 18rem;"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top card-img-bottom"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top card-img-bottom"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img-overlay"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -773,8 +761,8 @@
 
 <div class="cf-example">
 <div class="card" style="max-width: 18rem;">
-  <div class="card-img card-img-top">
-    <img class="img-fluid" data-src="holder.js/100px150/?text=Image cap" alt="Card image cap" />
+  <div class="card-img">
+    <img class="img-fluid card-img-top" data-src="holder.js/100px150/?text=Image cap" alt="Card image cap" />
   </div>
   <div class="card-body">
     <h4 class="card-title">Card title</h4>
@@ -792,8 +780,8 @@
 </div>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span> <span class="na">style=</span><span class="s">"max-width: 18rem;"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1041,7 +1029,7 @@
 
 <h2 id="navigation">Navigation</h2>
 
-<p>Add navigation items within a card’s header (or block) with Figuration’s <a href="/figuration-preview//components/navs/">navigation components</a>.</p>
+<p>Add navigation items within a card’s header (or block) with Figuration’s <a href="/figuration-preview/components/navs/">navigation components</a>.</p>
 
 <div class="cf-example">
 <div class="card text-center">
@@ -1439,29 +1427,29 @@
 
 <h3 id="header-and-footer-variants">Header and Footer Variants</h3>
 
-<p>Recolor the header and footer sections of your cards by using the background context colors. <strong>Darker colors require the use of <code class="highlighter-rouge">.card-inverse</code>.</strong></p>
+<p>Recolor the header and footer sections of your cards by using the background context colors. Additional use of <a href="/figuration-preview/utilities/color/#text">text color utilities</a> might be needed.</p>
 
 <div class="cf-example">
 <div class="card">
-  <h3 class="card-header card-inverse bg-primary">Featured</h3>
+  <h3 class="card-header bg-primary text-light">Featured</h3>
   <div class="card-body">
     <h4 class="card-title">Special title treatment</h4>
     <p class="card-text">Some sample text to build out the size of the card. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
-  <div class="card-footer card-inverse bg-primary">
+  <div class="card-footer bg-primary text-light">
     Footer
   </div>
 </div>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"card-header card-inverse bg-primary"</span><span class="nt">&gt;</span>Featured<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"card-header bg-primary text-light"</span><span class="nt">&gt;</span>Featured<span class="nt">&lt;/h3&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Special title treatment<span class="nt">&lt;/h4&gt;</span>
     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Some sample text to build out the size of the card. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Go somewhere<span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer card-inverse bg-primary"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer bg-primary text-light"</span><span class="nt">&gt;</span>
     Footer
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
@@ -1477,8 +1465,8 @@
 <div class="cf-example">
 <div class="card-group-sm">
   <div class="card">
-    <div class="card-img card-img-top">
-      <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+    <div class="card-img">
+      <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
     </div>
     <div class="card-body">
       <h4 class="card-title">Card title</h4>
@@ -1487,8 +1475,8 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-img card-img-top">
-      <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+    <div class="card-img">
+      <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
     </div>
     <div class="card-body">
       <h4 class="card-title">Card title</h4>
@@ -1497,8 +1485,8 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-img card-img-top">
-      <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+    <div class="card-img">
+      <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
     </div>
     <div class="card-body">
       <h4 class="card-title">Card title</h4>
@@ -1510,8 +1498,8 @@
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-group-sm"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1520,8 +1508,8 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1530,8 +1518,8 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1546,8 +1534,8 @@
 <div class="cf-example">
 <div class="card-group-sm">
   <div class="card">
-    <div class="card-img card-img-top">
-      <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+    <div class="card-img">
+      <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
     </div>
     <div class="card-body">
       <h4 class="card-title">Card title</h4>
@@ -1561,8 +1549,8 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-img card-img-top">
-      <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+    <div class="card-img">
+      <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
     </div>
     <div class="card-body">
       <h4 class="card-title">Card title</h4>
@@ -1573,8 +1561,8 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-img card-img-top">
-      <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+    <div class="card-img">
+      <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
     </div>
     <div class="card-body">
       <h4 class="card-title">Card title</h4>
@@ -1588,8 +1576,8 @@
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-group-sm"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1603,8 +1591,8 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1615,8 +1603,8 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1635,8 +1623,8 @@
 <div class="cf-example">
 <div class="card-deck-sm">
   <div class="card">
-    <div class="card-img card-img-top">
-      <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+    <div class="card-img">
+      <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
     </div>
     <div class="card-body">
       <h4 class="card-title">Card title</h4>
@@ -1645,8 +1633,8 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-img card-img-top">
-      <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+    <div class="card-img">
+      <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
     </div>
     <div class="card-body">
       <h4 class="card-title">Card title</h4>
@@ -1655,8 +1643,8 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-img card-img-top">
-      <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+    <div class="card-img">
+      <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
     </div>
     <div class="card-body">
       <h4 class="card-title">Card title</h4>
@@ -1668,8 +1656,8 @@
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-deck-sm"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1678,8 +1666,8 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1688,8 +1676,8 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1704,8 +1692,8 @@
 <div class="cf-example">
 <div class="card-deck-sm">
   <div class="card">
-    <div class="card-img card-img-top">
-      <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+    <div class="card-img">
+      <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
     </div>
     <div class="card-body">
       <h4 class="card-title">Card title</h4>
@@ -1719,8 +1707,8 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-img card-img-top">
-      <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+    <div class="card-img">
+      <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
     </div>
     <div class="card-body">
       <h4 class="card-title">Card title</h4>
@@ -1731,8 +1719,8 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-img card-img-top">
-      <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+    <div class="card-img">
+      <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
     </div>
     <div class="card-body">
       <h4 class="card-title">Card title</h4>
@@ -1746,8 +1734,8 @@
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-deck-sm"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1761,8 +1749,8 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1773,8 +1761,8 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1823,8 +1811,8 @@
 <div class="cf-example">
 <div class="card-deck-sm card-deck-col">
     <div class="card">
-        <div class="card-img card-img-top">
-            <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+        <div class="card-img">
+            <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
         </div>
         <div class="card-body">
             <h4 class="card-title">Card title</h4>
@@ -1832,8 +1820,8 @@
         </div>
     </div>
     <div class="card">
-        <div class="card-img card-img-top">
-            <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+        <div class="card-img">
+            <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
         </div>
         <div class="card-body">
             <h4 class="card-title">Card title</h4>
@@ -1841,8 +1829,8 @@
         </div>
     </div>
     <div class="card">
-        <div class="card-img card-img-top">
-            <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+        <div class="card-img">
+            <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
         </div>
         <div class="card-body">
             <h4 class="card-title">Card title</h4>
@@ -1850,8 +1838,8 @@
         </div>
     </div>
     <div class="card">
-        <div class="card-img card-img-top">
-            <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+        <div class="card-img">
+            <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
         </div>
         <div class="card-body">
             <h4 class="card-title">Card title</h4>
@@ -1862,8 +1850,8 @@
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-deck-sm card-deck-col"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1871,8 +1859,8 @@
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1880,8 +1868,8 @@
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1889,8 +1877,8 @@
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -1910,8 +1898,8 @@
 <div class="cf-example">
 <div class="card-columns-sm">
   <div class="card">
-    <div class="card-img card-img-top">
-      <img class="img-fluid" data-src="holder.js/100px150/" alt="Card image cap" />
+    <div class="card-img">
+      <img class="img-fluid card-img-top" data-src="holder.js/100px150/" alt="Card image cap" />
     </div>
     <div class="card-body">
       <h4 class="card-title">Card title that wraps to a new line</h4>
@@ -1931,8 +1919,8 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-img card-img-top">
-      <img class="img-fluid" data-src="holder.js/100px160/" alt="Card image cap" />
+    <div class="card-img">
+      <img class="img-fluid card-img-top" data-src="holder.js/100px160/" alt="Card image cap" />
     </div>
     <div class="card-body">
       <h4 class="card-title">Card title</h4>
@@ -1940,11 +1928,11 @@
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
-  <div class="card card-inverse card-primary text-center">
+  <div class="card bg-primary text-light text-center">
     <div class="card-body">
       <blockquote class="blockquote text-light">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-        <footer class="blockquote-footer card-inverse">
+        <footer class="blockquote-footer text-light">
           <small>
             Someone famous in <cite title="Source Title">Source Title</cite>
           </small>
@@ -1987,8 +1975,8 @@
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-columns-sm"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title that wraps to a new line<span class="nt">&lt;/h4&gt;</span>
@@ -2008,8 +1996,8 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img card-img-top"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
@@ -2017,11 +2005,11 @@
       <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Last updated 3 mins ago<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-inverse card-primary text-center"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card bg-primary text-light text-center"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote text-light"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer card-inverse"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer text-light"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;small&gt;</span>
             Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;</span>
           <span class="nt">&lt;/small&gt;</span>
@@ -2099,7 +2087,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.1
+            Current version: 4.0.0-alpha.2
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>
@@ -2115,8 +2103,8 @@
             <br />
             Portions: &copy; 2011-2018 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
         <p>
-            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/tree/v4-dev/blob/master/LICENSE">MIT</a>,
-            docs <a rel="license" href="https://github.com/cast-org/figuration/tree/v4-dev/blob/master/docs/LICENSE">CC BY 4.0</a>.
+            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
+            docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.
         </p>
 
         <hr />
