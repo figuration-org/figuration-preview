@@ -130,7 +130,7 @@
     </ul>
 </header>
 
-    <div class="jumbotron jumbotron-full jumbotron-docs">
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
         <div class="container-fluid">
             
     <div class="h1">Content</div>
@@ -319,6 +319,11 @@
   <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
   <li><a href="#user-input" id="markdown-toc-user-input">User Input</a></li>
   <li><a href="#sample-output" id="markdown-toc-sample-output">Sample Output</a></li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables-1" id="markdown-toc-variables-1">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="inline-code">Inline Code</h2>
@@ -372,6 +377,151 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;samp&gt;</span>This text is meant to be treated as sample output from a computer program.<span class="nt">&lt;/samp&gt;</span></code></pre></div>
 
+<h2 id="sass-reference">SASS Reference</h2>
+
+<h3 id="variables-1">Variables</h3>
+
+<p>The available <a href="/figuration-preview/get-started/options/">Customization options</a>, or Sass variables, that can be customized for the code CSS styles.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-code</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the code CSS rules.
+                    Smaller segements of the code CSS rules can be disabled with the following <code>$enable-*</code> variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-code-code</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the code element CSS rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-code-kbd</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the keyboard element CSS rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-code-pre</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the pre element CSS rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$code-font-size</code></td>
+                <td>percent</td>
+                <td><code>87.5%</code></td>
+                <td>
+                    Code and pre element font size.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$code-padding-x</code></td>
+                <td>string</td>
+                <td><code>.4375rem</code></td>
+                <td>
+                    Code element horizontal padding.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$code-padding-y</code></td>
+                <td>string</td>
+                <td><code>.125rem</code></td>
+                <td>
+                    Code element vertical padding.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$code-color</code></td>
+                <td>string</td>
+                <td><code>palette($red, 550)</code></td>
+                <td>
+                    Code element text color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$code-bg</code></td>
+                <td>string</td>
+                <td><code>$uibase-50</code></td>
+                <td>
+                    Code element background color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$kbd-color</code></td>
+                <td>string</td>
+                <td><code>$uibase-50</code></td>
+                <td>
+                    Keyboard element text color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$kbd-bg</code></td>
+                <td>string</td>
+                <td><code>$uibase-900</code></td>
+                <td>
+                    Keyboard element background color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$kbd-box-shadow</code></td>
+                <td>string</td>
+                <td><code>inset 0 -.1rem 0 rgba($black, .25)</code></td>
+                <td>
+                    Optional box shadow for keyboard element.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$kbd-nested-font-weight</code></td>
+                <td>string</td>
+                <td><code>$font-weight-bold</code></td>
+                <td>
+                    Font weight for nested keyboard elements.  Parent keyboard element inherit the current font weight.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$kbd-border-radius</code></td>
+                <td>string</td>
+                <td><code>.1875rem</code></td>
+                <td>
+                    Keyboard element border radius.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$pre-color</code></td>
+                <td>string</td>
+                <td><code>$uibase-700</code></td>
+                <td>
+                    Pre element text color.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>No mixins available.</p>
 
             </main>
         </div>
@@ -384,7 +534,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.2
+            Current version: 4.0.0-alpha.3
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>

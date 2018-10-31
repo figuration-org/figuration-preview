@@ -130,7 +130,7 @@
     </ul>
 </header>
 
-    <div class="jumbotron jumbotron-full jumbotron-docs">
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
         <div class="container-fluid">
             
     <div class="h1">Components</div>
@@ -394,12 +394,21 @@
     </ul>
   </li>
   <li><a href="#layout-options" id="markdown-toc-layout-options">Layout Options</a>    <ul>
+      <li><a href="#horizontal-cards" id="markdown-toc-horizontal-cards">Horizontal Cards</a>        <ul>
+          <li><a href="#reverse-horizontal-card" id="markdown-toc-reverse-horizontal-card">Reverse Horizontal Card</a></li>
+        </ul>
+      </li>
       <li><a href="#card-groups" id="markdown-toc-card-groups">Card Groups</a></li>
       <li><a href="#card-decks" id="markdown-toc-card-decks">Card Decks</a>        <ul>
           <li><a href="#responsive-rows" id="markdown-toc-responsive-rows">Responsive Rows</a></li>
         </ul>
       </li>
       <li><a href="#card-columns" id="markdown-toc-card-columns">Card Columns</a></li>
+    </ul>
+  </li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
     </ul>
   </li>
 </ul>
@@ -629,6 +638,10 @@
 
 <p>Turn an image into a card background and overlay your card’s text. The use of <code class="highlighter-rouge">.card-img-top</code> and <code class="highlighter-rouge">.card-img-bottom</code> will round over all corners of the image, and <code class="highlighter-rouge">.card-img-overlay</code> will allow content to overlay the image. Depending on the image, you may or may not need additional styles or utility classes.</p>
 
+<div class="cf-callout cf-callout-info">
+<p>Note that content should not be larger than the height of the image.  If content is larger than the image the content will be displayed outside the image.</p>
+</div>
+
 <div class="cf-example">
 <div class="card text-white" style="max-width: 18rem;">
   <div class="card-img">
@@ -654,13 +667,14 @@
 
 <h3 id="lists">Lists</h3>
 
-<p>Create lists of content in a card with <a href="/figuration-preview/components/lists/"><code class="highlighter-rouge">.list</code> component</a> and it’s modifiers.</p>
+<p>Create lists of content in a card with <a href="/figuration-preview/components/lists/"><code class="highlighter-rouge">.list</code> component</a> and it’s modifiers.
+Adding <code class="highlighter-rouge">.card-list</code> to a <code class="highlighter-rouge">.list</code> will automatically add a border radius and will also remove the bottom margin from the <strong>last child</strong> in a section.</p>
 
-<p>Horizontal lists are not currently supported in cards.</p>
+<p>Cards do not currently have support for proper border radius handling for horizontal lists, or for lists within horizontal cards.</p>
 
 <div class="cf-example">
 <div class="card">
-  <ul class="list list-spaced list-divided">
+  <ul class="list list-spaced list-divided card-list">
     <li class="list-item">List item</li>
     <li class="list-item">List item</li>
     <li class="list-item">List item</li>
@@ -668,7 +682,7 @@
 </div>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list list-spaced list-divided"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list list-spaced list-divided card-list"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>List item<span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>List item<span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>List item<span class="nt">&lt;/li&gt;</span>
@@ -678,7 +692,7 @@
 <div class="cf-example">
 <div class="card">
   <h3 class="card-header">Sample Header</h3>
-  <ul class="list list-spaced list-divided mb-0">
+  <ul class="list list-spaced list-divided card-list mb-0">
     <li class="list-item">List item</li>
     <li class="list-item">List item</li>
     <li class="list-item">List item</li>
@@ -688,7 +702,7 @@
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"card-header"</span><span class="nt">&gt;</span>Sample Header<span class="nt">&lt;/h3&gt;</span>
-  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list list-spaced list-divided mb-0"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list list-spaced list-divided card-list mb-0"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>List item<span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>List item<span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>List item<span class="nt">&lt;/li&gt;</span>
@@ -698,9 +712,11 @@
 
 <h3 id="tables">Tables</h3>
 
+<p><code class="highlighter-rouge">.card-table</code> will remove the bottom margin from the <strong>last child</strong> in a section.</p>
+
 <div class="cf-example">
 <div class="card">
-    <table class="table table-divided">
+    <table class="table table-divided card-table">
         <thead>
             <tr>
                 <th scope="col">Header</th>
@@ -728,7 +744,7 @@
 </div>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-divided"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-divided card-table"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;thead&gt;</span>
             <span class="nt">&lt;tr&gt;</span>
                 <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Header<span class="nt">&lt;/th&gt;</span>
@@ -1458,6 +1474,182 @@
 
 <p>In addition to styling the content within cards, Figuration includes a few options for laying out series of cards.</p>
 
+<h3 id="horizontal-cards">Horizontal Cards</h3>
+
+<p>Create horizontal card using <code class="highlighter-rouge">.card-horizontal{breakpoint}</code> and adding child <code class="highlighter-rouge">.card-col</code> containters, to control when content switches from column to row layout. Sizing of columns can be controlled via grid classes.</p>
+
+<p>For basic use cases, <code class="highlighter-rouge">border-radius</code> updates are handled for switching from column to row layout for the header, footer, and image card sub-components.  In some cases, custom CSS may be needed. List and table sub-components are not currently handled.  Card decks and card groups also do not have explicit support for horizontal cards.</p>
+
+<div class="cf-example">
+<div class="card card-horizontal">
+    <div class="card-col col-5">
+        <div class="card-img">
+            <img class="img-fluid card-img-top card-img-bottom" data-src="holder.js/100px150/?text=Image cap" alt="Card image cap" />
+        </div>
+    </div>
+    <!-- using `.col-sm` due to pixel rounding -->
+    <div class="card-col col">
+        <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This card layout will always display the image cap on the <strong>start</strong> side of the card.</p>
+        </div>
+    </div>
+</div>
+
+<div class="card card-horizontal-md">
+    <!-- using `.col-md` due to pixel rounding -->
+    <div class="card-col col-md">
+        <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This card layout will display the image cap <strong>below</strong> the body content at smaller viewports.</p>
+        </div>
+    </div>
+    <div class="card-col col-md-5">
+        <div class="card-img">
+            <img class="img-fluid card-img-top card-img-bottom" data-src="holder.js/100px150/?text=Image cap" alt="Card image cap" />
+        </div>
+    </div>
+</div>
+
+<div class="card card-horizontal-md">
+    <div class="card-col col-md-5">
+        <div class="card-img">
+            <img class="img-fluid card-img-top card-img-bottom" data-src="holder.js/100px225/?text=Image cap" alt="Card image cap" />
+        </div>
+    </div>
+    <!-- using `.col-md` due to pixel rounding -->
+    <div class="card-col col-md">
+        <h4 class="card-header">Featured</h4>
+        <div class="card-body">
+            <p class="card-text">This card layout will display the image cap <strong>above</strong> the body content at smaller viewports.</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+    </div>
+</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-horizontal"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-col col-5"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top card-img-bottom"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!-- using `.col-sm` due to pixel rounding --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-col col"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>This card layout will always display the image cap on the <span class="nt">&lt;strong&gt;</span>start<span class="nt">&lt;/strong&gt;</span> side of the card.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-horizontal-md"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- using `.col-md` due to pixel rounding --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-col col-md"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>This card layout will display the image cap <span class="nt">&lt;strong&gt;</span>below<span class="nt">&lt;/strong&gt;</span> the body content at smaller viewports.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-col col-md-5"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top card-img-bottom"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-horizontal-md"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-col col-md-5"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top card-img-bottom"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!-- using `.col-md` due to pixel rounding --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-col col-md"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-header"</span><span class="nt">&gt;</span>Featured<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>This card layout will display the image cap <span class="nt">&lt;strong&gt;</span>above<span class="nt">&lt;/strong&gt;</span> the body content at smaller viewports.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Last updated 3 mins ago<span class="nt">&lt;/small&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h4 id="reverse-horizontal-card">Reverse Horizontal Card</h4>
+
+<p>Quickly swap the <em>visual</em> column order using one of the responsive reverse horizontal card classes, <code class="highlighter-rouge">.card-horizontal{breakpoint}-reverse</code>.</p>
+
+<p>In the examples below, the card will display the image cap <strong>above</strong> the body content, then at larger viewports, will display the image cap on the <strong>end</strong> side of the card.</p>
+
+<div class="cf-example">
+<div class="card card-horizontal-sm-reverse">
+    <div class="card-col col-sm-5">
+        <div class="card-img">
+            <img class="img-fluid card-img-top card-img-bottom" data-src="holder.js/100px150/?text=Image cap" alt="Card image cap" />
+        </div>
+    </div>
+    <!-- using `.col-sm` due to pixel rounding -->
+    <div class="card-col col-sm">
+        <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some sample text to build out the size of the card. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+</div>
+
+<div class="card card-horizontal-md-reverse">
+    <div class="card-col col-md-5">
+        <div class="card-img">
+            <img class="img-fluid card-img-top card-img-bottom" data-src="holder.js/100px225/?text=Image cap" alt="Card image cap" />
+        </div>
+    </div>
+    <!-- using `.col-md` due to pixel rounding -->
+    <div class="card-col col-md">
+        <h4 class="card-header">Featured</h4>
+        <div class="card-body">
+            <p class="card-text">Some sample text to build out the size of the card. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+    </div>
+</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-horizontal-sm-reverse"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-col col-sm-5"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top card-img-bottom"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!-- using `.col-sm` due to pixel rounding --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-col col-sm"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Some sample text to build out the size of the card. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-horizontal-md-reverse"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-col col-md-5"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid card-img-top card-img-bottom"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!-- using `.col-md` due to pixel rounding --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-col col-md"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-header"</span><span class="nt">&gt;</span>Featured<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Some sample text to build out the size of the card. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Last updated 3 mins ago<span class="nt">&lt;/small&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
 <h3 id="card-groups">Card Groups</h3>
 
 <p>Use card groups to render cards as a single, attached element with equal width and height columns. Card groups use <code class="highlighter-rouge">display: flex;</code> to achieve their uniform sizing.  Card groups are available with the class syntax of <code class="highlighter-rouge">.card-group{-breakpoint}</code>, such as <code class="highlighter-rouge">.card-group-md</code> to enable the group layout for <code class="highlighter-rouge">md</code> screens and above.</p>
@@ -1893,8 +2085,6 @@
 
 <p>Responsive variants are available with the class syntax of <code class="highlighter-rouge">.card-columns{-breakpoint}</code>, such as <code class="highlighter-rouge">.card-columns-sm</code> to enable the columns layout for <code class="highlighter-rouge">sm</code> screens and above.</p>
 
-<p><strong>Heads up!</strong> Your mileage with card columns may vary. To prevent cards breaking across columns, we set them to <code class="highlighter-rouge">display: inline-table</code>, as <code class="highlighter-rouge">column-break-inside: avoid</code> isn’t a fully supported option yet.</p>
-
 <div class="cf-example">
 <div class="card-columns-sm">
   <div class="card">
@@ -2076,6 +2266,448 @@
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
+<h1 id="sass-reference">SASS Reference</h1>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/get-started/options/">Customization options</a>, or Sass variables, that can be customized for the card component.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-card</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card component classes.
+                    Smaller segements of the card component classes can be disabled with the following <code>$enable-*</code> variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-body</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card body class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-title</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card title class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-subtitle</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card subtitle class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-text</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card text rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-link</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card link rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-list</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card list rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-table</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card table rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-header</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card header rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-footer</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card footer rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-header-tabs</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card header tabs class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-header pills</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card header pills class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-img</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card image rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-img-overlay</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card image overlay class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-horizontal</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the horizontal card rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-deck</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card deck rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-deck-responsive</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the responsive card deck rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-group</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card group rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-group-responsive</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the responsive card group rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-columns</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the card columns rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-card-columns-responsive</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the responsive card columns rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-padding-y</code></td>
+                <td>string</td>
+                <td><code>.75rem</code></td>
+                <td>
+                    Card body vertical padding.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-padding-x</code></td>
+                <td>string</td>
+                <td><code>1rem</code></td>
+                <td>
+                    Card body horizontal padding.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-margin-bottom</code></td>
+                <td>string</td>
+                <td><code>1rem</code></td>
+                <td>
+                    Card vertical spacing.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-bg</code></td>
+                <td>string</td>
+                <td><code>$component-bg</code></td>
+                <td>
+                    Card background color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-border-color</code></td>
+                <td>string</td>
+                <td><code>$component-overlay-border-color</code></td>
+                <td>
+                    Card border color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-border-width</code></td>
+                <td>string</td>
+                <td><code>$border-width</code></td>
+                <td>
+                    Card border width.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-border-radius</code></td>
+                <td>string</td>
+                <td><code>$border-radius</code></td>
+                <td>
+                    Card border radius.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-border-radius</code></td>
+                <td>string</td>
+                <td><code>calc(#{$card-border-radius} - #{$card-border-width})</code></td>
+                <td>
+                    Card border radius for internal pieces.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-link-margin-left</code></td>
+                <td>string</td>
+                <td><code>1.25rem</code></td>
+                <td>
+                    Horizontal spacing between card link items.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-title-margin-bottom</code></td>
+                <td>string</td>
+                <td><code>1rem</code></td>
+                <td>
+                    Horizontal spacing for a card title.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-subtitle-margin-top</code></td>
+                <td>string</td>
+                <td><code>-.5rem</code></td>
+                <td>
+                    Horizontal spacing for a card subtitle.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-header-padding-y</code></td>
+                <td>string</td>
+                <td><code>.75rem</code></td>
+                <td>
+                    Vertical padding for card header.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-header-padding-x</code></td>
+                <td>string</td>
+                <td><code>1rem</code></td>
+                <td>
+                    Horizontal padding for card header.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-header-bg</code></td>
+                <td>string</td>
+                <td><code>$component-section-bg</code></td>
+                <td>
+                    Background color for card header.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-header-color</code></td>
+                <td>string</td>
+                <td><code>$body-color</code></td>
+                <td>
+                    Text color for card header.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-header-border-color</code></td>
+                <td>string</td>
+                <td><code>$component-section-border-color</code></td>
+                <td>
+                    Border color for card header.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-header-border-width</code></td>
+                <td>string</td>
+                <td><code>$card-border-width</code></td>
+                <td>
+                    Border width for card header.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-footer-padding-y</code></td>
+                <td>string</td>
+                <td><code>.75rem</code></td>
+                <td>
+                    Vertical padding for card footer.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-footer-padding-x</code></td>
+                <td>string</td>
+                <td><code>1rem</code></td>
+                <td>
+                    Horizontal padding for card footer.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-footer-bg</code></td>
+                <td>string</td>
+                <td><code>$component-section-bg</code></td>
+                <td>
+                    Background color for card footer.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-footer-color</code></td>
+                <td>string</td>
+                <td><code>$body-color</code></td>
+                <td>
+                    Text color for card footer.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-footer-border-color</code></td>
+                <td>string</td>
+                <td><code>$component-section-border-color</code></td>
+                <td>
+                    Border color for card footer.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-footer-border-width</code></td>
+                <td>string</td>
+                <td><code>$card-border-width</code></td>
+                <td>
+                    Border width for card footer.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-img-overlay-padding</code></td>
+                <td>string</td>
+                <td><code>$card-padding-y $card-padding-x</code></td>
+                <td>
+                    Vertical and horizontal padding for image overlay content.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-deck-gutter-widths</code></td>
+                <td>string</td>
+                <td><code>$grid-gutter-widths</code></td>
+                <td>
+                    Horizontal spacing between cards in a card deck.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-columns-count</code></td>
+                <td>integer</td>
+                <td><code>3</code></td>
+                <td>
+                    Number of columns for card columns.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-columns-column-gap</code></td>
+                <td>string</td>
+                <td><code>1.25rem</code></td>
+                <td>
+                    Horizontal spacing between cards for card columns.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-horizontal-breakpoints</code></td>
+                <td>list</td>
+                <td><code>map-keys($grid-breakpoints)</code></td>
+                <td>
+                    Breakpoint list for responsive horizontal cards.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-deck-breakpoints</code></td>
+                <td>list</td>
+                <td><code>map-keys($grid-breakpoints)</code></td>
+                <td>
+                    Breakpoint list for responsive card decks.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-group-breakpoints</code></td>
+                <td>list</td>
+                <td><code>map-keys($grid-breakpoints)</code></td>
+                <td>
+                    Breakpoint list for responsive card groups.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$card-columns-breakpoints</code></td>
+                <td>list</td>
+                <td><code>map-keys($grid-breakpoints)</code></td>
+                <td>
+                    Breakpoint list for responsive card columns.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>No mixins available.</p>
+
             </main>
         </div>
 
@@ -2087,7 +2719,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.2
+            Current version: 4.0.0-alpha.3
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>

@@ -130,7 +130,7 @@
     </ul>
 </header>
 
-    <div class="jumbotron jumbotron-full jumbotron-docs">
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
         <div class="container-fluid">
             
     <div class="h1">Utilities</div>
@@ -403,6 +403,11 @@
   <li><a href="#hiding-content" id="markdown-toc-hiding-content">Hiding Content</a></li>
   <li><a href="#invisible-content" id="markdown-toc-invisible-content">Invisible Content</a></li>
   <li><a href="#useful-resources" id="markdown-toc-useful-resources">Useful Resources</a></li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="screen-reader-only-content">Screen Reader Only Content</h2>
@@ -459,6 +464,85 @@
 
 <p>Still have questions?  There are some links to external resources avaiable in the <a href="/figuration-preview/get-started/accessibility/#screen-reader-only-content">screen reader section on the Accessibility page</a></p>
 
+<h2 id="sass-reference">SASS Reference</h2>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/get-started/options/">Customization options</a>, or Sass variables, that can be customized for this grouping of utility classes.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-utility-sronly</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the position utility classes.
+                    Smaller segements of the position utilities can be disabled with the following <code>$enable-*</code> variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-sronly-common</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the base `.sr-only` utility class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-sronly-focusable</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the base `.sr-only-focusable` utility class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-sronly-responsive</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the responsive screen reader only utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-sronly-responsive-down</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the down responsive down variants of screen reader only utility classes.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>Here are the mixins related to this grouping of utility classes that we use to help generate our CSS.  You can also uses these mixins to generate your own custom components or utilities.</p>
+
+<h4 class="no_toc" id="sr-only">sr-only</h4>
+
+<p>Only display content to screen readers.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">sr-only</span><span class="p">()</span><span class="err">;</span></code></pre></figure>
+
+<h4 class="no_toc" id="sr-only-focusable">sr-only-focusable</h4>
+
+<p>Use in conjunction with <code class="highlighter-rouge">.sr-only</code> to only display content when it becomes focused.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">sr-only-focusable</span><span class="p">()</span><span class="err">;</span></code></pre></figure>
+
+
             </main>
         </div>
 
@@ -470,7 +554,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.2
+            Current version: 4.0.0-alpha.3
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>

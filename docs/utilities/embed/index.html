@@ -130,7 +130,7 @@
     </ul>
 </header>
 
-    <div class="jumbotron jumbotron-full jumbotron-docs">
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
         <div class="container-fluid">
             
     <div class="h1">Utilities</div>
@@ -404,6 +404,11 @@
     </ul>
   </li>
   <li><a href="#aspect-ratios" id="markdown-toc-aspect-ratios">Aspect Ratios</a></li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
+    </ul>
+  </li>
 </ul>
 
 <p>Rules are directly applied to <code class="highlighter-rouge">&lt;iframe&gt;</code>, <code class="highlighter-rouge">&lt;embed&gt;</code>, <code class="highlighter-rouge">&lt;video&gt;</code>, and <code class="highlighter-rouge">&lt;object&gt;</code> elements; optionally use an explicit descendant class <code class="highlighter-rouge">.embed-fluid-item</code> when you want to match the styling for other attributes.</p>
@@ -478,6 +483,77 @@
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$embed-fluid-aspect-ratios</span><span class="p">:</span> <span class="bp">false</span><span class="p">;</span></code></pre></figure>
 
+<h2 id="sass-reference">SASS Reference</h2>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/get-started/options/">Customization options</a>, or Sass variables, that can be customized for this grouping of utility classes.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-utility-embed</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the embed utility classes.
+                    Smaller segements of the embed utilities can be disabled with the following <code>$enable-*</code> variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-embed-fluid</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the fluid embed utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-embed-fullscreen</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the fullscreen overrides for embed utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$embed-fluid-default-ratio</code></td>
+                <td>string</td>
+                <td><code>percentage(9 / 16)</code></td>
+                <td>
+                    The default embed aspect ratio.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$embed-fluid-aspect-ratios</code></td>
+                <td>list</td>
+                <td><pre><code>(
+    (21, 9),
+    (16, 9),
+    (4, 3),
+    (1, 1)
+)</code></pre>
+                </td>
+                <td>
+                    Additional embed aspect ratios.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>No mixins available.</p>
 
             </main>
         </div>
@@ -490,7 +566,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.2
+            Current version: 4.0.0-alpha.3
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>

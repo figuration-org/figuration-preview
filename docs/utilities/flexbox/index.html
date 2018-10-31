@@ -130,7 +130,7 @@
     </ul>
 </header>
 
-    <div class="jumbotron jumbotron-full jumbotron-docs">
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
         <div class="container-fluid">
             
     <div class="h1">Utilities</div>
@@ -413,6 +413,11 @@
   <li><a href="#order" id="markdown-toc-order">Order</a></li>
   <li><a href="#align-content" id="markdown-toc-align-content">Align Content</a></li>
   <li><a href="#sizing" id="markdown-toc-sizing">Sizing</a></li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="enable-flex-layout">Enable Flex Layout</h2>
@@ -1398,6 +1403,104 @@
 
 </div>
 
+<h2 id="sass-reference">SASS Reference</h2>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/get-started/options/">Customization options</a>, or Sass variables, that can be customized for this grouping of utility classes.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-utility-flex</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the flex utility classes.
+                    Smaller segements of the flex utilities can be disabled with the following <code>$enable-*</code> variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-flex-order</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the flex order utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-flex-direction</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the flex direction utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-flex-wrap</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the flex wrap utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-flex-justify</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the flex <code>justify-content</code> utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-flex-items</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the flex <code>align-items</code> utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-flex-content</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the flex <code>align-content</code> utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-flex-self</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the flex <code>align-self</code> utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-flex-sizing</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the flex sizing utility classes.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>No mixins available.</p>
+
             </main>
         </div>
 
@@ -1409,7 +1512,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.2
+            Current version: 4.0.0-alpha.3
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>

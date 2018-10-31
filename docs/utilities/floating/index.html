@@ -130,7 +130,7 @@
     </ul>
 </header>
 
-    <div class="jumbotron jumbotron-full jumbotron-docs">
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
         <div class="container-fluid">
             
     <div class="h1">Utilities</div>
@@ -395,6 +395,19 @@
 
                 <p>These utility classes float an element to the enable or disable floating, based on the current viewport size using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">CSS <code class="highlighter-rouge">float</code> property</a>.</p>
 
+<h2 class="no_toc" id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#usage" id="markdown-toc-usage">Usage</a></li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="usage">Usage</h2>
+
 <p>Note that the float utilities do not have any affect on items inside flex container.  Please refer to the <a href="https://www.w3.org/TR/css-flexbox-1/#flex-containers">flexbox specification</a> for details.</p>
 
 <p>Instead of using <code class="highlighter-rouge">left/right</code> designators, the float utilities use <code class="highlighter-rouge">start/end</code> designators to match up with the <a href="/figuration-preview/utilities/flexbox/">flexbox utilities</a>.</p>
@@ -429,6 +442,56 @@
   <span class="k">@include</span> <span class="nd">float-none</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
+<h2 id="sass-reference">SASS Reference</h2>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/get-started/options/">Customization options</a>, or Sass variables, that can be customized for this grouping of utility classes.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-utility-float</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the float utility classes.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>Here are the mixins related to this grouping of utility classes that we use to help generate our CSS.  You can also uses these mixins to generate your own custom components or utilities.</p>
+
+<h4 class="no_toc" id="float-start">float-start</h4>
+
+<p>Apply a float to the ‘start’ side.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">float-start</span><span class="p">()</span><span class="err">;</span></code></pre></figure>
+
+<h4 class="no_toc" id="float-end">float-end</h4>
+
+<p>Apply a float to the ‘end’ side.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">float-end</span><span class="p">()</span><span class="err">;</span></code></pre></figure>
+
+<h4 class="no_toc" id="float-none">float-none</h4>
+
+<p>Disable float.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">float-none</span><span class="p">()</span><span class="err">;</span></code></pre></figure>
 
             </main>
         </div>
@@ -441,7 +504,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.2
+            Current version: 4.0.0-alpha.3
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>

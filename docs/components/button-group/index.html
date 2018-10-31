@@ -130,7 +130,7 @@
     </ul>
 </header>
 
-    <div class="jumbotron jumbotron-full jumbotron-docs">
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
         <div class="container-fluid">
             
     <div class="h1">Components</div>
@@ -373,6 +373,11 @@
   <li><a href="#tooltips-and-popovers" id="markdown-toc-tooltips-and-popovers">Tooltips and Popovers</a></li>
   <li><a href="#accessibility" id="markdown-toc-accessibility">Accessibility</a>    <ul>
       <li><a href="#ensure-correct-role-and-provide-a-label" id="markdown-toc-ensure-correct-role-and-provide-a-label">Ensure correct <code class="highlighter-rouge">role</code> and provide a label</a></li>
+    </ul>
+  </li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
     </ul>
   </li>
 </ul>
@@ -718,6 +723,72 @@
 
 <p>In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct role attribute. In the examples provided here, we use <code class="highlighter-rouge">aria-label</code>, but alternatives such as <code class="highlighter-rouge">aria-labelledby</code> can also be used.</p>
 
+<h2 id="sass-reference">SASS Reference</h2>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/get-started/options/">Customization options</a>, or Sass variables, that can be customized for the button group component.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-btn-group</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the button group component classes.
+                    Smaller segements of the button group component classes can be disabled with the following <code>$enable-*</code> variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-btn-group-horizontal</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the horizontal button group classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-btn-group-vertical</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the vertical button group classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-btn-group-sizing</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the button group sizing classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-btn-toolbar</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the button toolbar classes.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>No mixins available.</p>
+
             </main>
         </div>
 
@@ -729,7 +800,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.2
+            Current version: 4.0.0-alpha.3
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>

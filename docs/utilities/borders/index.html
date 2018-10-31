@@ -130,7 +130,7 @@
     </ul>
 </header>
 
-    <div class="jumbotron jumbotron-full jumbotron-docs">
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
         <div class="container-fluid">
             
     <div class="h1">Utilities</div>
@@ -410,6 +410,11 @@
       <li><a href="#responsive-borders" id="markdown-toc-responsive-borders">Responsive Borders</a></li>
     </ul>
   </li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="border-radius">Border Radius</h2>
@@ -654,6 +659,495 @@
     Sample container
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
+<h2 id="sass-reference">SASS Reference</h2>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/get-started/options/">Customization options</a>, or Sass variables, that can be customized for this grouping of utility classes.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-utility-border</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the border utility classes.
+                    Smaller segements of the border utilities can be disabled with the following <code>$enable-*</code> variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-addition</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the additive border utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-removal</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the subtractive border utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-colors</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the theme border color utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-palette</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the palette border color utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-special</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the transparent border color utility class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-radius-circle</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the circle border radius utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-radius-addition</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the additive border radius utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-radius-component</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the additive component size border radius utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-radius-removal</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the subtractive border radius utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$radius-border-radius</code></td>
+                <td>number</td>
+                <td><code>$border-radius</code></td>
+                <td>
+                    Border radius size.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$utility-radius-sizes</code></td>
+                <td>map</td>
+                <td><code>$component-sizes</code></td>
+                <td>
+                    Component border radius size variants.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$utility-border-breakpoints</code></td>
+                <td>list</td>
+                <td><code>map-keys($grid-breakpoints)</code></td>
+                <td>
+                    Breakpoint list to generate for additive and subtractive border radius utilities.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$utility-border-colors</code></td>
+                <td>map</td>
+                <td><code>$base-colors</code></td>
+                <td>
+                    Themed border colors.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$palette-colors-borders</code></td>
+                <td>map</td>
+                <td><code>$palette-colors</code></td>
+                <td>
+                    Palette-based border colors.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$palette-levels-borders</code></td>
+                <td>list</td>
+                <td><code>$palette-levels</code></td>
+                <td>
+                    List of palette levels to use with palette border colors.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>Here are the mixins related to this grouping of utility classes that we use to help generate our CSS.  You can also uses these mixins to generate your own custom components or utilities.</p>
+
+<h4 class="no_toc" id="border-radius-1">border-radius</h4>
+
+<p>Apply a border radius to an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td><code>$border-radius</code></td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="border-top-radius">border-top-radius</h4>
+
+<p>Apply a border radius the corners on the top side of an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-top-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td>none</td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="border-end-radius">border-end-radius</h4>
+
+<p>Apply a border radius the corners on the end side of an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-end-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td>none</td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="border-bottom-radius">border-bottom-radius</h4>
+
+<p>Apply a border radius the corners on the bottom side of an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-bottom-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td>none</td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="border-start-radius">border-start-radius</h4>
+
+<p>Apply a border radius the corners on the start side of an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-start-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td>none</td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="border-top-start-radius">border-top-start-radius</h4>
+
+<p>Apply a border radius on the top start corner of an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-top-start-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td>none</td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="border-top-end-radius">border-top-end-radius</h4>
+
+<p>Apply a border radius on the top end corner of an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-top-end-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td>none</td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="border-bottom-start-radius">border-bottom-start-radius</h4>
+
+<p>Apply a border radius on the bottom start corner of an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-bottom-start-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td>none</td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="border-bottom-end-radius">border-bottom-end-radius</h4>
+
+<p>Apply a border radius on the bottom end corner of an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-bottom-end-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td>none</td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="radius-sides">radius-sides</h4>
+
+<p>Generate component size border radius utility classes for use with an element’s sides.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">radius-sides</span><span class="p">(</span><span class="nv">$radius</span><span class="o">,</span> <span class="nv">$size</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td><code>$radius-border-radius</code></td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$size</code></td>
+                <td>string</td>
+                <td><code>null</code></td>
+                <td>
+                    Name for the component size.  A <code>null</code> value will not include a component size in the class names.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="radius-corners">radius-corners</h4>
+
+<p>Generate component size border radius utility classes for use with an element’s individual corners.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">radius-corners</span><span class="p">(</span><span class="nv">$radius</span><span class="o">,</span> <span class="nv">$size</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td><code>$radius-border-radius</code></td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$size</code></td>
+                <td>string</td>
+                <td><code>null</code></td>
+                <td>
+                    Name for the component size.  A <code>null</code> value will not include a component size in the class names.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
             </main>
         </div>
 
@@ -665,7 +1159,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.2
+            Current version: 4.0.0-alpha.3
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>

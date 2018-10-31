@@ -130,7 +130,7 @@
     </ul>
 </header>
 
-    <div class="jumbotron jumbotron-full jumbotron-docs">
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
         <div class="container-fluid">
             
     <div class="h1">Utilities</div>
@@ -404,6 +404,11 @@
     </ul>
   </li>
   <li><a href="#print-utilities" id="markdown-toc-print-utilities">Print Utilities</a></li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="common-utilities">Common Utilities</h2>
@@ -415,11 +420,11 @@
   <li><code class="highlighter-rouge">.d-none</code> sets <code class="highlighter-rouge">display: none;</code></li>
   <li><code class="highlighter-rouge">.d-block</code> sets <code class="highlighter-rouge">display: block;</code></li>
   <li><code class="highlighter-rouge">.d-inline</code> sets <code class="highlighter-rouge">display: inline;</code></li>
+  <li><code class="highlighter-rouge">.d-flex</code> sets <code class="highlighter-rouge">display: flex;</code></li>
+  <li><code class="highlighter-rouge">.d-inline-flex</code> sets <code class="highlighter-rouge">display: inline-flex;</code></li>
   <li><code class="highlighter-rouge">.d-table</code> sets <code class="highlighter-rouge">display: table;</code></li>
   <li><code class="highlighter-rouge">.d-table-row</code> sets <code class="highlighter-rouge">display: table-row;</code></li>
   <li><code class="highlighter-rouge">.d-table-cell</code> sets <code class="highlighter-rouge">display: table-cell;</code></li>
-  <li><code class="highlighter-rouge">.d-flex</code> sets <code class="highlighter-rouge">display: flex;</code></li>
-  <li><code class="highlighter-rouge">.d-inline-flex</code> sets <code class="highlighter-rouge">display: inline-flex;</code></li>
 </ul>
 
 <p>These classes are also available in responsive variants, in the form of <code class="highlighter-rouge">.d{-breakpoint}-{value}</code>, such as <code class="highlighter-rouge">.d-lg-block</code>. Please refer to how our <a href="/figuration-preview/layout/overview/#breakpoint-nomenclature">breakpoint nomenclature</a> is used.</p>
@@ -669,6 +674,73 @@
   <li><code class="highlighter-rouge">.print-table-cell</code></li>
 </ul>
 
+<h2 id="sass-reference">SASS Reference</h2>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/get-started/options/">Customization options</a>, or Sass variables, that can be customized for this grouping of utility classes.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-utility-display</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the display utility classes.
+                    Smaller segements of the display utilities can be disabled with the following <code>$enable-*</code> variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-display-common</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    <p>Enable the generation of the more common display rules as utility classes.</p>
+                    <p>This encompases the rules of <code>display: {none, block, flex, inline, inline-block, inline-flex}</code>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-display-table</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the table display rules as utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-display-down</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the `down` variant of the responsive hiding display rules as utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-display-print</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the print display utility classes.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>No mixins available.</p>
+
             </main>
         </div>
 
@@ -680,7 +752,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.2
+            Current version: 4.0.0-alpha.3
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>

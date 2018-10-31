@@ -130,7 +130,7 @@
     </ul>
 </header>
 
-    <div class="jumbotron jumbotron-full jumbotron-docs">
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
         <div class="container-fluid">
             
     <div class="h1">Utilities</div>
@@ -405,6 +405,11 @@
       <li><a href="#negative-margins" id="markdown-toc-negative-margins">Negative Margins</a></li>
     </ul>
   </li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="how-it-works">How It Works</h2>
@@ -562,6 +567,109 @@
 
 </div>
 
+<h2 id="sass-reference">SASS Reference</h2>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/get-started/options/">Customization options</a>, or Sass variables, that can be customized for this grouping of utility classes.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-utility-spacing</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the spacing utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-spacing-padding</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the padding utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-spacing-margin</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the margin utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-spacing-margin-auto</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the auto maring utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-spacing-margin-negative</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the negative margin utility classes.
+                </td>
+            </tr>
+             <tr>
+                <td><code>$spacer</code></td>
+                <td>string</td>
+                <td><code>1rem</code></td>
+                <td>
+                    Base spacer dimension.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$spacers</code></td>
+                <td>map</td>
+                <td><pre><code>"0":    0,
+"0_25": ($spacer * .25),
+"0_5":  ($spacer * .5),
+"1":    $spacer,
+"1_5":  ($spacer * 1.5),
+"2":    ($spacer * 2)</code></pre>
+                </td>
+                <td>
+                    Map of sizing append names and rules to be generated.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$spacers-negative</code></td>
+                <td>map</td>
+                <td><code>$spacers</code></td>
+                <td>
+                    Map of negative margin sizing append names and rules to be generated.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$spacers-negative-prepend</code></td>
+                <td>string</td>
+                <td><code>n</code></td>
+                <td>
+                    The string prepended to the name to designate negative margin classes.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>No mixins available.</p>
+
             </main>
         </div>
 
@@ -573,7 +681,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.2
+            Current version: 4.0.0-alpha.3
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>

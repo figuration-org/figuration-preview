@@ -130,7 +130,7 @@
     </ul>
 </header>
 
-    <div class="jumbotron jumbotron-full jumbotron-docs">
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
         <div class="container-fluid">
             
     <div class="h1">Components</div>
@@ -365,6 +365,11 @@
   <li><a href="#example" id="markdown-toc-example">Example</a></li>
   <li><a href="#changing-the-separator" id="markdown-toc-changing-the-separator">Changing the Separator</a></li>
   <li><a href="#accessibility" id="markdown-toc-accessibility">Accessibility</a></li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="example">Example</h2>
@@ -459,6 +464,79 @@
 
 <p>For more information, see the <a href="https://www.w3.org/TR/wai-aria-practices/#breadcrumb">WAI-ARIA Authoring Practices for the breadcrumb pattern</a>.</p>
 
+<h1 id="sass-reference">SASS Reference</h1>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/get-started/options/">Customization options</a>, or Sass variables, that can be customized for the breadcrumb component.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-breadcrumb</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the breadcrumb component classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$breadcrumb-margin-bottom</code></td>
+                <td>string</td>
+                <td><code>1rem</code></td>
+                <td>
+                    Vertical spacing for breadcrumb.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$breadcrumb-item-padding-x</code></td>
+                <td>string</td>
+                <td><code>.5rem</code></td>
+                <td>
+                    Horizontal spacing for breadcrumb items.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$breadcrumb-active-color</code></td>
+                <td>string</td>
+                <td><code>$uibase-700</code></td>
+                <td>
+                    Text color for active breadcrumb items.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$breadcrumb-divider</code></td>
+                <td>string</td>
+                <td><code>quote("/")</code></td>
+                <td>
+                    Breadcrumb divider content.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$breadcrumb-divider-color</code></td>
+                <td>string</td>
+                <td><code>$uibase-300</code></td>
+                <td>
+                    Text color of breadcrumb divider.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>No mixins available.</p>
+
             </main>
         </div>
 
@@ -470,7 +548,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.2
+            Current version: 4.0.0-alpha.3
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>

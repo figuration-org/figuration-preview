@@ -130,7 +130,7 @@
     </ul>
 </header>
 
-    <div class="jumbotron jumbotron-full jumbotron-docs">
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
         <div class="container-fluid">
             
     <div class="h1">Components</div>
@@ -373,6 +373,11 @@
       <li><a href="#stacked" id="markdown-toc-stacked">Stacked</a></li>
     </ul>
   </li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="how-it-works">How It Works</h2>
@@ -598,6 +603,144 @@
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar bg-info"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 20%"</span> <span class="na">aria-valuenow=</span><span class="s">"20"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
+<h2 id="sass-reference">SASS Reference</h2>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/get-started/options/">Customization options</a>, or Sass variables, that can be customized for progress component.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-progress</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the progress classes.
+                    Smaller segements of the progress classes can be disabled with the following <code>$enable-*</code> variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-progress-striped</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the striped progress bar rule.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-progress-animated</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the animated progress bar rule.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$progress-height</code></td>
+                <td>string</td>
+                <td><code>1rem</code></td>
+                <td>
+                    Height of progress component.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$progress-font-size</code></td>
+                <td>string</td>
+                <td><code>($font-size-base * .75)</code></td>
+                <td>
+                    Font size for progress component.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$progress-bg</code></td>
+                <td>string</td>
+                <td><code>$uibase-100</code></td>
+                <td>
+                    Background color for progress component.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$progress-bg</code></td>
+                <td>string</td>
+                <td><code>$uibase-100</code></td>
+                <td>
+                    Background color for progress component.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$progress-border-radius</code></td>
+                <td>string</td>
+                <td><code>$border-radius</code></td>
+                <td>
+                    Border radius for progress component.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$progress-box-shadow</code></td>
+                <td>string</td>
+                <td><code>map-get($shadows, "i1")</code></td>
+                <td>
+                    Box shadow for progress component.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$progress-bar-color</code></td>
+                <td>string</td>
+                <td><code>$white</code></td>
+                <td>
+                    Text color for progress bar component.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$progress-bar-color</code></td>
+                <td>string</td>
+                <td><code>$uibase-300</code></td>
+                <td>
+                    Background color for progress bar component.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$progress-box-shadow</code></td>
+                <td>string</td>
+                <td><code>inset 0 .125rem .25rem rgba($white, .25)</code></td>
+                <td>
+                    Box shadow for progress bar component.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$progress-bar-animation-timing</code></td>
+                <td>string</td>
+                <td><code>1s linear infinite</code></td>
+                <td>
+                    Timing for animated progress bar.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$progress-bar-transition</code></td>
+                <td>string</td>
+                <td><code>width .3s ease</code></td>
+                <td>
+                    Transition rule for animated progress bar.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>No mixins available.</p>
+
             </main>
         </div>
 
@@ -609,7 +752,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.2
+            Current version: 4.0.0-alpha.3
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>

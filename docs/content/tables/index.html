@@ -130,7 +130,7 @@
     </ul>
 </header>
 
-    <div class="jumbotron jumbotron-full jumbotron-docs">
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
         <div class="container-fluid">
             
     <div class="h1">Content</div>
@@ -343,6 +343,11 @@
       <li><a href="#headerfooter-color" id="markdown-toc-headerfooter-color">Header/Footer Color</a></li>
       <li><a href="#border-color" id="markdown-toc-border-color">Border Color</a></li>
       <li><a href="#contextual-classes" id="markdown-toc-contextual-classes">Contextual Classes</a></li>
+    </ul>
+  </li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
     </ul>
   </li>
 </ul>
@@ -1955,6 +1960,322 @@ All cells use <code class="highlighter-rouge">border-left</code> for their verti
   <span class="nt">&lt;/tfoot&gt;</span>
 <span class="nt">&lt;/table&gt;</span></code></pre></div>
 
+<h2 id="sass-reference">SASS Reference</h2>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/get-started/options/">Customization options</a>, or Sass variables, that can be customized for tables.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-table</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the table classes.
+                    Smaller segements of the table classes can be disabled with the following <code>$enable-*</code> variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-table-borders</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of table border classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-table-striped</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of striped table classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-table-hover</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of hoverable table classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-table-condensed</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of condensed table classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-table-active</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of active table row color class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-table-colors</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of theme table row color classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-table-scroll</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of scrollable table class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-table-scroll-responsive</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of responsive scrollable table classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-margin-bottom</code></td>
+                <td>string</td>
+                <td><code>$spacer</code></td>
+                <td>
+                    Margin bottom for table.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-cell-padding</code></td>
+                <td>boolean</td>
+                <td><code>.75rem</code></td>
+                <td>
+                    Table cell padding.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-condensed-cell-padding</code></td>
+                <td>boolean</td>
+                <td><code>.3125rem .5rem</code></td>
+                <td>
+                    Cell padding for condensed table variant.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-caption-color</code></td>
+                <td>boolean</td>
+                <td><code>$uibase-500</code></td>
+                <td>
+                    Table caption text color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-bg</code></td>
+                <td>boolean</td>
+                <td><code>$component-bg</code></td>
+                <td>
+                    Table background color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-bg-active</code></td>
+                <td>boolean</td>
+                <td><code>$component-hover-bg</code></td>
+                <td>
+                    Active table row background color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-bg-active-hover</code></td>
+                <td>boolean</td>
+                <td><code>$uibase-200</code></td>
+                <td>
+                    Active table row background color for hover state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-border-width</code></td>
+                <td>boolean</td>
+                <td><code>$border-width</code></td>
+                <td>
+                    Table cell border width.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-border-color</code></td>
+                <td>boolean</td>
+                <td><code>$component-border-color</code></td>
+                <td>
+                    Table cell border color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-head-border-width</code></td>
+                <td>boolean</td>
+                <td><code>2 * $table-border-width</code></td>
+                <td>
+                    Border width between table header and body.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-body-border-width</code></td>
+                <td>boolean</td>
+                <td><code>2 * $table-border-width</code></td>
+                <td>
+                    Border width between sibling table bodies.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-foot-border-width</code></td>
+                <td>boolean</td>
+                <td><code>2 * $table-border-width</code></td>
+                <td>
+                    Border width between table body and footer.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-striped-selector</code></td>
+                <td>boolean</td>
+                <td><code>odd</code></td>
+                <td>
+                    Selector for table striping.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-striped-box-shadow</code></td>
+                <td>boolean</td>
+                <td><code>inset 0 0 0 999rem rgba($uibase-900, .075)</code></td>
+                <td>
+                    Shadow overlay for striped tables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-striped-alt-box-shadow</code></td>
+                <td>boolean</td>
+                <td><code>inset 0 0 0 999rem rgba($white, .125)</code></td>
+                <td>
+                    Alternate shadow overlay for striped tables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-hover-box-shadow</code></td>
+                <td>boolean</td>
+                <td><code>inset 0 0 0 999rem rgba($uibase-900, .125)</code></td>
+                <td>
+                    Shadow overlay for hoverable tables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-hover-alt-box-shadow</code></td>
+                <td>boolean</td>
+                <td><code>inset 0 0 0 999rem rgba($white, .2)</code></td>
+                <td>
+                    Alternate shadow overlay for hoverable tables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-scroll-breakpoints</code></td>
+                <td>list</td>
+                <td><code>map-keys($grid-breakpoints)</code></td>
+                <td>
+                    Breakpoint list for responsive scrollable tables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-themes</code></td>
+                <td>map</td>
+                <td><code>()</code></td>
+                <td>
+                    Map of color schemes for tables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-colors</code></td>
+                <td>list</td>
+                <td><code>$base-colors</code></td>
+                <td>
+                    Colors to mix and merge into <code>$table-themes</code>
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-levels</code></td>
+                <td>map</td>
+                <td><code>$level-context</code></td>
+                <td>
+                    Levels to mix table colors with.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>Here are the mixins related to tables that we use to help generate our CSS.  You can also uses these mixins to generate your own custom components or utilities.</p>
+
+<h4 class="no_toc" id="table-row-variant">table-row-variant</h4>
+
+<p>Build a color variant to be applied to a table row, <code class="highlighter-rouge">&lt;tr&gt;</code>, element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">table-row-variant</span><span class="p">(</span><span class="nv">$state</span><span class="o">,</span> <span class="nv">$bg</span><span class="o">,</span> <span class="nv">$hover-bg</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$state</code></td>
+                <td>string</td>
+                <td><code>''</code></td>
+                <td>
+                    The value appended to generate the class <code>.table-#{$state}</code>.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$bg</code></td>
+                <td>string</td>
+                <td><code>none</code></td>
+                <td>
+                    Background color for a table row and it's direct <code>&lt;th&gt;</code> and <code>&lt;td&gt;</code> cells.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$hover-bg</code></td>
+                <td>string</td>
+                <td><code>none</code></td>
+                <td>
+                    Hover activated background color for a table row and it's direct <code>&lt;th&gt;</code> and <code>&lt;td&gt;</code> cells, when used in a table with <code>.table-hover</code>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="table-scroll">table-scroll</h4>
+
+<p>Enable horizontal scrolling on a <code class="highlighter-rouge">&lt;table&gt;</code> element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">table-scroll</span><span class="p">()</span><span class="err">;</span></code></pre></figure>
 
             </main>
         </div>
@@ -1967,7 +2288,7 @@ All cells use <code class="highlighter-rouge">border-left</code> for their verti
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.2
+            Current version: 4.0.0-alpha.3
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>

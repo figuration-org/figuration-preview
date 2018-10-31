@@ -130,7 +130,7 @@
     </ul>
 </header>
 
-    <div class="jumbotron jumbotron-full jumbotron-docs">
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
         <div class="container-fluid">
             
     <div class="h1">Components</div>
@@ -399,6 +399,103 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
+<h2 id="sass-reference">SASS Reference</h2>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/get-started/options/">Customization options</a>, or Sass variables, that can be customized for jumbotrons.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-jumbotron</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the jumbotron classes.
+                    Smaller segements of the jumbotron classes can be disabled with the following <code>$enable-*</code> variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-jumbotron-fluid</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of fluid width jumbotron class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$jumbotron-padding-y</code></td>
+                <td>string</td>
+                <td><code>3rem</code></td>
+                <td>
+                    Vertical padding for jumbotron.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$jumbotron-padding-x</code></td>
+                <td>string</td>
+                <td><code>1.5rem</code></td>
+                <td>
+                    Horizontal padding for jumbotron.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$jumbotron-breakpoint</code></td>
+                <td>breakpoint</td>
+                <td><code>sm</code></td>
+                <td>
+                    At which breakpoint to alter the jumbotron padding.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$jumbotron-padding-xs-y</code></td>
+                <td>string</td>
+                <td><code>1.5rem</code></td>
+                <td>
+                    Vertical padding for jumbotron below the specified breakpoint.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$jumbotron-padding-xs-x</code></td>
+                <td>string</td>
+                <td><code>.75rem</code></td>
+                <td>
+                    Horizontal padding for jumbotron below the specified breakpoint.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$jumbotron-bg</code></td>
+                <td>string</td>
+                <td><code>$uibase-50</code></td>
+                <td>
+                    Background color for jumbotron.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$jumbotron-border-radius</code></td>
+                <td>string</td>
+                <td><code>.3125rem</code></td>
+                <td>
+                    Border radius for jumbotron.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>No mixins available.</p>
 
             </main>
         </div>
@@ -411,7 +508,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.2
+            Current version: 4.0.0-alpha.3
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>

@@ -130,7 +130,7 @@
     </ul>
 </header>
 
-    <div class="jumbotron jumbotron-full jumbotron-docs">
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
         <div class="container-fluid">
             
 
@@ -294,6 +294,7 @@
 <h3 id="button">Button</h3>
 <ul>
   <li>Added support for CSS checkbox and radio buttons, using <code class="highlighter-rouge">.btn-check</code> and <code class="highlighter-rouge">.btn-check-input</code> classes.</li>
+  <li>Content in buttons will now wrap by default.  You can use the <code class="highlighter-rouge">.text-nowrap</code> utility class to preserve old behaviour.</li>
 </ul>
 
 <h3 id="card">Card</h3>
@@ -301,20 +302,15 @@
   <li>Contextually colored cards have been removed. Now you will need to use the with text, background, and border color utilities.</li>
   <li>Cards have been converted to flexbox layout.</li>
   <li>Images now need to be wrapped with <code class="highlighter-rouge">.card-img</code> to keep aspect ratio and scaling in check due to flexbox.</li>
+  <li>List and table sub-components now use a <code class="highlighter-rouge">.card-list</code> or <code class="highlighter-rouge">.card-table</code> respectively.</li>
+  <li>Repsonsive horizontal card layouts have been added with <code class="highlighter-rouge">.card-horizontal{breakpoint}</code>, <code class="highlighter-rouge">.card-horizontal{breakpoint}-reverse</code>, and child <code class="highlighter-rouge">.card-col</code> elements.</li>
 </ul>
 
 <h3 id="input-group">Input Group</h3>
-
 <ul>
-  <li>
-    <p>Input group addons have been revised, simplifying much of the related CSS. Within an addon, place your buttons as they would exist anywhere else, but wrap text in <code class="highlighter-rouge">.input-group-text</code>.</p>
-  </li>
-  <li>
-    <p>Validation styles are now supported, as are multiple inputs (though you can only validate one input per group).</p>
-  </li>
-  <li>
-    <p>Sizing classes must be on the parent <code class="highlighter-rouge">.input-group</code> and not the individual form elements.</p>
-  </li>
+  <li>Input group addons have been revised, simplifying much of the related CSS. Within an addon, place your buttons as they would exist anywhere else, but wrap text in <code class="highlighter-rouge">.input-group-text</code>.</li>
+  <li>Validation styles are now supported, as are multiple inputs (though you can only validate one input per group).</li>
+  <li>Sizing classes must be on the parent <code class="highlighter-rouge">.input-group</code> and not the individual form elements.</li>
 </ul>
 
 <h3 id="list-group">List Group</h3>
@@ -387,7 +383,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.2
+            Current version: 4.0.0-alpha.3
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>
