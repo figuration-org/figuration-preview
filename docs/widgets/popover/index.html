@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="description" content="CAST Figuration - A feature rich, responsive, mobile first, accessible, front-end framework.">
 
@@ -410,7 +410,7 @@
                 <p>A more robust version of a tooltip, that allows for larger pieces of content or interactive functionality.</p>
 
 <div class="cf-callout cf-callout-info cf-callout-dep">
-<p class="h5">Widget Dependencies</p>
+<p class="h5 no_toc">Widget Dependencies</p>
 
 <p>Popover requires the following:</p>
 
@@ -531,7 +531,7 @@
   Reverse popover
 </button>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw=</span><span class="s">"popover"</span> <span class="na">data-cfw-popover-container=</span><span class="s">"body"</span> <span class="na">data-cfw-popover-placement=</span><span class="s">"top"</span> <span class="na">data-cfw-popover-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw=</span><span class="s">"popover"</span> <span class="na">data-cfw-popover-container=</span><span class="s">"body"</span> <span class="na">data-cfw-popover-placement=</span><span class="s">"top"</span> <span class="na">data-cfw-popover-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
   Popover on top
 <span class="nt">&lt;/button&gt;</span>
 
@@ -545,21 +545,21 @@
 
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">data-cfw=</span><span class="s">"popover"</span> <span class="na">data-cfw-popover-container=</span><span class="s">"body"</span> <span class="na">data-cfw-popover-placement=</span><span class="s">"reverse"</span> <span class="na">data-cfw-popover-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
   Reverse popover
-<span class="nt">&lt;/button&gt;</span></code></pre></div>
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
 <h3 id="default-toggle-example">Default Toggle Example</h3>
 
 <div class="cf-example">
 <button type="button" class="btn btn-info" data-cfw="popover" title="Click Popover Example" data-cfw-popover-content="Click the trigger or close button to close me." data-cfw-popover-placement="forward">Click to toggle popover</button>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span> <span class="na">data-cfw=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Click Popover Example"</span> <span class="na">data-cfw-popover-content=</span><span class="s">"Click the trigger or close button to close me."</span> <span class="na">data-cfw-popover-placement=</span><span class="s">"forward"</span><span class="nt">&gt;</span>Click to toggle popover<span class="nt">&lt;/button&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span> <span class="na">data-cfw=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Click Popover Example"</span> <span class="na">data-cfw-popover-content=</span><span class="s">"Click the trigger or close button to close me."</span> <span class="na">data-cfw-popover-placement=</span><span class="s">"forward"</span><span class="nt">&gt;</span>Click to toggle popover<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
 <h3 id="hover-example">Hover Example</h3>
 
 <div class="cf-example">
 <button type="button" class="btn btn-info" id="cf-example-hover-popover" data-cfw="popover" title="Hover Popover Example" data-cfw-popover-content="Stop hovering over the trigger or the popover to auto-close." data-cfw-popover-placement="forward" data-cfw-popover-trigger="hover focus">Hover/focus to show popover</button>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span> <span class="na">id=</span><span class="s">"cf-example-hover-popover"</span> <span class="na">data-cfw=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Hover Popover Example"</span> <span class="na">data-cfw-popover-content=</span><span class="s">"Stop hovering over the trigger or the popover to auto-close."</span> <span class="na">data-cfw-popover-placement=</span><span class="s">"forward"</span> <span class="na">data-cfw-popover-trigger=</span><span class="s">"hover focus"</span><span class="nt">&gt;</span>Hover/focus to show popover<span class="nt">&lt;/button&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span> <span class="na">id=</span><span class="s">"cf-example-hover-popover"</span> <span class="na">data-cfw=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Hover Popover Example"</span> <span class="na">data-cfw-popover-content=</span><span class="s">"Stop hovering over the trigger or the popover to auto-close."</span> <span class="na">data-cfw-popover-placement=</span><span class="s">"forward"</span> <span class="na">data-cfw-popover-trigger=</span><span class="s">"hover focus"</span><span class="nt">&gt;</span>Hover/focus to show popover<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
 <script>
     $('#cf-example-hover-popover').on('click', function(){
@@ -574,14 +574,14 @@
 <div class="cf-example">
 <button type="button" class="btn btn-info" data-cfw="popover" title="Draggable Popover Example" data-cfw-popover-content="Click the trigger or close link to close me." data-cfw-popover-placement="forward" data-cfw-popover-drag="true">Draggable popover</button>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span> <span class="na">data-cfw=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Draggable Popover Example"</span> <span class="na">data-cfw-popover-content=</span><span class="s">"Click the trigger or close link to close me."</span> <span class="na">data-cfw-popover-placement=</span><span class="s">"forward"</span> <span class="na">data-cfw-popover-drag=</span><span class="s">"true"</span><span class="nt">&gt;</span>Draggable popover<span class="nt">&lt;/button&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span> <span class="na">data-cfw=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Draggable Popover Example"</span> <span class="na">data-cfw-popover-content=</span><span class="s">"Click the trigger or close link to close me."</span> <span class="na">data-cfw-popover-placement=</span><span class="s">"forward"</span> <span class="na">data-cfw-popover-drag=</span><span class="s">"true"</span><span class="nt">&gt;</span>Draggable popover<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
 <h3 id="popover-with-html">Popover with HTML</h3>
 
 <div class="cf-example">
 <button type="button" class="btn btn-info" data-cfw="popover" data-cfw-popover-html="true" data-cfw-popover-placement="forward" data-cfw-popover-content="&lt;em&gt;Popover&lt;/em&gt; &lt;u&gt;with&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;" title="&lt;em&gt;Popover&lt;/em&gt; &lt;u&gt;with&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;">Popover with HTML</button>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span> <span class="na">data-cfw=</span><span class="s">"popover"</span> <span class="na">data-cfw-popover-html=</span><span class="s">"true"</span> <span class="na">data-cfw-popover-placement=</span><span class="s">"forward"</span> <span class="na">data-cfw-popover-content=</span><span class="s">"&lt;em&gt;Popover&lt;/em&gt; &lt;u&gt;with&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;"</span> <span class="na">title=</span><span class="s">"&lt;em&gt;Popover&lt;/em&gt; &lt;u&gt;with&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;"</span><span class="nt">&gt;</span>Popover with HTML<span class="nt">&lt;/button&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span> <span class="na">data-cfw=</span><span class="s">"popover"</span> <span class="na">data-cfw-popover-html=</span><span class="s">"true"</span> <span class="na">data-cfw-popover-placement=</span><span class="s">"forward"</span> <span class="na">data-cfw-popover-content=</span><span class="s">"&lt;em&gt;Popover&lt;/em&gt; &lt;u&gt;with&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;"</span> <span class="na">title=</span><span class="s">"&lt;em&gt;Popover&lt;/em&gt; &lt;u&gt;with&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;"</span><span class="nt">&gt;</span>Popover with HTML<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
 <p>If using more complex HTML, using a data attribute might not be optimal.  A better option would be to use the Javascript options, or with a pre-generated popover, as shown in the following example.</p>
 
@@ -596,7 +596,7 @@ $('#html-popover').CFW_Popover({
 });
 </script>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span> <span class="na">id=</span><span class="s">"html-popover"</span><span class="nt">&gt;</span>Popover with HTML<span class="nt">&lt;/button&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span> <span class="na">id=</span><span class="s">"html-popover"</span><span class="nt">&gt;</span>Popover with HTML<span class="nt">&lt;/button&gt;</span>
 
 <span class="nt">&lt;script&gt;</span>
 <span class="nx">$</span><span class="p">(</span><span class="s1">'#html-popover'</span><span class="p">).</span><span class="nx">CFW_Popover</span><span class="p">({</span>
@@ -604,7 +604,7 @@ $('#html-popover').CFW_Popover({
     <span class="na">title</span><span class="p">:</span> <span class="s1">'&lt;em&gt;Popover&lt;/em&gt; &lt;u&gt;with&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;'</span><span class="p">,</span>
     <span class="na">content</span><span class="p">:</span> <span class="s1">'&lt;span aria-hidden="true"&gt;&amp;middot;&lt;/span&gt; &lt;em&gt;Popover&lt;/em&gt; &lt;u&gt;with&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;'</span>
 <span class="p">});</span>
-<span class="nt">&lt;/script&gt;</span></code></pre></div>
+<span class="nt">&lt;/script&gt;</span></code></pre></figure>
 
 <h3 id="pre-generated-popover">Pre-generated Popover</h3>
 
@@ -625,7 +625,7 @@ $('#html-popover').CFW_Popover({
     <div class="popover-arrow"></div>
 </div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span> <span class="na">data-cfw=</span><span class="s">"popover"</span> <span class="na">data-cfw-popover-target=</span><span class="s">"#popoverExample0"</span> <span class="na">data-cfw-popover-placement=</span><span class="s">"forward"</span><span class="nt">&gt;</span>Show Popover<span class="nt">&lt;/button&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span> <span class="na">data-cfw=</span><span class="s">"popover"</span> <span class="na">data-cfw-popover-target=</span><span class="s">"#popoverExample0"</span> <span class="na">data-cfw-popover-placement=</span><span class="s">"forward"</span><span class="nt">&gt;</span>Show Popover<span class="nt">&lt;/button&gt;</span>
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"popover"</span> <span class="na">id=</span><span class="s">"popoverExample0"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"popover-header"</span><span class="nt">&gt;</span>Popover title<span class="nt">&lt;/h3&gt;</span>
@@ -637,7 +637,7 @@ $('#html-popover').CFW_Popover({
         <span class="nt">&lt;/figure&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"popover-arrow"</span><span class="nt">&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="custom-placement">Custom Placement</h3>
 
@@ -658,7 +658,7 @@ $('#html-popover').CFW_Popover({
     });
 </script>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span> <span class="na">id=</span><span class="s">"cf-example-placed-popover"</span> <span class="na">title=</span><span class="s">"Custom placed popover"</span> <span class="na">data-cfw-popover-content=</span><span class="s">"Look, I am way over here!"</span><span class="nt">&gt;</span>Custom Placement Popover<span class="nt">&lt;/button&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span> <span class="na">id=</span><span class="s">"cf-example-placed-popover"</span> <span class="na">title=</span><span class="s">"Custom placed popover"</span> <span class="na">data-cfw-popover-content=</span><span class="s">"Look, I am way over here!"</span><span class="nt">&gt;</span>Custom Placement Popover<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;script&gt;</span>
     <span class="nx">$</span><span class="p">(</span><span class="s1">'#cf-example-placed-popover'</span><span class="p">).</span><span class="nx">CFW_Popover</span><span class="p">({</span>
         <span class="na">placement</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">tip</span><span class="p">,</span> <span class="nx">trigger</span><span class="p">)</span> <span class="p">{</span>
@@ -670,7 +670,7 @@ $('#html-popover').CFW_Popover({
             <span class="k">return</span> <span class="nx">loc</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">});</span>
-<span class="nt">&lt;/script&gt;</span></code></pre></div>
+<span class="nt">&lt;/script&gt;</span></code></pre></figure>
 
 <h3 id="viewport-constrainment">Viewport Constrainment</h3>
 
@@ -708,7 +708,7 @@ $('#html-popover').CFW_Popover({
     });
 </script>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-viewport"</span> <span class="na">id=</span><span class="s">"viewport-popover"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-viewport"</span> <span class="na">id=</span><span class="s">"viewport-popover"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"viewport-text"</span><span class="nt">&gt;</span>Viewport constraints for popovers.<span class="nt">&lt;/p&gt;</span>
 
     <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info popover-viewport-bottom"</span> <span class="na">title=</span><span class="s">"This should be shifted to the right"</span><span class="nt">&gt;</span>Shift Right<span class="nt">&lt;/button&gt;</span>
@@ -737,7 +737,7 @@ $('#html-popover').CFW_Popover({
         <span class="na">viewport</span><span class="p">:</span> <span class="s1">'#viewport-popover'</span><span class="p">,</span>
         <span class="na">padding</span><span class="p">:</span> <span class="mi">2</span>
     <span class="p">});</span>
-<span class="nt">&lt;/script&gt;</span></code></pre></div>
+<span class="nt">&lt;/script&gt;</span></code></pre></figure>
 
 <h3 id="disabled-elements">Disabled Elements</h3>
 
@@ -750,9 +750,9 @@ $('#html-popover').CFW_Popover({
   <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled="">Disabled button</button>
 </span>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"d-inline-block"</span> <span class="na">data-cfw=</span><span class="s">"popover"</span> <span class="na">data-cfw-popover-content=</span><span class="s">"Popover for disabled item"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"d-inline-block"</span> <span class="na">data-cfw=</span><span class="s">"popover"</span> <span class="na">data-cfw-popover-content=</span><span class="s">"Popover for disabled item"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">style=</span><span class="s">"pointer-events: none;"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled button<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/span&gt;</span></code></pre></div>
+<span class="nt">&lt;/span&gt;</span></code></pre></figure>
 
 <h2 id="usage">Usage</h2>
 
@@ -1365,7 +1365,7 @@ function myPopoverAlign(tip, trigger) {
             </main>
         </div>
 
-        <div class="topLink">
+        <div class="toplink">
             <a href="#content">Top of Page <span class="caret"></span></a>
         </div>
     </div>
@@ -1373,7 +1373,7 @@ function myPopoverAlign(tip, trigger) {
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.3
+            Current version: 4.0.0-alpha.4
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>
@@ -1385,9 +1385,9 @@ function myPopoverAlign(tip, trigger) {
             <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
         </ul>
         <p>
-            &copy; 2013-2018 <a href="http://www.cast.org/">CAST, Inc.</a>
+            &copy; 2013-2019 <a href="http://www.cast.org/">CAST, Inc.</a>
             <br />
-            Portions: &copy; 2011-2018 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
+            Portions: &copy; 2011-2019 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
         <p>
             Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
             docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.

@@ -1,10 +1,10 @@
 /*!
- * Figuration (v4.0.0-alpha.3)
+ * Figuration (v4.0.0-alpha.4)
  * http://figuration.org
- * Copyright 2013-2018 CAST, Inc.
+ * Copyright 2013-2019 CAST, Inc.
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * -----
- * Portions Copyright 2011-2018  the Bootstrap Authors and Twitter, Inc.
+ * Portions Copyright 2011-2019  the Bootstrap Authors and Twitter, Inc.
  * Used under MIT License (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
@@ -21,7 +21,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): util.js
+ * Figuration (v4.0.0-alpha.4): util.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -76,22 +76,26 @@ if (typeof jQuery === 'undefined') {
 
     // Get longest CSS transition duration
     var CFW_transitionCssDuration = function($node) {
-        var durationArray = [0]; // Set a min value -- otherwise get `Infinity`
+        var timeArray = [0]; // Set a min value -- otherwise get `Infinity`
         var MILLISECONDS_MULTIPLIER = 1000;
+        var DURATION_PRECISION = 2;
 
         $node.each(function() {
             var $this = $(this);
-            var durations = $this.css('transition-duration') || $this.css('-webkit-transition-duration') || $this.css('-moz-transition-duration') || $this.css('-ms-transition-duration') || $this.css('-o-transition-duration');
-            if (durations) {
-                var times = durations.split(',');
-                for (var i = times.length; i--;) { // Reverse loop should be faster
-                    durationArray = durationArray.concat(parseFloat(times[i]));
+            var transitionDuration = $this.css('transition-duration');
+            var transitionDelay = $this.css('transition-delay');
+
+            if (transitionDuration && transitionDelay) {
+                var durations = transitionDuration.split(',');
+                var delays = transitionDelay.split(',');
+                for (var i = durations.length; i--;) {
+                    timeArray = timeArray.concat(parseFloat(durations[i]) + parseFloat(delays[i]));
                 }
             }
         });
 
-        var duration = Math.max.apply(Math, durationArray); // http://stackoverflow.com/a/1379560
-        return duration * MILLISECONDS_MULTIPLIER; // convert to milliseconds
+        var duration = Math.max.apply(Math, timeArray); // http://stackoverflow.com/a/1379560
+        return duration.toPrecision(DURATION_PRECISION) * MILLISECONDS_MULTIPLIER; // convert to milliseconds
     };
 
     var CFW_transitionEndEmulate = function(start, complete) {
@@ -367,10 +371,10 @@ if (typeof jQuery === 'undefined') {
         var scrollP = document.createElement('p');
         $(scrollDiv).append(scrollP);
         $node.append(scrollDiv);
-        var scrollWidth = $.CFW_measureScrollbar();
+        var scrollbarWidth = $.CFW_measureScrollbar();
         var posLeft = scrollP.getBoundingClientRect().left;
         $node[0].removeChild(scrollDiv);
-        return posLeft < scrollWidth ? 'right' : 'left';
+        return posLeft < scrollbarWidth ? 'right' : 'left';
     };
 
     $.CFW_throttle = function(fn, threshhold, scope) {
@@ -416,7 +420,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): drag.js
+ * Figuration (v4.0.0-alpha.4): drag.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -603,7 +607,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): collapse.js
+ * Figuration (v4.0.0-alpha.4): collapse.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -840,7 +844,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): dropdown.js
+ * Figuration (v4.0.0-alpha.4): dropdown.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -905,7 +909,7 @@ if (typeof jQuery === 'undefined') {
         if (e && e.which === RIGHT_MOUSE_BUTTON_WHICH) { return; }
 
         // Ignore clicks into input areas
-        if (e && e.type === 'click' && /input|textarea/i.test(e.target.tagName)) {
+        if (e && e.type === 'click' && /label|input|textarea/i.test(e.target.tagName)) {
             return;
         }
 
@@ -913,7 +917,7 @@ if (typeof jQuery === 'undefined') {
         $('[data-cfw="dropdown"]').each(function() {
             var $parent = getParent($(this));
             if (!$parent.hasClass('open')) { return; }
-            $(this).CFW_Dropdown('hideRev');
+            $(this).CFW_Dropdown('hideRev', e);
         });
     };
 
@@ -950,10 +954,7 @@ if (typeof jQuery === 'undefined') {
             $('a', this.$target).attr('tabIndex', -1).not('.disabled, :disabled');
 
             // Set ARIA on trigger
-            this.$element.attr({
-                'aria-haspopup': 'true',
-                'aria-expanded': 'false'
-            });
+            this.$element.attr('aria-expanded', 'false');
 
             if (this.settings.backlink && this.settings.backtop) {
                 var $backTop = $('<li class="' + this.c.backLink + '"><a href="#">' + this.settings.backtext + '</a></li>')
@@ -994,10 +995,7 @@ if (typeof jQuery === 'undefined') {
                     .addClass($selfRef.c.isMenu)
                     .closest('li').addClass($selfRef.c.hasSubMenu);
 
-                $subLink.attr({
-                    'aria-haspopup': 'true',
-                    'aria-expanded': 'false'
-                });
+                $subLink.attr('aria-expanded', 'false');
             });
 
             // Set role on dividers
@@ -1126,7 +1124,11 @@ if (typeof jQuery === 'undefined') {
             var showing = $parent.hasClass('open');
             if (showing) { return; }
 
-            if (!$trigger.CFW_trigger('beforeShow.cfw.dropdown')) {
+            var eventProperties = {
+                relatedTarget: $trigger[0]
+            };
+
+            if (!$trigger.CFW_trigger('beforeShow.cfw.dropdown', eventProperties)) {
                 return;
             }
 
@@ -1191,7 +1193,7 @@ if (typeof jQuery === 'undefined') {
             //  .children('a').attr('tabIndex', 0);
             this.$target.find('li').redraw();
 
-            $trigger.CFW_trigger('afterShow.cfw.dropdown');
+            $trigger.CFW_trigger('afterShow.cfw.dropdown', eventProperties);
         },
 
         hideMenu : function(e, $trigger, $menu, triggerFocus) {
@@ -1203,7 +1205,14 @@ if (typeof jQuery === 'undefined') {
             var showing = $parent.hasClass('open');
             if (!showing) { return; }
 
-            if (!$trigger.CFW_trigger('beforeHide.cfw.dropdown')) {
+            var eventProperties = {
+                relatedTarget: $trigger[0]
+            };
+            if (e && e.type === 'click') {
+                eventProperties.clickEvent = e;
+            }
+
+            if (!$trigger.CFW_trigger('beforeHide.cfw.dropdown', eventProperties)) {
                 return;
             }
 
@@ -1252,7 +1261,7 @@ if (typeof jQuery === 'undefined') {
                 $trigger.trigger('focus');
             }
             $parent.removeClass(this.c.hover);
-            $trigger.CFW_trigger('afterHide.cfw.dropdown');
+            $trigger.CFW_trigger('afterHide.cfw.dropdown', eventProperties);
         },
 
         toggle : function() {
@@ -1267,8 +1276,8 @@ if (typeof jQuery === 'undefined') {
             this.hideMenu(null, this.$element, this.$target);
         },
 
-        hideRev : function() {
-            this.hideMenu(null, this.$element, this.$target, false);
+        hideRev : function(e) {
+            this.hideMenu(e, this.$element, this.$target, false);
         },
 
         closeUp : function($node) {
@@ -1527,7 +1536,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): tab.js
+ * Figuration (v4.0.0-alpha.4): tab.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -1638,9 +1647,6 @@ if (typeof jQuery === 'undefined') {
                 e.preventDefault();
             }
 
-            var inTransition = this.$navElm.data('cfw.tab.inTransition');
-            if (inTransition) { return; }
-
             if (this.$element.hasClass('active') ||
                 this.$element.hasClass('disabled') ||
                 this.$element[0].hasAttribute('disabled')) {
@@ -1664,8 +1670,6 @@ if (typeof jQuery === 'undefined') {
             if (!eventHideResult || !eventShowResult) {
                 return;
             }
-
-            this.$navElm.data('cfw.tab.inTransition', true);
 
             if ($previous.length) {
                 $previous
@@ -1745,7 +1749,7 @@ if (typeof jQuery === 'undefined') {
             }
 
             var complete = function() {
-                $prevActive.removeClass('active');
+                $prevActive.removeClass('active in');
                 $node.addClass('active');
 
                 if (isPanel) {
@@ -1754,13 +1758,10 @@ if (typeof jQuery === 'undefined') {
                     });
                     $node.CFW_mutateTrigger();
                     $prevActive.CFW_mutateTrigger();
-                    $selfRef.$navElm.removeData('cfw.tab.inTransition');
                 }
             };
 
             $node.CFW_transition(null, complete);
-
-            $prevActive.removeClass('in');
         },
 
         dispose : function() {
@@ -1797,7 +1798,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): affix.js
+ * Figuration (v4.0.0-alpha.4): affix.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -1970,7 +1971,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): tooltip.js
+ * Figuration (v4.0.0-alpha.4): tooltip.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -2549,22 +2550,17 @@ if (typeof jQuery === 'undefined') {
             var $tip = this.$target;
             $tip.detach();
 
-            /* eslint-disable no-lonely-if */
             if (typeof placement === 'object') {
                 // Custom placement
                 this.settings.container = 'body';
                 $tip.appendTo(this.settings.container);
-                $tip.offset(placement);
-                $tip.addClass('in');
+            } if (this.settings.container) {
+                // Container placement
+                $tip.appendTo(this.settings.container);
             } else {
-                // Standard Placement
-                if (this.settings.container) {
-                    $tip.appendTo(this.settings.container);
-                } else {
-                    $tip.insertAfter(this.$element);
-                }
+                // Default placement
+                $tip.insertAfter(this.$element);
             }
-            /* eslint-enable no-lonely-if */
 
             this.inserted = true;
             this.$element.CFW_trigger('inserted.cfw.' + this.type);
@@ -2591,6 +2587,8 @@ if (typeof jQuery === 'undefined') {
 
             if (typeof placement === 'object') {
                 // Custom placement
+                $tip.offset(placement);
+                $tip.addClass('in');
                 return;
             }
 
@@ -3094,7 +3092,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): popover.js
+ * Figuration (v4.0.0-alpha.4): popover.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3295,23 +3293,38 @@ if (typeof jQuery === 'undefined') {
 
 
     CFW_Widget_Popover.prototype.viewportDragLimit = function() {
-        var $tip = this.$target;
         var $viewport = this.$viewport;
-
+        var scrollbarWidth = this.viewportScrollbarWidth($viewport);
         var limit = $viewport.offset();
-        limit.bottom = limit.top + $viewport.outerHeight() - $tip.outerHeight();
-        limit.right = limit.left + $viewport.outerWidth() - $tip.outerWidth();
+
+        limit.bottom = limit.top + $viewport.outerHeight();
+        limit.right = limit.left + $viewport.outerWidth() - scrollbarWidth;
 
         // Allow dragging around entire window if body is smaller than window
         if ($viewport.is('body')) {
             if (document.body.clientHeight < window.innerHeight) {
-                limit.bottom = limit.top + window.innerHeight - $tip.outerHeight();
+                limit.bottom = window.innerHeight;
             }
             if (document.body.clientWidth < window.innerWidth) {
-                limit.right = limit.left + window.innerWidth - $tip.outerWidth();
+                limit.right = window.innerWidth - scrollbarWidth;
             }
         }
         return limit;
+    };
+
+    CFW_Widget_Popover.prototype.viewportScrollbarWidth = function($viewport) {
+        // Check to see if a scrollbar is possible
+        var compStyle = window.getComputedStyle($viewport[0]);
+        var hasScrollY = /^(visible|auto|scroll)$/.test(compStyle.overflow) || /^(visible|auto|scroll)$/.test(compStyle.overflowY);
+        var scrollHeight = $viewport[0].scrollHeight;
+
+        // Return width of scrollbar if there seems to be one
+        if ($viewport.is('body') && hasScrollY && scrollHeight > window.innerHeight) {
+            return $.CFW_measureScrollbar();
+        } else if (hasScrollY && scrollHeight > $viewport[0].clientHeight) {
+            return $.CFW_measureScrollbar();
+        }
+        return 0;
     };
 
     CFW_Widget_Popover.prototype.locateDragTip = function(offsetY, offsetX) {
@@ -3320,8 +3333,8 @@ if (typeof jQuery === 'undefined') {
         var viewportPadding = this.settings.padding;
 
         $tip.css({
-            top: Math.min(limit.bottom - viewportPadding, Math.max(limit.top + viewportPadding, offsetY)),
-            left: Math.min(limit.right - viewportPadding, Math.max(limit.left + viewportPadding, offsetX))
+            top: Math.min(limit.bottom - viewportPadding - $tip.outerHeight(), Math.max(limit.top + viewportPadding, offsetY)),
+            left: Math.min(limit.right - viewportPadding - $tip.outerWidth(), Math.max(limit.left + viewportPadding, offsetX))
         });
     };
 
@@ -3398,7 +3411,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): modal.js
+ * Figuration (v4.0.0-alpha.4): modal.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3542,6 +3555,7 @@ if (typeof jQuery === 'undefined') {
             this.$target
                 .removeClass('in')
                 .attr('aria-hidden', true)
+                .removeAttr('aria-modal')
                 .off('.dismiss.cfw.modal');
 
             this.$dialog.off('mousedown.dismiss.cfw.modal');
@@ -3572,7 +3586,10 @@ if (typeof jQuery === 'undefined') {
 
             $.CFW_reflow(this.$target[0]); // Force Reflow
 
-            this.$target.addClass('in').removeAttr('aria-hidden');
+            this.$target
+                .addClass('in')
+                .removeAttr('aria-hidden')
+                .attr('aria-modal', true);
 
             // Mutation handler
             this.$target
@@ -3921,7 +3938,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): accordion.js
+ * Figuration (v4.0.0-alpha.4): accordion.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3997,7 +4014,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): tab-responsive.js
+ * Figuration (v4.0.0-alpha.4): tab-responsive.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4134,7 +4151,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): slideshow.js
+ * Figuration (v4.0.0-alpha.4): slideshow.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4330,7 +4347,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): scrollspy.js
+ * Figuration (v4.0.0-alpha.4): scrollspy.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4517,7 +4534,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): alert.js
+ * Figuration (v4.0.0-alpha.4): alert.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4650,7 +4667,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): lazy.js
+ * Figuration (v4.0.0-alpha.4): lazy.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4857,7 +4874,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): equalize.js
+ * Figuration (v4.0.0-alpha.4): equalize.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -5074,7 +5091,7 @@ if (typeof jQuery === 'undefined') {
 /* eslint-disable no-magic-numbers */
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): player.js
+ * Figuration (v4.0.0-alpha.4): player.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -6901,7 +6918,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Figuration (v4.0.0-alpha.3): common.js
+ * Figuration (v4.0.0-alpha.4): common.js
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */

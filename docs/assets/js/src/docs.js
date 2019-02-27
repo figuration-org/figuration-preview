@@ -2,7 +2,7 @@
 /* global Clipboard, Holder, anchors */
 
 /*!
- * Figuration (v4.0.0-alpha.3)
+ * Figuration (v4.0.0-alpha.4)
  * http://figuration.org
  * Copyright 2013-2018 CAST, Inc.
  * Licensed under MIT (https://github.com/cast-org/figuration/blob/master/LICENSE)
@@ -76,10 +76,10 @@
         });
     };
 
-    var topLinkAffix = function() {
-        var $topLink = $('.topLink');
+    var toplinkAffix = function() {
+        var $toplink = $('.toplink');
 
-        $topLink.CFW_Affix({
+        $toplink.CFW_Affix({
             top: function() {
                 return $('.cf-title').offset().top;
             },
@@ -210,7 +210,7 @@
     $(window).ready(function() {
         addAnchors();
         addClipboard();
-        topLinkAffix();
+        toplinkAffix();
         paletteHex();
         sectionToc();
         docsDirection();

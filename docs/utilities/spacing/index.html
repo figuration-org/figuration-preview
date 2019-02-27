@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="description" content="CAST Figuration - A feature rich, responsive, mobile first, accessible, front-end framework.">
 
@@ -278,6 +278,18 @@
         
 
         <li class="nav-item">
+          <a href="/figuration-preview/utilities/overflow/" class="nav-link ">
+            Overflow 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
           <a href="/figuration-preview/utilities/position/" class="nav-link ">
             Position 
           </a>
@@ -523,49 +535,43 @@
 
 <p>Here is a comparison and example of customizing the grid at the medium (<code class="highlighter-rouge">md</code>) breakpoint and above. The the <code class="highlighter-rouge">.col</code> horizontal padding is increased with <code class="highlighter-rouge">.px-md-2</code> and then counteracted that with negative horizontal margin <code class="highlighter-rouge">.mx-md-n2</code> on the parent <code class="highlighter-rouge">.row</code>.</p>
 
-<div class="cf-example-row">
-
-<div class="cf-example">
+<div class="cf-example cf-example-row">
 <div class="row mb-1">
-    <div class="col py-1">Standard horizontal column padding</div>
-    <div class="col py-1">Standard horizontal column padding</div>
+    <div class="col">Standard horizontal column padding</div>
+    <div class="col">Standard horizontal column padding</div>
 </div>
 
 <div class="row mx-md-n2">
-    <div class="col py-1 px-md-2">Custom horizontal column padding</div>
-    <div class="col py-1 px-md-2">Custom horizontal column padding</div>
+    <div class="col px-md-2">Custom horizontal column padding</div>
+    <div class="col px-md-2">Custom horizontal column padding</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row mb-1"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col py-1"</span><span class="nt">&gt;</span>Standard horizontal column padding<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col py-1"</span><span class="nt">&gt;</span>Standard horizontal column padding<span class="nt">&lt;/div&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row mb-1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Standard horizontal column padding<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Standard horizontal column padding<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row mx-md-n2"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col py-1 px-md-2"</span><span class="nt">&gt;</span>Custom horizontal column padding<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col py-1 px-md-2"</span><span class="nt">&gt;</span>Custom horizontal column padding<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-</div>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col px-md-2"</span><span class="nt">&gt;</span>Custom horizontal column padding<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col px-md-2"</span><span class="nt">&gt;</span>Custom horizontal column padding<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>In some cases, you may also have to adjust the padding on the parent container of the <code class="highlighter-rouge">.row</code> element to prevent horizontal scrollbars from occuring.  For example, using the custom negative margin example above, you may find the need to use <code class="highlighter-rouge">.px-md-2</code> on the parent <code class="highlighter-rouge">.container-fluid</code>.</p>
 
-<div class="cf-example-row">
-
-<div class="cf-example">
+<div class="cf-example cf-example-row">
 <div class="container-fluid px-md-2">
     <div class="row mx-md-n2">
-        <div class="col py-1 px-md-2">Custom horizontal column padding</div>
-        <div class="col py-1 px-md-2">Custom horizontal column padding</div>
+        <div class="col px-md-2">Custom horizontal column padding</div>
+        <div class="col px-md-2">Custom horizontal column padding</div>
     </div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid px-md-2"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row mx-md-n2"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col py-1 px-md-2"</span><span class="nt">&gt;</span>Custom horizontal column padding<span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col py-1 px-md-2"</span><span class="nt">&gt;</span>Custom horizontal column padding<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
 </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid px-md-2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row mx-md-n2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col px-md-2"</span><span class="nt">&gt;</span>Custom horizontal column padding<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col px-md-2"</span><span class="nt">&gt;</span>Custom horizontal column padding<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="sass-reference">SASS Reference</h2>
 
@@ -673,7 +679,7 @@
             </main>
         </div>
 
-        <div class="topLink">
+        <div class="toplink">
             <a href="#content">Top of Page <span class="caret"></span></a>
         </div>
     </div>
@@ -681,7 +687,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.3
+            Current version: 4.0.0-alpha.4
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>
@@ -693,9 +699,9 @@
             <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
         </ul>
         <p>
-            &copy; 2013-2018 <a href="http://www.cast.org/">CAST, Inc.</a>
+            &copy; 2013-2019 <a href="http://www.cast.org/">CAST, Inc.</a>
             <br />
-            Portions: &copy; 2011-2018 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
+            Portions: &copy; 2011-2019 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
         <p>
             Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
             docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.

@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="description" content="CAST Figuration - A feature rich, responsive, mobile first, accessible, front-end framework.">
 
@@ -316,7 +316,7 @@
 
 <p>Copy-paste the stylesheet <code class="highlighter-rouge">&lt;link&gt;</code> into your <code class="highlighter-rouge">&lt;head&gt;</code> before all other stylesheets to load our CSS.</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/figuration@4.0.0-alpha.3/dist/css/figuration.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-XxBOwxsamf0Z0CV3QtqnfYf9eqnkikkHLnPQBAPIcDw522AemcRYjW7TvHHKtNJ5"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/figuration@4.0.0-alpha.4/dist/css/figuration.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-ruVwy3Votl/u+i9XkE/c6nB9GY8x6vco90ZhAn8DxIAMzc/ReGAl5ZMgoXehck0o"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre></figure>
 
 <h3 id="javascript">JavaScript</h3>
 
@@ -325,7 +325,7 @@
 <p>Our widgets work with either the full version of jQuery, or the <a href="https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/">jQuery’s slim build</a>.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/figuration@4.0.0-alpha.3/dist/js/figuration.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-7ttxFxKie97gaX46s6mD0mqut//LXW31I1JC2tn/NQCsOvVJWrL6BEX44aZxKZ3D"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/figuration@4.0.0-alpha.4/dist/js/figuration.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-m6RN6xIpDZ/PgXIlV4qDlWld0LZuHeZpp07ajAFy/OB8vD+CssIbMnVLySvNVgw3"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 
 <h2 id="basic-template">Basic Template</h2>
 
@@ -336,18 +336,18 @@
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en-us"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Hello, world!<span class="nt">&lt;/title&gt;</span>
-
     <span class="c">&lt;!-- Required meta tags --&gt;</span>
     <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;title&gt;</span>Hello, world!<span class="nt">&lt;/title&gt;</span>
 
     <span class="c">&lt;!-- Figuration CSS --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/figuration@4.0.0-alpha.3/dist/css/figuration.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-XxBOwxsamf0Z0CV3QtqnfYf9eqnkikkHLnPQBAPIcDw522AemcRYjW7TvHHKtNJ5"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/figuration@4.0.0-alpha.4/dist/css/figuration.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-ruVwy3Votl/u+i9XkE/c6nB9GY8x6vco90ZhAn8DxIAMzc/ReGAl5ZMgoXehck0o"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
 
     <span class="c">&lt;!-- jQuery and Figuration JS --&gt;</span>
     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/figuration@4.0.0-alpha.3/dist/js/figuration.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-7ttxFxKie97gaX46s6mD0mqut//LXW31I1JC2tn/NQCsOvVJWrL6BEX44aZxKZ3D"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/figuration@4.0.0-alpha.4/dist/js/figuration.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-m6RN6xIpDZ/PgXIlV4qDlWld0LZuHeZpp07ajAFy/OB8vD+CssIbMnVLySvNVgw3"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
   <span class="nt">&lt;/head&gt;</span>
   <span class="nt">&lt;body&gt;</span>
     <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
@@ -381,7 +381,7 @@
 </ul>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="c">&lt;!-- Figuration RTL CSS --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/figuration@4.0.0-alpha.3/dist/css/figuration-rtl.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-JzrtQ3eaBNtKBzpe7JmoUUd85Dcb8N9iR7uT+4WJBXhZ5Ctc4tkzvf8popNxJ3W0"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/figuration@4.0.0-alpha.4/dist/css/figuration-rtl.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-UjNnePr+K3rlamqWcvcfv8QLD41URRhGSwoBSrTo2Dj6ByPRwq2iy6LuVo/yg8n1"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
     </code></pre></figure>
 
 <p>When complete, the basic template for a right-to-left markup should look like the following example.</p>
@@ -389,18 +389,18 @@
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"ar"</span> <span class="na">dir=</span><span class="s">"rtl"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Hello, world!<span class="nt">&lt;/title&gt;</span>
-
     <span class="c">&lt;!-- Required meta tags --&gt;</span>
     <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;title&gt;</span>Hello, world!<span class="nt">&lt;/title&gt;</span>
 
     <span class="c">&lt;!-- Figuration RTL CSS --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/figuration@4.0.0-alpha.3/dist/css/figuration-rtl.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-JzrtQ3eaBNtKBzpe7JmoUUd85Dcb8N9iR7uT+4WJBXhZ5Ctc4tkzvf8popNxJ3W0"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/figuration@4.0.0-alpha.4/dist/css/figuration-rtl.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-UjNnePr+K3rlamqWcvcfv8QLD41URRhGSwoBSrTo2Dj6ByPRwq2iy6LuVo/yg8n1"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
 
     <span class="c">&lt;!-- jQuery and Figuration JS --&gt;</span>
     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/figuration@4.0.0-alpha.3/dist/js/figuration.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-7ttxFxKie97gaX46s6mD0mqut//LXW31I1JC2tn/NQCsOvVJWrL6BEX44aZxKZ3D"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/figuration@4.0.0-alpha.4/dist/js/figuration.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-m6RN6xIpDZ/PgXIlV4qDlWld0LZuHeZpp07ajAFy/OB8vD+CssIbMnVLySvNVgw3"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
   <span class="nt">&lt;/head&gt;</span>
   <span class="nt">&lt;body&gt;</span>
     <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
@@ -424,7 +424,7 @@
 
 <p>Figuration is developed <em>mobile first</em>, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, <strong>add the responsive viewport meta tag</strong> to your <code class="highlighter-rouge">&lt;head&gt;</code>.</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span></code></pre></figure>
 
 <p>You can see an example of this in action in the <a href="#basic-template">basic template</a>.</p>
 
@@ -467,7 +467,7 @@
             </main>
         </div>
 
-        <div class="topLink">
+        <div class="toplink">
             <a href="#content">Top of Page <span class="caret"></span></a>
         </div>
     </div>
@@ -475,7 +475,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.3
+            Current version: 4.0.0-alpha.4
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>
@@ -487,9 +487,9 @@
             <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
         </ul>
         <p>
-            &copy; 2013-2018 <a href="http://www.cast.org/">CAST, Inc.</a>
+            &copy; 2013-2019 <a href="http://www.cast.org/">CAST, Inc.</a>
             <br />
-            Portions: &copy; 2011-2018 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
+            Portions: &copy; 2011-2019 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
         <p>
             Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
             docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.

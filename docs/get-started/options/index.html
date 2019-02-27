@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="description" content="CAST Figuration - A feature rich, responsive, mobile first, accessible, front-end framework.">
 
@@ -380,6 +380,8 @@
 
 <p>Every Sass variable, or setting, in Figuration includes the <code class="highlighter-rouge">!default</code> flag allowing you to override the variable’s default value in your own Sass without modifying Figuration’s source code. Copy and paste variables as needed, modify their values, and remove the <code class="highlighter-rouge">!default</code> flag. If a variable has already been assigned, then it won’t be re-assigned by the default values.</p>
 
+<p>You will find the complete list of Figuration’s setting variables in <code class="highlighter-rouge">scss/_settings.scss</code>. Some variables are set to <code class="highlighter-rouge">null</code>, these variables don’t output the property unless they are overridden in your configuration.</p>
+
 <p>Variable overrides within the same Sass file can come before or after the default variables. However, when overriding across Sass files, your overrides must come before you import Figuration’s Sass files.</p>
 
 <p>Here’s an example that changes the <code class="highlighter-rouge">background-color</code> and <code class="highlighter-rouge">color</code> for the <code class="highlighter-rouge">&lt;body&gt;</code> when importing and compiling Figuration via grunt:</p>
@@ -487,6 +489,11 @@
       <td>Enables predefined <code class="highlighter-rouge">transition</code>s on various components.</td>
     </tr>
     <tr>
+      <td><code class="highlighter-rouge">$enable-transitions-reduced</code></td>
+      <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
+      <td>Enables the generation of <a href="/figuration-preview/getting-started/accessibility/#reduced-motion"><code class="highlighter-rouge">prefers-reduced-motion</code> media query</a>, which suppresses certain animations/transitions based on the users’ browser/operating system preferences.</td>
+    </tr>
+    <tr>
       <td><code class="highlighter-rouge">$enable-grid-classes</code></td>
       <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
       <td>Enables the generation of CSS classes for the grid system (e.g. <code class="highlighter-rouge">.container</code>, <code class="highlighter-rouge">.row</code>, <code class="highlighter-rouge">.col-md-1</code>, etc.).</td>
@@ -538,12 +545,11 @@
 <p>By using a map, we can be sure the components are all the same height when horizontally aligned.</p>
 
 <div class="cf-callout cf-callout-info">
-<p class="h5"><code class="highlighter-rouge">&lt;select&gt;</code> Sizing Caveat</p>
+<p class="h5 no_toc"><code class="highlighter-rouge">&lt;select&gt;</code> Sizing Caveat</p>
 
 <p>Currently there is a minor issue with vertical sizing and <code class="highlighter-rouge">&lt;select&gt;</code> elements with Internet Explorer.  IE will render <code class="highlighter-rouge">&lt;select&gt;</code> elements slightly shorter in vertical height than other browsers.</p>
 
 <p>This has not undergone stringent testing on mobile devices yet.</p>
-
 </div>
 
 <p>You can modify, remove, or add additional sizes, beyond the default sizing, by redefining the <code class="highlighter-rouge">$component-sizes</code> variable and
@@ -694,7 +700,7 @@ Below is the default additional settings for reference.  Try not to confuse the 
   <span class="py">--breakpoint-md</span><span class="p">:</span> <span class="m">48em</span><span class="p">;</span>
   <span class="py">--breakpoint-lg</span><span class="p">:</span> <span class="m">62em</span><span class="p">;</span>
   <span class="py">--breakpoint-xl</span><span class="p">:</span> <span class="m">75em</span><span class="p">;</span>
-  <span class="py">--font-family-sans-serif</span><span class="p">:</span> <span class="n">-apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span> <span class="s1">"Segoe UI"</span><span class="p">,</span> <span class="n">Roboto</span><span class="p">,</span> <span class="s1">"Helvetica Neue"</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">,</span> <span class="s1">"Apple Color Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Symbol"</span><span class="p">,</span> <span class="s1">"Noto Color Emoji"</span><span class="p">;</span>
+  <span class="py">--font-family-sans-serif</span><span class="p">:</span> <span class="n">-apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span> <span class="s1">"Segoe UI"</span><span class="p">,</span> <span class="n">Roboto</span><span class="p">,</span> <span class="s1">"Noto Sans"</span><span class="p">,</span> <span class="s1">"Helvetica Neue"</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">,</span> <span class="s1">"Apple Color Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Symbol"</span><span class="p">,</span> <span class="s1">"Noto Color Emoji"</span><span class="p">;</span>
   <span class="py">--font-family-serif</span><span class="p">:</span> <span class="n">Georgia</span><span class="p">,</span> <span class="s1">"Times New Roman"</span><span class="p">,</span> <span class="n">Times</span><span class="p">,</span> <span class="nb">serif</span><span class="p">;</span>
   <span class="py">--font-family-monospace</span><span class="p">:</span> <span class="n">SFMono-Regular</span><span class="p">,</span> <span class="n">Menlo</span><span class="p">,</span> <span class="n">Monaco</span><span class="p">,</span> <span class="n">Consolas</span><span class="p">,</span> <span class="s1">"Liberation Mono"</span><span class="p">,</span> <span class="s1">"Courier New"</span><span class="p">,</span> <span class="nb">monospace</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
@@ -797,7 +803,7 @@ Below is the default additional settings for reference.  Try not to confuse the 
             </main>
         </div>
 
-        <div class="topLink">
+        <div class="toplink">
             <a href="#content">Top of Page <span class="caret"></span></a>
         </div>
     </div>
@@ -805,7 +811,7 @@ Below is the default additional settings for reference.  Try not to confuse the 
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.3
+            Current version: 4.0.0-alpha.4
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>
@@ -817,9 +823,9 @@ Below is the default additional settings for reference.  Try not to confuse the 
             <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
         </ul>
         <p>
-            &copy; 2013-2018 <a href="http://www.cast.org/">CAST, Inc.</a>
+            &copy; 2013-2019 <a href="http://www.cast.org/">CAST, Inc.</a>
             <br />
-            Portions: &copy; 2011-2018 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
+            Portions: &copy; 2011-2019 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
         <p>
             Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
             docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.

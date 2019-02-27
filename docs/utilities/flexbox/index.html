@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="description" content="CAST Figuration - A feature rich, responsive, mobile first, accessible, front-end framework.">
 
@@ -278,6 +278,18 @@
         
 
         <li class="nav-item">
+          <a href="/figuration-preview/utilities/overflow/" class="nav-link ">
+            Overflow 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
           <a href="/figuration-preview/utilities/position/" class="nav-link ">
             Position 
           </a>
@@ -430,21 +442,15 @@
   <li><code class="highlighter-rouge">.d{-breakpoint}-inline-flex</code> sets <code class="highlighter-rouge">display: inline-flex;</code></li>
 </ul>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex p-0_5">A flexbox container!</div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex p-0_5"</span><span class="nt">&gt;</span>A flexbox container!<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
 </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex p-0_5"</span><span class="nt">&gt;</span>A flexbox container!<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-inline-flex p-0_5">An inline flexbox container!</div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline-flex p-0_5"</span><span class="nt">&gt;</span>An inline flexbox container!<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
 </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline-flex p-0_5"</span><span class="nt">&gt;</span>An inline flexbox container!<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="direction">Direction</h2>
 
@@ -460,9 +466,7 @@
 
 <p>Use <code class="highlighter-rouge">.flex-row</code> to set a horizontal direction (the browser default), or <code class="highlighter-rouge">.flex-row-reverse</code> to start the horizontal direction from the opposite side.</p>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex flex-row mb-1">
   <div class="p-0_5">Flex item 1</div>
   <div class="p-0_5">Flex item 2</div>
@@ -473,7 +477,8 @@
   <div class="p-0_5">Flex item 2</div>
   <div class="p-0_5">Flex item 3</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-row mb-1"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-row mb-1"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item 1<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item 2<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item 3<span class="nt">&lt;/div&gt;</span>
@@ -482,15 +487,11 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item 1<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item 2<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item 3<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-</div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>Use <code class="highlighter-rouge">.flex-column</code> to set a vertical direction, or <code class="highlighter-rouge">.flex-column-reverse</code> to start the vertical direction from the opposite side.</p>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex flex-column mb-1">
   <div class="p-0_5">Flex item 1</div>
   <div class="p-0_5">Flex item 2</div>
@@ -501,7 +502,8 @@
   <div class="p-0_5">Flex item 2</div>
   <div class="p-0_5">Flex item 3</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-column mb-1"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-column mb-1"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item 1<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item 2<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item 3<span class="nt">&lt;/div&gt;</span>
@@ -510,9 +512,7 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item 1<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item 2<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item 3<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-</div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="justify-content">Justify Content</h2>
 
@@ -527,9 +527,7 @@
   <li><code class="highlighter-rouge">.flex{-breakpoint}-between</code></li>
 </ul>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex flex-start mb-1">
   <div class="p-0_5"><code>.flex-start</code></div>
   <div class="p-0_5">Flex item</div>
@@ -555,7 +553,8 @@
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Justify the space between</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-start mb-1"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-start mb-1"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;&lt;code&gt;</span>.flex-start<span class="nt">&lt;/code&gt;&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Justify at start of main axis<span class="nt">&lt;/div&gt;</span>
@@ -579,13 +578,13 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;&lt;code&gt;</span>.flex-between<span class="nt">&lt;/code&gt;&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Justify the space between<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-</div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="align-items">Align Items</h2>
 
 <p>Use <code class="highlighter-rouge">flex-items</code> utilities on flexbox containers to change the alignment of flex items on the <em>cross axis</em> (the y-axis to start, x-axis if <code class="highlighter-rouge">flex-direction: column</code>). Choose from <code class="highlighter-rouge">start</code>, <code class="highlighter-rouge">center</code> , <code class="highlighter-rouge">end</code>, <code class="highlighter-rouge">baseline</code>, or <code class="highlighter-rouge">stretch</code> (browser default).</p>
+
+<p><strong>Internet Explorer 10 and 11 do not support vertical alignment of flex items when the flex container has a <code class="highlighter-rouge">min-height</code>.</strong> <a href="https://github.com/philipwalton/flexbugs#flexbug-3">See Flexbugs #3 for more details.</a></p>
 
 <p>Responsive item alignment utilities:</p>
 <ul>
@@ -596,9 +595,7 @@
   <li><code class="highlighter-rouge">.flex{-breakpoint}-items-stretch</code></li>
 </ul>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex flex-items-start mb-1" style="min-height: 8rem;">
   <div class="p-0_5"><code>.flex-items-start</code></div>
   <div class="p-0_5">Flex item</div>
@@ -624,7 +621,8 @@
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Stretch items</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-items-start mb-1"</span> <span class="na">style=</span><span class="s">"min-height: 8rem;"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-items-start mb-1"</span> <span class="na">style=</span><span class="s">"min-height: 8rem;"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;&lt;code&gt;</span>.flex-items-start<span class="nt">&lt;/code&gt;&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Align at cross axis start<span class="nt">&lt;/div&gt;</span>
@@ -648,13 +646,13 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;&lt;code&gt;</span>.flex-items-stretch<span class="nt">&lt;/code&gt;&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Stretch items<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-</div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="align-self">Align Self</h2>
 
 <p>Use <code class="highlighter-rouge">flex-self</code> utilities on flexbox items to individually change their alignment on the cross axis (the y-axis to start, x-axis if <code class="highlighter-rouge">flex-direction: column</code>). Choose from the same options as <code class="highlighter-rouge">flex-items</code>: <code class="highlighter-rouge">start</code>, <code class="highlighter-rouge">center</code>, <code class="highlighter-rouge">end</code>, <code class="highlighter-rouge">baseline</code>, or <code class="highlighter-rouge">stretch</code> (browser default).</p>
+
+<p><strong>Internet Explorer 10 and 11 do not support vertical alignment of flex items when the flex container has a <code class="highlighter-rouge">min-height</code>.</strong> <a href="https://github.com/philipwalton/flexbugs#flexbug-3">See Flexbugs #3 for more details.</a></p>
 
 <p>Responsive self alignment utilities:</p>
 <ul>
@@ -665,9 +663,7 @@
   <li><code class="highlighter-rouge">.flex{-breakpoint}-self-stretch</code></li>
 </ul>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex mb-1" style="min-height: 8rem;">
 <div class="p-0_5">Flex item</div>
 <div class="flex-self-start p-0_5"><code>.flex-self-start</code></div>
@@ -693,7 +689,8 @@
 <div class="flex-self-stretch p-0_5"><code>.flex-self-stretch</code></div>
 <div class="p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex mb-1"</span> <span class="na">style=</span><span class="s">"min-height: 8rem;"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex mb-1"</span> <span class="na">style=</span><span class="s">"min-height: 8rem;"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-self-start p-0_5"</span><span class="nt">&gt;&lt;code&gt;</span>.flex-self-start<span class="nt">&lt;/code&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
@@ -717,9 +714,7 @@
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-self-stretch p-0_5"</span><span class="nt">&gt;&lt;code&gt;</span>.flex-self-stretch<span class="nt">&lt;/code&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-</div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="auto-margins">Auto Margins</h2>
 
@@ -729,9 +724,7 @@
 
 <p><strong>Unfortunately, IE10 and IE11 do not properly support auto margins on flex items whose parent has a non-default <code class="highlighter-rouge">justify-content</code> value.</strong> <a href="https://stackoverflow.com/a/37535548">See this StackOverflow answer</a> for more details.</p>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex mb-1">
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
@@ -749,7 +742,8 @@
   <div class="p-0_5">Flex item</div>
   <div class="ms-auto p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex mb-1"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex mb-1"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
@@ -765,17 +759,13 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ms-auto p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-</div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="with-align-items">With align-items</h3>
 
 <p>Vertically, move one flex item to the top or bottom of a container by mixing <code class="highlighter-rouge">align-items</code>, <code class="highlighter-rouge">flex-direction: column</code>, and <code class="highlighter-rouge">margin-top: auto</code> or <code class="highlighter-rouge">margin-bottom: auto</code>.</p>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex flex-items-start flex-column mb-1" style="min-height: 12rem;">
   <div class="mb-auto p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
@@ -787,7 +777,8 @@
   <div class="p-0_5">Flex item</div>
   <div class="mt-auto p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-items-start flex-column mb-1"</span> <span class="na">style=</span><span class="s">"min-height: 12rem;"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-items-start flex-column mb-1"</span> <span class="na">style=</span><span class="s">"min-height: 12rem;"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mb-auto p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
@@ -797,9 +788,7 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mt-auto p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-</div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="wrap">Wrap</h2>
 
@@ -812,9 +801,7 @@
   <li><code class="highlighter-rouge">.flex{-breakpoint}-wrap-reverse</code></li>
 </ul>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex flex-nowrap">
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
@@ -832,29 +819,26 @@
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-nowrap"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
 </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-nowrap"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex flex-wrap">
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
@@ -872,29 +856,26 @@
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-wrap"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
 </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-wrap"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex flex-wrap-reverse">
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
@@ -912,25 +893,24 @@
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-wrap-reverse"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
 </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-wrap-reverse"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="order">Order</h2>
 
@@ -945,9 +925,7 @@
 
 <p>Even greater control is available with responsive order classes that match the column counts.  These are in the form of <code class="highlighter-rouge">.order-{breakpoint}-{col}</code>, such as <code class="highlighter-rouge">.order-2.order-md-4</code>.</p>
 
-<div class="cf-example-row">
-
-<div class="cf-example">
+<div class="cf-example cf-example-row">
 <div class="row">
     <div class="col-1 order-last">
         1
@@ -965,7 +943,8 @@
         5
     </div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-1 order-last"</span><span class="nt">&gt;</span>
         1
     <span class="nt">&lt;/div&gt;</span>
@@ -981,13 +960,9 @@
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-1 order-first"</span><span class="nt">&gt;</span>
         5
     <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-</div>
-
-<div class="cf-example-row">
-
-<div class="cf-example">
+<div class="cf-example cf-example-row">
 <div class="row">
     <div class="col-1 order-12">
         1
@@ -1005,7 +980,8 @@
         5
     </div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-1 order-12"</span><span class="nt">&gt;</span>
         1
     <span class="nt">&lt;/div&gt;</span>
@@ -1021,9 +997,7 @@
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-1 order-2"</span><span class="nt">&gt;</span>
         5
     <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-</div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="align-content">Align Content</h2>
 
@@ -1041,9 +1015,7 @@
   <li><code class="highlighter-rouge">.flex{-breakpoint}-content-stretch</code></li>
 </ul>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex flex-content-start flex-wrap" style="min-height: 12rem;">
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
@@ -1061,29 +1033,26 @@
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-content-start flex-wrap"</span> <span class="na">style=</span><span class="s">"min-height: 12rem;"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
 </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-content-start flex-wrap"</span> <span class="na">style=</span><span class="s">"min-height: 12rem;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex flex-content-center flex-wrap" style="min-height: 12rem;">
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
@@ -1101,29 +1070,26 @@
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-content-center flex-wrap"</span> <span class="na">style=</span><span class="s">"min-height: 12rem;"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
 </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-content-center flex-wrap"</span> <span class="na">style=</span><span class="s">"min-height: 12rem;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex flex-content-end flex-wrap" style="min-height: 12rem;">
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
@@ -1141,29 +1107,26 @@
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-content-end flex-wrap"</span> <span class="na">style=</span><span class="s">"min-height: 12rem;"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
 </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-content-end flex-wrap"</span> <span class="na">style=</span><span class="s">"min-height: 12rem;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex flex-content-between flex-wrap" style="min-height: 12rem;">
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
@@ -1181,29 +1144,26 @@
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-content-between flex-wrap"</span> <span class="na">style=</span><span class="s">"min-height: 12rem;"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
 </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-content-between flex-wrap"</span> <span class="na">style=</span><span class="s">"min-height: 12rem;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex flex-content-around flex-wrap" style="min-height: 12rem;">
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
@@ -1221,29 +1181,26 @@
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-content-around flex-wrap"</span> <span class="na">style=</span><span class="s">"min-height: 12rem;"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
 </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-content-around flex-wrap"</span> <span class="na">style=</span><span class="s">"min-height: 12rem;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex flex-content-stretch flex-wrap" style="min-height: 12rem;">
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
@@ -1261,25 +1218,24 @@
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-content-stretch flex-wrap"</span> <span class="na">style=</span><span class="s">"min-height: 12rem;"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
 </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-content-stretch flex-wrap"</span> <span class="na">style=</span><span class="s">"min-height: 12rem;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="sizing">Sizing</h2>
 
@@ -1299,109 +1255,91 @@
 
 <p>To make an element grow or shrink as needed, use the <code class="highlighter-rouge">.flex-fill</code> utility.</p>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex">
   <div class="p-0_5">Flex item</div>
   <div class="flex-fill p-0_5">Auto sizing flex item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum ipsum ut efficitur imperdiet.</div>
   <div class="p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-fill p-0_5"</span><span class="nt">&gt;</span>Auto sizing flex item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum ipsum ut efficitur imperdiet.<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-</div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>Use <code class="highlighter-rouge">.flex-grow-0/1</code> utilities to toggle a flex item’s ability to grow to fill available space. In the example below, the <code class="highlighter-rouge">.flex-grow-1</code> elements uses all available space it can, while allowing the remaining two flex items their necessary space.</p>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex">
   <div class="p-0_5">Flex item</div>
   <div class="p-0_5 flex-grow-1">Growing flex item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum ipsum ut efficitur imperdiet.</div>
   <div class="p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5 flex-grow-1"</span><span class="nt">&gt;</span>Growing flex item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum ipsum ut efficitur imperdiet.<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-</div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>To make an element grow, but not shrink, use the <code class="highlighter-rouge">.flex-grow</code> utility.</p>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex">
   <div class="p-0_5">Flex item</div>
   <div class="flex-grow p-0_5">Growing flex item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum ipsum ut efficitur imperdiet.</div>
   <div class="p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-grow p-0_5"</span><span class="nt">&gt;</span>Growing flex item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum ipsum ut efficitur imperdiet.<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-</div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>Use <code class="highlighter-rouge">.flex-shrink-0/1</code> utilities to toggle a flex item’s ability to shrink if necessary. In the example below, the second flex item with <code class="highlighter-rouge">.flex-shrink-1</code> is forced to wrap it’s contents to a new line, “shrinking” to allow more space for the previous flex item with <code class="highlighter-rouge">.w-100</code>.</p>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex">
   <div class="p-0_5 w-100">Flex item</div>
   <div class="p-0_5 flex-shrink-1">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5 w-100"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5 flex-shrink-1"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-</div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>To make an element shrink, but not grow, use the <code class="highlighter-rouge">.flex-shrink</code> utility.</p>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex">
   <div class="p-0_5">Flex item</div>
   <div class="flex-shrink p-0_5">Shrinking flex item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum ipsum ut efficitur imperdiet.</div>
   <div class="p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-shrink p-0_5"</span><span class="nt">&gt;</span>Shrinking flex item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum ipsum ut efficitur imperdiet.<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-</div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>To prevent an element from growing or shrinking, use the <code class="highlighter-rouge">.flex-none</code> utility.</p>
 
-<div class="cf-example-flex">
-
-<div class="cf-example">
+<div class="cf-example cf-example-flex">
 <div class="d-flex">
   <div class="p-0_5">Flex item</div>
   <div class="flex-none p-0_5">Non-flex item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum ipsum ut efficitur imperdiet.</div>
   <div class="p-0_5">Flex item</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-none p-0_5"</span><span class="nt">&gt;</span>Non-flex item - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum ipsum ut efficitur imperdiet.<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-0_5"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-</div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="sass-reference">SASS Reference</h2>
 
@@ -1504,7 +1442,7 @@
             </main>
         </div>
 
-        <div class="topLink">
+        <div class="toplink">
             <a href="#content">Top of Page <span class="caret"></span></a>
         </div>
     </div>
@@ -1512,7 +1450,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.3
+            Current version: 4.0.0-alpha.4
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>
@@ -1524,9 +1462,9 @@
             <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
         </ul>
         <p>
-            &copy; 2013-2018 <a href="http://www.cast.org/">CAST, Inc.</a>
+            &copy; 2013-2019 <a href="http://www.cast.org/">CAST, Inc.</a>
             <br />
-            Portions: &copy; 2011-2018 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
+            Portions: &copy; 2011-2019 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
         <p>
             Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
             docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.

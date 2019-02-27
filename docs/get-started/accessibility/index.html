@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="description" content="CAST Figuration - A feature rich, responsive, mobile first, accessible, front-end framework.">
 
@@ -366,6 +366,7 @@
   <li>In some cases, an acceptable solution would be to replace the <code class="highlighter-rouge">&lt;a&gt;</code> element with a <code class="highlighter-rouge">&lt;span&gt;</code> to allow for a similar layout.  This is due to <code class="highlighter-rouge">&lt;span&gt;</code>s also having a default <code class="highlighter-rouge">display: inline</code> and are not clickable or focusable through keyboard interaction.</li>
   <li>Disabled links, especially buttons and navigation items, would benefit from the inclusion of an <code class="highlighter-rouge">aria-disabled="true"</code> attribute to indicate the state of the element to assistive technologies.</li>
   <li>Add a <code class="highlighter-rouge">tabindex="-1"</code> attribute on disabled links to prevent them from receiving keyboard focus.</li>
+  <li>Add an <code class="highlighter-rouge">aria-disabled="true"</code> attribute to indicate the state of the element to assistive technologies.</li>
   <li>Use custom JavaScript to disable their functionality. For example:</li>
 </ul>
 
@@ -379,7 +380,7 @@
 
 <h2 id="reduced-motion">Reduced Motion</h2>
 
-<p>Figuration includes support for the <a href="https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion"><code class="highlighter-rouge">prefers-reduced-motion</code> media feature</a>. In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in Figuration (for instance, when a modal dialog is opened or closed) will be disabled. Currently, support is limited to Safari on macOS and iOS.</p>
+<p>Figuration includes support for the <a href="https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion"><code class="highlighter-rouge">prefers-reduced-motion</code> media feature</a>. In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in Figuration (for instance, when a modal dialog is opened or closed) will be disabled. Additional information about browser support can be found over at <a href="https://caniuse.com/#search=prefers-reduced-motion">Can I Use</a>.</p>
 
 <h2 id="additional-resources">Additional Resources</h2>
 
@@ -396,7 +397,7 @@
             </main>
         </div>
 
-        <div class="topLink">
+        <div class="toplink">
             <a href="#content">Top of Page <span class="caret"></span></a>
         </div>
     </div>
@@ -404,7 +405,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.3
+            Current version: 4.0.0-alpha.4
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>
@@ -416,9 +417,9 @@
             <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
         </ul>
         <p>
-            &copy; 2013-2018 <a href="http://www.cast.org/">CAST, Inc.</a>
+            &copy; 2013-2019 <a href="http://www.cast.org/">CAST, Inc.</a>
             <br />
-            Portions: &copy; 2011-2018 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
+            Portions: &copy; 2011-2019 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
         <p>
             Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
             docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.

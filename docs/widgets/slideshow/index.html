@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="description" content="CAST Figuration - A feature rich, responsive, mobile first, accessible, front-end framework.">
 
@@ -410,7 +410,7 @@
                 <p>A simple widget that extends on the <a href="/figuration-preview/widgets/tab/">Tab widget</a> to add previous and next navigation items that update their disabled state based on the currently active tab/slide.</p>
 
 <div class="cf-callout cf-callout-info cf-callout-dep">
-<p class="h5">Widget Dependencies</p>
+<p class="h5 no_toc">Widget Dependencies</p>
 
 <p>Sideshow requires the following:</p>
 
@@ -607,7 +607,7 @@
     <ul class="nav nav-tabs" data-cfw="slideshow">
         <li class="nav-item"><a href="#" class="nav-link" data-cfw-slideshow-nav="prev" title="Previous Slide" aria-label="Previous Slide"><span aria-hidden="true">&laquo;</span></a></li>
         <li class="nav-item"><a href="#ex-slide0" class="nav-link" data-cfw="tab">Slide 1</a></li>
-        <li class="nav-item"><a href="#ex-slide1" class="nav-link disabled" data-cfw="tab">Slide 2</a></li>
+        <li class="nav-item"><a href="#ex-slide1" class="nav-link disabled" data-cfw="tab" tabindex="-1" aria-disabled="true">Slide 2</a></li>
         <li class="nav-item"><a href="#ex-slide2" class="nav-link" data-cfw="tab">Slide 3</a></li>
         <li class="nav-item"><a href="#ex-slide3" class="nav-link" data-cfw="tab">Slide 4</a></li>
         <li class="nav-item"><a href="#" class="nav-link" data-cfw-slideshow-nav="next" title="Next Slide" aria-label="Next Slide"><span aria-hidden="true">&raquo;</span></a></li>
@@ -631,7 +631,7 @@
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span> <span class="na">data-cfw=</span><span class="s">"slideshow"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-cfw-slideshow-nav=</span><span class="s">"prev"</span> <span class="na">title=</span><span class="s">"Previous Slide"</span> <span class="na">aria-label=</span><span class="s">"Previous Slide"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;laquo;</span><span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#ex-slide0"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-cfw=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Slide 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#ex-slide1"</span> <span class="na">class=</span><span class="s">"nav-link disabled"</span> <span class="na">data-cfw=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Slide 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#ex-slide1"</span> <span class="na">class=</span><span class="s">"nav-link disabled"</span> <span class="na">data-cfw=</span><span class="s">"tab"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Slide 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#ex-slide2"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-cfw=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Slide 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#ex-slide3"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-cfw=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Slide 4<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-cfw-slideshow-nav=</span><span class="s">"next"</span> <span class="na">title=</span><span class="s">"Next Slide"</span> <span class="na">aria-label=</span><span class="s">"Next Slide"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;raquo;</span><span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
@@ -817,7 +817,7 @@
             </main>
         </div>
 
-        <div class="topLink">
+        <div class="toplink">
             <a href="#content">Top of Page <span class="caret"></span></a>
         </div>
     </div>
@@ -825,7 +825,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.3
+            Current version: 4.0.0-alpha.4
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>
@@ -837,9 +837,9 @@
             <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
         </ul>
         <p>
-            &copy; 2013-2018 <a href="http://www.cast.org/">CAST, Inc.</a>
+            &copy; 2013-2019 <a href="http://www.cast.org/">CAST, Inc.</a>
             <br />
-            Portions: &copy; 2011-2018 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
+            Portions: &copy; 2011-2019 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
         <p>
             Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
             docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.

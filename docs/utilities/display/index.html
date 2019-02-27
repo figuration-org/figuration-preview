@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="description" content="CAST Figuration - A feature rich, responsive, mobile first, accessible, front-end framework.">
 
@@ -278,6 +278,18 @@
         
 
         <li class="nav-item">
+          <a href="/figuration-preview/utilities/overflow/" class="nav-link ">
+            Overflow 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
           <a href="/figuration-preview/utilities/position/" class="nav-link ">
             Position 
           </a>
@@ -398,7 +410,8 @@
 <h2 class="no_toc" id="contents">Contents</h2>
 
 <ul id="markdown-toc">
-  <li><a href="#common-utilities" id="markdown-toc-common-utilities">Common Utilities</a></li>
+  <li><a href="#notation" id="markdown-toc-notation">Notation</a></li>
+  <li><a href="#examples" id="markdown-toc-examples">Examples</a></li>
   <li><a href="#responsively-hiding-content" id="markdown-toc-responsively-hiding-content">Responsively Hiding Content</a>    <ul>
       <li><a href="#test-cases" id="markdown-toc-test-cases">Test Cases</a></li>
     </ul>
@@ -411,7 +424,7 @@
   </li>
 </ul>
 
-<h2 id="common-utilities">Common Utilities</h2>
+<h2 id="notation">Notation</h2>
 
 <p>While there is a large number of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display"><code class="highlighter-rouge">display</code> properties</a> available, we only support a handful of the more commonly used ones.  Sorry, but we can’t support all of them, so if you need one that is not in the list below, you will need to use custom CSS.</p>
 
@@ -419,8 +432,9 @@
 <ul>
   <li><code class="highlighter-rouge">.d-none</code> sets <code class="highlighter-rouge">display: none;</code></li>
   <li><code class="highlighter-rouge">.d-block</code> sets <code class="highlighter-rouge">display: block;</code></li>
-  <li><code class="highlighter-rouge">.d-inline</code> sets <code class="highlighter-rouge">display: inline;</code></li>
   <li><code class="highlighter-rouge">.d-flex</code> sets <code class="highlighter-rouge">display: flex;</code></li>
+  <li><code class="highlighter-rouge">.d-inline</code> sets <code class="highlighter-rouge">display: inline;</code></li>
+  <li><code class="highlighter-rouge">.d-inline-block</code> sets <code class="highlighter-rouge">display: inline-block;</code></li>
   <li><code class="highlighter-rouge">.d-inline-flex</code> sets <code class="highlighter-rouge">display: inline-flex;</code></li>
   <li><code class="highlighter-rouge">.d-table</code> sets <code class="highlighter-rouge">display: table;</code></li>
   <li><code class="highlighter-rouge">.d-table-row</code> sets <code class="highlighter-rouge">display: table-row;</code></li>
@@ -429,41 +443,21 @@
 
 <p>These classes are also available in responsive variants, in the form of <code class="highlighter-rouge">.d{-breakpoint}-{value}</code>, such as <code class="highlighter-rouge">.d-lg-block</code>. Please refer to how our <a href="/figuration-preview/layout/overview/#breakpoint-nomenclature">breakpoint nomenclature</a> is used.</p>
 
-<div class="cf-example">
-<div class="d-inline bg-success">d-inline</div>
-<div class="d-inline bg-success">d-inline</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline bg-success"</span><span class="nt">&gt;</span>d-inline<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline bg-success"</span><span class="nt">&gt;</span>d-inline<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<h2 id="examples">Examples</h2>
 
 <div class="cf-example">
-<span class="d-block bg-primary">d-block</span>
+<div class="d-inline p-0_5 bg-primary text-white">d-inline</div>
+<div class="d-inline p-0_5 bg-secondary text-white">d-inline</div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"d-block bg-primary"</span><span class="nt">&gt;</span>d-block<span class="nt">&lt;/span&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline p-0_5 bg-primary text-white"</span><span class="nt">&gt;</span>d-inline<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline p-0_5 bg-secondary text-white"</span><span class="nt">&gt;</span>d-inline<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <div class="cf-example">
-<div class="d-inline-block bg-warning">d-inline-block</div>
-<div class="d-inline-block bg-warning">d-inline-block</div>
+<div class="d-block p-0_5 bg-primary text-white">d-block</div>
+<div class="d-block p-0_5 bg-secondary text-white">d-block</div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline-block bg-warning"</span><span class="nt">&gt;</span>d-inline-block<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline-block bg-warning"</span><span class="nt">&gt;</span>d-inline-block<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<div class="cf-example">
-<div class="d-table bg-info">
-    d-table
-    <div class="d-table-row">
-        <div class="d-table-cell bg-danger">d-table-cell</div>
-        <div class="d-table-cell bg-danger">d-table-cell</div>
-    </div>
-</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-table bg-info"</span><span class="nt">&gt;</span>
-    d-table
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-table-row"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-table-cell bg-danger"</span><span class="nt">&gt;</span>d-table-cell<span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-table-cell bg-danger"</span><span class="nt">&gt;</span>d-table-cell<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-block p-0_5 bg-primary text-white"</span><span class="nt">&gt;</span>d-block<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-block p-0_5 bg-secondary text-white"</span><span class="nt">&gt;</span>d-block<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="responsively-hiding-content">Responsively Hiding Content</h2>
 
@@ -666,8 +660,8 @@
   <li><code class="highlighter-rouge">.print-none</code></li>
   <li><code class="highlighter-rouge">.print-block</code></li>
   <li><code class="highlighter-rouge">.print-flex</code></li>
-  <li><code class="highlighter-rouge">.print-inline-block</code></li>
   <li><code class="highlighter-rouge">.print-inline</code></li>
+  <li><code class="highlighter-rouge">.print-inline-block</code></li>
   <li><code class="highlighter-rouge">.print-inline-flex</code></li>
   <li><code class="highlighter-rouge">.print-table</code></li>
   <li><code class="highlighter-rouge">.print-table-row</code></li>
@@ -701,28 +695,11 @@
                 </td>
             </tr>
             <tr>
-                <td><code>$enable-utility-display-common</code></td>
+                <td><code>$enable-utility-display-down-none</code></td>
                 <td>boolean</td>
                 <td><code>true</code></td>
                 <td>
-                    <p>Enable the generation of the more common display rules as utility classes.</p>
-                    <p>This encompases the rules of <code>display: {none, block, flex, inline, inline-block, inline-flex}</code>.</p>
-                </td>
-            </tr>
-            <tr>
-                <td><code>$enable-utility-display-table</code></td>
-                <td>boolean</td>
-                <td><code>true</code></td>
-                <td>
-                    Enable the generation of the table display rules as utility classes.
-                </td>
-            </tr>
-            <tr>
-                <td><code>$enable-utility-display-down</code></td>
-                <td>boolean</td>
-                <td><code>true</code></td>
-                <td>
-                    Enable the generation of the `down` variant of the responsive hiding display rules as utility classes.
+                    Enable the generation of the `down-none` responsive hiding display rules as utility classes.
                 </td>
             </tr>
             <tr>
@@ -731,6 +708,22 @@
                 <td><code>true</code></td>
                 <td>
                     Enable the generation of the print display utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$utility-display-breakpoints</code></td>
+                <td>string</td>
+                <td><code>map-keys($grid-breakpoints)</code></td>
+                <td>
+                    Map of breakpoints that will be used to generate responsive display utilities.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$utility-display</code></td>
+                <td>string</td>
+                <td><code>none, block, flex, inline, inline-block, inline-flex, table, table-row, table-cell</code></td>
+                <td>
+                    List of display values that will be used to generate responsive display utilities.
                 </td>
             </tr>
         </tbody>
@@ -744,7 +737,7 @@
             </main>
         </div>
 
-        <div class="topLink">
+        <div class="toplink">
             <a href="#content">Top of Page <span class="caret"></span></a>
         </div>
     </div>
@@ -752,7 +745,7 @@
     <footer class="cf-footer">
     <div class="container">
         <p class="mb-0">
-            Current version: 4.0.0-alpha.3
+            Current version: 4.0.0-alpha.4
         </p>
         <p>
             <a href="/figuration-preview/migration/">Migration Notes (in progress)</a>
@@ -764,9 +757,9 @@
             <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
         </ul>
         <p>
-            &copy; 2013-2018 <a href="http://www.cast.org/">CAST, Inc.</a>
+            &copy; 2013-2019 <a href="http://www.cast.org/">CAST, Inc.</a>
             <br />
-            Portions: &copy; 2011-2018 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
+            Portions: &copy; 2011-2019 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
         <p>
             Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
             docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.
