@@ -1,0 +1,2330 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="CAST Figuration - A feature rich, responsive, mobile first, accessible, front-end framework.">
+
+<title>
+  
+    Tables &#124; CAST Figuration
+  
+</title>
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/figuration-preview/4.0.0-alpha.4/apple-touch-icon.png">
+<link rel="icon" href="/figuration-preview/4.0.0-alpha.4/favicon.ico">
+
+<!-- Core CSS -->
+
+  <link href="/figuration-preview/4.0.0-alpha.4/dist/css/figuration.css" rel="stylesheet" id="cssCore">
+
+
+<!-- Algolia DocSearch CSS -->
+
+
+<!-- Docs CSS -->
+
+  <link href="/figuration-preview/4.0.0-alpha.4/assets/css/docs.css" rel="stylesheet" id="cssDocs">
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/figuration-preview/4.0.0-alpha.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+
+<!-- MutationObserver Polyfill -->
+
+  <script src="/figuration-preview/4.0.0-alpha.4/assets/js/vendor/MutationObserver.min.js"></script>
+
+
+<!-- Core JS -->
+
+  <script src="/figuration-preview/4.0.0-alpha.4/dist/js/figuration.js"></script>
+
+
+<!-- Docs JS -->
+
+  <script src="/figuration-preview/4.0.0-alpha.4/assets/js/vendor/anchor.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.4/assets/js/vendor/clipboard.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.4/assets/js/vendor/holder.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.4/assets/js/src/docs.js"></script>
+
+
+<!-- IE emulation mode warning -->
+<script src="/figuration-preview/4.0.0-alpha.4/assets/js/ie-emulation-modes-warning.js"></script>
+
+
+
+</head>
+<body>
+    <a class="skipnav" href="#content">Skip to main content</a>
+
+    <div class="v4-warning">
+    v4 is in Alpha! Not ready for Production!
+</div>
+<header class="navbar navbar-expand-lg navbar-dark print-hide cf-header">
+    <a class="navbar-brand" href="/figuration-preview/4.0.0-alpha.4/" aria-label="CAST Figuration">
+        <img src="/figuration-preview/4.0.0-alpha.4/assets/brand/figuration-outline.svg" class="navbar-brand-logo" alt="" />
+        <span class="sr-only-xs-down">CAST Figuration</span>
+    </a>
+    <button class="navbar-toggle flex-first me-0_5" type="button" data-cfw="collapse" data-cfw-collapse-target="#cf-topnav" aria-label="Toggle navigation">
+        <span class="cf-header-menu" aria-hidden="true">&#8801;</span>
+    </button>
+    <div class="navbar-collapse collapse flex-last flex-lg-unordered text-nowrap" id="cf-topnav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/get-started/quick-start/" class="nav-link ">Get Started</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/layout/overview/" class="nav-link ">Layout</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/content/reboot/" class="nav-link active">Content <span class="sr-only">(current section)</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/components/alerts/" class="nav-link ">Components</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/utilities/borders/" class="nav-link ">Utilities</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/widgets/overview/" class="nav-link ">Widgets</a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="navbar-nav ms-auto cf-header-social">
+        <li class="nav-item">
+            <a href="https://twitter.com/figuration_org" class="nav-link" aria-label="Twitter" title="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" focusable="false"  class="cf-header-icon"  >
+  <title>Twitter</title>
+  <path fill="currentColor" d="M512 97.2c-18.84 8.36-39.08 14-60.33 16.55 21.7-13 38.34-33.58 46.2-58.1-20.3 12.03-42.8 20.77-66.72 25.48C412 60.7 384.7 47.96 354.48 47.96c-58 0-105.04 47.03-105.04 105.03 0 8.23.93 16.25 2.72 23.93-87.3-4.38-164.7-46.2-216.5-109.75-9.05 15.5-14.24 33.56-14.24 52.8 0 36.45 18.55 68.6 46.73 87.44-17.2-.54-33.4-5.27-47.57-13.14v1.32c0 50.9 36.2 93.35 84.25 103-8.8 2.4-18.1 3.7-27.68 3.7-6.76 0-13.34-.67-19.76-1.9 13.36 41.73 52.15 72.1 98.12 72.95-35.95 28.18-81.25 44.97-130.46 44.97-8.48 0-16.84-.5-25.06-1.47 46.5 29.8 101.7 47.2 161.02 47.2 193.2 0 298.87-160.07 298.87-298.88 0-4.55-.1-9.08-.32-13.6 20.53-14.8 38.34-33.3 52.42-54.36z"/>
+</svg>
+
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="https://github.com/cast-org/figuration" class="nav-link" aria-label="Github" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false"  class="cf-header-icon"  >
+  <title>GitHub</title>
+  <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.3 6.53 5.47 7.6.4.06.55-.18.55-.4v-1.48c-2.02.37-2.54-.5-2.7-.94-.1-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.62 0 1.07.58 1.22.82.72 1.2 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.77-.2-3.63-.9-3.63-3.95 0-.87.3-1.6.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.2 2.2.83.64-.18 1.32-.27 2-.27.68 0 1.36.1 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.93.08 2.13.5.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.3.25.54.73.54 1.48v2.2c0 .22.15.47.55.4C13.7 14.52 16 11.52 16 8c0-4.42-3.58-8-8-8z"/>
+</svg>
+
+            </a>
+        </li>
+        <li class="nav-item dropdown dropdown-menu-reverse">
+            <a href="#" role="button" class="nav-link" aria-label="Settings" title="Settings" data-cfw="dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" focusable="false"  class="cf-header-icon"  >
+  <title>Settings</title>
+  <path fill="currentColor" d="M3.5 0l-.5 1.19c-.1.03-.19.08-.28.13l-1.19-.5-.72.72.5 1.19c-.05.1-.09.18-.13.28l-1.19.5v1l1.19.5c.04.1.08.18.13.28l-.5 1.19.72.72 1.19-.5c.09.04.18.09.28.13l.5 1.19h1l.5-1.19c.09-.04.19-.08.28-.13l1.19.5.72-.72-.5-1.19c.04-.09.09-.19.13-.28l1.19-.5v-1l-1.19-.5c-.03-.09-.08-.19-.13-.28l.5-1.19-.72-.72-1.19.5c-.09-.04-.19-.09-.28-.13l-.5-1.19h-1zm.5 2.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5z"/>
+</svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">Direction</li>
+                <li><button type="button" class="dropdown-item" id="dir-ltr">Left-to-right</button></li>
+                <li><button type="button" class="dropdown-item" id="dir-rtl">Right-to-left</button></li>
+            </ul>
+        </li>
+        
+    </ul>
+</header>
+
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
+        <div class="container-fluid">
+            
+    <div class="h1">Content</div>
+    <p class="lead">
+        Styles for displaying content with some of the most commonly used HTML elements, including normalization, typography, images, tables, buttons, forms, and more.
+    </p>
+
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-3 col-xl-2 cf-sidebar">
+                <nav class="cf-links">
+
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+    <div class="h4 cf-sidebar-header">Content</div>
+    <ul class="nav flex-column">
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/reboot/" class="nav-link ">
+            Reboot 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/color/" class="nav-link ">
+            Color 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/typography/" class="nav-link ">
+            Typography 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/code/" class="nav-link ">
+            Code 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/images/" class="nav-link ">
+            Images 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/figures/" class="nav-link ">
+            Figures 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/tables/" class="nav-link active">
+            Tables <span class="sr-only">(current page)</span>
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/buttons/" class="nav-link ">
+            Buttons 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/forms/" class="nav-link ">
+            Forms 
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+</nav>
+
+            </div>
+
+            <div class="d-none d-xl-block col-xl-2 cf-toc">
+            </div>
+
+            <main class="col-12 col-md-9 col-xl-8 cf-content" role="main">
+                <h1 class="cf-title" id="content">
+                    Tables
+                    
+                </h1>
+
+                <p>Due to the widespread use of tables across third-party widgets like calendars and date pickers, we’ve designed our tables to be <strong>opt-in</strong>. Just add the base class <code class="highlighter-rouge">.table</code> to any <code class="highlighter-rouge">&lt;table&gt;</code>, then extend with custom styles or our various included modifier classes.</p>
+
+<h2 class="no_toc" id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#basic-table" id="markdown-toc-basic-table">Basic Table</a></li>
+  <li><a href="#styled-tables" id="markdown-toc-styled-tables">Styled Tables</a>    <ul>
+      <li><a href="#striped-rows" id="markdown-toc-striped-rows">Striped Rows</a></li>
+      <li><a href="#hoverable-rows" id="markdown-toc-hoverable-rows">Hoverable Rows</a></li>
+      <li><a href="#condensed-table" id="markdown-toc-condensed-table">Condensed Table</a></li>
+      <li><a href="#narrow-table" id="markdown-toc-narrow-table">Narrow Table</a></li>
+    </ul>
+  </li>
+  <li><a href="#table-borders" id="markdown-toc-table-borders">Table Borders</a>    <ul>
+      <li><a href="#divided-table" id="markdown-toc-divided-table">Divided Table</a></li>
+      <li><a href="#ruled-table" id="markdown-toc-ruled-table">Ruled Table</a></li>
+      <li><a href="#pillared-table" id="markdown-toc-pillared-table">Pillared Table</a></li>
+      <li><a href="#walled-table" id="markdown-toc-walled-table">Walled Table</a></li>
+      <li><a href="#celled-table" id="markdown-toc-celled-table">Celled Table</a></li>
+      <li><a href="#wrapped-table" id="markdown-toc-wrapped-table">Wrapped Table</a></li>
+      <li><a href="#bordered-table" id="markdown-toc-bordered-table">Bordered Table</a></li>
+    </ul>
+  </li>
+  <li><a href="#captions" id="markdown-toc-captions">Captions</a></li>
+  <li><a href="#scrolling-tables" id="markdown-toc-scrolling-tables">Scrolling Tables</a>    <ul>
+      <li><a href="#always-scrolling" id="markdown-toc-always-scrolling">Always Scrolling</a></li>
+      <li><a href="#responsive-scrolling" id="markdown-toc-responsive-scrolling">Responsive Scrolling</a></li>
+    </ul>
+  </li>
+  <li><a href="#color-variants" id="markdown-toc-color-variants">Color Variants</a>    <ul>
+      <li><a href="#inverse-table" id="markdown-toc-inverse-table">Inverse Table</a></li>
+      <li><a href="#headerfooter-color" id="markdown-toc-headerfooter-color">Header/Footer Color</a></li>
+      <li><a href="#border-color" id="markdown-toc-border-color">Border Color</a></li>
+      <li><a href="#contextual-classes" id="markdown-toc-contextual-classes">Contextual Classes</a></li>
+    </ul>
+  </li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="basic-table">Basic Table</h2>
+
+<p>Using the most basic table markup, a <code class="highlighter-rouge">.table</code> will result in a mostly unstyled table, and will use all available width.</p>
+
+<p>Nested tables are not explicitly supported by Figuration as they can create usability and accessibility issues for screen reader users.  The recommendation would be to break up complex tables into multiple simpler tables.
+Check out <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced">MDN’s HTML table advanced features and accessibility document</a> for additional help when building tables.</p>
+
+<div class="cf-example">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Header 1</th>
+      <th scope="col">Header 2</th>
+      <th scope="col">Header 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td colspan="2">Spanned Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Footer 1</th>
+      <th scope="col">Footer 2</th>
+      <th scope="col">Footer 3</th>
+    </tr>
+  </tfoot>
+</table>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Header 1<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Header 2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Header 3<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Cell<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>Spanned Cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Cell<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Cell<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;tfoot&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Footer 1<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Footer 2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Footer 3<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tfoot&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h2 id="styled-tables">Styled Tables</h2>
+
+<h3 id="striped-rows">Striped Rows</h3>
+
+<p>Use <code class="highlighter-rouge">.table-striped{-alt}</code> to add zebra-striping to any table row within the <code class="highlighter-rouge">&lt;tbody&gt;</code>.  This is done by using a semi-opaque, inset <code class="highlighter-rouge">box-shadow</code> within each cell to adjust the perceived background color.</p>
+
+<p>Variants include:</p>
+<ul>
+  <li><code class="highlighter-rouge">.table-striped</code> - darken the striped row’s background-color</li>
+  <li><code class="highlighter-rouge">.table-striped-alt</code> - lighten the striped row’s background-color</li>
+</ul>
+
+<div class="cf-example">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<div class="cf-example">
+  <table class="table table-striped-alt bg-dark text-white">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped-alt bg-dark text-white"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h3 id="hoverable-rows">Hoverable Rows</h3>
+
+<p>Add <code class="highlighter-rouge">.table-hover{-alt}</code> to enable a hover state on table rows within a <code class="highlighter-rouge">&lt;tbody&gt;</code>. This is done by using a semi-opaque, inset <code class="highlighter-rouge">box-shadow</code> within each cell to adjust the perceived background color.</p>
+
+<p>Variants include:</p>
+<ul>
+  <li><code class="highlighter-rouge">.table-hover</code> - darken the hovered row’s background-color</li>
+  <li><code class="highlighter-rouge">.table-hover-alt</code> - lighten the hovered row’s background-color</li>
+</ul>
+
+<div class="cf-example">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-hover"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<div class="cf-example">
+  <table class="table table-hover-alt bg-dark text-white">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-hover-alt bg-dark text-white"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h3 id="condensed-table">Condensed Table</h3>
+
+<p>Add <code class="highlighter-rouge">.table-condensed</code> to make tables more compact by reducing the cell padding.</p>
+
+<div class="cf-example">
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-condensed"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h3 id="narrow-table">Narrow Table</h3>
+
+<p>Use our <a href="/figuration-preview/4.0.0-alpha.4/utilities/sizing/">sizing utilities</a>, such as <code class="highlighter-rouge">w-auto</code>, to control a table’s width.</p>
+
+<div class="cf-example">
+  <table class="table w-auto">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table w-auto"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h2 id="table-borders">Table Borders</h2>
+
+<h3 id="divided-table">Divided Table</h3>
+
+<p>Add a horizontal border between rows using <code class="highlighter-rouge">.table-divided</code>.</p>
+
+<div class="cf-example">
+  <table class="table table-divided">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-divided"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h3 id="ruled-table">Ruled Table</h3>
+
+<p>Put a border on the top and bottom of a table, and between rows using <code class="highlighter-rouge">.table-ruled</code>.</p>
+
+<div class="cf-example">
+  <table class="table table-ruled">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-ruled"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h3 id="pillared-table">Pillared Table</h3>
+
+<p>Put a vertical border and between columns using <code class="highlighter-rouge">.table-pillared</code>.</p>
+
+<div class="cf-example">
+  <table class="table table-pillared">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-pillared"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h3 id="walled-table">Walled Table</h3>
+
+<p>Put a border on the sides of a table, and between columns using <code class="highlighter-rouge">.table-walled</code>.</p>
+
+<div class="cf-example">
+  <table class="table table-walled">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-walled"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h3 id="celled-table">Celled Table</h3>
+
+<p>Put horizontal and vertical borders between rows and columns using <code class="highlighter-rouge">.table-celled</code>.</p>
+
+<div class="cf-example">
+  <table class="table table-celled">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-celled"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h3 id="wrapped-table">Wrapped Table</h3>
+
+<p>Put a border all around the outisde of a table with <code class="highlighter-rouge">.table-wrapped</code>.</p>
+
+<div class="cf-example">
+  <table class="table table-wrapped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-wrapped"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h3 id="bordered-table">Bordered Table</h3>
+
+<p>Put a border around the table and every cell with <code class="highlighter-rouge">.table-bordered</code>.</p>
+
+<div class="cf-example">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h2 id="captions">Captions</h2>
+
+<p>A <code class="highlighter-rouge">&lt;caption&gt;</code> functions like a heading for a table. It helps users with screen readers to find a table and understand what it’s about and decide if they want to read it.</p>
+
+<div class="cf-example">
+<table class="table">
+  <caption>List of users</caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>John</td>
+      <td>Doe</td>
+      <td>jdoe</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jane</td>
+      <td>Smith</td>
+      <td>jsmith</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>James</td>
+      <td>White</td>
+      <td>jwhite</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;caption&gt;</span>List of users<span class="nt">&lt;/caption&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>John<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Doe<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>jdoe<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Jane<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Smith<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>jsmith<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>James<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>White<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>jwhite<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h2 id="scrolling-tables">Scrolling Tables</h2>
+
+<p>Having an issue with tables becoming too wide for their containers? Add a <code class="highlighter-rouge">.table-scroll</code> wrapper to any <code class="highlighter-rouge">.table</code> to make them scroll horizontally if they become wider than their container.</p>
+
+<div class="cf-callout cf-callout-warning">
+<p class="h5 no_toc">Vertical Clipping</p>
+
+<p>Scrolling tables make use of <code class="highlighter-rouge">overflow-y: hidden</code>, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.</p>
+</div>
+
+<h3 id="always-scrolling">Always Scrolling</h3>
+
+<div class="cf-example">
+  <div class="table-scroll">
+    <table class="table table-bordered text-nowrap">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Header 1</th>
+          <th scope="col">Header 2</th>
+          <th scope="col">Header 3</th>
+          <th scope="col">Header 4</th>
+          <th scope="col">Header 5</th>
+          <th scope="col">Header 6</th>
+          <th scope="col">Header 7</th>
+          <th scope="col">Header 8</th>
+          <th scope="col">Header 9</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th></th>
+          <th>Footer 1</th>
+          <th>Footer 2</th>
+          <th>Footer 3</th>
+          <th>Footer 4</th>
+          <th>Footer 5</th>
+          <th>Footer 6</th>
+          <th>Footer 7</th>
+          <th>Footer 8</th>
+          <th>Footer 9</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-scroll"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered"</span><span class="nt">&gt;</span>
+        ...
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="responsive-scrolling">Responsive Scrolling</h3>
+
+<p>Table scrolling is also available in responsive variants of the form <code class="highlighter-rouge">.table-scroll-*</code>, where the table will horizontally scroll when the table is wider than it’s container and when the viewport is at the given breakpoint or smaller.</p>
+
+<p>Responsive variants are:</p>
+<ul>
+  <li><code class="highlighter-rouge">.table-scroll-xs</code></li>
+  <li><code class="highlighter-rouge">.table-scroll-sm</code></li>
+  <li><code class="highlighter-rouge">.table-scroll-md</code></li>
+  <li><code class="highlighter-rouge">.table-scroll-lg</code></li>
+</ul>
+
+<p><strong>Heads up!</strong> There is no <code class="highlighter-rouge">.table-scroll-*</code> class created for the largest breakpoint, <code class="highlighter-rouge">.table-scroll-xl</code>, since it is functionally equivalent to using <code class="highlighter-rouge">.table-scroll</code>.</p>
+
+<div class="cf-example">
+  <div class="table-scroll-xs">
+    <table class="table table-bordered text-nowrap">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Header 1</th>
+          <th scope="col">Header 2</th>
+          <th scope="col">Header 3</th>
+          <th scope="col">Header 4</th>
+          <th scope="col">Header 5</th>
+          <th scope="col">Header 6</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th></th>
+          <th>Footer 1</th>
+          <th>Footer 2</th>
+          <th>Footer 3</th>
+          <th>Footer 4</th>
+          <th>Footer 5</th>
+          <th>Footer 6</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class="table-scroll-sm">
+    <table class="table table-bordered text-nowrap">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Header 1</th>
+          <th scope="col">Header 2</th>
+          <th scope="col">Header 3</th>
+          <th scope="col">Header 4</th>
+          <th scope="col">Header 5</th>
+          <th scope="col">Header 6</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th></th>
+          <th>Footer 1</th>
+          <th>Footer 2</th>
+          <th>Footer 3</th>
+          <th>Footer 4</th>
+          <th>Footer 5</th>
+          <th>Footer 6</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class="table-scroll-md">
+    <table class="table table-bordered text-nowrap">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Header 1</th>
+          <th scope="col">Header 2</th>
+          <th scope="col">Header 3</th>
+          <th scope="col">Header 4</th>
+          <th scope="col">Header 5</th>
+          <th scope="col">Header 6</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th></th>
+          <th>Footer 1</th>
+          <th>Footer 2</th>
+          <th>Footer 3</th>
+          <th>Footer 4</th>
+          <th>Footer 5</th>
+          <th>Footer 6</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class="table-scroll-lg">
+    <table class="table table-bordered text-nowrap">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Header 1</th>
+          <th scope="col">Header 2</th>
+          <th scope="col">Header 3</th>
+          <th scope="col">Header 4</th>
+          <th scope="col">Header 5</th>
+          <th scope="col">Header 6</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th></th>
+          <th>Footer 1</th>
+          <th>Footer 2</th>
+          <th>Footer 3</th>
+          <th>Footer 4</th>
+          <th>Footer 5</th>
+          <th>Footer 6</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-scroll-xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered"</span><span class="nt">&gt;</span>
+        ...
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-scroll-sm"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered"</span><span class="nt">&gt;</span>
+        ...
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-scroll-md"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered"</span><span class="nt">&gt;</span>
+        ...
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-scroll-lg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered"</span><span class="nt">&gt;</span>
+        ...
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="color-variants">Color Variants</h2>
+
+<p>Use <a href="/figuration-preview/4.0.0-alpha.4/utilities/color/">color utility classes</a> to style tables with color.</p>
+
+<div class="cf-callout cf-callout-info">
+<p class="h5 no_toc">Conveying Meaning to Assistive Technologies</p>
+
+<p>Please refer to the <a href="/figuration-preview/4.0.0-alpha.4/get-started/accessibility/#conveying-meaning-with-color">Accessiblity notes about conveying meaning with color</a>.</p>
+</div>
+
+<h3 id="inverse-table">Inverse Table</h3>
+
+<p>Easily create an inverted table with light text on a dark background.</p>
+
+<div class="cf-example">
+  <table class="table table-bordered bg-dark border-secondary text-white">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered bg-dark border-secondary text-white"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h3 id="headerfooter-color">Header/Footer Color</h3>
+
+<p>Use <a href="/figuration-preview/4.0.0-alpha.4/utilities/color/">text or background utilities</a> to alter the look of the header and/or footer.</p>
+
+<div class="cf-example">
+  <table class="table">
+    <thead class="bg-dark text-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot class="bg-light text-dark">
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered bg-dark border-secondary text-white"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead</span> <span class="na">class</span> <span class="err">"</span><span class="na">bg-dark</span> <span class="na">text-light</span><span class="err">"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    ...
+  <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;tfoot</span> <span class="na">class=</span><span class="s">"bg-light text-dark"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/tfoot&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h3 id="border-color">Border Color</h3>
+
+<p><code class="highlighter-rouge">.table</code>s are defined with <code class="highlighter-rouge">border-{side}-color: inherit;</code>, allowing for easy recoloring of the borders by setting the <code class="highlighter-rouge">border-color</code> on the <code class="highlighter-rouge">.table</code> itself.  Setting a <code class="highlighter-rouge">border-color</code> on a table row or cell will affect the border color for that specific element and it’s descendants.</p>
+
+<p>All cells use <code class="highlighter-rouge">border-top</code> for their horizontal borders,  while <code class="highlighter-rouge">&lt;thead&gt;</code> adds a <code class="highlighter-rouge">border-bottom</code> to <code class="highlighter-rouge">&lt;th&gt;</code> elements.
+All cells use <code class="highlighter-rouge">border-left</code> for their vertical ones, unless they are the last ones in a row, then they potentially add a <code class="highlighter-rouge">border-right</code> depending on the modifier used.</p>
+
+<p>&lt;div class=”cf-example”</p>
+<table class="table table-bordered border-primary">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+<p>&lt;/div&gt;</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered border-primary"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<div class="cf-example">
+  <table class="table table-divided">
+    <thead class="border-primary">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Header 1</th>
+        <th scope="col">Header 2</th>
+        <th scope="col">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td colspan="2">Spanned Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+    <tfoot class="border-danger">
+      <tr>
+        <th></th>
+        <th>Footer 1</th>
+        <th>Footer 2</th>
+        <th>Footer 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-divided"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"border-primary"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    ...
+  <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;tfoot</span> <span class="na">class=</span><span class="s">"border-danger"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/tfoot&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h3 id="contextual-classes">Contextual Classes</h3>
+
+<p>Use contextual classes to color table rows or individual cells.</p>
+
+<div class="cf-example">
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th scope="row">Default</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+            <tr class="table-active">
+                <th scope="row">Active</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+            <tr class="table-primary">
+                <th scope="row">Primary</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+            <tr class="table-secondary">
+                <th scope="row">Secondary</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+            <tr class="table-success">
+                <th scope="row">Success</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+            <tr class="table-info">
+                <th scope="row">Info</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+            <tr class="table-warning">
+                <th scope="row">Warning</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">Danger</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+            <tr class="table-light">
+                <th scope="row">Light</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+            <tr class="table-dark">
+                <th scope="row">Dark</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- On rows --&gt;</span>
+<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-active"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
+
+<span class="c">&lt;!-- On cells (`td` or `th`) --&gt;</span>
+<span class="nt">&lt;tr&gt;</span>
+  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-active"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+<span class="nt">&lt;/tr&gt;</span></code></pre></figure>
+
+<p>You may also use <a href="/figuration-preview/4.0.0-alpha.4/utilities/color/">text or background utilities</a>.</p>
+
+<div class="cf-example">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Column heading</th>
+        <th scope="col">Column heading</th>
+        <th scope="col">Column heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-primary text-white">
+        <th scope="row">1</th>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr class="bg-success">
+        <th scope="row">3</th>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr class="bg-info text-white">
+        <th scope="row">5</th>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr class="bg-warning">
+        <th scope="row">7</th>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr class="bg-danger text-white">
+        <th scope="row">9</th>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Column footer</th>
+        <th>Column footer</th>
+        <th>Column footer</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- On rows --&gt;</span>
+<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"bg-primary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"bg-success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"bg-info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"bg-warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"bg-danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
+
+<span class="c">&lt;!-- On cells (`td` or `th`) --&gt;</span>
+<span class="nt">&lt;tr&gt;</span>
+  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"bg-primary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"bg-success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"bg-info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"bg-warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"bg-danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+<span class="nt">&lt;/tr&gt;</span></code></pre></figure>
+
+<p>You can also use <a href="/figuration-preview/4.0.0-alpha.4/utilities/color/">text or background utilities</a> to achieve multiple styles.</p>
+
+<div class="cf-example">
+<table class="table">
+  <thead class="text-light bg-primary">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Header 1</th>
+      <th scope="col">Header 2</th>
+      <th scope="col">Header 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="text-info">
+      <th scope="row">1</th>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td colspan="2" class="text-success">table cell</td>
+      <td class="text-danger">table cell</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td class="text-light bg-success">table cell</td>
+      <td>Cell</td>
+      <td class="text-light bg-danger">table cell</td>
+    </tr>
+  </tbody>
+  <tfoot class="bg-info text-light">
+    <tr>
+      <th></th>
+      <th>Footer 1</th>
+      <th>Footer 2</th>
+      <th>Footer 3</th>
+    </tr>
+  </tfoot>
+</table>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"text-light bg-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Header 1<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Header 2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Header 3<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"text-info"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Cell<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">class=</span><span class="s">"text-success"</span><span class="nt">&gt;</span>table cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-danger"</span><span class="nt">&gt;</span>table cell<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-light bg-success"</span><span class="nt">&gt;</span>table cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-light bg-danger"</span><span class="nt">&gt;</span>table cell<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;tfoot</span> <span class="na">class=</span><span class="s">"bg-info text-light"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Footer 1<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Footer 2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Footer 3<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tfoot&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h2 id="sass-reference">SASS Reference</h2>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/4.0.0-alpha.4/get-started/options/">Customization options</a>, or Sass variables, that can be customized for tables.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-table</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the table classes.
+                    Smaller segements of the table classes can be disabled with the following <code>$enable-*</code> variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-table-borders</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of table border classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-table-striped</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of striped table classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-table-hover</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of hoverable table classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-table-condensed</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of condensed table classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-table-active</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of active table row color class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-table-colors</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of theme table row color classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-table-scroll</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of scrollable table class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-table-scroll-responsive</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of responsive scrollable table classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-margin-bottom</code></td>
+                <td>string</td>
+                <td><code>$spacer</code></td>
+                <td>
+                    Margin bottom for table.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-cell-padding</code></td>
+                <td>boolean</td>
+                <td><code>.75rem</code></td>
+                <td>
+                    Table cell padding.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-condensed-cell-padding</code></td>
+                <td>boolean</td>
+                <td><code>.3125rem .5rem</code></td>
+                <td>
+                    Cell padding for condensed table variant.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-caption-color</code></td>
+                <td>boolean</td>
+                <td><code>$uibase-500</code></td>
+                <td>
+                    Table caption text color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-bg</code></td>
+                <td>boolean</td>
+                <td><code>null</code></td>
+                <td>
+                    Table background color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-bg-active</code></td>
+                <td>boolean</td>
+                <td><code>$component-hover-bg</code></td>
+                <td>
+                    Active table row background color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-bg-active-hover</code></td>
+                <td>boolean</td>
+                <td><code>$uibase-200</code></td>
+                <td>
+                    Active table row background color for hover state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-border-width</code></td>
+                <td>boolean</td>
+                <td><code>$border-width</code></td>
+                <td>
+                    Table cell border width.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-border-color</code></td>
+                <td>boolean</td>
+                <td><code>$component-border-color</code></td>
+                <td>
+                    Table cell border color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-head-border-width</code></td>
+                <td>boolean</td>
+                <td><code>2 * $table-border-width</code></td>
+                <td>
+                    Border width between table header and body.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-body-border-width</code></td>
+                <td>boolean</td>
+                <td><code>2 * $table-border-width</code></td>
+                <td>
+                    Border width between sibling table bodies.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-foot-border-width</code></td>
+                <td>boolean</td>
+                <td><code>2 * $table-border-width</code></td>
+                <td>
+                    Border width between table body and footer.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-striped-selector</code></td>
+                <td>boolean</td>
+                <td><code>odd</code></td>
+                <td>
+                    Selector for table striping.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-striped-box-shadow</code></td>
+                <td>boolean</td>
+                <td><code>inset 0 0 0 999rem rgba($uibase-900, .075)</code></td>
+                <td>
+                    Shadow overlay for striped tables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-striped-alt-box-shadow</code></td>
+                <td>boolean</td>
+                <td><code>inset 0 0 0 999rem rgba($white, .125)</code></td>
+                <td>
+                    Alternate shadow overlay for striped tables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-hover-box-shadow</code></td>
+                <td>boolean</td>
+                <td><code>inset 0 0 0 999rem rgba($uibase-900, .125)</code></td>
+                <td>
+                    Shadow overlay for hoverable tables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-hover-alt-box-shadow</code></td>
+                <td>boolean</td>
+                <td><code>inset 0 0 0 999rem rgba($white, .2)</code></td>
+                <td>
+                    Alternate shadow overlay for hoverable tables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-scroll-breakpoints</code></td>
+                <td>list</td>
+                <td><code>map-keys($grid-breakpoints)</code></td>
+                <td>
+                    Breakpoint list for responsive scrollable tables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-themes</code></td>
+                <td>map</td>
+                <td><code>()</code></td>
+                <td>
+                    Map of color schemes for tables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-colors</code></td>
+                <td>list</td>
+                <td><code>$base-colors</code></td>
+                <td>
+                    Colors to mix and merge into <code>$table-themes</code>
+                </td>
+            </tr>
+            <tr>
+                <td><code>$table-levels</code></td>
+                <td>map</td>
+                <td><code>$level-context</code></td>
+                <td>
+                    Levels to mix table colors with.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>Here are the mixins related to tables that we use to help generate our CSS.  You can also uses these mixins to generate your own custom components or utilities.</p>
+
+<h4 class="no_toc" id="table-row-variant">table-row-variant</h4>
+
+<p>Build a color variant to be applied to a table row, <code class="highlighter-rouge">&lt;tr&gt;</code>, element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">table-row-variant</span><span class="p">(</span><span class="nv">$state</span><span class="o">,</span> <span class="nv">$bg</span><span class="o">,</span> <span class="nv">$hover-bg</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$state</code></td>
+                <td>string</td>
+                <td><code>''</code></td>
+                <td>
+                    The value appended to generate the class <code>.table-#{$state}</code>.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$bg</code></td>
+                <td>string</td>
+                <td><code>none</code></td>
+                <td>
+                    Background color for a table row and it's direct <code>&lt;th&gt;</code> and <code>&lt;td&gt;</code> cells.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$hover-bg</code></td>
+                <td>string</td>
+                <td><code>none</code></td>
+                <td>
+                    Hover activated background color for a table row and it's direct <code>&lt;th&gt;</code> and <code>&lt;td&gt;</code> cells, when used in a table with <code>.table-hover</code>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="table-scroll">table-scroll</h4>
+
+<p>Enable horizontal scrolling on a <code class="highlighter-rouge">&lt;table&gt;</code> element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">table-scroll</span><span class="p">()</span><span class="err">;</span></code></pre></figure>
+
+            </main>
+        </div>
+
+        <div class="toplink">
+            <a href="#content">Top of Page <span class="caret"></span></a>
+        </div>
+    </div>
+
+    <footer class="cf-footer">
+    <div class="container">
+        <p class="mb-0">
+            Current version: 4.0.0-alpha.4
+        </p>
+        <p>
+            <a href="/figuration-preview/4.0.0-alpha.4/migration/">Migration Notes (in progress)</a>
+        </p>
+        <ul class="footer-links d-inline-block d-sm-block mx-auto mx-sm-0">
+            <li><a href="/figuration-preview/about/overview/">About</a></li>
+            <li><a href="https://github.com/cast-org/figuration">GitHub Project</a></li>
+            <li><a href="https://github.com/cast-org/figuration/issues">Issues</a></li>
+            <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
+        </ul>
+        <p>
+            &copy; 2013-2019 <a href="http://www.cast.org/">CAST, Inc.</a>
+            <br />
+            Portions: &copy; 2011-2019 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
+        <p>
+            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
+            docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.
+        </p>
+
+        <hr />
+
+        <p class="font-weight-bold mb-0_25">Funding generously provided by:</p>
+        <div class="media footer-partners">
+            <div class="d-flex me-0_5">
+                <img src="/figuration-preview/4.0.0-alpha.4/assets/img/aem-logo.png" class="media-object" width="40" height="40" alt="AEM logo" />
+            </div>
+            <div class="media-body">
+                <span class="h6 partner-title"><a href="http://aem.cast.org/">National Center on Accessible Educational Materials at CAST, Inc.</a></span><br />
+                <small>Disclaimer: This does not necessarily represent endorsement by or the policies of the National Center on Accessible Educational Materials, the US Department of Education, and the US Federal Government.</small>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+    
+</body>
+</html>
