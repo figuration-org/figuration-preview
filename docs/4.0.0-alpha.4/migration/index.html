@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="CAST Figuration - A feature rich, responsive, mobile first, accessible, front-end framework.">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="4.0.0-alpha.4">
+
+<!-- Favicons -->
+<link sizes="180x180" rel="apple-touch-icon" href="/figuration-preview/4.0.0-alpha.4/assets/favicon/apple-touch-icon.png"/>
+<link sizes="32x32" rel="icon" href="/figuration-preview/4.0.0-alpha.4/assets/favicon/favicon-32x32.png" type="image/png"/>
+<link sizes="16x16" rel="icon" href="/figuration-preview/4.0.0-alpha.4/assets/favicon/favicon-16x16.png" type="image/png"/>
+<link rel="manifest" href="/figuration-preview/4.0.0-alpha.4/assets/favicon/site.webmanifest"/>
+<link color="#5bbad5" rel="mask-icon" href="/figuration-preview/4.0.0-alpha.4/assets/favicon/safari-pinned-tab.svg"/>
+<link rel="shortcut icon" href="/figuration-preview/4.0.0-alpha.4/assets/favicon/favicon.ico"/>
+<meta name="msapplication-TileColor" content="#117cba"/>
+<meta name="msapplication-config" content="/figuration-preview/4.0.0-alpha.4/assets/favicon/browserconfig.xml"/>
+<meta name="theme-color" content="#ffffff"/>
+
+
+
+<title>
+  
+    Migration from v3 to v4 &#124; CAST Figuration
+  
+</title>
+
+
+<!-- Core CSS -->
+
+  <link href="/figuration-preview/4.0.0-alpha.4/dist/css/figuration.css" rel="stylesheet" id="cssCore">
+
+
+<!-- Algolia DocSearch CSS -->
+
+
+<!-- Docs CSS -->
+
+  <link href="/figuration-preview/4.0.0-alpha.4/assets/css/docs.css" rel="stylesheet" id="cssDocs">
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/figuration-preview/4.0.0-alpha.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+
+<!-- MutationObserver Polyfill -->
+
+  <script src="/figuration-preview/4.0.0-alpha.4/assets/js/vendor/MutationObserver.min.js"></script>
+
+
+<!-- Core JS -->
+
+  <script src="/figuration-preview/4.0.0-alpha.4/dist/js/figuration.js"></script>
+
+
+<!-- Docs JS -->
+
+  <script src="/figuration-preview/4.0.0-alpha.4/assets/js/vendor/anchor.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.4/assets/js/vendor/clipboard.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.4/assets/js/vendor/holder.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.4/assets/js/src/docs.js"></script>
+
+
+<!-- IE emulation mode warning -->
+<script src="/figuration-preview/4.0.0-alpha.4/assets/js/ie-emulation-modes-warning.js"></script>
+
+
+
+</head>
+<body>
+    <a class="skipnav" href="#content">Skip to main content</a>
+
+    <div class="v4-warning">
+    v4 is in Alpha! Not ready for Production!
+</div>
+<header class="navbar navbar-expand-lg navbar-dark print-hide cf-header">
+    <a class="navbar-brand" href="/figuration-preview/4.0.0-alpha.4/" aria-label="CAST Figuration">
+        <img src="/figuration-preview/4.0.0-alpha.4/assets/brand/figuration-outline.svg" class="navbar-brand-logo" alt="" />
+        <span class="sr-only-xs-down">CAST Figuration</span>
+    </a>
+    <button class="navbar-toggle flex-first me-0_5" type="button" data-cfw="collapse" data-cfw-collapse-target="#cf-topnav" aria-label="Toggle navigation">
+        <span class="cf-header-menu" aria-hidden="true">&#8801;</span>
+    </button>
+    <div class="navbar-collapse collapse flex-last flex-lg-unordered text-nowrap" id="cf-topnav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/get-started/quick-start/" class="nav-link ">Get Started</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/layout/overview/" class="nav-link ">Layout</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/content/reboot/" class="nav-link ">Content</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/components/alerts/" class="nav-link ">Components</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/utilities/borders/" class="nav-link ">Utilities</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/widgets/overview/" class="nav-link ">Widgets</a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="navbar-nav ms-auto cf-header-social">
+        <li class="nav-item dropdown dropdown-menu-reverse me-1">
+            <a href="#" role="button" class="nav-link pe-0" data-cfw="dropdown">
+                v4.0.0-alpha.4
+                <span class="caret" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">Stable</li>
+                <li><a href="http://figuration.org">Latest (v3.0.5)</a></li>
+                <li class="dropdown-divider"></li>
+                <li class="dropdown-header">Development</li>
+                <li><a href="/4.0.0-alpha.5/">v4.0.0-alpha.5</a></li>
+                <li><a href="/4.0.0-alpha.4/" class="active">v4.0.0-alpha.4</a></li>
+
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="https://twitter.com/figuration_org" class="nav-link" aria-label="Twitter" title="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" focusable="false"  class="cf-header-icon"  >
+  <title>Twitter</title>
+  <path fill="currentColor" d="M512 97.2c-18.84 8.36-39.08 14-60.33 16.55 21.7-13 38.34-33.58 46.2-58.1-20.3 12.03-42.8 20.77-66.72 25.48C412 60.7 384.7 47.96 354.48 47.96c-58 0-105.04 47.03-105.04 105.03 0 8.23.93 16.25 2.72 23.93-87.3-4.38-164.7-46.2-216.5-109.75-9.05 15.5-14.24 33.56-14.24 52.8 0 36.45 18.55 68.6 46.73 87.44-17.2-.54-33.4-5.27-47.57-13.14v1.32c0 50.9 36.2 93.35 84.25 103-8.8 2.4-18.1 3.7-27.68 3.7-6.76 0-13.34-.67-19.76-1.9 13.36 41.73 52.15 72.1 98.12 72.95-35.95 28.18-81.25 44.97-130.46 44.97-8.48 0-16.84-.5-25.06-1.47 46.5 29.8 101.7 47.2 161.02 47.2 193.2 0 298.87-160.07 298.87-298.88 0-4.55-.1-9.08-.32-13.6 20.53-14.8 38.34-33.3 52.42-54.36z"/>
+</svg>
+
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="https://github.com/cast-org/figuration" class="nav-link" aria-label="Github" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false"  class="cf-header-icon"  >
+  <title>GitHub</title>
+  <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.3 6.53 5.47 7.6.4.06.55-.18.55-.4v-1.48c-2.02.37-2.54-.5-2.7-.94-.1-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.62 0 1.07.58 1.22.82.72 1.2 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.77-.2-3.63-.9-3.63-3.95 0-.87.3-1.6.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.2 2.2.83.64-.18 1.32-.27 2-.27.68 0 1.36.1 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.93.08 2.13.5.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.3.25.54.73.54 1.48v2.2c0 .22.15.47.55.4C13.7 14.52 16 11.52 16 8c0-4.42-3.58-8-8-8z"/>
+</svg>
+
+            </a>
+        </li>
+        <li class="nav-item dropdown dropdown-menu-reverse">
+            <a href="#" role="button" class="nav-link" aria-label="Settings" title="Settings" data-cfw="dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" focusable="false"  class="cf-header-icon"  >
+  <title>Settings</title>
+  <path fill="currentColor" d="M3.5 0l-.5 1.19c-.1.03-.19.08-.28.13l-1.19-.5-.72.72.5 1.19c-.05.1-.09.18-.13.28l-1.19.5v1l1.19.5c.04.1.08.18.13.28l-.5 1.19.72.72 1.19-.5c.09.04.18.09.28.13l.5 1.19h1l.5-1.19c.09-.04.19-.08.28-.13l1.19.5.72-.72-.5-1.19c.04-.09.09-.19.13-.28l1.19-.5v-1l-1.19-.5c-.03-.09-.08-.19-.13-.28l.5-1.19-.72-.72-1.19.5c-.09-.04-.19-.09-.28-.13l-.5-1.19h-1zm.5 2.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5z"/>
+</svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">Direction</li>
+                <li><button type="button" class="dropdown-item" id="dir-ltr">Left-to-right</button></li>
+                <li><button type="button" class="dropdown-item" id="dir-rtl">Right-to-left</button></li>
+            </ul>
+        </li>
+        
+    </ul>
+</header>
+
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
+        <div class="container-fluid">
+            
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-3 col-xl-2 cf-sidebar">
+                <nav class="cf-links">
+
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+</nav>
+
+            </div>
+
+            <div class="d-none d-xl-block col-xl-2 cf-toc">
+            </div>
+
+            <main class="col-12 col-md-9 col-xl-8 cf-content" role="main">
+                <h1 class="cf-title" id="content">
+                    Migration from v3 to v4
+                    
+                </h1>
+
+                <p>Figuration v4 is a considerable rework, and there are a large number of breaking changes across the entire framework.  We will try to explain the changes below.</p>
+
+<p>Some changes will most likely have been missed, so please refer to the documentation pages to see the revised/new implementations.</p>
+
+<h2 class="no_toc" id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#color" id="markdown-toc-color">Color</a></li>
+  <li><a href="#typography" id="markdown-toc-typography">Typography</a></li>
+  <li><a href="#table" id="markdown-toc-table">Table</a></li>
+  <li><a href="#form" id="markdown-toc-form">Form</a></li>
+  <li><a href="#grid" id="markdown-toc-grid">Grid</a></li>
+  <li><a href="#components" id="markdown-toc-components">Components</a>    <ul>
+      <li><a href="#breadbcrumb" id="markdown-toc-breadbcrumb">Breadbcrumb</a></li>
+      <li><a href="#button" id="markdown-toc-button">Button</a></li>
+      <li><a href="#card" id="markdown-toc-card">Card</a></li>
+      <li><a href="#input-group" id="markdown-toc-input-group">Input Group</a></li>
+      <li><a href="#list-group" id="markdown-toc-list-group">List Group</a></li>
+      <li><a href="#list" id="markdown-toc-list">List</a></li>
+      <li><a href="#pagination" id="markdown-toc-pagination">Pagination</a></li>
+      <li><a href="#switch" id="markdown-toc-switch">Switch</a></li>
+    </ul>
+  </li>
+  <li><a href="#utilities" id="markdown-toc-utilities">Utilities</a>    <ul>
+      <li><a href="#flexbox" id="markdown-toc-flexbox">Flexbox</a></li>
+      <li><a href="#image-replacement" id="markdown-toc-image-replacement">Image Replacement</a></li>
+    </ul>
+  </li>
+  <li><a href="#widgets" id="markdown-toc-widgets">Widgets</a>    <ul>
+      <li><a href="#button-1" id="markdown-toc-button-1">Button</a></li>
+      <li><a href="#lazy" id="markdown-toc-lazy">Lazy</a></li>
+      <li><a href="#slider" id="markdown-toc-slider">Slider</a></li>
+      <li><a href="#player" id="markdown-toc-player">Player</a></li>
+    </ul>
+  </li>
+  <li><a href="#build-tools" id="markdown-toc-build-tools">Build Tools</a></li>
+</ul>
+
+<h2 id="color">Color</h2>
+<ul>
+  <li>Reworked the colors, internal palette system, and consolidated the re-used component colors.</li>
+  <li>Added functions to check, and/or determine the best color, these can be found in <code class="highlighter-rouge">/scss/functions/_color-util.scss</code>.</li>
+  <li>Extended the contextual colors with light and dark contextual variants.  <strong>These variants are not available as palettes</strong> by default.</li>
+</ul>
+
+<h2 id="typography">Typography</h2>
+<ul>
+  <li>Added two methods of Responsive Typography support.
+    <ul>
+      <li>Ratio scaling - variable sizing based on viewport dimension</li>
+      <li>Stepped scaling - one defined size per breakpoint</li>
+    </ul>
+  </li>
+  <li>Inline lists, <code class="highlighter-rouge">.list-inline</code>, has been dropped and replaced with the <code class="highlighter-rouge">.list-horizontal</code> modifier in the new <a href="/figuration-preview/4.0.0-alpha.4/components/lists/">List component</a>.</li>
+</ul>
+
+<h2 id="table">Table</h2>
+<ul>
+  <li><code class="highlighter-rouge">.table</code> now creates a visually simple table, borders are controlled through a selection of modifier classes.</li>
+  <li><code class="highlighter-rouge">.table-hover</code> and <code class="highlighter-rouge">.table-striped</code> now use a solid gradient color overlayed using <code class="highlighter-rouge">background-image</code> to create their visual state.</li>
+  <li><code class="highlighter-rouge">.table-scroll-*</code> has dropped the <code class="highlighter-rouge">down</code> portion of the class name, and is now meant to used as a wrapper to prevent conflict with screen-readers due to the use of <code class="highlighter-rouge">display: block</code>.</li>
+</ul>
+
+<h2 id="form">Form</h2>
+<ul>
+  <li>
+    <p>Rewrote both custom and default checkboxes and radios. Now, both have matching HTML structure (outer <code class="highlighter-rouge">&lt;div&gt;</code> with sibling <code class="highlighter-rouge">&lt;input&gt;</code> and <code class="highlighter-rouge">&lt;label&gt;</code>, and an additional <code class="highlighter-rouge">&lt;label&gt;</code> for custom controls) and the same layout styles (stacked default, inline with modifier class). This allows us to style the label based on the input’s state, simplifying support for the <code class="highlighter-rouge">disabled</code> attribute (previously requiring a parent class) and better support for form validation.</p>
+
+    <p>For custom checkboxes and radios, the re-implemented <code class="highlighter-rouge">.custom-control-indicator</code> has changed to being an additional <code class="highlighter-rouge">&lt;label&gt;</code> element and to use the <code class="highlighter-rouge">.custom-control-label::before</code> for the background and border colors, and <code class="highlighter-rouge">.custom-control-label::after</code> controls the icon.</p>
+
+    <p>In the case of switches the roles are altered to where the <code class="highlighter-rouge">::before</code> pseudo-element becomes the thumb instead of the background, and the <code class="highlighter-rouge">::after</code> becomes the track.</p>
+
+    <p>To make a custom check inline, add <code class="highlighter-rouge">.custom-control-inline</code>.</p>
+  </li>
+  <li>
+    <p>Removed <code class="highlighter-rouge">.col-form-legend</code> in favor of a slightly improved <code class="highlighter-rouge">.col-form-label</code>. This way the sizing variants, such as <code class="highlighter-rouge">.col-form-label-sm</code> and <code class="highlighter-rouge">.col-form-label-lg</code>, can be used on <code class="highlighter-rouge">&lt;legend&gt;</code> elements also.</p>
+  </li>
+  <li>
+    <p>Custom file inputs received a change to their <code class="highlighter-rouge">$custom-file-text</code> Sass variable. It is no longer a nested Sass map and now only powers one string—the <code class="highlighter-rouge">Browse</code> button as that is now the only pseudo-element generated from our Sass. The <code class="highlighter-rouge">Choose file</code> text now comes from the <code class="highlighter-rouge">.custom-file-label</code>.</p>
+  </li>
+  <li>
+    <p>Added custom styling for <code class="highlighter-rouge">input type="range"</code>.  The Slider widget has been removed from Figuration and moved into it’s own repository: <a href="https://github.com/cast-org/figuration-slider">Figuration Slider</a>.</p>
+  </li>
+  <li>
+    <p>Validation icons have been re-implemented.  The <code class="highlighter-rouge">.form-control-icon</code> has been replaced with <code class="highlighter-rouge">.has-validation-icon</code>. The icons are still optional and can now be used with textual <code class="highlighter-rouge">&lt;input class="form-control"&gt;</code>, <code class="highlighter-rouge">&lt;textarea class="form-control"&gt;</code>, and <code class="highlighter-rouge">&lt;select class="custom-select"&gt;</code> elements.  Icons can be used within <code class="highlighter-rouge">.input-groups</code> but they no longer scale with the input sizing.</p>
+  </li>
+</ul>
+
+<h2 id="grid">Grid</h2>
+<ul>
+  <li>Dropped the <code class="highlighter-rouge">.push</code> and <code class="highlighter-rouge">.pull</code> modifiers in favor of <code class="highlighter-rouge">.offset-*</code> and flex utilities.</li>
+</ul>
+
+<h2 id="components">Components</h2>
+
+<h3 id="breadbcrumb">Breadbcrumb</h3>
+<ul>
+  <li>Removed <code class="highlighter-rouge">padding</code>, <code class="highlighter-rouge">background-color</code> and <code class="highlighter-rouge">border-radius</code> from parent <code class="highlighter-rouge">.breadcrumb</code> element.</li>
+</ul>
+
+<h3 id="button">Button</h3>
+<ul>
+  <li>Added support for CSS checkbox and radio buttons, using <code class="highlighter-rouge">.btn-check</code> and <code class="highlighter-rouge">.btn-check-input</code> classes.</li>
+  <li>Content in buttons will now wrap by default.  You can use the <code class="highlighter-rouge">.text-nowrap</code> utility class to preserve old behaviour.</li>
+</ul>
+
+<h3 id="card">Card</h3>
+<ul>
+  <li>Contextually colored cards have been removed. Now you will need to use the with text, background, and border color utilities.</li>
+  <li>Cards have been converted to flexbox layout.</li>
+  <li>Images now need to be wrapped with <code class="highlighter-rouge">.card-img</code> to keep aspect ratio and scaling in check due to flexbox.</li>
+  <li>List and table sub-components now use a <code class="highlighter-rouge">.card-list</code> or <code class="highlighter-rouge">.card-table</code> respectively.</li>
+  <li>Repsonsive horizontal card layouts have been added with <code class="highlighter-rouge">.card-horizontal{breakpoint}</code>, <code class="highlighter-rouge">.card-horizontal{breakpoint}-reverse</code>, and child <code class="highlighter-rouge">.card-col</code> elements.</li>
+</ul>
+
+<h3 id="input-group">Input Group</h3>
+<ul>
+  <li>Input group addons have been revised, simplifying much of the related CSS. Within an addon, place your buttons as they would exist anywhere else, but wrap text in <code class="highlighter-rouge">.input-group-text</code>.</li>
+  <li>Validation styles are now supported, as are multiple inputs (though you can only validate one input per group).</li>
+  <li>Sizing classes must be on the parent <code class="highlighter-rouge">.input-group</code> and not the individual form elements.</li>
+</ul>
+
+<h3 id="list-group">List Group</h3>
+<ul>
+  <li>The List Group is no longer a stand-alone component, and is now modifier within the new <a href="/figuration-preview/4.0.0-alpha.4/components/lists/">List component</a>.</li>
+</ul>
+
+<h3 id="list">List</h3>
+<ul>
+  <li>A new component that allows for greater styling options for lists, or pseudo-lists using <code class="highlighter-rouge">&lt;div&gt;</code>s.</li>
+</ul>
+
+<h3 id="pagination">Pagination</h3>
+<ul>
+  <li>Pagination has been modified with a couple of style modifier classes for greater flexibility.  The use of the <code class="highlighter-rouge">.pagination-group</code> modifier class on the <code class="highlighter-rouge">.pagination</code> element is needed to keep the same look as the older pagination component.</li>
+</ul>
+
+<h3 id="switch">Switch</h3>
+<ul>
+  <li>Dropped Switch component and consolidated with the <code class="highlighter-rouge">.custom-control</code> radio and checkbox controls. Check out the <a href="/figuration-preview/4.0.0-alpha.4/content/forms/#switches">new switch custom control</a>.</li>
+</ul>
+
+<h2 id="utilities">Utilities</h2>
+
+<h3 id="flexbox">Flexbox</h3>
+<ul>
+  <li>Renamed <code class="highlighter-rouge">.flex-order</code> to <code class="highlighter-rouge">.order</code> to both shorten and also match standard rule name.</li>
+</ul>
+
+<h3 id="image-replacement">Image Replacement</h3>
+<ul>
+  <li>Dropped the <code class="highlighter-rouge">.text-hide</code> util and <code class="highlighter-rouge">.text-hide()</code> mixin—in favor of using <code class="highlighter-rouge">.sr-only</code> as the replacement.</li>
+</ul>
+
+<h2 id="widgets">Widgets</h2>
+
+<h3 id="button-1">Button</h3>
+<ul>
+  <li>Dropped button widget in favor of CSS input buttons.  Single state toggles can be replaced with checkbox <code class="highlighter-rouge">.btn-check</code> variant.</li>
+</ul>
+
+<h3 id="lazy">Lazy</h3>
+<ul>
+  <li>Dropped support for jQuery animations as the slim build does not support them.  Added an optional fade-in CSSS animation.</li>
+</ul>
+
+<h3 id="slider">Slider</h3>
+<ul>
+  <li>Dropped the slider widget as a bundled plugin.  This has been replaced with the <code class="highlighter-rouge">.custom-range</code> styled <code class="highlighter-rouge">&lt;input type="range"&gt;</code> element.</li>
+</ul>
+
+<h3 id="player">Player</h3>
+<ul>
+  <li>Dropped support for sliders using the Slider widget, and added support for <code class="highlighter-rouge">&lt;input type="range"&gt;</code> elements.  A few improvements on the accesibility of the sliders were also added.</li>
+</ul>
+
+<h2 id="build-tools">Build Tools</h2>
+<ul>
+  <li>Figuration now requires Node.js v8 or newer if using our build tools.  This is due to the minimum Node.js requirement for <code class="highlighter-rouge">grunt-sass</code>.</li>
+</ul>
+
+            </main>
+        </div>
+
+        <div class="toplink">
+            <a href="#content">Top of Page <span class="caret"></span></a>
+        </div>
+    </div>
+
+    <footer class="cf-footer">
+    <div class="container">
+        <p class="mb-0">
+            Current version: 4.0.0-alpha.4
+        </p>
+        <p>
+            <a href="/figuration-preview/4.0.0-alpha.4/migration/">Migration Notes (in progress)</a>
+        </p>
+        <ul class="footer-links d-inline-block d-sm-block mx-auto mx-sm-0">
+            <li><a href="/figuration-preview/about/overview/">About</a></li>
+            <li><a href="https://github.com/cast-org/figuration">GitHub Project</a></li>
+            <li><a href="https://github.com/cast-org/figuration/issues">Issues</a></li>
+            <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
+        </ul>
+        <p>
+            &copy; 2013-2019 <a href="http://www.cast.org/">CAST, Inc.</a>
+            <br />
+            Portions: &copy; 2011-2019 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
+        <p>
+            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
+            docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.
+        </p>
+
+        <hr />
+
+        <p class="font-weight-bold mb-0_25">Funding generously provided by:</p>
+        <div class="media footer-partners">
+            <div class="d-flex me-0_5">
+                <img src="/figuration-preview/4.0.0-alpha.4/assets/img/aem-logo.png" class="media-object" width="40" height="40" alt="AEM logo" />
+            </div>
+            <div class="media-body">
+                <span class="h6 partner-title"><a href="http://aem.cast.org/">National Center on Accessible Educational Materials at CAST, Inc.</a></span><br />
+                <small>Disclaimer: This does not necessarily represent endorsement by or the policies of the National Center on Accessible Educational Materials, the US Department of Education, and the US Federal Government.</small>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+    
+</body>
+</html>

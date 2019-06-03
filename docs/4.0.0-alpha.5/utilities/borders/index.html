@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Easily manipulate borders on your images or other elements.">
+<meta name="generator" content="Jekyll v3.8.5">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="4.0.0-alpha.5">
+
+<title>Borders &#124; CAST Figuration</title>
+
+<!-- Favicons -->
+<link sizes="180x180" rel="apple-touch-icon" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/apple-touch-icon.png"/>
+<link sizes="32x32" rel="icon" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/favicon-32x32.png" type="image/png"/>
+<link sizes="16x16" rel="icon" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/favicon-16x16.png" type="image/png"/>
+<link rel="manifest" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/site.webmanifest"/>
+<link color="#5bbad5" rel="mask-icon" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/safari-pinned-tab.svg"/>
+<link rel="shortcut icon" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/favicon.ico"/>
+<meta name="msapplication-TileColor" content="#117cba"/>
+<meta name="msapplication-config" content="/figuration-preview/4.0.0-alpha.5/assets/favicon/browserconfig.xml"/>
+<meta name="theme-color" content="#ffffff"/>
+
+<!-- Font CSS -->
+<link href="/figuration-preview/4.0.0-alpha.5/assets/fonts/fontawesome/css/all.min.css" rel="stylesheet" property="stylesheet">
+
+
+<!-- Core CSS -->
+<link href="/figuration-preview/4.0.0-alpha.5/dist/css/figuration.css" rel="stylesheet" id="cssCore">
+
+
+<!-- Algolia DocSearch CSS -->
+
+
+<!-- Docs CSS -->
+<link href="/figuration-preview/4.0.0-alpha.5/assets/css/docs.css" rel="stylesheet" id="cssDocs">
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/figuration-preview/4.0.0-alpha.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+
+<!-- Core JS -->
+<script src="/figuration-preview/4.0.0-alpha.5/dist/js/figuration.js"></script>
+
+
+<!-- Docs JS -->
+<script src="/figuration-preview/4.0.0-alpha.5/assets/js/vendor/anchor.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.5/assets/js/vendor/clipboard.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.5/assets/js/vendor/holder.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.5/assets/js/src/docs.js"></script>
+
+
+<!-- IE emulation mode warning -->
+<script src="/figuration-preview/4.0.0-alpha.5/assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@figuration_org">
+<meta name="twitter:creator" content="@figuration_org">
+<meta name="twitter:title" content="Borders">
+<meta name="twitter:description" content="Easily manipulate borders on your images or other elements.">
+<meta name="twitter:image" content="https://figuration-org.github.io/4.0.0-alpha.5/assets/brand/figuration-social.png">
+
+<!-- Google Analytics -->
+
+
+
+</head>
+<body>
+    <a class="skipnav sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="v4-warning">
+    v4 is in Alpha! Not ready for Production!
+</div>
+<header class="navbar navbar-expand-lg navbar-dark print-hide cf-header">
+    <a class="navbar-brand" href="/figuration-preview/" aria-label="CAST Figuration">
+        <img src="/figuration-preview/4.0.0-alpha.5/assets/brand/figuration-outline.svg" class="navbar-brand-logo" alt="" />
+        <span class="sr-only-xs-down">CAST Figuration</span>
+    </a>
+    <button class="navbar-toggle flex-first me-0_5" type="button" data-cfw="collapse" data-cfw-collapse-target="#cf-topnav" aria-label="Toggle navigation">
+        <span class="cf-header-menu" aria-hidden="true">&#8801;</span>
+    </button>
+    <div class="navbar-collapse collapse flex-last flex-lg-unordered text-nowrap" id="cf-topnav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/get-started/quick-start/" class="nav-link ">Get Started</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/layout/overview/" class="nav-link ">Layout</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/content/reboot/" class="nav-link ">Content</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/components/alerts/" class="nav-link ">Components</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/utilities/borders/" class="nav-link active">Utilities <span class="sr-only">(current section)</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/widgets/overview/" class="nav-link ">Widgets</a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="navbar-nav ms-auto cf-header-social">
+        <li class="nav-item dropdown dropdown-menu-reverse me-1">
+            <a href="#" role="button" class="nav-link pe-0" data-cfw="dropdown">
+                v4.0.0-alpha.5
+                <span class="caret" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">Stable</li>
+                <li><a href="http://figuration.org">Latest (v3.0.5)</a></li>
+                <li class="dropdown-divider"></li>
+                <li class="dropdown-header">Development</li>
+                <li><a href="/figuration-preview/4.0.0-alpha.5/" class="active">v4.0.0-alpha.5</a></li>
+                <li><a href="/figuration-preview/4.0.0-alpha.4/">v4.0.0-alpha.4</a></li>
+
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="https://twitter.com/figuration_org" class="nav-link" aria-label="Twitter" title="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" focusable="false"  class="cf-header-icon"  >
+  <title>Twitter</title>
+  <path fill="currentColor" d="M512 97.2c-18.84 8.36-39.08 14-60.33 16.55 21.7-13 38.34-33.58 46.2-58.1-20.3 12.03-42.8 20.77-66.72 25.48C412 60.7 384.7 47.96 354.48 47.96c-58 0-105.04 47.03-105.04 105.03 0 8.23.93 16.25 2.72 23.93-87.3-4.38-164.7-46.2-216.5-109.75-9.05 15.5-14.24 33.56-14.24 52.8 0 36.45 18.55 68.6 46.73 87.44-17.2-.54-33.4-5.27-47.57-13.14v1.32c0 50.9 36.2 93.35 84.25 103-8.8 2.4-18.1 3.7-27.68 3.7-6.76 0-13.34-.67-19.76-1.9 13.36 41.73 52.15 72.1 98.12 72.95-35.95 28.18-81.25 44.97-130.46 44.97-8.48 0-16.84-.5-25.06-1.47 46.5 29.8 101.7 47.2 161.02 47.2 193.2 0 298.87-160.07 298.87-298.88 0-4.55-.1-9.08-.32-13.6 20.53-14.8 38.34-33.3 52.42-54.36z"/>
+</svg>
+
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="https://github.com/cast-org/figuration" class="nav-link" aria-label="Github" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false"  class="cf-header-icon"  >
+  <title>GitHub</title>
+  <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.3 6.53 5.47 7.6.4.06.55-.18.55-.4v-1.48c-2.02.37-2.54-.5-2.7-.94-.1-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.62 0 1.07.58 1.22.82.72 1.2 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.77-.2-3.63-.9-3.63-3.95 0-.87.3-1.6.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.2 2.2.83.64-.18 1.32-.27 2-.27.68 0 1.36.1 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.93.08 2.13.5.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.3.25.54.73.54 1.48v2.2c0 .22.15.47.55.4C13.7 14.52 16 11.52 16 8c0-4.42-3.58-8-8-8z"/>
+</svg>
+
+            </a>
+        </li>
+        <li class="nav-item dropdown dropdown-menu-reverse">
+            <a href="#" role="button" class="nav-link" aria-label="Settings" title="Settings" data-cfw="dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" focusable="false"  class="cf-header-icon"  >
+  <title>Settings</title>
+  <path fill="currentColor" d="M3.5 0l-.5 1.19c-.1.03-.19.08-.28.13l-1.19-.5-.72.72.5 1.19c-.05.1-.09.18-.13.28l-1.19.5v1l1.19.5c.04.1.08.18.13.28l-.5 1.19.72.72 1.19-.5c.09.04.18.09.28.13l.5 1.19h1l.5-1.19c.09-.04.19-.08.28-.13l1.19.5.72-.72-.5-1.19c.04-.09.09-.19.13-.28l1.19-.5v-1l-1.19-.5c-.03-.09-.08-.19-.13-.28l.5-1.19-.72-.72-1.19.5c-.09-.04-.19-.09-.28-.13l-.5-1.19h-1zm.5 2.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5z"/>
+</svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">Direction</li>
+                <li><button type="button" class="dropdown-item" id="dir-ltr">Left-to-right</button></li>
+                <li><button type="button" class="dropdown-item" id="dir-rtl">Right-to-left</button></li>
+            </ul>
+        </li>
+    </ul>
+</header>
+
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
+        <div class="container-fluid">
+            
+    <div class="h1">Utilities</div>
+    <p class="lead">
+        Dozens of utility classes with a single purpose designed to reduce the frequency of highly repetitive declarations in your CSS while allowing for quick and easy development.
+    </p>
+
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-xl-2 cf-sidebar">
+                
+
+<nav class="cf-links" aria-label="Section navigation">
+
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+    <div class="h4 cf-sidebar-header">Utilities</div>
+    <ul class="nav flex-column">
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/borders/" class="nav-link active"> Borders <span class="sr-only">(current page)</span></a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/clearfix/" class="nav-link "> Clearfix </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/color/" class="nav-link "> Color </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/display/" class="nav-link "> Display </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/embed/" class="nav-link "> Embed </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/flexbox/" class="nav-link "> Flexbox </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/floating/" class="nav-link "> Floating </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/icons/" class="nav-link "> Icons </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/overflow/" class="nav-link "> Overflow </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/position/" class="nav-link "> Position </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/screen-readers/" class="nav-link "> Screen Readers </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/shadows/" class="nav-link "> Shadows </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/sizing/" class="nav-link "> Sizing </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/spacing/" class="nav-link "> Spacing </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/typography/" class="nav-link "> Typography </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/vertical-alignment/" class="nav-link "> Vertical Alignment </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/utilities/visibility/" class="nav-link "> Visibility </a>
+            
+        </li>
+      
+    </ul>
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+</nav>
+
+            </div>
+
+            <nav class="d-none d-xl-block col-xl-2 cf-toc" aria-label="Page navigation">
+            </nav>
+
+            <main class="col-md-9 col-xl-8 cf-content" role="main">
+                <h1 class="cf-title" id="content">
+                    Borders
+                    
+                </h1>
+
+                <p class="fs-large">Easily manipulate borders on your images or other elements.</p>
+
+                <h2 class="no_toc" id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#border-radius" id="markdown-toc-border-radius">Border Radius</a>    <ul>
+      <li><a href="#sizes" id="markdown-toc-sizes">Sizes</a></li>
+      <li><a href="#removing" id="markdown-toc-removing">Removing</a></li>
+      <li><a href="#circles" id="markdown-toc-circles">Circles</a></li>
+      <li><a href="#pills" id="markdown-toc-pills">Pills</a></li>
+    </ul>
+  </li>
+  <li><a href="#borders" id="markdown-toc-borders">Borders</a>    <ul>
+      <li><a href="#adding-borders" id="markdown-toc-adding-borders">Adding Borders</a></li>
+      <li><a href="#removing-borders" id="markdown-toc-removing-borders">Removing Borders</a></li>
+      <li><a href="#responsive-borders" id="markdown-toc-responsive-borders">Responsive Borders</a></li>
+    </ul>
+  </li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="border-radius">Border Radius</h2>
+
+<p>Add a class to your element to round the corners.  You can target various sides of an element using the format <code class="highlighter-rouge">.radius{-side}</code>.</p>
+
+<p>Where <em>sides</em> is one of:</p>
+
+<ul>
+  <li>blank - for <code class="highlighter-rouge">all</code> 4 corners of the element</li>
+  <li><code class="highlighter-rouge">t</code> - for both corners on the <code class="highlighter-rouge">top</code> side</li>
+  <li><code class="highlighter-rouge">b</code> - for both corners on the <code class="highlighter-rouge">bottom</code> side</li>
+  <li><code class="highlighter-rouge">e</code> - for both corners on the <code class="highlighter-rouge">end</code> side</li>
+  <li><code class="highlighter-rouge">s</code> - for both corners on the <code class="highlighter-rouge">start</code> side</li>
+  <li><code class="highlighter-rouge">te</code> - for the <code class="highlighter-rouge">top end</code> corner</li>
+  <li><code class="highlighter-rouge">ts</code> - for the <code class="highlighter-rouge">top start</code> corner</li>
+  <li><code class="highlighter-rouge">be</code> - for the <code class="highlighter-rouge">bottom end</code> corner</li>
+  <li><code class="highlighter-rouge">bs</code> - for the <code class="highlighter-rouge">bottom start</code> corner</li>
+</ul>
+
+<p>The <em>start/end sides</em> are designated as follows depending on which version of the Figuration CSS you are using.  The default <code class="highlighter-rouge">figuration.*.css</code> uses the <code class="highlighter-rouge">ltr</code> mode, where <code class="highlighter-rouge">figuration-rtl.*.css</code> uses the <code class="highlighter-rouge">rtl</code> mode.</p>
+
+<ul>
+  <li>For <code class="highlighter-rouge">left-to-right</code> mode (<code class="highlighter-rouge">ltr</code> - default);
+    <ul>
+      <li><code class="highlighter-rouge">start</code> refers to the <code class="highlighter-rouge">left</code> side</li>
+      <li><code class="highlighter-rouge">end</code> refers to the <code class="highlighter-rouge">right</code> side</li>
+    </ul>
+  </li>
+  <li>For <code class="highlighter-rouge">right-to-left</code> mode (<code class="highlighter-rouge">rtl</code>);
+    <ul>
+      <li><code class="highlighter-rouge">start</code> refers to the <code class="highlighter-rouge">right</code> side</li>
+      <li><code class="highlighter-rouge">end</code> refers to the <code class="highlighter-rouge">left</code> side</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="cf-example">
+    <div class="mb-1">
+        <img data-src="holder.js/100x100/?text=All" class="radius" alt="Example radiused image" />
+        <img data-src="holder.js/100x100/?text=Top" class="radius-t" alt="Example top radiused image" />
+        <img data-src="holder.js/100x100/?text=Bottom" class="radius-b" alt="Example bottom radiused image" />
+        <img data-src="holder.js/100x100/?text='End'" class="radius-e" alt="Example 'start' radiused image" />
+        <img data-src="holder.js/100x100/?text='Start'" class="radius-s" alt="Example 'end' radiused image" />
+    </div>
+    <div>
+        <img data-src="holder.js/100x100/?text=Top 'End'" class="radius-te" alt="A generic square placeholder image a rounded corner on the top 'end'" />
+        <img data-src="holder.js/100x100/?text=Top 'Start'" class="radius-ts" alt="A generic square placeholder image a rounded corner on the top 'start'" />
+        <img data-src="holder.js/100x100/?text=Bottom 'End'" class="radius-be" alt="A generic square placeholder image a rounded corner on the bottom 'end'" />
+        <img data-src="holder.js/100x100/?text=Bottom 'Start'" class="radius-bs" alt="A generic square placeholder image a rounded corner on the bottom 'start'" />
+    </div>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Sides --&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"radius"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"radius-t"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"radius-b"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"radius-e"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"radius-s"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- Corners --&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"round-te"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"round-ts"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"round-be"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"round-bs"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h3 id="sizes">Sizes</h3>
+
+<p>A few sizes are available, the default border-radius size, along with <code class="highlighter-rouge">small</code> and <code class="highlighter-rouge">large</code> variants. Responsive classes are built in the form <code class="highlighter-rouge">.radius{-side}-{size}</code>.</p>
+
+<div class="cf-example">
+    <img data-src="holder.js/100x100?text=Small" class="radius-small" alt="Placeholder iamge slightly rounded corners" />
+    <img data-src="holder.js/100x100?text=Default" class="radius" alt="Placeholder image with rounded corners" />
+    <img data-src="holder.js/100x100?text=Large" class="radius-large" alt="Placeholder image with more rounded corners" />
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"radius-small"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"radius"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"radius-large"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h3 id="removing">Removing</h3>
+
+<p>There is also the special case size of <code class="highlighter-rouge">0</code> (zero) to remove  a radius.</p>
+
+<div class="cf-example">
+<button type="button" class="btn radius-s-0">Button</button>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn radius-s-0"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<h3 id="circles">Circles</h3>
+
+<p>When elements are of a square (1:1) aspect ratio, you can create a circle using <code class="highlighter-rouge">.radius-circle</code>.  If the element has an unequal aspect ratio, you will get more on an elipse shape.</p>
+
+<div class="cf-example">
+    <img data-src="holder.js/100x100/?text=Circle" class="radius-circle" width="100" height="100" alt="Completely round" />
+    <img data-src="holder.js/100x50/?text=Elipse" class="radius-circle" width="100" height="50" alt="Horizontal elipse" />
+    <img data-src="holder.js/50x100/?text=Elipse" class="radius-circle" width="50" height="100" alt="Vertical elipse" />
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"radius-circle"</span> <span class="na">width=</span><span class="s">"100"</span> <span class="na">height=</span><span class="s">"100"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"radius-circle"</span> <span class="na">width=</span><span class="s">"100"</span> <span class="na">height=</span><span class="s">"50"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"radius-circle"</span> <span class="na">width=</span><span class="s">"50"</span> <span class="na">height=</span><span class="s">"100"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h3 id="pills">Pills</h3>
+
+<p>Create a ‘pill’ shape with <code class="highlighter-rouge">.radius-pill</code>.</p>
+
+<div class="cf-example">
+    <img data-src="holder.js/100x50/?text=Pill" class="radius-pill" width="100" height="50" alt="Rounded pill image" />
+    <img data-src="holder.js/75x32/?text=Pill" class="radius-pill" width="75" height="32" alt="Rounded pill image" />
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"radius-pill"</span> <span class="na">width=</span><span class="s">"100"</span> <span class="na">height=</span><span class="s">"50"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"radius-pill"</span> <span class="na">width=</span><span class="s">"75"</span> <span class="na">height=</span><span class="s">"32"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h2 id="borders">Borders</h2>
+
+<p>Add or remove borders on all or just one side with border utilities</p>
+
+<h3 id="adding-borders">Adding Borders</h3>
+
+<p>Quickly add the default component border to an element with the <code class="highlighter-rouge">.border{-side}</code> utility classes.</p>
+
+<p>Available border addition utilities are:</p>
+<ul>
+  <li><code class="highlighter-rouge">.border</code> - for all sides</li>
+  <li><code class="highlighter-rouge">.border-t</code> - for the <code class="highlighter-rouge">top</code> side</li>
+  <li><code class="highlighter-rouge">.border-b</code> - for the <code class="highlighter-rouge">bottom</code> side</li>
+  <li><code class="highlighter-rouge">.border-e</code> - for the <code class="highlighter-rouge">end</code> side</li>
+  <li><code class="highlighter-rouge">.border-s</code> - for the <code class="highlighter-rouge">start</code> side</li>
+  <li><code class="highlighter-rouge">.border-x</code> - for both <code class="highlighter-rouge">start</code> and <code class="highlighter-rouge">end</code> sides</li>
+  <li><code class="highlighter-rouge">.border-y</code> - for both <code class="highlighter-rouge">top</code> and <code class="highlighter-rouge">bottom</code> sides</li>
+</ul>
+
+<p>The <em>start/end sides</em> are designated as follows depending on which version of the Figuration CSS you are using.  The default <code class="highlighter-rouge">figuration.*.css</code> uses the <code class="highlighter-rouge">ltr</code> mode, where <code class="highlighter-rouge">figuration-rtl.*.css</code> uses the <code class="highlighter-rouge">rtl</code> mode.</p>
+
+<ul>
+  <li>For <code class="highlighter-rouge">left-to-right</code> mode (<code class="highlighter-rouge">ltr</code> - default);
+    <ul>
+      <li><code class="highlighter-rouge">start</code> refers to the <code class="highlighter-rouge">left</code> side</li>
+      <li><code class="highlighter-rouge">end</code> refers to the <code class="highlighter-rouge">right</code> side</li>
+    </ul>
+  </li>
+  <li>For <code class="highlighter-rouge">right-to-left</code> mode (<code class="highlighter-rouge">rtl</code>);
+    <ul>
+      <li><code class="highlighter-rouge">start</code> refers to the <code class="highlighter-rouge">right</code> side</li>
+      <li><code class="highlighter-rouge">end</code> refers to the <code class="highlighter-rouge">left</code> side</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="cf-example">
+<div class="border bg-gray-50 p-0_5 mb-1">
+  This div container has a border on all sides, and some padding added.
+</div>
+
+<div class="border-x bg-gray-50 p-0_5 mb-1">
+  This div container has a border on the left and right sides, and some padding added.
+</div>
+
+<div class="border-y bg-gray-50 p-0_5 mb-1">
+  This div container has a border on the top and bottom sides, and some padding added.
+</div>
+
+<span class="border-t bg-gray-50 p-0_5" style="width: 3rem;">'top'</span>
+<span class="border-e bg-gray-50 p-0_5" style="width: 3rem;">'end'</span>
+<span class="border-b bg-gray-50 p-0_5" style="width: 3rem;">'bottom'</span>
+<span class="border-s bg-gray-50 p-0_5" style="width: 3rem;">'start'</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"border bg-gray-50 p-0_5 mb-1"</span><span class="nt">&gt;</span>
+  This div container has a border on all sides, and some padding added.
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"border-x bg-gray-50 p-0_5 mb-1"</span><span class="nt">&gt;</span>
+  This div container has a border on the left and right sides, and some padding added.
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"border-y bg-gray-50 p-0_5 mb-1"</span><span class="nt">&gt;</span>
+  This div container has a border on the top and bottom sides, and some padding added.
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border-t bg-gray-50 p-0_5"</span> <span class="na">style=</span><span class="s">"width: 3rem;"</span><span class="nt">&gt;</span>'top'<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border-e bg-gray-50 p-0_5"</span> <span class="na">style=</span><span class="s">"width: 3rem;"</span><span class="nt">&gt;</span>'end'<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border-b bg-gray-50 p-0_5"</span> <span class="na">style=</span><span class="s">"width: 3rem;"</span><span class="nt">&gt;</span>'bottom'<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border-s bg-gray-50 p-0_5"</span> <span class="na">style=</span><span class="s">"width: 3rem;"</span><span class="nt">&gt;</span>'start'<span class="nt">&lt;/span&gt;</span></code></pre></figure>
+
+<h3 id="removing-borders">Removing Borders</h3>
+
+<p>Remove the border on a given side of an element with the <code class="highlighter-rouge">.border{-side}-0</code> utility classes.</p>
+
+<p>Available border removal utilities are:</p>
+<ul>
+  <li><code class="highlighter-rouge">.border-0</code> - for <code class="highlighter-rouge">all</code> 4 sides of the element</li>
+  <li><code class="highlighter-rouge">.border-t-0</code> - for the <code class="highlighter-rouge">top</code> side</li>
+  <li><code class="highlighter-rouge">.border-b-0</code> - for the <code class="highlighter-rouge">bottom</code> side</li>
+  <li><code class="highlighter-rouge">.border-e-0</code> - for the <code class="highlighter-rouge">end</code> side</li>
+  <li><code class="highlighter-rouge">.border-s-0</code> - for the <code class="highlighter-rouge">start</code> side</li>
+  <li><code class="highlighter-rouge">.border-x-0</code> - for both <code class="highlighter-rouge">start</code> and <code class="highlighter-rouge">end</code> sides</li>
+  <li><code class="highlighter-rouge">.border-y-0</code> - for both <code class="highlighter-rouge">top</code> and <code class="highlighter-rouge">bottom</code> sides</li>
+</ul>
+
+<p>The <em>start/end sides</em> are designated as follows depending on which version of the Figuration CSS you are using.  The default <code class="highlighter-rouge">figuration.*.css</code> uses the <code class="highlighter-rouge">ltr</code> mode, where <code class="highlighter-rouge">figuration-rtl.*.css</code> uses the <code class="highlighter-rouge">rtl</code> mode.</p>
+
+<ul>
+  <li>For <code class="highlighter-rouge">left-to-right</code> mode (<code class="highlighter-rouge">ltr</code> - default);
+    <ul>
+      <li><code class="highlighter-rouge">start</code> refers to the <code class="highlighter-rouge">left</code> side</li>
+      <li><code class="highlighter-rouge">end</code> refers to the <code class="highlighter-rouge">right</code> side</li>
+    </ul>
+  </li>
+  <li>For <code class="highlighter-rouge">right-to-left</code> mode (<code class="highlighter-rouge">rtl</code>);
+    <ul>
+      <li><code class="highlighter-rouge">start</code> refers to the <code class="highlighter-rouge">right</code> side</li>
+      <li><code class="highlighter-rouge">end</code> refers to the <code class="highlighter-rouge">left</code> side</li>
+    </ul>
+  </li>
+</ul>
+
+<p>See the following example of removing various borders from some buttons.</p>
+
+<div class="cf-example">
+<button type="button" class="btn radius-0 border-0">all</button>
+<button type="button" class="btn radius-0 border-t-0">top</button>
+<button type="button" class="btn radius-0 border-e-0">'end'</button>
+<button type="button" class="btn radius-0 border-b-0">bottom</button>
+<button type="button" class="btn radius-0 border-s-0">'start'</button>
+<button type="button" class="btn radius-0 border-x-0">left and right</button>
+<button type="button" class="btn radius-0 border-y-0">top and bottom</button>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn radius-0 border-0"</span><span class="nt">&gt;</span>all<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn radius-0 border-t-0"</span><span class="nt">&gt;</span>top<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn radius-0 border-e-0"</span><span class="nt">&gt;</span>'end'<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn radius-0 border-b-0"</span><span class="nt">&gt;</span>bottom<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn radius-0 border-s-0"</span><span class="nt">&gt;</span>'start'<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn radius-0 border-x-0"</span><span class="nt">&gt;</span>left and right<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn radius-0 border-y-0"</span><span class="nt">&gt;</span>top and bottom<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<h3 id="responsive-borders">Responsive Borders</h3>
+
+<p>Add or remove borders with responsive border utility classes in the form of <code class="highlighter-rouge">.border{-breakpoint}{-side}{-0}</code>.</p>
+
+<p>For example to have a border on the sides of an element up to and including the <code class="highlighter-rouge">md</code> breakpoint, and then at the <code class="highlighter-rouge">lg</code> breakpoint switch to only having top and bottom borders, you would do the following:</p>
+
+<div class="cf-example">
+<div class="border-x border-lg-x-0 border-lg-y bg-light p-0_5" style="max-width: 18rem;">
+    Sample container
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"border-x border-lg-x-0 border-lg-y bg-light p-0_5"</span> <span class="na">style=</span><span class="s">"max-width: 18rem;"</span><span class="nt">&gt;</span>
+    Sample container
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="sass-reference">SASS Reference</h2>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/4.0.0-alpha.5/get-started/options/">Customization options</a>, or Sass variables, that can be customized for this grouping of utility classes.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-utility-border</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the border utility classes.
+                    Smaller segements of the border utilities can be disabled with the following <code>$enable-*</code> variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-addition</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the additive border utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-removal</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the subtractive border utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-colors</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the theme border color utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-palette</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the palette border color utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-special</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the transparent border color utility class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-radius-circle</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the circle border radius utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-radius-pill</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the pill border radius utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-radius-addition</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the additive border radius utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-radius-sizing</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the additive border radius size variant utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-utility-border-radius-removal</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the subtractive border radius utility classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$radius-border-radius</code></td>
+                <td>number</td>
+                <td><code>$border-radius</code></td>
+                <td>
+                    Border radius size.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$radii</code></td>
+                <td>map</td>
+                <td>
+<pre><code>("small": .1875rem,
+"large": .3125rem)</code></pre>
+                </td>
+                <td>
+                    Border radius size variants.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$utility-border-breakpoints</code></td>
+                <td>list</td>
+                <td><code>map-keys($grid-breakpoints)</code></td>
+                <td>
+                    Breakpoint list to generate for additive and subtractive border radius utilities.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$utility-border-colors</code></td>
+                <td>map</td>
+                <td><code>$base-colors</code></td>
+                <td>
+                    Themed border colors.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$palette-colors-borders</code></td>
+                <td>map</td>
+                <td><code>$palette-colors</code></td>
+                <td>
+                    Palette-based border colors.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$palette-levels-borders</code></td>
+                <td>list</td>
+                <td><code>$palette-levels</code></td>
+                <td>
+                    List of palette levels to use with palette border colors.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>Here are the mixins related to this grouping of utility classes that we use to help generate our CSS.  You can also uses these mixins to generate your own custom components or utilities.</p>
+
+<h4 class="no_toc" id="border-radius-1">border-radius</h4>
+
+<p>Apply a border radius to an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td><code>$border-radius</code></td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="border-top-radius">border-top-radius</h4>
+
+<p>Apply a border radius the corners on the top side of an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-top-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td>none</td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="border-end-radius">border-end-radius</h4>
+
+<p>Apply a border radius the corners on the end side of an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-end-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td>none</td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="border-bottom-radius">border-bottom-radius</h4>
+
+<p>Apply a border radius the corners on the bottom side of an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-bottom-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td>none</td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="border-start-radius">border-start-radius</h4>
+
+<p>Apply a border radius the corners on the start side of an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-start-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td>none</td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="border-top-start-radius">border-top-start-radius</h4>
+
+<p>Apply a border radius on the top start corner of an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-top-start-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td>none</td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="border-top-end-radius">border-top-end-radius</h4>
+
+<p>Apply a border radius on the top end corner of an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-top-end-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td>none</td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="border-bottom-start-radius">border-bottom-start-radius</h4>
+
+<p>Apply a border radius on the bottom start corner of an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-bottom-start-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td>none</td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="border-bottom-end-radius">border-bottom-end-radius</h4>
+
+<p>Apply a border radius on the bottom end corner of an element.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">border-bottom-end-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td>none</td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="radius-sides">radius-sides</h4>
+
+<p>Generate component size border radius utility classes for use with an element’s sides.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">radius-sides</span><span class="p">(</span><span class="nv">$radius</span><span class="o">,</span> <span class="nv">$size</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td><code>$radius-border-radius</code></td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$size</code></td>
+                <td>string</td>
+                <td><code>null</code></td>
+                <td>
+                    Name for the component size.  A <code>null</code> value will not include a component size in the class names.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="radius-corners">radius-corners</h4>
+
+<p>Generate component size border radius utility classes for use with an element’s individual corners.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">radius-corners</span><span class="p">(</span><span class="nv">$radius</span><span class="o">,</span> <span class="nv">$size</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$radius</code></td>
+                <td>number</td>
+                <td><code>$radius-border-radius</code></td>
+                <td>
+                    Border radius dimension.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$size</code></td>
+                <td>string</td>
+                <td><code>null</code></td>
+                <td>
+                    Name for the component size.  A <code>null</code> value will not include a component size in the class names.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+            </main>
+        </div>
+
+        <div class="toplink">
+            <a href="#content">Top of Page <span class="caret"></span></a>
+        </div>
+    </div>
+
+    <footer class="cf-footer">
+    <div class="container">
+        <p class="mb-0">
+            Current version: 4.0.0-alpha.5
+        </p>
+        <p>
+            <a href="/figuration-preview/4.0.0-alpha.5/migration/">Migration Notes (in progress)</a>
+        </p>
+        <ul class="footer-links d-inline-block d-sm-block mx-auto mx-sm-0">
+            <li><a href="/figuration-preview/about/overview/">About</a></li>
+            <li><a href="https://github.com/cast-org/figuration">GitHub Project</a></li>
+            <li><a href="https://github.com/cast-org/figuration/issues">Issues</a></li>
+            <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
+        </ul>
+        <p>
+            &copy; 2013-2019 <a href="http://www.cast.org/">CAST, Inc.</a>
+            <br />
+            Portions: &copy; 2011-2019 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+        </p>
+        <p>
+            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
+            docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.
+        </p>
+
+        <hr />
+
+        <p class="font-weight-bold mb-0_25">Funding generously provided by:</p>
+        <div class="media footer-partners">
+            <div class="d-flex me-0_5">
+                <img src="/figuration-preview/4.0.0-alpha.5/assets/img/aem-logo.png" class="media-object" width="40" height="40" alt="AEM logo" />
+            </div>
+            <div class="media-body">
+                <span class="h6 partner-title"><a href="http://aem.cast.org/">National Center on Accessible Educational Materials at CAST, Inc.</a></span><br />
+                <small>Disclaimer: This does not necessarily represent endorsement by or the policies of the National Center on Accessible Educational Materials, the US Department of Education, and the US Federal Government.</small>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+    
+</body>
+</html>

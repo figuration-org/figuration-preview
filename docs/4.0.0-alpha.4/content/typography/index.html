@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="CAST Figuration - A feature rich, responsive, mobile first, accessible, front-end framework.">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="4.0.0-alpha.4">
+
+<!-- Favicons -->
+<link sizes="180x180" rel="apple-touch-icon" href="/figuration-preview/4.0.0-alpha.4/assets/favicon/apple-touch-icon.png"/>
+<link sizes="32x32" rel="icon" href="/figuration-preview/4.0.0-alpha.4/assets/favicon/favicon-32x32.png" type="image/png"/>
+<link sizes="16x16" rel="icon" href="/figuration-preview/4.0.0-alpha.4/assets/favicon/favicon-16x16.png" type="image/png"/>
+<link rel="manifest" href="/figuration-preview/4.0.0-alpha.4/assets/favicon/site.webmanifest"/>
+<link color="#5bbad5" rel="mask-icon" href="/figuration-preview/4.0.0-alpha.4/assets/favicon/safari-pinned-tab.svg"/>
+<link rel="shortcut icon" href="/figuration-preview/4.0.0-alpha.4/assets/favicon/favicon.ico"/>
+<meta name="msapplication-TileColor" content="#117cba"/>
+<meta name="msapplication-config" content="/figuration-preview/4.0.0-alpha.4/assets/favicon/browserconfig.xml"/>
+<meta name="theme-color" content="#ffffff"/>
+
+
+
+<title>
+  
+    Typography &#124; CAST Figuration
+  
+</title>
+
+
+<!-- Core CSS -->
+
+  <link href="/figuration-preview/4.0.0-alpha.4/dist/css/figuration.css" rel="stylesheet" id="cssCore">
+
+
+<!-- Algolia DocSearch CSS -->
+
+
+<!-- Docs CSS -->
+
+  <link href="/figuration-preview/4.0.0-alpha.4/assets/css/docs.css" rel="stylesheet" id="cssDocs">
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/figuration-preview/4.0.0-alpha.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+
+<!-- MutationObserver Polyfill -->
+
+  <script src="/figuration-preview/4.0.0-alpha.4/assets/js/vendor/MutationObserver.min.js"></script>
+
+
+<!-- Core JS -->
+
+  <script src="/figuration-preview/4.0.0-alpha.4/dist/js/figuration.js"></script>
+
+
+<!-- Docs JS -->
+
+  <script src="/figuration-preview/4.0.0-alpha.4/assets/js/vendor/anchor.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.4/assets/js/vendor/clipboard.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.4/assets/js/vendor/holder.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.4/assets/js/src/docs.js"></script>
+
+
+<!-- IE emulation mode warning -->
+<script src="/figuration-preview/4.0.0-alpha.4/assets/js/ie-emulation-modes-warning.js"></script>
+
+
+
+</head>
+<body>
+    <a class="skipnav" href="#content">Skip to main content</a>
+
+    <div class="v4-warning">
+    v4 is in Alpha! Not ready for Production!
+</div>
+<header class="navbar navbar-expand-lg navbar-dark print-hide cf-header">
+    <a class="navbar-brand" href="/figuration-preview/4.0.0-alpha.4/" aria-label="CAST Figuration">
+        <img src="/figuration-preview/4.0.0-alpha.4/assets/brand/figuration-outline.svg" class="navbar-brand-logo" alt="" />
+        <span class="sr-only-xs-down">CAST Figuration</span>
+    </a>
+    <button class="navbar-toggle flex-first me-0_5" type="button" data-cfw="collapse" data-cfw-collapse-target="#cf-topnav" aria-label="Toggle navigation">
+        <span class="cf-header-menu" aria-hidden="true">&#8801;</span>
+    </button>
+    <div class="navbar-collapse collapse flex-last flex-lg-unordered text-nowrap" id="cf-topnav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/get-started/quick-start/" class="nav-link ">Get Started</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/layout/overview/" class="nav-link ">Layout</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/content/reboot/" class="nav-link active">Content <span class="sr-only">(current section)</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/components/alerts/" class="nav-link ">Components</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/utilities/borders/" class="nav-link ">Utilities</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.4/widgets/overview/" class="nav-link ">Widgets</a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="navbar-nav ms-auto cf-header-social">
+        <li class="nav-item dropdown dropdown-menu-reverse me-1">
+            <a href="#" role="button" class="nav-link pe-0" data-cfw="dropdown">
+                v4.0.0-alpha.4
+                <span class="caret" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">Stable</li>
+                <li><a href="http://figuration.org">Latest (v3.0.5)</a></li>
+                <li class="dropdown-divider"></li>
+                <li class="dropdown-header">Development</li>
+                <li><a href="/4.0.0-alpha.5/">v4.0.0-alpha.5</a></li>
+                <li><a href="/4.0.0-alpha.4/" class="active">v4.0.0-alpha.4</a></li>
+
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="https://twitter.com/figuration_org" class="nav-link" aria-label="Twitter" title="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" focusable="false"  class="cf-header-icon"  >
+  <title>Twitter</title>
+  <path fill="currentColor" d="M512 97.2c-18.84 8.36-39.08 14-60.33 16.55 21.7-13 38.34-33.58 46.2-58.1-20.3 12.03-42.8 20.77-66.72 25.48C412 60.7 384.7 47.96 354.48 47.96c-58 0-105.04 47.03-105.04 105.03 0 8.23.93 16.25 2.72 23.93-87.3-4.38-164.7-46.2-216.5-109.75-9.05 15.5-14.24 33.56-14.24 52.8 0 36.45 18.55 68.6 46.73 87.44-17.2-.54-33.4-5.27-47.57-13.14v1.32c0 50.9 36.2 93.35 84.25 103-8.8 2.4-18.1 3.7-27.68 3.7-6.76 0-13.34-.67-19.76-1.9 13.36 41.73 52.15 72.1 98.12 72.95-35.95 28.18-81.25 44.97-130.46 44.97-8.48 0-16.84-.5-25.06-1.47 46.5 29.8 101.7 47.2 161.02 47.2 193.2 0 298.87-160.07 298.87-298.88 0-4.55-.1-9.08-.32-13.6 20.53-14.8 38.34-33.3 52.42-54.36z"/>
+</svg>
+
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="https://github.com/cast-org/figuration" class="nav-link" aria-label="Github" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false"  class="cf-header-icon"  >
+  <title>GitHub</title>
+  <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.3 6.53 5.47 7.6.4.06.55-.18.55-.4v-1.48c-2.02.37-2.54-.5-2.7-.94-.1-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.62 0 1.07.58 1.22.82.72 1.2 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.77-.2-3.63-.9-3.63-3.95 0-.87.3-1.6.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.2 2.2.83.64-.18 1.32-.27 2-.27.68 0 1.36.1 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.93.08 2.13.5.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.3.25.54.73.54 1.48v2.2c0 .22.15.47.55.4C13.7 14.52 16 11.52 16 8c0-4.42-3.58-8-8-8z"/>
+</svg>
+
+            </a>
+        </li>
+        <li class="nav-item dropdown dropdown-menu-reverse">
+            <a href="#" role="button" class="nav-link" aria-label="Settings" title="Settings" data-cfw="dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" focusable="false"  class="cf-header-icon"  >
+  <title>Settings</title>
+  <path fill="currentColor" d="M3.5 0l-.5 1.19c-.1.03-.19.08-.28.13l-1.19-.5-.72.72.5 1.19c-.05.1-.09.18-.13.28l-1.19.5v1l1.19.5c.04.1.08.18.13.28l-.5 1.19.72.72 1.19-.5c.09.04.18.09.28.13l.5 1.19h1l.5-1.19c.09-.04.19-.08.28-.13l1.19.5.72-.72-.5-1.19c.04-.09.09-.19.13-.28l1.19-.5v-1l-1.19-.5c-.03-.09-.08-.19-.13-.28l.5-1.19-.72-.72-1.19.5c-.09-.04-.19-.09-.28-.13l-.5-1.19h-1zm.5 2.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5z"/>
+</svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">Direction</li>
+                <li><button type="button" class="dropdown-item" id="dir-ltr">Left-to-right</button></li>
+                <li><button type="button" class="dropdown-item" id="dir-rtl">Right-to-left</button></li>
+            </ul>
+        </li>
+        
+    </ul>
+</header>
+
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
+        <div class="container-fluid">
+            
+    <div class="h1">Content</div>
+    <p class="lead">
+        Styles for displaying content with some of the most commonly used HTML elements, including normalization, typography, images, tables, buttons, forms, and more.
+    </p>
+
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-3 col-xl-2 cf-sidebar">
+                <nav class="cf-links">
+
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+    <div class="h4 cf-sidebar-header">Content</div>
+    <ul class="nav flex-column">
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/reboot/" class="nav-link ">
+            Reboot 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/color/" class="nav-link ">
+            Color 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/typography/" class="nav-link active">
+            Typography <span class="sr-only">(current page)</span>
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/code/" class="nav-link ">
+            Code 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/images/" class="nav-link ">
+            Images 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/figures/" class="nav-link ">
+            Figures 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/tables/" class="nav-link ">
+            Tables 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/buttons/" class="nav-link ">
+            Buttons 
+          </a>
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/figuration-preview/4.0.0-alpha.4/content/forms/" class="nav-link ">
+            Forms 
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+</nav>
+
+            </div>
+
+            <div class="d-none d-xl-block col-xl-2 cf-toc">
+            </div>
+
+            <main class="col-12 col-md-9 col-xl-8 cf-content" role="main">
+                <h1 class="cf-title" id="content">
+                    Typography
+                    
+                </h1>
+
+                <p>Figuration includes simple and easily customized typography for headings, body text, lists, and more. For even more control, check out the <a href="/figuration-preview/4.0.0-alpha.4/utilities/typography/">utility classes</a>.</p>
+
+<h2 class="no_toc" id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#global-settings" id="markdown-toc-global-settings">Global Settings</a></li>
+  <li><a href="#headings" id="markdown-toc-headings">Headings</a>    <ul>
+      <li><a href="#customizing-headings" id="markdown-toc-customizing-headings">Customizing Headings</a></li>
+    </ul>
+  </li>
+  <li><a href="#lead" id="markdown-toc-lead">Lead</a></li>
+  <li><a href="#inline-text-elements" id="markdown-toc-inline-text-elements">Inline Text Elements</a></li>
+  <li><a href="#text-utilities" id="markdown-toc-text-utilities">Text Utilities</a></li>
+  <li><a href="#abbreviations" id="markdown-toc-abbreviations">Abbreviations</a></li>
+  <li><a href="#blockquotes" id="markdown-toc-blockquotes">Blockquotes</a>    <ul>
+      <li><a href="#naming-a-source" id="markdown-toc-naming-a-source">Naming a Source</a></li>
+      <li><a href="#alignment" id="markdown-toc-alignment">Alignment</a></li>
+    </ul>
+  </li>
+  <li><a href="#lists" id="markdown-toc-lists">Lists</a>    <ul>
+      <li><a href="#unstyled" id="markdown-toc-unstyled">Unstyled</a></li>
+      <li><a href="#styled" id="markdown-toc-styled">Styled</a></li>
+      <li><a href="#description-list-alignment" id="markdown-toc-description-list-alignment">Description List Alignment</a></li>
+    </ul>
+  </li>
+  <li><a href="#responsive-typography" id="markdown-toc-responsive-typography">Responsive Typography</a>    <ul>
+      <li><a href="#common-settings" id="markdown-toc-common-settings">Common Settings</a></li>
+      <li><a href="#fluid-responsive-typography" id="markdown-toc-fluid-responsive-typography">Fluid Responsive Typography</a>        <ul>
+          <li><a href="#settings" id="markdown-toc-settings">Settings</a></li>
+          <li><a href="#safari-issue" id="markdown-toc-safari-issue">Safari Issue</a></li>
+        </ul>
+      </li>
+      <li><a href="#scaled-responsive-typography" id="markdown-toc-scaled-responsive-typography">Scaled Responsive Typography</a>        <ul>
+          <li><a href="#settings-1" id="markdown-toc-settings-1">Settings</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="global-settings">Global Settings</h2>
+
+<p>Figuration sets basic global display, typography, and link styles. Specifically, we:</p>
+
+<ul>
+  <li>Use a <a href="/figuration-preview/4.0.0-alpha.4/content/reboot/#native-font-stack">native font stack</a> that selects the best <code class="highlighter-rouge">font-family</code> for each OS and device.</li>
+  <li>Use the <code class="highlighter-rouge">$font-family-base</code>, <code class="highlighter-rouge">$font-size-base</code>, and <code class="highlighter-rouge">$line-height-base</code> attributes as our typographic base applied to the <code class="highlighter-rouge">&lt;body&gt;</code>.</li>
+  <li>Use <code class="highlighter-rouge">$font-size-base</code> to scale the font size of text across all components.</li>
+  <li>Convert all <code class="highlighter-rouge">font-size</code> CSS rules to <code class="highlighter-rouge">rem</code> units, assuming the typical browser default of <code class="highlighter-rouge">1rem</code>=<code class="highlighter-rouge">16px</code> through the use of our <code class="highlighter-rouge">font-size()</code> Sass mixin.  While <em>highly opinionated</em>, Figuration believes, this offers better accessibility than using <code class="highlighter-rouge">px</code> to define font sizes.</li>
+  <li>Set the global link color via <code class="highlighter-rouge">$link-color</code> and apply link underlines only on <code class="highlighter-rouge">:hover</code>.</li>
+  <li>Use <code class="highlighter-rouge">$body-bg</code> to set a <code class="highlighter-rouge">background-color</code> on the <code class="highlighter-rouge">&lt;body&gt;</code> (<code class="highlighter-rouge">#fff</code> by default).</li>
+</ul>
+
+<p>These styles can be found within <code class="highlighter-rouge">_reboot.scss</code>, and the global variables are defined in <code class="highlighter-rouge">_settings.scss</code>. Make sure to set <code class="highlighter-rouge">$font-size-base</code> using <code class="highlighter-rouge">rem</code> units.</p>
+
+<h2 id="headings">Headings</h2>
+
+<p>All HTML headings, <code class="highlighter-rouge">&lt;h1&gt;</code> through <code class="highlighter-rouge">&lt;h6&gt;</code>, are available.</p>
+
+<div class="cf-example">
+<h1>h1. Example heading</h1>
+<h2>h2. Example heading</h2>
+<h3>h3. Example heading</h3>
+<h4>h4. Example heading</h4>
+<h5>h5. Example heading</h5>
+<h6>h6. Example heading</h6>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>h1. Example heading<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>h2. Example heading<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>h3. Example heading<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>h4. Example heading<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>h5. Example heading<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>h6. Example heading<span class="nt">&lt;/h6&gt;</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">.h1</code> through <code class="highlighter-rouge">.h6</code> classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
+
+<div class="cf-example">
+<p class="h1">h1. Example heading</p>
+<p class="h2">h2. Example heading</p>
+<p class="h3">h3. Example heading</p>
+<p class="h4">h4. Example heading</p>
+<p class="h5">h5. Example heading</p>
+<p class="h6">h6. Example heading</p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h1"</span><span class="nt">&gt;</span>h1. Example heading<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h2"</span><span class="nt">&gt;</span>h2. Example heading<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h3"</span><span class="nt">&gt;</span>h3. Example heading<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h4"</span><span class="nt">&gt;</span>h4. Example heading<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h5"</span><span class="nt">&gt;</span>h5. Example heading<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h6"</span><span class="nt">&gt;</span>h6. Example heading<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<h3 id="customizing-headings">Customizing Headings</h3>
+
+<p>Create lighter, secondary text in any heading with a generic <code class="highlighter-rouge">&lt;small&gt;</code> tag or the <code class="highlighter-rouge">.small</code> class.</p>
+
+<p>You can also use the included utility classes to recolor the secondary text.</p>
+
+<div class="cf-example">
+<h3>
+  Fancy display heading
+  <small class="text-muted">With secondary text</small>
+</h3>
+
+<h3>
+  Fancy display heading
+  <small class="text-info">With secondary text</small>
+</h3>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3&gt;</span>
+  Fancy display heading
+  <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>With secondary text<span class="nt">&lt;/small&gt;</span>
+<span class="nt">&lt;/h3&gt;</span>
+
+<span class="nt">&lt;h3&gt;</span>
+  Fancy display heading
+  <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-info"</span><span class="nt">&gt;</span>With secondary text<span class="nt">&lt;/small&gt;</span>
+<span class="nt">&lt;/h3&gt;</span></code></pre></figure>
+
+<h2 id="lead">Lead</h2>
+
+<p>Make a paragraph stand out by adding <code class="highlighter-rouge">.lead</code>.</p>
+
+<div class="cf-example">
+<p class="lead">
+  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+</p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>
+  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<h2 id="inline-text-elements">Inline Text Elements</h2>
+
+<p>Styling for common inline HTML5 elements.</p>
+
+<div class="cf-example">
+<p>You can use the mark tag to <mark>highlight</mark> text.</p>
+<p><del>This line of text is meant to be treated as deleted text.</del></p>
+<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+<p><u>This line of text will render as underlined</u></p>
+<p><small>This line of text is meant to be treated as fine print.</small></p>
+<p><strong>This line rendered as bold text.</strong></p>
+<p><em>This line rendered as italicized text.</em></p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>You can use the mark tag to <span class="nt">&lt;mark&gt;</span>highlight<span class="nt">&lt;/mark&gt;</span> text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;del&gt;</span>This line of text is meant to be treated as deleted text.<span class="nt">&lt;/del&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;s&gt;</span>This line of text is meant to be treated as no longer accurate.<span class="nt">&lt;/s&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;ins&gt;</span>This line of text is meant to be treated as an addition to the document.<span class="nt">&lt;/ins&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;u&gt;</span>This line of text will render as underlined<span class="nt">&lt;/u&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;small&gt;</span>This line of text is meant to be treated as fine print.<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>This line rendered as bold text.<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;em&gt;</span>This line rendered as italicized text.<span class="nt">&lt;/em&gt;&lt;/p&gt;</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">.mark</code> and <code class="highlighter-rouge">.small</code> classes are also available to apply the same styles as <code class="highlighter-rouge">&lt;mark&gt;</code> and <code class="highlighter-rouge">&lt;small&gt;</code> while avoiding any unwanted semantic implications that the tags would bring.</p>
+
+<p>While not shown above, feel free to use <code class="highlighter-rouge">&lt;b&gt;</code> and <code class="highlighter-rouge">&lt;i&gt;</code> in HTML5. <code class="highlighter-rouge">&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code class="highlighter-rouge">&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>
+
+<h2 id="text-utilities">Text Utilities</h2>
+
+<p>Change text alignment, transform, style, weight, and color with our <a href="/figuration-preview/4.0.0-alpha.4/utilities/typography/#text-alignment">text utilities</a>.</p>
+
+<h2 id="abbreviations">Abbreviations</h2>
+
+<p>Stylized implementation of HTML’s <code class="highlighter-rouge">&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a <code class="highlighter-rouge">title</code> attribute have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
+
+<p>Add <code class="highlighter-rouge">.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
+
+<div class="cf-example">
+<p><abbr title="attribute">attr</abbr></p>
+<p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"attribute"</span><span class="nt">&gt;</span>attr<span class="nt">&lt;/abbr&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"HyperText Markup Language"</span> <span class="na">class=</span><span class="s">"initialism"</span><span class="nt">&gt;</span>HTML<span class="nt">&lt;/abbr&gt;&lt;/p&gt;</span></code></pre></figure>
+
+<h2 id="blockquotes">Blockquotes</h2>
+
+<p>For quoting blocks of content from another source within your document. Wrap <code class="highlighter-rouge">&lt;blockquote class="blockquote"&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote.</p>
+
+<div class="cf-example">
+<blockquote class="blockquote">
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span></code></pre></figure>
+
+<h3 id="naming-a-source">Naming a Source</h3>
+
+<p>Add a <code class="highlighter-rouge">&lt;footer class="blockquote-footer"&gt;</code> for identifying the source. Wrap the name of the source work in <code class="highlighter-rouge">&lt;cite&gt;</code>.</p>
+
+<div class="cf-example">
+<blockquote class="blockquote">
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span></code></pre></figure>
+
+<h3 id="alignment">Alignment</h3>
+
+<p>Use <a href="/figuration-preview/4.0.0-alpha.4/utilities/typography/#text-alignment">text alignment utilities</a> to alter the layout of the blockquote.</p>
+
+<div class="cf-example">
+<blockquote class="blockquote text-center">
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote text-center"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span></code></pre></figure>
+
+<div class="cf-example">
+<blockquote class="blockquote text-end">
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote text-end"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span></code></pre></figure>
+
+<h2 id="lists">Lists</h2>
+
+<p>See the <a href="/figuration-preview/4.0.0-alpha.4/content/reboot/#lists">rebooted list styles</a> for the default layouts.</p>
+
+<h3 id="unstyled">Unstyled</h3>
+
+<p>Remove the default <code class="highlighter-rouge">list-style</code> and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.</p>
+
+<div class="cf-example">
+<ul class="list-unstyled">
+  <li>Unstyled List Item</li>
+  <li>Unstyled List Item
+        <ul>
+            <li>Nested List Item</li>
+            <li>Nested List Item</li>
+        </ul>
+    </li>
+    <li>Unstyled List Item</li>
+</ul>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-unstyled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Unstyled List Item<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Unstyled List Item
+        <span class="nt">&lt;ul&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Nested List Item<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Nested List Item<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Unstyled List Item<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+<h3 id="styled">Styled</h3>
+
+<p>Even more layout and style options are available for lists with Figuration’s <a href="/figuration-preview/4.0.0-alpha.4/components/lists/">list component</a>.  This component includes indented unstyled lists, stylized bulleted and ordered lists, horizontal lists, and lists with dividers between items.</p>
+
+<h3 id="description-list-alignment">Description List Alignment</h3>
+
+<p>Align terms and descriptions horizontally by using our grid system’s predefined classes (or semantic mixins). For longer terms, you can optionally add a <code class="highlighter-rouge">.text-truncate</code> class to truncate the text with an ellipsis.</p>
+
+<div class="cf-example">
+<dl class="row">
+  <dt class="col-sm-3">Description lists</dt>
+  <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+
+  <dt class="col-sm-3">Euismod</dt>
+  <dd class="col-sm-9">Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+  <dd class="col-sm-9 offset-sm-3">Donec id elit non mi porta gravida at eget metus.</dd>
+
+  <dt class="col-sm-3">Malesuada porta</dt>
+  <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
+
+  <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+  <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+
+  <dt class="col-sm-3">Nesting</dt>
+  <dd class="col-sm-9">
+    <dl class="row">
+      <dt class="col-sm-4">Nested definition list</dt>
+      <dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
+    </dl>
+  </dd>
+</dl>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-sm-3"</span><span class="nt">&gt;</span>Description lists<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>A description list is perfect for defining terms.<span class="nt">&lt;/dd&gt;</span>
+
+  <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-sm-3"</span><span class="nt">&gt;</span>Euismod<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<span class="nt">&lt;/dd&gt;</span>
+  <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-sm-9 offset-sm-3"</span><span class="nt">&gt;</span>Donec id elit non mi porta gravida at eget metus.<span class="nt">&lt;/dd&gt;</span>
+
+  <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-sm-3"</span><span class="nt">&gt;</span>Malesuada porta<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>Etiam porta sem malesuada magna mollis euismod.<span class="nt">&lt;/dd&gt;</span>
+
+  <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-sm-3 text-truncate"</span><span class="nt">&gt;</span>Truncated term is truncated<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.<span class="nt">&lt;/dd&gt;</span>
+
+  <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-sm-3"</span><span class="nt">&gt;</span>Nesting<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-sm-4"</span><span class="nt">&gt;</span>Nested definition list<span class="nt">&lt;/dt&gt;</span>
+      <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-sm-8"</span><span class="nt">&gt;</span>Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;/dl&gt;</span>
+  <span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span></code></pre></figure>
+
+<h2 id="responsive-typography">Responsive Typography</h2>
+
+<p><em>Responsive typography</em> refers to scaling an element’s <code class="highlighter-rouge">font-size</code> within a series of media queries.</p>
+
+<p>Figuration, by default, does not have responsive typography enabled. However, we have included two different methods to enable this functionality.</p>
+<ul>
+  <li><em>Fluid</em> sizing based on the dimensions of the viewport.  Based on the <a href="https://github.com/MartijnCuppens/rfs">Responsive font-size mixin</a> by <a href="https://github.com/MartijnCuppens">Martijn Cuppens</a>.</li>
+  <li><em>Scaled</em> sizing is scaling based on current <a href="/figuration-preview/4.0.0-alpha.4/layout/overview/#responsive-breakpoints">responsive breakpoint</a>.</li>
+</ul>
+
+<p>See the <a href="/figuration-preview/4.0.0-alpha.4/get-started/options/#global-options">Global Options</a> on how the enable either method.  <strong>Note that only one of these methods can be enabled at a time.</strong></p>
+
+<p>Benefits of using Figuration’s responsive typography options include:</p>
+<ul>
+  <li>Font sizes will adjust with the size of the device, which can help reduce the chance of overflow for long words.</li>
+  <li>Font sizes of text elements will always remain in relation to one another.</li>
+  <li>The minimum font size (configuration setting) will prevent the font size from becoming too small so readability can be assured.</li>
+  <li>Does not use the <code class="highlighter-rouge">font-size</code> of the <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> element, and outputs sizes in <code class="highlighter-rouge">rem</code> units, allowing for a greater level of accessibility for users who change the default font size of their browser.</li>
+</ul>
+
+<p>Possible drawbacks include:</p>
+<ul>
+  <li>Can generate a large amount of CSS.  Enabling the <code class="highlighter-rouge">$responsive-font-size-generate-static</code> setting will generate a large amount of the CSS.  Compressing the CSS, with gzip or other methods, will reduce the CSS file size impact due to the large amount of repeating strings.</li>
+</ul>
+
+<h3 id="common-settings">Common Settings</h3>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$responsive-font-size-minimum-size</code></td>
+                <td>font size in <code>px</code> or <code>rem</code></td>
+                <td>1em</td>
+                <td>
+                    <p>Calculated font sizes will never be smaller than this size. However, you can still pass a smaller font size, but then it won't be responsively sized.</p>
+                    <p>For example: <code>font-size(1.5rem)</code> will trigger responsive sizing, with <code>font-size(.875rem)</code> will remain staticly sized at <code>.875rem</code>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><code>$responsive-font-size-generate-static</code></td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>
+                    <p>Generates the <code>.font-size-static</code> utility classes to disable the responsive font sizes for an element and it's descendant elements. This does not apply to font sizes which are inherited from parent elements.</p>
+                    <p>If you are not using these utilities, it would be worthwhile to disable this setting to stop the generation of a potentially large amount of unused CSS.</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="fluid-responsive-typography">Fluid Responsive Typography</h3>
+
+<p>A smooth responsive sizing of text based on the viewport dimensions, by default this is the viewport width <code class="highlighter-rouge">vw</code> dimension.  As the viewport size is reduced, font sizes are</p>
+
+<p>Using Figuration’s default settings, a Sass input:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.element</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">2</span><span class="mi">.5rem</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Will generate the CSS output:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.element</span><span class="o">,</span>
+<span class="nc">.font-size-static</span> <span class="nc">.element</span><span class="o">,</span> <span class="nc">.element.font-size-static</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">2.5rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="p">:</span> <span class="m">75em</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.element</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">1.3rem</span> <span class="err">+</span> <span class="m">1.6vw</span><span class="p">)</span> <span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h4 id="settings">Settings</h4>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$responsive-font-size-fluid-breakpoint</code></td>
+                <td><code>em</code> unit breakpoint dimension</td>
+                <td>75em</td>
+                <td>Above this breakpoint, the font size will be equal to the font size you passed to the mixin; below the breakpoint, the font size will dynamically scale.</td>
+            </tr>
+            <tr>
+                <td><code>$responsive-font-size-fluid-factor</code></td>
+                <td>integer</td>
+                <td>5</td>
+                <td>This value determines the strength of font size resizing. The higher $rfs-factor, the less difference there is between font sizes on small screens. The lower the factor, the less influence the responsive scaling has, which results in bigger font sizes for small screens. <code>$responsive-font-size-fluid-factor</code> must be greater than 1, and setting it to 1 will disable responsive scaling.</td>
+            </tr>
+            <tr>
+                <td><code>$responsive-font-size-fluid-two-dimensional</code></td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Enabling the two dimensional media queries will determine the font size based on the smallest side of the screen with <code>vmin</code>. This prevents the font size from changing if the device toggles between portrait and landscape mode.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 id="safari-issue">Safari Issue</h4>
+<p>There is a known issue with Safari where it does not always recalculate the value of vw in a calc()-function for font-sizes in iframes.
+<a href="https://github.com/MartijnCuppens/rfs#known-issues">More information and a workaround can be found over at Martijn Cuppen’s Responsive font-size mixin</a>.</p>
+
+<h3 id="scaled-responsive-typography">Scaled Responsive Typography</h3>
+
+<p>This variant of the responsive typography uses a stepped scale, making the font scale and sizing consistent across all widths of a breakpoint.</p>
+
+<p>By default the font size is scaled downwards at each decreasing breakpoint level from largest to smallest.</p>
+
+<p>Using Figuration’s default settings, a Sass input:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.element</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">2</span><span class="mi">.5rem</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Will generate the CSS output:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.element</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1.9375rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">36em</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.element</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">2.078125rem</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">48em</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.element</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">2.21875rem</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">62em</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.element</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">2.359375rem</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">75em</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.element</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">2.5rem</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.font-size-static</span> <span class="nc">.element</span><span class="o">,</span> <span class="nc">.element.font-size-static</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">2.5rem</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h4 id="settings-1">Settings</h4>
+
+<p>Scaled responsive typography only has one setting, <code class="highlighter-rouge">$responsive-font-size-scale-factor</code>, a Sass map that aligns with Figuration’s <a href="/figuration-preview/4.0.0-alpha.4/layout/grid/#grid-options">grid breakpoints</a>.  Each breakpoint level gets an associated scaling value.  The following example shows the default settings for the scaling values.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$responsive-font-size-scale-factor</span><span class="p">:</span> <span class="p">(</span>
+    <span class="n">xs</span><span class="o">:</span> <span class="mi">.625</span><span class="o">,</span>
+    <span class="n">sm</span><span class="o">:</span> <span class="mi">.71875</span><span class="o">,</span>
+    <span class="n">md</span><span class="o">:</span> <span class="mi">.8125</span><span class="o">,</span>
+    <span class="n">lg</span><span class="o">:</span> <span class="mi">.90625</span><span class="o">,</span>
+    <span class="n">xl</span><span class="o">:</span> <span class="m">1</span>
+<span class="p">)</span></code></pre></figure>
+
+<p>It is also possible to change the settings so font size grows as the breakpoint size increases, as shown in the following example.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$responsive-font-size-scale-factor</span><span class="p">:</span> <span class="p">(</span>
+    <span class="n">xs</span><span class="o">:</span> <span class="m">1</span><span class="o">,</span>
+    <span class="n">sm</span><span class="o">:</span> <span class="m">1</span><span class="mi">.09375</span><span class="o">,</span>
+    <span class="n">md</span><span class="o">:</span> <span class="m">1</span><span class="mi">.1875</span><span class="o">,</span>
+    <span class="n">lg</span><span class="o">:</span> <span class="m">1</span><span class="mi">.28125</span><span class="o">,</span>
+    <span class="n">xl</span><span class="o">:</span> <span class="m">1</span><span class="mi">.375</span>
+<span class="p">);</span></code></pre></figure>
+
+<h2 id="sass-reference">SASS Reference</h2>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/4.0.0-alpha.4/get-started/options/">Customization options</a>, or Sass variables, that can be customized for the typography CSS styles.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-typography</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the typography classes.
+                    Smaller segements of the typography classes can be disabled with the following <code>$enable-*</code> variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-typography-headings</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the <code>&lt;hN&gt;</code> headings and heading classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-typography-lead</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the lead in typography class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-typography-hr</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the reset for horizontal rules.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-typography-small</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of CSS for the small element and associated class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-typography-mark</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of CSS for the mark element and associated class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-typography-list-unstyled</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the unstyled list class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-typography-initialism</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the initialism class.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-typography-blockquote</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the blockquote classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$font-family-sans-serif</code></td>
+                <td>string</td>
+                <td><code>-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"</code></td>
+                <td>
+                    Sans-serif font stack.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$font-family-serif</code></td>
+                <td>string</td>
+                <td><code>Georgia, "Times New Roman", Times, serif</code></td>
+                <td>
+                    Serif font stack.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$font-family-monospace</code></td>
+                <td>string</td>
+                <td><code>Georgia, "Times New Roman", Times, serif</code></td>
+                <td>
+                    Monospace font stack.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$font-weight-lighter</code></td>
+                <td>string/integer</td>
+                <td><code>lighter</code></td>
+                <td>
+                    Lighter font weight
+                </td>
+            </tr>
+            <tr>
+                <td><code>$font-weight-light</code></td>
+                <td>string/integer</td>
+                <td><code>300</code></td>
+                <td>
+                    Light font weight
+                </td>
+            </tr>
+            <tr>
+                <td><code>$font-weight-normal</code></td>
+                <td>string/integer</td>
+                <td><code>400</code></td>
+                <td>
+                    Standard font weight
+                </td>
+            </tr>
+            <tr>
+                <td><code>$font-weight-bold</code></td>
+                <td>string/integer</td>
+                <td><code>700</code></td>
+                <td>
+                    Bold font weight
+                </td>
+            </tr>
+            <tr>
+                <td><code>$font-weight-bolder</code></td>
+                <td>string/integer</td>
+                <td><code>bolder</code></td>
+                <td>
+                    Bolder font weight
+                </td>
+            </tr>
+            <tr>
+                <td><code>$font-size-h1</code></td>
+                <td>string</td>
+                <td><code>($font-size-base * 2.5)</code></td>
+                <td>
+                    <code>&lt;h1&gt;</code> font size.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$font-size-h2</code></td>
+                <td>string</td>
+                <td><code>($font-size-base * 2)</code></td>
+                <td>
+                    <code>&lt;h2&gt;</code> font size.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$font-size-h3</code></td>
+                <td>string</td>
+                <td><code>($font-size-base * 1.75)</code></td>
+                <td>
+                    <code>&lt;h3&gt;</code> font size.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$font-size-h4</code></td>
+                <td>string</td>
+                <td><code>($font-size-base * 1.5)</code></td>
+                <td>
+                    <code>&lt;h4&gt;</code> font size.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$font-size-h5</code></td>
+                <td>string</td>
+                <td><code>($font-size-base * 1.25)</code></td>
+                <td>
+                    <code>&lt;h5&gt;</code> font size.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$font-size-h6</code></td>
+                <td>string</td>
+                <td><code>($font-size-base * 1)</code></td>
+                <td>
+                    <code>&lt;h6&gt;</code> font size.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$headings-font-family</code></td>
+                <td>string</td>
+                <td><code>null</code></td>
+                <td>
+                    Headings font family.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$headings-font-weight</code></td>
+                <td>string/integer</td>
+                <td><code>600</code></td>
+                <td>
+                    Headings font weight.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$headings-line-height</code></td>
+                <td>float</td>
+                <td><code>1.25</code></td>
+                <td>
+                    Headings line height.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$headings-color</code></td>
+                <td>string</td>
+                <td><code>null</code></td>
+                <td>
+                    Headings text color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$lead-font-size</code></td>
+                <td>string</td>
+                <td><code>($font-size-base * 1.25)</code></td>
+                <td>
+                    Lead in font size.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$lead-font-weight</code></td>
+                <td>string</td>
+                <td><code>inherit</code></td>
+                <td>
+                    Lead in font weight.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$lead-line-height</code></td>
+                <td>string</td>
+                <td><code>$line-height-base</code></td>
+                <td>
+                    Lead in line height.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$small-font-size</code></td>
+                <td>percent</td>
+                <td><code>80%</code></td>
+                <td>
+                    Small font size.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$text-muted</code></td>
+                <td>string</td>
+                <td><code>$uibase-500</code></td>
+                <td>
+                    Muted text color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$mark-padding-x</code></td>
+                <td>string</td>
+                <td><code>.25rem</code></td>
+                <td>
+                    Mark element padding.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$mark-bg</code></td>
+                <td>string</td>
+                <td><code>#ff0</code></td>
+                <td>
+                    Mark element background color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$hr-spacer-y</code></td>
+                <td>string</td>
+                <td><code>1rem</code></td>
+                <td>
+                    Horizontal rule vertical spacing.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$hr-border-color</code></td>
+                <td>string</td>
+                <td><code>rgba($black, .1)</code></td>
+                <td>
+                    Horizontal rule border color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$hr-border-width</code></td>
+                <td>string</td>
+                <td><code>$border-width</code></td>
+                <td>
+                    Horizontal rule border width.
+                </td>
+            </tr>
+
+            <tr>
+                <td><code>$blockquote-font-size</code></td>
+                <td>string</td>
+                <td><code>($font-size-base * 1.1875)</code></td>
+                <td>
+                    Blockquote font size.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$blockquote-color</code></td>
+                <td>string</td>
+                <td><code>$body-color</code></td>
+                <td>
+                    Blockquote font color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$blockquote-footer-font-size</code></td>
+                <td>string</td>
+                <td><code>$font-size-base</code></td>
+                <td>
+                    Blockquote footer font size.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$blockquote-footer-color</code></td>
+                <td>string</td>
+                <td><code>$uibase-500</code></td>
+                <td>
+                    Blockquote footer text color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$blockquote-footer-content</code></td>
+                <td>string</td>
+                <td><code>"\2014\00a0"</code> (em dash and non-breaking space)</td>
+                <td>
+                    Prefix for blockquote footer.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>No mixins available.</p>
+
+            </main>
+        </div>
+
+        <div class="toplink">
+            <a href="#content">Top of Page <span class="caret"></span></a>
+        </div>
+    </div>
+
+    <footer class="cf-footer">
+    <div class="container">
+        <p class="mb-0">
+            Current version: 4.0.0-alpha.4
+        </p>
+        <p>
+            <a href="/figuration-preview/4.0.0-alpha.4/migration/">Migration Notes (in progress)</a>
+        </p>
+        <ul class="footer-links d-inline-block d-sm-block mx-auto mx-sm-0">
+            <li><a href="/figuration-preview/about/overview/">About</a></li>
+            <li><a href="https://github.com/cast-org/figuration">GitHub Project</a></li>
+            <li><a href="https://github.com/cast-org/figuration/issues">Issues</a></li>
+            <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
+        </ul>
+        <p>
+            &copy; 2013-2019 <a href="http://www.cast.org/">CAST, Inc.</a>
+            <br />
+            Portions: &copy; 2011-2019 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">CC BY 3.0</a>.
+        <p>
+            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
+            docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.
+        </p>
+
+        <hr />
+
+        <p class="font-weight-bold mb-0_25">Funding generously provided by:</p>
+        <div class="media footer-partners">
+            <div class="d-flex me-0_5">
+                <img src="/figuration-preview/4.0.0-alpha.4/assets/img/aem-logo.png" class="media-object" width="40" height="40" alt="AEM logo" />
+            </div>
+            <div class="media-body">
+                <span class="h6 partner-title"><a href="http://aem.cast.org/">National Center on Accessible Educational Materials at CAST, Inc.</a></span><br />
+                <small>Disclaimer: This does not necessarily represent endorsement by or the policies of the National Center on Accessible Educational Materials, the US Department of Education, and the US Federal Government.</small>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+    
+</body>
+</html>
