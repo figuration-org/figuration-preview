@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Customize Figuration using Sass variables for global style preferences, color themes, and component adjustments.">
+<meta name="generator" content="Jekyll v3.8.5">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="4.0.0-alpha.5">
+
+<title>Customization Options &#124; CAST Figuration</title>
+
+<!-- Favicons -->
+<link sizes="180x180" rel="apple-touch-icon" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/apple-touch-icon.png"/>
+<link sizes="32x32" rel="icon" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/favicon-32x32.png" type="image/png"/>
+<link sizes="16x16" rel="icon" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/favicon-16x16.png" type="image/png"/>
+<link rel="manifest" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/site.webmanifest"/>
+<link color="#5bbad5" rel="mask-icon" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/safari-pinned-tab.svg"/>
+<link rel="shortcut icon" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/favicon.ico"/>
+<meta name="msapplication-TileColor" content="#117cba"/>
+<meta name="msapplication-config" content="/figuration-preview/4.0.0-alpha.5/assets/favicon/browserconfig.xml"/>
+<meta name="theme-color" content="#ffffff"/>
+
+<!-- Font CSS -->
+<link href="/figuration-preview/4.0.0-alpha.5/assets/fonts/fontawesome/css/all.min.css" rel="stylesheet" property="stylesheet">
+
+
+<!-- Core CSS -->
+<link href="/figuration-preview/4.0.0-alpha.5/dist/css/figuration.css" rel="stylesheet" id="cssCore">
+
+
+<!-- Algolia DocSearch CSS -->
+
+
+<!-- Docs CSS -->
+<link href="/figuration-preview/4.0.0-alpha.5/assets/css/docs.css" rel="stylesheet" id="cssDocs">
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/figuration-preview/4.0.0-alpha.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+
+<!-- Core JS -->
+<script src="/figuration-preview/4.0.0-alpha.5/dist/js/figuration.js"></script>
+
+
+<!-- Docs JS -->
+<script src="/figuration-preview/4.0.0-alpha.5/assets/js/vendor/anchor.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.5/assets/js/vendor/clipboard.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.5/assets/js/vendor/holder.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.5/assets/js/src/docs.js"></script>
+
+
+<!-- IE emulation mode warning -->
+<script src="/figuration-preview/4.0.0-alpha.5/assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@figuration_org">
+<meta name="twitter:creator" content="@figuration_org">
+<meta name="twitter:title" content="Customization Options">
+<meta name="twitter:description" content="Customize Figuration using Sass variables for global style preferences, color themes, and component adjustments.">
+<meta name="twitter:image" content="https://figuration-org.github.io/4.0.0-alpha.5/assets/brand/figuration-social.png">
+
+<!-- Google Analytics -->
+
+
+
+</head>
+<body>
+    <a class="skipnav sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="v4-warning">
+    v4 is in Alpha! Not ready for Production!
+</div>
+<header class="navbar navbar-expand-lg navbar-dark print-hide cf-header">
+    <a class="navbar-brand" href="/figuration-preview/" aria-label="CAST Figuration">
+        <img src="/figuration-preview/4.0.0-alpha.5/assets/brand/figuration-outline.svg" class="navbar-brand-logo" alt="" />
+        <span class="sr-only-xs-down">CAST Figuration</span>
+    </a>
+    <button class="navbar-toggle flex-first me-0_5" type="button" data-cfw="collapse" data-cfw-collapse-target="#cf-topnav" aria-label="Toggle navigation">
+        <span class="cf-header-menu" aria-hidden="true">&#8801;</span>
+    </button>
+    <div class="navbar-collapse collapse flex-last flex-lg-unordered text-nowrap" id="cf-topnav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/get-started/quick-start/" class="nav-link active">Get Started <span class="sr-only">(current section)</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/layout/overview/" class="nav-link ">Layout</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/content/reboot/" class="nav-link ">Content</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/components/alerts/" class="nav-link ">Components</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/utilities/borders/" class="nav-link ">Utilities</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/widgets/overview/" class="nav-link ">Widgets</a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="navbar-nav ms-auto cf-header-social">
+        <li class="nav-item dropdown dropdown-menu-reverse me-1">
+            <a href="#" role="button" class="nav-link pe-0" data-cfw="dropdown">
+                v4.0.0-alpha.5
+                <span class="caret" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">Stable</li>
+                <li><a href="http://figuration.org">Latest (v3.0.5)</a></li>
+                <li class="dropdown-divider"></li>
+                <li class="dropdown-header">Development</li>
+                <li><a href="/figuration-preview/4.0.0-alpha.5/" class="active">v4.0.0-alpha.5</a></li>
+                <li><a href="/figuration-preview/4.0.0-alpha.4/">v4.0.0-alpha.4</a></li>
+
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="https://twitter.com/figuration_org" class="nav-link" aria-label="Twitter" title="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" focusable="false"  class="cf-header-icon"  >
+  <title>Twitter</title>
+  <path fill="currentColor" d="M512 97.2c-18.84 8.36-39.08 14-60.33 16.55 21.7-13 38.34-33.58 46.2-58.1-20.3 12.03-42.8 20.77-66.72 25.48C412 60.7 384.7 47.96 354.48 47.96c-58 0-105.04 47.03-105.04 105.03 0 8.23.93 16.25 2.72 23.93-87.3-4.38-164.7-46.2-216.5-109.75-9.05 15.5-14.24 33.56-14.24 52.8 0 36.45 18.55 68.6 46.73 87.44-17.2-.54-33.4-5.27-47.57-13.14v1.32c0 50.9 36.2 93.35 84.25 103-8.8 2.4-18.1 3.7-27.68 3.7-6.76 0-13.34-.67-19.76-1.9 13.36 41.73 52.15 72.1 98.12 72.95-35.95 28.18-81.25 44.97-130.46 44.97-8.48 0-16.84-.5-25.06-1.47 46.5 29.8 101.7 47.2 161.02 47.2 193.2 0 298.87-160.07 298.87-298.88 0-4.55-.1-9.08-.32-13.6 20.53-14.8 38.34-33.3 52.42-54.36z"/>
+</svg>
+
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="https://github.com/cast-org/figuration" class="nav-link" aria-label="Github" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false"  class="cf-header-icon"  >
+  <title>GitHub</title>
+  <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.3 6.53 5.47 7.6.4.06.55-.18.55-.4v-1.48c-2.02.37-2.54-.5-2.7-.94-.1-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.62 0 1.07.58 1.22.82.72 1.2 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.77-.2-3.63-.9-3.63-3.95 0-.87.3-1.6.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.2 2.2.83.64-.18 1.32-.27 2-.27.68 0 1.36.1 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.93.08 2.13.5.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.3.25.54.73.54 1.48v2.2c0 .22.15.47.55.4C13.7 14.52 16 11.52 16 8c0-4.42-3.58-8-8-8z"/>
+</svg>
+
+            </a>
+        </li>
+        <li class="nav-item dropdown dropdown-menu-reverse">
+            <a href="#" role="button" class="nav-link" aria-label="Settings" title="Settings" data-cfw="dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" focusable="false"  class="cf-header-icon"  >
+  <title>Settings</title>
+  <path fill="currentColor" d="M3.5 0l-.5 1.19c-.1.03-.19.08-.28.13l-1.19-.5-.72.72.5 1.19c-.05.1-.09.18-.13.28l-1.19.5v1l1.19.5c.04.1.08.18.13.28l-.5 1.19.72.72 1.19-.5c.09.04.18.09.28.13l.5 1.19h1l.5-1.19c.09-.04.19-.08.28-.13l1.19.5.72-.72-.5-1.19c.04-.09.09-.19.13-.28l1.19-.5v-1l-1.19-.5c-.03-.09-.08-.19-.13-.28l.5-1.19-.72-.72-1.19.5c-.09-.04-.19-.09-.28-.13l-.5-1.19h-1zm.5 2.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5z"/>
+</svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">Direction</li>
+                <li><button type="button" class="dropdown-item" id="dir-ltr">Left-to-right</button></li>
+                <li><button type="button" class="dropdown-item" id="dir-rtl">Right-to-left</button></li>
+            </ul>
+        </li>
+    </ul>
+</header>
+
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
+        <div class="container-fluid">
+            
+    <div class="h1">Get Started</div>
+    <p class="lead">
+        An overview of Figuration, including how to use it, basic templates, examples, and more.
+    </p>
+
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-xl-2 cf-sidebar">
+                
+
+<nav class="cf-links" aria-label="Section navigation">
+
+
+  
+  
+
+  
+    <div class="h4 cf-sidebar-header">Get Started</div>
+    <ul class="nav flex-column">
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/get-started/quick-start/" class="nav-link "> Quick Start </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/get-started/download/" class="nav-link "> Download </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/get-started/browsers-devices/" class="nav-link "> Browsers & Devices </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/get-started/options/" class="nav-link active"> Options <span class="sr-only">(current page)</span></a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/get-started/build-tools/" class="nav-link "> Build Tools </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/get-started/accessibility/" class="nav-link "> Accessibility </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/get-started/examples/" class="nav-link "> Examples </a>
+            
+        </li>
+      
+    </ul>
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+</nav>
+
+            </div>
+
+            <nav class="d-none d-xl-block col-xl-2 cf-toc" aria-label="Page navigation">
+            </nav>
+
+            <main class="col-md-9 col-xl-8 cf-content" role="main">
+                <h1 class="cf-title" id="content">
+                    Customization Options
+                    
+                </h1>
+
+                <p class="fs-large">Customize Figuration using Sass variables for global style preferences, color themes, and component adjustments.</p>
+
+                <h2 class="no_toc" id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#customizing-options" id="markdown-toc-customizing-options">Customizing Options</a></li>
+  <li><a href="#importing" id="markdown-toc-importing">Importing</a></li>
+  <li><a href="#variable-defaults" id="markdown-toc-variable-defaults">Variable Defaults</a></li>
+  <li><a href="#sass-maps" id="markdown-toc-sass-maps">Sass Maps</a>    <ul>
+      <li><a href="#changing-map-defaults" id="markdown-toc-changing-map-defaults">Changing Map Defaults</a></li>
+      <li><a href="#adding-to-a-map" id="markdown-toc-adding-to-a-map">Adding to a Map</a></li>
+      <li><a href="#removing-from-a-map" id="markdown-toc-removing-from-a-map">Removing from a Map</a></li>
+    </ul>
+  </li>
+  <li><a href="#global-options" id="markdown-toc-global-options">Global Options</a></li>
+  <li><a href="#component-sizes" id="markdown-toc-component-sizes">Component Sizes</a></li>
+  <li><a href="#color-themes" id="markdown-toc-color-themes">Color Themes</a>    <ul>
+      <li><a href="#adding-a-theme" id="markdown-toc-adding-a-theme">Adding a Theme</a></li>
+      <li><a href="#removing-a-theme" id="markdown-toc-removing-a-theme">Removing a Theme</a></li>
+    </ul>
+  </li>
+  <li><a href="#palette-variables" id="markdown-toc-palette-variables">Palette Variables</a></li>
+  <li><a href="#css-variables" id="markdown-toc-css-variables">CSS Variables</a>    <ul>
+      <li><a href="#available-variables" id="markdown-toc-available-variables">Available Variables</a></li>
+      <li><a href="#examples" id="markdown-toc-examples">Examples</a></li>
+      <li><a href="#breakpoint-variables" id="markdown-toc-breakpoint-variables">Breakpoint Variables</a></li>
+      <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>        <ul>
+          <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+          <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="customizing-options">Customizing Options</h2>
+
+<p>Whenever possible, avoid modifying Figurations’s core files. For Sass, that means creating your own stylesheet that imports Figuration so you can modify and extend it. Assuming you’ve downloaded our source files or are using a package manager, you’ll have a file structure that looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">your-project/
++-- scss
+|   +-- custom.scss
++-- node_modules/
+    +-- figuration
+        +-- js
+        +-- scss</code></pre></figure>
+
+<p>If you are using a download version of our source files, you may need to manually setup something similar to that structure, keeping Figuration’s source files separate from your own.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">your-project/
++-- scss
+|   +-- custom.scss
++-- figuration
+    +-- js
+    +-- scss</code></pre></figure>
+
+<h2 id="importing">Importing</h2>
+
+<p>In your <code class="highlighter-rouge">custom.scss</code>, you will import Figuration’s source Sass files. Our recommended structure is to pick the parts you need, but you can include everything if desired. Be aware there are some requirements and dependencies across our components, so you may need to include slightly more than you need. Some of our components will also need have our JavaScript included in order to become interactive.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// custom.scss</span>
+<span class="c1">// Recommended structure for importing Figuration into your</span>
+<span class="c1">// project allowing for use of Figuration's Sass functions</span>
+<span class="c1">// in your custom setting overrides</span>
+
+<span class="c1">// Required - functions</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/functions"</span><span class="p">;</span>
+
+<span class="c1">// Custom - your setting overrides</span>
+<span class="c1">// typically go in this location</span>
+
+<span class="c1">// Required - settings</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/settings"</span><span class="p">;</span>
+
+<span class="c1">// Custom - your setting removals</span>
+<span class="c1">// typically go in this location</span>
+
+<span class="c1">// Required - mixins</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/mixins"</span><span class="p">;</span>
+
+<span class="c1">// Core and Components</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/root"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/reboot"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/typography"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/images"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/buttons"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/grid"</span><span class="p">;</span>
+<span class="nc">...</span></code></pre></figure>
+
+<p>With that setup in place, you can begin to modify any of the Sass variables and maps in your <code class="highlighter-rouge">custom.scss</code>. You can also start to add parts of Figuration under the <code class="highlighter-rouge">// Optional</code> section as needed.</p>
+
+<h2 id="variable-defaults">Variable Defaults</h2>
+
+<p>Every Sass variable, or setting, in Figuration includes the <code class="highlighter-rouge">!default</code> flag allowing you to override the variable’s default value in your own Sass without modifying Figuration’s source code. Copy and paste variables as needed, modify their values, and remove the <code class="highlighter-rouge">!default</code> flag. If a variable has already been assigned, then it won’t be re-assigned by the default values.</p>
+
+<p>You will find the complete list of Figuration’s setting variables in <code class="highlighter-rouge">scss/_settings.scss</code>. Some variables are set to <code class="highlighter-rouge">null</code>, these variables don’t output the property unless they are overridden in your configuration.</p>
+
+<p>Variable overrides within the same Sass file can come before or after the default variables. However, when overriding across Sass files, your overrides must come before you import Figuration’s Sass files.</p>
+
+<p>Here’s an example that changes the <code class="highlighter-rouge">background-color</code> and <code class="highlighter-rouge">color</code> for the <code class="highlighter-rouge">&lt;body&gt;</code> when importing and compiling Figuration via grunt:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Required - functions</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/functions"</span><span class="p">;</span>
+
+<span class="c1">// Custom - your setting overrides</span>
+<span class="nv">$body-bg</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+<span class="nv">$body-color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+
+<span class="c1">// Required - settings and mixins</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/settings"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/mixins"</span><span class="p">;</span>
+
+<span class="c1">// Core and Components</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/reboot"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/typography"</span><span class="p">;</span>
+<span class="nc">...</span></code></pre></figure>
+
+<p>Repeat as necessary for any variable in Figuration, including the global options below.</p>
+
+<p>Sometimes you may need to pull in other variables that you did not plan on.  This is due of the order in which the Sass fils are proceesed, and also the use of various functions, that may require their configuration settings to be copied over to your <code class="highlighter-rouge">custom.scss</code>.</p>
+
+<h2 id="sass-maps">Sass Maps</h2>
+
+<p>Figuration uses a bunch of Sass maps, key-value pairs, to generate certain portions of related CSS. Sass maps are used for grid breakpoints, colors, component sizing, and more.</p>
+
+<p>Just like Sass variables, all Sass maps include the <code class="highlighter-rouge">!default</code> flag and can be overridden and extended.</p>
+
+<p>Some of our Sass maps are merged into empty ones by default. This is done to allow easy expansion of a given Sass map, but makes <em>removing</em> items from a map slightly more difficult.</p>
+
+<h3 id="changing-map-defaults">Changing Map Defaults</h3>
+
+<p>Change a pre-defined color in the <code class="highlighter-rouge">$base-colors</code> map, by adding the following to your custom Sass file:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$base-colors</span><span class="p">:</span> <span class="p">(</span>
+    <span class="s2">"primary"</span><span class="o">:</span> <span class="mh">#004dd1</span><span class="o">,</span>
+    <span class="s2">"danger"</span><span class="o">:</span> <span class="mh">#bb1f11</span>
+<span class="p">);</span></code></pre></figure>
+
+<h3 id="adding-to-a-map">Adding to a Map</h3>
+
+<p>To add another color option to <code class="highlighter-rouge">$base-colors</code>, add a new key-value pair.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$control-colors</span><span class="p">:</span> <span class="p">(</span>
+    <span class="s2">"new-color"</span><span class="o">:</span> <span class="mh">#990099</span>
+<span class="p">);</span></code></pre></figure>
+
+<h3 id="removing-from-a-map">Removing from a Map</h3>
+
+<p>To remove colors from <code class="highlighter-rouge">$base-colors</code>, use <code class="highlighter-rouge">map-remove()</code>. The same method can be used with other Sass maps.</p>
+
+<p>However, you will need to insert this setting after the <em>Required</em> sections and before the <em>Core and Components</em> section.</p>
+
+<p>Also note, that each component will inherit the <code class="highlighter-rouge">$base-colors</code> map, unless previously overridden, before the removal occurs.  This means is you may need to remove the colors again for each component where desired.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Required - functions</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/functions"</span><span class="p">;</span>
+
+<span class="c1">// Required - settings and mixins</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/settings"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/mixins"</span><span class="p">;</span>
+
+<span class="c1">// Custom map removals go in this location</span>
+<span class="nv">$base-colors</span><span class="p">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$base-colors</span><span class="o">,</span> <span class="s2">"warning"</span><span class="o">,</span> <span class="s2">"light"</span><span class="o">,</span> <span class="s2">"dark"</span><span class="p">);</span>
+<span class="nv">$btn-colors</span><span class="p">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$btn-colors</span><span class="o">,</span> <span class="s2">"warning"</span><span class="o">,</span> <span class="s2">"light"</span><span class="o">,</span> <span class="s2">"dark"</span><span class="p">);</span>
+
+<span class="c1">// Core and Components</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/reboot"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/typography"</span><span class="p">;</span>
+<span class="nc">...</span></code></pre></figure>
+
+<h2 id="global-options">Global Options</h2>
+
+<p>You can find and customize these variables for key global options in our <code class="highlighter-rouge">_settings.scss</code> file.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Values</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">$spacer</code></td>
+      <td><code class="highlighter-rouge">1rem</code> (default), or any value &gt; 0</td>
+      <td>Specifies the default spacer value used to programmatically generate the <a href="/figuration-preview/4.0.0-alpha.5/utilities/spacing/">Spacing utilities</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-rounded</code></td>
+      <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
+      <td>Enables predefined <code class="highlighter-rouge">border-radius</code> styles on various components.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-shadows</code></td>
+      <td><code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> (default)</td>
+      <td>Enables predefined <code class="highlighter-rouge">box-shadow</code> styles on various components.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-transitions</code></td>
+      <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
+      <td>Enables predefined <code class="highlighter-rouge">transition</code>s on various components.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-transitions-reduced</code></td>
+      <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
+      <td>Enables the generation of <a href="/figuration-preview/4.0.0-alpha.5/get-started/accessibility/#reduced-motion"><code class="highlighter-rouge">prefers-reduced-motion</code> media query</a>, which suppresses certain animations/transitions based on the users’ browser/operating system preferences.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-grid-classes</code></td>
+      <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
+      <td>Enables the generation of CSS classes for the grid system (e.g. <code class="highlighter-rouge">.container</code>, <code class="highlighter-rouge">.row</code>, <code class="highlighter-rouge">.col-md-1</code>, etc.).</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-print-styles</code></td>
+      <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
+      <td>Enables predefined style overrides used when printing.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-palette</code></td>
+      <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
+      <td>Enables the generation of CSS classes for the palette color themes (e.g. <code class="highlighter-rouge">.text-blue-500</code>, etc.).</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-sizing</code></td>
+      <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
+      <td>Enables the generation of CSS classes for component sizes, and also for some utilites. (e.g. <code class="highlighter-rouge">.btn-small</code>, <code class="highlighter-rouge">.radius-t-xsmall</code>, etc.).</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-bp-smallest</code></td>
+      <td><code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> (default)</td>
+      <td>Enables the generation of CSS classes for breakpoint sizes that include the smallest breakpoint designator. (e.g. <code class="highlighter-rouge">.col-xs-12</code>).  Also refer to the <a href="/figuration-preview/4.0.0-alpha.5/layout/overview/#breakpoint-nomenclature">Breakpoint Nomenclature</a> section.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-rfs-fluid</code></td>
+      <td><code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> (default)</td>
+      <td>Enables the <em>fluid</em> Responsive typography option, , which fluidly scales element’s <code class="highlighter-rouge">font-size</code> based on the dimensions of the viewport.  See the <a href="/figuration-preview/4.0.0-alpha.5/content/typography/#responsive-typography">Responsive Typography</a> section for more details.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-rfs-scale</code></td>
+      <td><code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> (default)</td>
+      <td>Enables the <em>scaled</em> Responsive typography option, which scales element’s <code class="highlighter-rouge">font-size</code> on a per breakpoint basis.  See the <a href="/figuration-preview/4.0.0-alpha.5/content/typography/#responsive-typography">Responsive Typography</a> section for more details.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-validation-icons</code></td>
+      <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
+      <td>Enables the generation of CSS classes for the optional <code class="highlighter-rouge">background-image</code> icons within textual inputs and some custom forms for validation states.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>There are additional options in our <code class="highlighter-rouge">_settings_options.scss</code> that can be used to optionally disable the CSS generation for certain sets, or subsets, of components and utilities.  More information about these setting options can be found on the respective pages for each component and utility.</p>
+
+<h2 id="component-sizes">Component Sizes</h2>
+
+<p>The button, button group, pagination, form-control and input-group components all use the same base sizing settings for consistency.</p>
+
+<p>By using a map, we can be sure the components are all the same height when horizontally aligned.</p>
+
+<p>You can modify, remove, or add additional sizes, beyond the default sizing, by redefining the <code class="highlighter-rouge">$component-sizes</code> map.  The <code class="highlighter-rouge">null</code> values will use the component’s default line-height and <code class="highlighter-rouge">em</code> padding for the that particular size variant.</p>
+
+<p>Below is the default additional settings for reference.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Used for button, button groups, pagination, form-control, and input-group</span>
+<span class="nv">$component-sizes</span><span class="p">:</span> <span class="p">(</span>
+    <span class="s2">"xsmall"</span><span class="o">:</span> <span class="p">(</span>
+        <span class="s2">"padding-y"</span><span class="o">:</span>     <span class="n">null</span><span class="o">,</span>
+        <span class="s2">"padding-x"</span><span class="o">:</span>     <span class="n">null</span><span class="o">,</span>
+        <span class="s2">"font-size"</span><span class="o">:</span>     <span class="p">(</span><span class="nv">$font-size-base</span> <span class="o">*</span> <span class="mi">.75</span><span class="p">)</span><span class="o">,</span>
+        <span class="s2">"line-height"</span><span class="o">:</span>   <span class="n">null</span><span class="o">,</span>
+        <span class="s2">"border-radius"</span><span class="o">:</span> <span class="mi">.1875rem</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="s2">"small"</span><span class="o">:</span> <span class="p">(</span>
+        <span class="s2">"padding-y"</span><span class="o">:</span>     <span class="n">null</span><span class="o">,</span>
+        <span class="s2">"padding-x"</span><span class="o">:</span>     <span class="n">null</span><span class="o">,</span>
+        <span class="s2">"font-size"</span><span class="o">:</span>     <span class="p">(</span><span class="nv">$font-size-base</span> <span class="o">*</span> <span class="mi">.875</span><span class="p">)</span><span class="o">,</span>
+        <span class="s2">"line-height"</span><span class="o">:</span>   <span class="n">null</span><span class="o">,</span>
+        <span class="s2">"border-radius"</span><span class="o">:</span> <span class="mi">.1875rem</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="s2">"large"</span><span class="o">:</span> <span class="p">(</span>
+        <span class="s2">"padding-y"</span><span class="o">:</span>     <span class="n">null</span><span class="o">,</span>
+        <span class="s2">"padding-x"</span><span class="o">:</span>     <span class="n">null</span><span class="o">,</span>
+        <span class="s2">"font-size"</span><span class="o">:</span>     <span class="p">(</span><span class="nv">$font-size-base</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.125</span><span class="p">)</span><span class="o">,</span>
+        <span class="s2">"line-height"</span><span class="o">:</span>   <span class="n">null</span><span class="o">,</span>
+        <span class="s2">"border-radius"</span><span class="o">:</span> <span class="mi">.3125rem</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="s2">"xlarge"</span><span class="o">:</span> <span class="p">(</span>
+        <span class="s2">"padding-y"</span><span class="o">:</span>     <span class="n">null</span><span class="o">,</span>
+        <span class="s2">"padding-x"</span><span class="o">:</span>     <span class="n">null</span><span class="o">,</span>
+        <span class="s2">"font-size"</span><span class="o">:</span>     <span class="p">(</span><span class="nv">$font-size-base</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.25</span><span class="p">)</span><span class="o">,</span>
+        <span class="s2">"line-height"</span><span class="o">:</span>   <span class="n">null</span><span class="o">,</span>
+        <span class="s2">"border-radius"</span><span class="o">:</span> <span class="mi">.3125rem</span>
+    <span class="p">)</span>
+<span class="p">);</span></code></pre></figure>
+
+<p>If you wish to have more concise control over components, you can always force the sizing values to fit your needs.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Used for button, button groups, pagination, form-control, and input-group</span>
+<span class="nv">$component-sizes</span><span class="p">:</span> <span class="p">(</span>
+    <span class="n">xsmall</span><span class="o">:</span> <span class="p">(</span>
+        <span class="n">font-size</span><span class="o">:</span>      <span class="mi">.75rem</span><span class="o">,</span>
+        <span class="n">padding-y</span><span class="o">:</span>      <span class="mi">.1875rem</span><span class="o">,</span>
+        <span class="n">padding-x</span><span class="o">:</span>      <span class="mi">.375rem</span><span class="o">,</span>
+        <span class="n">border-radius</span><span class="o">:</span>  <span class="mi">.1875rem</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="n">small</span><span class="o">:</span> <span class="p">(</span>
+        <span class="n">font-size</span><span class="o">:</span>      <span class="mi">.875rem</span><span class="o">,</span>
+        <span class="n">padding-y</span><span class="o">:</span>      <span class="mi">.25rem</span><span class="o">,</span>
+        <span class="n">padding-x</span><span class="o">:</span>      <span class="mi">.5rem</span><span class="o">,</span>
+        <span class="n">border-radius</span><span class="o">:</span>  <span class="mi">.1875rem</span>
+   <span class="p">)</span><span class="o">,</span>
+    <span class="nb">large</span><span class="o">:</span> <span class="p">(</span>
+        <span class="n">font-size</span><span class="o">:</span>      <span class="m">1</span><span class="mi">.25rem</span><span class="o">,</span>
+        <span class="n">padding-y</span><span class="o">:</span>      <span class="mi">.625rem</span><span class="o">,</span>
+        <span class="n">padding-x</span><span class="o">:</span>      <span class="m">1</span><span class="mi">.25rem</span><span class="o">,</span>
+        <span class="n">border-radius</span><span class="o">:</span>  <span class="mi">.3125rem</span>
+    <span class="p">)</span><span class="o">,</span>
+    <span class="n">xlarge</span><span class="o">:</span> <span class="p">(</span>
+        <span class="n">font-size</span><span class="o">:</span>      <span class="m">1</span><span class="mi">.5rem</span><span class="o">,</span>
+        <span class="n">padding-y</span><span class="o">:</span>      <span class="mi">.75rem</span><span class="o">,</span>
+        <span class="n">padding-x</span><span class="o">:</span>      <span class="m">1</span><span class="mi">.5rem</span><span class="o">,</span>
+        <span class="n">border-radius</span><span class="o">:</span>  <span class="mi">.3125rem</span>
+    <span class="p">)</span>
+<span class="p">);</span></code></pre></figure>
+
+<h2 id="color-themes">Color Themes</h2>
+
+<p>Colors that are defined in the <code class="highlighter-rouge">$control-color</code> and</p>
+
+<h3 id="adding-a-theme">Adding a Theme</h3>
+
+<p>Extend the default contextual color map with your own custom colors.</p>
+
+<p>Yes, it is a substantial and confusing piece of SCSS, but allows for reasonable flexibility.</p>
+
+<p>The <code class="highlighter-rouge">$control-themes</code> map is used by mainly by control items—specifically—buttons, badges, and switches.</p>
+
+<p>The <code class="highlighter-rouge">$context-themes</code> map is used for contextual items—specifically—alerts, lists, and tables.</p>
+
+<p>You can also add a single color map without all the additional color mixing functions with something a bit simpler.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Adding a color theme</span>
+<span class="nv">$single-color</span><span class="p">:</span> <span class="p">(</span>
+    <span class="s2">"purple"</span><span class="o">:</span> <span class="p">(</span>
+        <span class="s2">"bg"</span><span class="o">:</span>                        <span class="mh">#990099</span><span class="o">,</span>
+        <span class="s2">"color"</span><span class="o">:</span>                     <span class="mh">#fff</span><span class="o">,</span>
+        <span class="s2">"border-color"</span><span class="o">:</span>              <span class="mh">#800080</span><span class="o">,</span>
+        <span class="s2">"hover-bg"</span><span class="o">:</span>                  <span class="mh">#770077</span><span class="o">,</span>
+        <span class="s2">"hover-color"</span><span class="o">:</span>               <span class="mh">#fff</span><span class="o">,</span>
+        <span class="s2">"hover-border-color"</span><span class="o">:</span>        <span class="mh">#660066</span><span class="o">,</span>
+        <span class="s2">"active-hover-bg"</span><span class="o">:</span>           <span class="mh">#ffb3ff</span><span class="o">,</span>
+        <span class="s2">"active-hover-color"</span><span class="o">:</span>        <span class="mh">#990099</span><span class="o">,</span>
+        <span class="s2">"active-hover-border-color"</span><span class="o">:</span> <span class="mh">#ff29ff</span>
+    <span class="p">);</span>
+<span class="err">);</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Required - functions</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/functions"</span><span class="p">;</span>
+
+<span class="c1">// Required - settings and mixins</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/settings"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/mixins"</span><span class="p">;</span>
+
+<span class="c1">// Custom theme addition/removal go in this location</span>
+<span class="nv">$btn-themes</span><span class="p">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$btn-themes</span><span class="o">,</span> <span class="nv">$single-color</span><span class="p">);</span>
+
+<span class="c1">// Core and Components</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/reboot"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/typography"</span><span class="p">;</span>
+<span class="nc">...</span></code></pre></figure>
+
+<h3 id="removing-a-theme">Removing a Theme</h3>
+
+<p>Just like removing from the color maps, use <code class="highlighter-rouge">map-remove()</code> to remove themes from <code class="highlighter-rouge">$btn-themes</code>.</p>
+
+<p>As before, insert this setting after the <em>Required</em> sections and before the <em>Core and Components</em> section.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Required - functions</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/functions"</span><span class="p">;</span>
+
+<span class="c1">// Required - settings and mixins</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/settings"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/mixins"</span><span class="p">;</span>
+
+<span class="c1">// Custom theme addition/removal go in this location</span>
+<span class="nv">$btn-themes</span><span class="p">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="s1">'warning'</span><span class="o">,</span> <span class="s1">'light'</span><span class="o">,</span> <span class="s1">'dark'</span><span class="p">);</span>
+
+<span class="c1">// Core and Components</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/reboot"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/figuration/scss/typography"</span><span class="p">;</span>
+<span class="nc">...</span></code></pre></figure>
+
+<h2 id="palette-variables">Palette Variables</h2>
+
+<p>When enabled, any theme in the <code class="highlighter-rouge">$palette-themes</code> map get CSS generated for each defined level for both text and background variants.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Palette Colors</span>
+<span class="nv">$red</span><span class="p">:</span>       <span class="mh">#c81d0e</span><span class="p">;</span>
+<span class="nv">$green</span><span class="p">:</span>     <span class="mh">#108918</span><span class="p">;</span>
+<span class="nv">$blue</span><span class="p">:</span>      <span class="mh">#1242ba</span><span class="p">;</span>
+<span class="nv">$cyan</span><span class="p">:</span>      <span class="mh">#117dba</span><span class="p">;</span>
+<span class="nv">$yellow</span><span class="p">:</span>    <span class="mh">#c98800</span><span class="p">;</span>
+<span class="nv">$gray</span><span class="p">:</span>      <span class="mh">#666</span><span class="p">;</span>
+
+<span class="c1">// Palette Map</span>
+<span class="nv">$palette-themes</span><span class="p">:</span> <span class="p">(</span>
+    <span class="s2">"red"</span><span class="o">:</span>      <span class="nv">$red</span><span class="o">,</span>
+    <span class="s2">"green"</span><span class="o">:</span>    <span class="nv">$green</span><span class="o">,</span>
+    <span class="s2">"blue"</span><span class="o">:</span>     <span class="nv">$blue</span><span class="o">,</span>
+    <span class="s2">"cyan"</span><span class="o">:</span>     <span class="nv">$cyan</span><span class="o">,</span>
+    <span class="s2">"yellow"</span><span class="o">:</span>   <span class="nv">$yellow</span><span class="o">,</span>
+    <span class="s2">"gray"</span><span class="o">:</span>     <span class="nv">$gray</span>
+<span class="p">);</span></code></pre></figure>
+
+<p>The default setting for the color levels to be generated is defined as the following.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$palette-levels</span><span class="p">:</span> <span class="m">50</span> <span class="m">100</span> <span class="m">200</span> <span class="m">300</span> <span class="m">400</span> <span class="m">500</span> <span class="m">600</span> <span class="m">700</span> <span class="m">800</span> <span class="m">900</span><span class="p">;</span></code></pre></figure>
+
+<h2 id="css-variables">CSS Variables</h2>
+
+<p>Figuration includes some <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">CSS custom properties (variables)</a> in its compiled CSS. These provide easy access to commonly used values like the theme colors, breakpoints, and primary font stacks when working in your browser’s Inspector, a code sandbox, or general prototyping.</p>
+
+<h3 id="available-variables">Available Variables</h3>
+
+<p>Here are the variables we include (note that the <code class="highlighter-rouge">:root</code> is required). They’re located in our <code class="highlighter-rouge">_root.scss</code> file.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:root</span> <span class="p">{</span>
+  <span class="py">--color-primary</span><span class="p">:</span> <span class="m">#0055e9</span><span class="p">;</span>
+  <span class="py">--color-secondary</span><span class="p">:</span> <span class="m">#5e7182</span><span class="p">;</span>
+  <span class="py">--color-info</span><span class="p">:</span> <span class="m">#1680a4</span><span class="p">;</span>
+  <span class="py">--color-success</span><span class="p">:</span> <span class="m">#0e8a16</span><span class="p">;</span>
+  <span class="py">--color-warning</span><span class="p">:</span> <span class="m">#f8c223</span><span class="p">;</span>
+  <span class="py">--color-danger</span><span class="p">:</span> <span class="m">#d42314</span><span class="p">;</span>
+  <span class="py">--color-light</span><span class="p">:</span> <span class="m">#eff1f3</span><span class="p">;</span>
+  <span class="py">--color-dark</span><span class="p">:</span> <span class="m">#343e48</span><span class="p">;</span>
+  <span class="py">--color-uibase</span><span class="p">:</span> <span class="m">#5e7182</span><span class="p">;</span>
+  <span class="py">--color-gray</span><span class="p">:</span> <span class="m">#666</span><span class="p">;</span>
+  <span class="py">--breakpoint-xs</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="py">--breakpoint-sm</span><span class="p">:</span> <span class="m">36em</span><span class="p">;</span>
+  <span class="py">--breakpoint-md</span><span class="p">:</span> <span class="m">48em</span><span class="p">;</span>
+  <span class="py">--breakpoint-lg</span><span class="p">:</span> <span class="m">62em</span><span class="p">;</span>
+  <span class="py">--breakpoint-xl</span><span class="p">:</span> <span class="m">75em</span><span class="p">;</span>
+  <span class="py">--font-family-sans-serif</span><span class="p">:</span> <span class="n">-apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span> <span class="s1">"Segoe UI"</span><span class="p">,</span> <span class="n">Roboto</span><span class="p">,</span> <span class="s1">"Noto Sans"</span><span class="p">,</span> <span class="s1">"Helvetica Neue"</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">,</span> <span class="s1">"Apple Color Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Symbol"</span><span class="p">,</span> <span class="s1">"Noto Color Emoji"</span><span class="p">;</span>
+  <span class="py">--font-family-serif</span><span class="p">:</span> <span class="n">Georgia</span><span class="p">,</span> <span class="s1">"Times New Roman"</span><span class="p">,</span> <span class="n">Times</span><span class="p">,</span> <span class="nb">serif</span><span class="p">;</span>
+  <span class="py">--font-family-monospace</span><span class="p">:</span> <span class="n">SFMono-Regular</span><span class="p">,</span> <span class="n">Menlo</span><span class="p">,</span> <span class="n">Monaco</span><span class="p">,</span> <span class="n">Consolas</span><span class="p">,</span> <span class="s1">"Liberation Mono"</span><span class="p">,</span> <span class="s1">"Courier New"</span><span class="p">,</span> <span class="nb">monospace</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="examples">Examples</h3>
+
+<p>CSS variables offer similar flexibility to Sass’s variables, but without the need for compilation before being served to the browser. For example, here we are resetting the font and link styles with CSS variables.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">font</span><span class="p">:</span> <span class="m">1rem</span><span class="p">/</span><span class="m">1.5</span> <span class="n">var</span><span class="p">(</span><span class="n">--font-family-sans-serif</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--color-primary</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="breakpoint-variables">Breakpoint Variables</h3>
+
+<p>While breakpoints are included in the CSS variables (e.g., <code class="highlighter-rouge">--breakpoint-md</code>), <strong>these are not supported in media queries</strong>, but they can still be used <em>within</em> rulesets in media queries. <a href="https://www.w3.org/TR/css-variables-1/#using-variables">Learn more in the spec.</a> The intention of including the breakpoints as CSS variables is for use in JavaScript. See some information about <a href="https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care#working_with_custom_properties_in_javascript">working with custom properties in JavaScript</a>.</p>
+
+<p>Here’s an example of <strong>what’s not supported:</strong></p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--breakpoint-sm</span><span class="p">))</span> <span class="p">{</span>
+  <span class="o">...</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>And here’s an example of <strong>what is supported:</strong></p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">48em</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.custom-element</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--color-primary</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="sass-reference">SASS Reference</h3>
+
+<h4 id="variables">Variables</h4>
+
+<p>The available <a href="/figuration-preview/4.0.0-alpha.5/get-started/options/">Customization options</a>, or Sass variables, that can be customized for generating the root CSS variables.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-root</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of root CSS variables.
+                    Smaller segements of the root CSS variables can be disabled with the following <code>$enable-*</code> variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-root-colors</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the color CSS variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-root-breakpoints</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the breakpoint CSS variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-root-fonts</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the font CSS variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$root-colors</code></td>
+                <td>map</td>
+                <td><code> map-merge($base-colors, $palette-colors)</code></td>
+                <td>
+                    Colors to output as CSS variables.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 id="mixins">Mixins</h4>
+
+<p>No mixins available.</p>
+
+            </main>
+        </div>
+
+        <div class="toplink">
+            <a href="#content">Top of Page <span class="caret"></span></a>
+        </div>
+    </div>
+
+    <footer class="cf-footer">
+    <div class="container">
+        <p class="mb-0">
+            Current version: 4.0.0-alpha.5
+        </p>
+        <p>
+            <a href="/figuration-preview/4.0.0-alpha.5/migration/">Migration Notes (in progress)</a>
+        </p>
+        <ul class="footer-links d-inline-block d-sm-block mx-auto mx-sm-0">
+            <li><a href="/figuration-preview/about/overview/">About</a></li>
+            <li><a href="https://github.com/cast-org/figuration">GitHub Project</a></li>
+            <li><a href="https://github.com/cast-org/figuration/issues">Issues</a></li>
+            <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
+        </ul>
+        <p>
+            &copy; 2013-2019 <a href="http://www.cast.org/">CAST, Inc.</a>
+            <br />
+            Portions: &copy; 2011-2019 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+        </p>
+        <p>
+            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
+            docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.
+        </p>
+
+        <hr />
+
+        <p class="font-weight-bold mb-0_25">Funding generously provided by:</p>
+        <div class="media footer-partners">
+            <div class="d-flex me-0_5">
+                <img src="/figuration-preview/4.0.0-alpha.5/assets/img/aem-logo.png" class="media-object" width="40" height="40" alt="AEM logo" />
+            </div>
+            <div class="media-body">
+                <span class="h6 partner-title"><a href="http://aem.cast.org/">National Center on Accessible Educational Materials at CAST, Inc.</a></span><br />
+                <small>Disclaimer: This does not necessarily represent endorsement by or the policies of the National Center on Accessible Educational Materials, the US Department of Education, and the US Federal Government.</small>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+    
+</body>
+</html>

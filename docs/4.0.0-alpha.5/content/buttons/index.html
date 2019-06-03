@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Use Figuration’s custom button styles for actions in forms, dialogs, and more. Includes support for a handful of contextual variations, sizes, states, and more.">
+<meta name="generator" content="Jekyll v3.8.5">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="4.0.0-alpha.5">
+
+<title>Buttons &#124; CAST Figuration</title>
+
+<!-- Favicons -->
+<link sizes="180x180" rel="apple-touch-icon" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/apple-touch-icon.png"/>
+<link sizes="32x32" rel="icon" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/favicon-32x32.png" type="image/png"/>
+<link sizes="16x16" rel="icon" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/favicon-16x16.png" type="image/png"/>
+<link rel="manifest" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/site.webmanifest"/>
+<link color="#5bbad5" rel="mask-icon" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/safari-pinned-tab.svg"/>
+<link rel="shortcut icon" href="/figuration-preview/4.0.0-alpha.5/assets/favicon/favicon.ico"/>
+<meta name="msapplication-TileColor" content="#117cba"/>
+<meta name="msapplication-config" content="/figuration-preview/4.0.0-alpha.5/assets/favicon/browserconfig.xml"/>
+<meta name="theme-color" content="#ffffff"/>
+
+<!-- Font CSS -->
+<link href="/figuration-preview/4.0.0-alpha.5/assets/fonts/fontawesome/css/all.min.css" rel="stylesheet" property="stylesheet">
+
+
+<!-- Core CSS -->
+<link href="/figuration-preview/4.0.0-alpha.5/dist/css/figuration.css" rel="stylesheet" id="cssCore">
+
+
+<!-- Algolia DocSearch CSS -->
+
+
+<!-- Docs CSS -->
+<link href="/figuration-preview/4.0.0-alpha.5/assets/css/docs.css" rel="stylesheet" id="cssDocs">
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/figuration-preview/4.0.0-alpha.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+
+<!-- Core JS -->
+<script src="/figuration-preview/4.0.0-alpha.5/dist/js/figuration.js"></script>
+
+
+<!-- Docs JS -->
+<script src="/figuration-preview/4.0.0-alpha.5/assets/js/vendor/anchor.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.5/assets/js/vendor/clipboard.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.5/assets/js/vendor/holder.min.js"></script>
+  <script src="/figuration-preview/4.0.0-alpha.5/assets/js/src/docs.js"></script>
+
+
+<!-- IE emulation mode warning -->
+<script src="/figuration-preview/4.0.0-alpha.5/assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@figuration_org">
+<meta name="twitter:creator" content="@figuration_org">
+<meta name="twitter:title" content="Buttons">
+<meta name="twitter:description" content="Use Figuration’s custom button styles for actions in forms, dialogs, and more. Includes support for a handful of contextual variations, sizes, states, and more.">
+<meta name="twitter:image" content="https://figuration-org.github.io/4.0.0-alpha.5/assets/brand/figuration-social.png">
+
+<!-- Google Analytics -->
+
+
+
+</head>
+<body>
+    <a class="skipnav sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="v4-warning">
+    v4 is in Alpha! Not ready for Production!
+</div>
+<header class="navbar navbar-expand-lg navbar-dark print-hide cf-header">
+    <a class="navbar-brand" href="/figuration-preview/" aria-label="CAST Figuration">
+        <img src="/figuration-preview/4.0.0-alpha.5/assets/brand/figuration-outline.svg" class="navbar-brand-logo" alt="" />
+        <span class="sr-only-xs-down">CAST Figuration</span>
+    </a>
+    <button class="navbar-toggle flex-first me-0_5" type="button" data-cfw="collapse" data-cfw-collapse-target="#cf-topnav" aria-label="Toggle navigation">
+        <span class="cf-header-menu" aria-hidden="true">&#8801;</span>
+    </button>
+    <div class="navbar-collapse collapse flex-last flex-lg-unordered text-nowrap" id="cf-topnav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/get-started/quick-start/" class="nav-link ">Get Started</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/layout/overview/" class="nav-link ">Layout</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/content/reboot/" class="nav-link active">Content <span class="sr-only">(current section)</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/components/alerts/" class="nav-link ">Components</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/utilities/borders/" class="nav-link ">Utilities</a>
+            </li>
+            <li class="nav-item">
+                <a href="/figuration-preview/4.0.0-alpha.5/widgets/overview/" class="nav-link ">Widgets</a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="navbar-nav ms-auto cf-header-social">
+        <li class="nav-item dropdown dropdown-menu-reverse me-1">
+            <a href="#" role="button" class="nav-link pe-0" data-cfw="dropdown">
+                v4.0.0-alpha.5
+                <span class="caret" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">Stable</li>
+                <li><a href="http://figuration.org">Latest (v3.0.5)</a></li>
+                <li class="dropdown-divider"></li>
+                <li class="dropdown-header">Development</li>
+                <li><a href="/figuration-preview/4.0.0-alpha.5/" class="active">v4.0.0-alpha.5</a></li>
+                <li><a href="/figuration-preview/4.0.0-alpha.4/">v4.0.0-alpha.4</a></li>
+
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="https://twitter.com/figuration_org" class="nav-link" aria-label="Twitter" title="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" focusable="false"  class="cf-header-icon"  >
+  <title>Twitter</title>
+  <path fill="currentColor" d="M512 97.2c-18.84 8.36-39.08 14-60.33 16.55 21.7-13 38.34-33.58 46.2-58.1-20.3 12.03-42.8 20.77-66.72 25.48C412 60.7 384.7 47.96 354.48 47.96c-58 0-105.04 47.03-105.04 105.03 0 8.23.93 16.25 2.72 23.93-87.3-4.38-164.7-46.2-216.5-109.75-9.05 15.5-14.24 33.56-14.24 52.8 0 36.45 18.55 68.6 46.73 87.44-17.2-.54-33.4-5.27-47.57-13.14v1.32c0 50.9 36.2 93.35 84.25 103-8.8 2.4-18.1 3.7-27.68 3.7-6.76 0-13.34-.67-19.76-1.9 13.36 41.73 52.15 72.1 98.12 72.95-35.95 28.18-81.25 44.97-130.46 44.97-8.48 0-16.84-.5-25.06-1.47 46.5 29.8 101.7 47.2 161.02 47.2 193.2 0 298.87-160.07 298.87-298.88 0-4.55-.1-9.08-.32-13.6 20.53-14.8 38.34-33.3 52.42-54.36z"/>
+</svg>
+
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="https://github.com/cast-org/figuration" class="nav-link" aria-label="Github" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false"  class="cf-header-icon"  >
+  <title>GitHub</title>
+  <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.3 6.53 5.47 7.6.4.06.55-.18.55-.4v-1.48c-2.02.37-2.54-.5-2.7-.94-.1-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.62 0 1.07.58 1.22.82.72 1.2 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.77-.2-3.63-.9-3.63-3.95 0-.87.3-1.6.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.2 2.2.83.64-.18 1.32-.27 2-.27.68 0 1.36.1 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.93.08 2.13.5.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.3.25.54.73.54 1.48v2.2c0 .22.15.47.55.4C13.7 14.52 16 11.52 16 8c0-4.42-3.58-8-8-8z"/>
+</svg>
+
+            </a>
+        </li>
+        <li class="nav-item dropdown dropdown-menu-reverse">
+            <a href="#" role="button" class="nav-link" aria-label="Settings" title="Settings" data-cfw="dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" focusable="false"  class="cf-header-icon"  >
+  <title>Settings</title>
+  <path fill="currentColor" d="M3.5 0l-.5 1.19c-.1.03-.19.08-.28.13l-1.19-.5-.72.72.5 1.19c-.05.1-.09.18-.13.28l-1.19.5v1l1.19.5c.04.1.08.18.13.28l-.5 1.19.72.72 1.19-.5c.09.04.18.09.28.13l.5 1.19h1l.5-1.19c.09-.04.19-.08.28-.13l1.19.5.72-.72-.5-1.19c.04-.09.09-.19.13-.28l1.19-.5v-1l-1.19-.5c-.03-.09-.08-.19-.13-.28l.5-1.19-.72-.72-1.19.5c-.09-.04-.19-.09-.28-.13l-.5-1.19h-1zm.5 2.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5z"/>
+</svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">Direction</li>
+                <li><button type="button" class="dropdown-item" id="dir-ltr">Left-to-right</button></li>
+                <li><button type="button" class="dropdown-item" id="dir-rtl">Right-to-left</button></li>
+            </ul>
+        </li>
+    </ul>
+</header>
+
+    <div class="jumbotron jumbotron-fluid jumbotron-docs">
+        <div class="container-fluid">
+            
+    <div class="h1">Content</div>
+    <p class="lead">
+        Styles for displaying content with some of the most commonly used HTML elements, including normalization, typography, images, tables, buttons, forms, and more.
+    </p>
+
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-xl-2 cf-sidebar">
+                
+
+<nav class="cf-links" aria-label="Section navigation">
+
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+    <div class="h4 cf-sidebar-header">Content</div>
+    <ul class="nav flex-column">
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/content/reboot/" class="nav-link "> Reboot </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/content/color/" class="nav-link "> Color </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/content/typography/" class="nav-link "> Typography </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/content/code/" class="nav-link "> Code </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/content/images/" class="nav-link "> Images </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/content/figures/" class="nav-link "> Figures </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/content/tables/" class="nav-link "> Tables </a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/content/buttons/" class="nav-link active"> Buttons <span class="sr-only">(current page)</span></a>
+            
+        </li>
+      
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          
+              <a href="/figuration-preview/4.0.0-alpha.5/content/forms/" class="nav-link "> Forms </a>
+            
+        </li>
+      
+    </ul>
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+</nav>
+
+            </div>
+
+            <nav class="d-none d-xl-block col-xl-2 cf-toc" aria-label="Page navigation">
+            </nav>
+
+            <main class="col-md-9 col-xl-8 cf-content" role="main">
+                <h1 class="cf-title" id="content">
+                    Buttons
+                    
+                </h1>
+
+                <p class="fs-large">Use Figuration's custom button styles for actions in forms, dialogs, and more. Includes support for a handful of contextual variations, sizes, states, and more.</p>
+
+                <h2 class="no_toc" id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#examples" id="markdown-toc-examples">Examples</a></li>
+  <li><a href="#button-tags" id="markdown-toc-button-tags">Button Tags</a></li>
+  <li><a href="#outline-buttons" id="markdown-toc-outline-buttons">Outline Buttons</a></li>
+  <li><a href="#sizes" id="markdown-toc-sizes">Sizes</a>    <ul>
+      <li><a href="#available-sizes" id="markdown-toc-available-sizes">Available Sizes</a></li>
+    </ul>
+  </li>
+  <li><a href="#icon-button" id="markdown-toc-icon-button">Icon Button</a></li>
+  <li><a href="#block-buttons" id="markdown-toc-block-buttons">Block Buttons</a></li>
+  <li><a href="#active-state" id="markdown-toc-active-state">Active State</a></li>
+  <li><a href="#disabled-state" id="markdown-toc-disabled-state">Disabled State</a></li>
+  <li><a href="#checkbox-and-radio-input-buttons" id="markdown-toc-checkbox-and-radio-input-buttons">Checkbox and Radio Input Buttons</a>    <ul>
+      <li><a href="#checkbox-input-button" id="markdown-toc-checkbox-input-button">Checkbox Input Button</a></li>
+      <li><a href="#radio-input-buttons" id="markdown-toc-radio-input-buttons">Radio Input Buttons</a></li>
+      <li><a href="#disabled-input-buttons" id="markdown-toc-disabled-input-buttons">Disabled Input Buttons</a></li>
+      <li><a href="#grouped-input-buttons" id="markdown-toc-grouped-input-buttons">Grouped Input Buttons</a></li>
+    </ul>
+  </li>
+  <li><a href="#sass-reference" id="markdown-toc-sass-reference">SASS Reference</a>    <ul>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+      <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<p>Figuration includes a few predefined button styles, each serving its own semantic purpose.</p>
+
+<div class="cf-callout cf-callout-info">
+<p class="h5 no_toc">Conveying Meaning to Assistive Technologies</p>
+
+<p>Please refer to the <a href="/figuration-preview/4.0.0-alpha.5/get-started/accessibility/#conveying-meaning-with-color">Accessiblity notes about conveying meaning with color</a>.</p>
+</div>
+
+<div class="cf-example">
+<button type="button" class="btn">Default</button>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Link</button>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-light"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-dark"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<h2 id="button-tags">Button Tags</h2>
+
+<p>The <code class="highlighter-rouge">.btn</code> classes are designed to be used with the <code class="highlighter-rouge">&lt;button&gt;</code> element. However, you can also use these classes on <code class="highlighter-rouge">&lt;a&gt;</code> or <code class="highlighter-rouge">&lt;input&gt;</code> elements (though some browsers may apply a slightly different rendering).</p>
+
+<p>When using button classes on <code class="highlighter-rouge">&lt;a&gt;</code> elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a <code class="highlighter-rouge">role="button"</code> to appropriately convey their purpose to assistive technologies such as screen readers.</p>
+
+<div class="cf-example">
+<a class="btn btn-primary" href="#" role="button">Link</a>
+<button class="btn btn-primary" type="submit">Button</button>
+<input class="btn btn-primary" type="button" value="Input" />
+<input class="btn btn-primary" type="submit" value="Submit" />
+<input class="btn btn-primary" type="reset" value="Reset" />
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Input"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Submit"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"reset"</span> <span class="na">value=</span><span class="s">"Reset"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h2 id="outline-buttons">Outline Buttons</h2>
+
+<p>In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the <code class="highlighter-rouge">.btn-outline-*</code> ones to remove all background images and colors on any button.</p>
+
+<div class="cf-example">
+<button type="button" class="btn btn-outline">Default</button>
+<button type="button" class="btn btn-outline-primary">Primary</button>
+<button type="button" class="btn btn-outline-secondary">Secondary</button>
+<button type="button" class="btn btn-outline-success">Success</button>
+<button type="button" class="btn btn-outline-info">Info</button>
+<button type="button" class="btn btn-outline-warning">Warning</button>
+<button type="button" class="btn btn-outline-danger">Danger</button>
+<button type="button" class="btn btn-outline-light">Light</button>
+<button type="button" class="btn btn-outline-dark">Dark</button>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-info"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-light"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-dark"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<h2 id="sizes">Sizes</h2>
+
+<h3 id="available-sizes">Available Sizes</h3>
+
+<p>Fancy larger or smaller buttons? Add <code class="highlighter-rouge">.btn-xsmall</code>, <code class="highlighter-rouge">.btn-small</code>, <code class="highlighter-rouge">.btn-large</code>, or <code class="highlighter-rouge">.btn-xlarge</code> for additional sizes.</p>
+
+<div class="cf-example">
+<p>
+  <button type="button" class="btn btn-primary btn-xlarge">Extra Large button</button>
+  <button type="button" class="btn btn-xlarge">Extra Large button</button>
+</p>
+<p>
+  <button type="button" class="btn btn-primary btn-large">Large button</button>
+  <button type="button" class="btn btn-large">Large button</button>
+</p>
+<p>
+  <button type="button" class="btn btn-primary">Default button</button>
+  <button type="button" class="btn">Default button</button>
+</p>
+<p>
+  <button type="button" class="btn btn-primary btn-small">Small button</button>
+  <button type="button" class="btn btn-small">Small button</button>
+</p>
+<p>
+  <button type="button" class="btn btn-primary btn-xsmall">Extra small button</button>
+  <button type="button" class="btn btn-xsmall">Extra small button</button>
+</p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-xlarge"</span><span class="nt">&gt;</span>Extra Large button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-xlarge"</span><span class="nt">&gt;</span>Extra Large button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-large"</span><span class="nt">&gt;</span>Large button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-large"</span><span class="nt">&gt;</span>Large button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Default button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>Default button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-small"</span><span class="nt">&gt;</span>Small button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-small"</span><span class="nt">&gt;</span>Small button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-xsmall"</span><span class="nt">&gt;</span>Extra small button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-xsmall"</span><span class="nt">&gt;</span>Extra small button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<h2 id="icon-button">Icon Button</h2>
+
+<p>If a button only contains an icon, you can use <code class="highlighter-rouge">.btn-icon</code> to reduce the horizontal <code class="highlighter-rouge">padding</code> of the button.  This will create more of a square button rather than a rectangular one using the default padding.</p>
+
+<p>The icons shown in the examples are from <a href="https://fontawesome.com/">Font Awesome</a>, and not included with Figuration.</p>
+
+<div class="cf-example">
+<p>
+  <button type="button" class="btn btn-icon btn-xlarge" aria-label="Extra large icon button"><span class="fas fa-fw fa-info-circle" aria-hidden="true"></span></button>
+</p>
+<p>
+  <button type="button" class="btn btn-icon btn-large" aria-label="Large icon button"><span class="fas fa-fw fa-info-circle" aria-hidden="true"></span></button>
+</p>
+<p>
+  <button type="button" class="btn btn-icon" aria-label="Default size icon button"><span class="fas fa-fw fa-info-circle" aria-hidden="true"></span></button>
+</p>
+<p>
+  <button type="button" class="btn btn-icon btn-small" aria-label="Small icon button"><span class="fas fa-fw fa-info-circle" aria-hidden="true"></span></button>
+</p>
+<p>
+  <button type="button" class="btn btn-icon btn-xsmall" aria-label="Extra small icon button"><span class="fas fa-fw fa-info-circle" aria-hidden="true"></span></button>
+</p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-icon btn-xlarge"</span> <span class="na">aria-label=</span><span class="s">"Extra large icon button"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fas fa-fw fa-info-circle"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-icon btn-large"</span> <span class="na">aria-label=</span><span class="s">"Large icon button"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fas fa-fw fa-info-circle"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-icon"</span> <span class="na">aria-label=</span><span class="s">"Default size icon button"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fas fa-fw fa-info-circle"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-icon btn-small"</span> <span class="na">aria-label=</span><span class="s">"Small icon button"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fas fa-fw fa-info-circle"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-icon btn-xsmall"</span> <span class="na">aria-label=</span><span class="s">"Extra small icon button"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fas fa-fw fa-info-circle"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<h2 id="block-buttons">Block Buttons</h2>
+
+<p>Create block level buttons—those that span the full width of a parent—by adding <code class="highlighter-rouge">.btn-block</code>.</p>
+
+<div class="cf-example">
+<button type="button" class="btn btn-primary btn-xlarge btn-block">Extra Large Block level button</button>
+<button type="button" class="btn btn-secondary btn-large btn-block">Large Block level button</button>
+<button type="button" class="btn btn-success btn-block">Default block level button</button>
+<button type="button" class="btn btn-warning btn-small btn-block">Small Block level button</button>
+<button type="button" class="btn btn-danger btn-xsmall btn-block">Extra Small Block level button</button>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-xlarge btn-block"</span><span class="nt">&gt;</span>Extra Large Block level button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-large btn-block"</span><span class="nt">&gt;</span>Large Block level button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-success btn-block"</span><span class="nt">&gt;</span>Default block level button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-warning btn-small btn-block"</span><span class="nt">&gt;</span>Small Block level button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger btn-xsmall btn-block"</span><span class="nt">&gt;</span>Extra Small Block level button<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<h2 id="active-state">Active State</h2>
+
+<p>Buttons will appear pressed (with a darker background and border) when active. <strong>There’s no need to add a class to <code class="highlighter-rouge">&lt;button&gt;</code>s as they use the <code class="highlighter-rouge">:active</code> pseudo-class</strong>. However, you can still force the same active appearance with <code class="highlighter-rouge">.active</code> (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.</p>
+
+<div class="cf-example">
+<strong>Standard Buttons:</strong>
+<p>
+<button type="button" class="btn active">Default</button>
+<button type="button" class="btn btn-primary active">Primary</button>
+<button type="button" class="btn btn-secondary active">Secondary</button>
+<button type="button" class="btn btn-success active">Success</button>
+<button type="button" class="btn btn-info active">Info</button>
+<button type="button" class="btn btn-warning active">Warning</button>
+<button type="button" class="btn btn-danger active">Danger</button>
+<button type="button" class="btn btn-light active">Light</button>
+<button type="button" class="btn btn-dark active">Dark</button>
+<button type="button" class="btn btn-link active">Link</button>
+</p>
+
+<strong>Outline Buttons:</strong>
+<p>
+<button type="button" class="btn btn-outline active">Default</button>
+<button type="button" class="btn btn-outline-primary active">Primary</button>
+<button type="button" class="btn btn-outline-secondary active">Secondary</button>
+<button type="button" class="btn btn-outline-success active">Success</button>
+<button type="button" class="btn btn-outline-info active">Info</button>
+<button type="button" class="btn btn-outline-warning active">Warning</button>
+<button type="button" class="btn btn-outline-danger active">Danger</button>
+<button type="button" class="btn btn-outline-light active">Light</button>
+<button type="button" class="btn btn-outline-dark active">Dark</button>
+</p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;strong&gt;</span>Standard Buttons:<span class="nt">&lt;/strong&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn active"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary active"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary active"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-success active"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info active"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-warning active"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger active"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-light active"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-dark active"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link active"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;strong&gt;</span>Outline Buttons:<span class="nt">&lt;/strong&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline active"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary active"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-secondary active"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-success active"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-info active"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-warning active"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-danger active"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-light active"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-dark active"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<h2 id="disabled-state">Disabled State</h2>
+
+<p>Make buttons look inactive by adding the <code class="highlighter-rouge">disabled</code> boolean attribute to any <code class="highlighter-rouge">&lt;button&gt;</code> element.</p>
+
+<div class="cf-example">
+<strong>Standard Buttons:</strong>
+<p>
+<button type="button" class="btn" disabled="">Default</button>
+<button type="button" class="btn btn-primary" disabled="">Primary</button>
+<button type="button" class="btn btn-secondary" disabled="">Secondary</button>
+<button type="button" class="btn btn-success" disabled="">Success</button>
+<button type="button" class="btn btn-info" disabled="">Info</button>
+<button type="button" class="btn btn-warning" disabled="">Warning</button>
+<button type="button" class="btn btn-danger" disabled="">Danger</button>
+<button type="button" class="btn btn-light" disabled="">Light</button>
+<button type="button" class="btn btn-dark" disabled="">Dark</button>
+<button type="button" class="btn btn-link" disabled="">Link</button>
+</p>
+
+<strong>Outline Buttons:</strong>
+<p>
+<button type="button" class="btn btn-outline" disabled="">Default</button>
+<button type="button" class="btn btn-outline-primary" disabled="">Primary</button>
+<button type="button" class="btn btn-outline-secondary" disabled="">Secondary</button>
+<button type="button" class="btn btn-outline-success" disabled="">Success</button>
+<button type="button" class="btn btn-outline-info" disabled="">Info</button>
+<button type="button" class="btn btn-outline-warning" disabled="">Warning</button>
+<button type="button" class="btn btn-outline-danger" disabled="">Danger</button>
+<button type="button" class="btn btn-outline-light" disabled="">Light</button>
+<button type="button" class="btn btn-outline-dark" disabled="">Dark</button>
+</p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;strong&gt;</span>Standard Buttons:<span class="nt">&lt;/strong&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-success"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-warning"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-light"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-dark"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;strong&gt;</span>Outline Buttons:<span class="nt">&lt;/strong&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-secondary"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-success"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-info"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-warning"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-danger"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-light"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-dark"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<p>Disabled buttons using the <code class="highlighter-rouge">&lt;a&gt;</code> element behave a bit different:</p>
+
+<div class="cf-callout cf-callout-info">
+<p class="h5 no_toc">Disabling Anchors</p>
+
+<p>Please refer to the <a href="/figuration-preview/4.0.0-alpha.5/get-started/accessibility/#disabled-anchors">Accessiblity notes about disabled anchors</a>.</p>
+</div>
+
+<div class="cf-example">
+<strong>Anchor Standard Buttons:</strong>
+<p>
+<a href="#" role="button" class="btn disabled" tabindex="-1" aria-disabled="true">Default</a>
+<a href="#" role="button" class="btn btn-primary disabled" tabindex="-1" aria-disabled="true">Primary</a>
+<a href="#" role="button" class="btn btn-secondary disabled" tabindex="-1" aria-disabled="true">Secondary</a>
+<a href="#" role="button" class="btn btn-success disabled" tabindex="-1" aria-disabled="true">Success</a>
+<a href="#" role="button" class="btn btn-info disabled" tabindex="-1" aria-disabled="true">Info</a>
+<a href="#" role="button" class="btn btn-warning disabled" tabindex="-1" aria-disabled="true">Warning</a>
+<a href="#" role="button" class="btn btn-danger disabled" tabindex="-1" aria-disabled="true">Danger</a>
+<a href="#" role="button" class="btn btn-light disabled" tabindex="-1" aria-disabled="true">Light</a>
+<a href="#" role="button" class="btn btn-dark disabled" tabindex="-1" aria-disabled="true">Dark</a>
+<a href="#" role="button" class="btn btn-link disabled" tabindex="-1" aria-disabled="true">Link</a>
+
+</p>
+
+<strong>Anchor Outline Buttons:</strong>
+<p>
+<a href="#" role="button" class="btn btn-outline disabled" tabindex="-1" aria-disabled="true">Default</a>
+<a href="#" role="button" class="btn btn-outline-primary disabled" tabindex="-1" aria-disabled="true">Primary</a>
+<a href="#" role="button" class="btn btn-outline-secondary disabled" tabindex="-1" aria-disabled="true">Secondary</a>
+<a href="#" role="button" class="btn btn-outline-success disabled" tabindex="-1" aria-disabled="true">Success</a>
+<a href="#" role="button" class="btn btn-outline-info disabled" tabindex="-1" aria-disabled="true">Info</a>
+<a href="#" role="button" class="btn btn-outline-warning disabled" tabindex="-1" aria-disabled="true">Warning</a>
+<a href="#" role="button" class="btn btn-outline-danger disabled" tabindex="-1" aria-disabled="true">Danger</a>
+<a href="#" role="button" class="btn btn-outline-light disabled" tabindex="-1" aria-disabled="true">Light</a>
+<a href="#" role="button" class="btn btn-outline-dark disabled" tabindex="-1" aria-disabled="true">Dark</a>
+</p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;strong&gt;</span>Anchor Standard Buttons:<span class="nt">&lt;/strong&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-success disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-warning disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-light disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-dark disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
+
+<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;strong&gt;</span>Anchor Outline Buttons:<span class="nt">&lt;/strong&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-secondary disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-success disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-info disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-warning disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-danger disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-light disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-dark disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<h2 id="checkbox-and-radio-input-buttons">Checkbox and Radio Input Buttons</h2>
+
+<p>Figuration’s <code class="highlighter-rouge">.btn</code> styles can be applied to checkbox and radio inputs as well. By using a wrapping <code class="highlighter-rouge">.btn-check</code> class, visually hiding the <code class="highlighter-rouge">&lt;input&gt;</code> with <code class="highlighter-rouge">.btn-check-input</code>, and the sibling selector (<code class="highlighter-rouge">~</code>) to control <code class="highlighter-rouge">.btn</code> styling based on the <code class="highlighter-rouge">&lt;input&gt;</code>’s state.
+<strong>A single class is used to consolidate layout and behavior of their HTML elements.</strong></p>
+
+<p>The <code class="highlighter-rouge">&lt;input&gt;</code>s and <code class="highlighter-rouge">&lt;label&gt;</code>s are sibling elements as opposed to an <code class="highlighter-rouge">&lt;input&gt;</code> within a <code class="highlighter-rouge">&lt;label&gt;</code>. You will need to use <code class="highlighter-rouge">id</code> and <code class="highlighter-rouge">for</code> attributes to associate the <code class="highlighter-rouge">&lt;input&gt;</code> and <code class="highlighter-rouge">&lt;label&gt;</code> elements.</p>
+
+<h3 id="checkbox-input-button">Checkbox Input Button</h3>
+
+<div class="cf-example">
+<div class="btn-check">
+    <input id="checkbox0" type="checkbox" class="btn-check-input" />
+    <label for="checkbox0" class="btn">Checkbox Button</label>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-check"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox0"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"btn-check-input"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox0"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>Checkbox Button<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="radio-input-buttons">Radio Input Buttons</h3>
+
+<div class="cf-example">
+<div class="btn-check">
+    <input id="radio0-0" type="radio" name="radio0" class="btn-check-input" checked="" />
+    <label for="radio0-0" class="btn">Radio 1</label>
+</div>
+<div class="btn-check">
+    <input id="radio0-1" type="radio" name="radio0" class="btn-check-input" />
+    <label for="radio0-1" class="btn">Radio 2</label>
+</div>
+<div class="btn-check">
+    <input id="radio0-2" type="radio" name="radio0" class="btn-check-input" />
+    <label for="radio0-2" class="btn">Radio 3</label>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-check"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radio0-0"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio0"</span> <span class="na">class=</span><span class="s">"btn-check-input"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio0-0"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>Radio 1<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-check"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radio0-1"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio0"</span> <span class="na">class=</span><span class="s">"btn-check-input"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio0-1"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>Radio 2<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-check"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radio0-2"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio0"</span> <span class="na">class=</span><span class="s">"btn-check-input"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio0-2"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>Radio 3<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="disabled-input-buttons">Disabled Input Buttons</h3>
+
+<p>Disabled checkboxes and radios are supported, you will need to add the <code class="highlighter-rouge">disabled</code> attribute to the <code class="highlighter-rouge">.btn-check-input</code>. This will also apply the disabled <code class="highlighter-rouge">.btn</code> styling to indicate the input’s state.</p>
+
+<div class="cf-example">
+<div class="btn-check">
+    <input id="checkbox1" type="checkbox" class="btn-check-input" disabled="" />
+    <label for="checkbox1" class="btn">Disabled Checkbox</label>
+</div>
+
+<div class="btn-check">
+    <input id="radio1-0" type="radio" name="radio1" class="btn-check-input" disabled="" />
+    <label for="radio1-0" class="btn">Disabled Radio</label>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-check"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox1"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"btn-check-input"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox1"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>Disabled Checkbox<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-check"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radio1-0"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio1"</span> <span class="na">class=</span><span class="s">"btn-check-input"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio1-0"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>Disabled Radio<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="grouped-input-buttons">Grouped Input Buttons</h3>
+
+<p>You can also use <code class="highlighter-rouge">.btn-check</code>s inside a <code class="highlighter-rouge">.btn-group</code> for grouping controls together.</p>
+
+<div class="cf-example">
+<div class="btn-group">
+    <div class="btn-check">
+        <input id="radio2-0" type="radio" name="radio2" class="btn-check-input" checked="" />
+        <label for="radio2-0" class="btn btn-outline-info">Radio 1</label>
+    </div>
+    <div class="btn-check">
+        <input id="radio2-1" type="radio" name="radio2" class="btn-check-input" />
+        <label for="radio2-1" class="btn btn-outline-info">Radio 2</label>
+    </div>
+    <div class="btn-check">
+        <input id="radio2-2" type="radio" name="radio2" class="btn-check-input" />
+        <label for="radio2-2" class="btn btn-outline-info">Radio 3</label>
+    </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radio2-0"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio2"</span> <span class="na">class=</span><span class="s">"btn-check-input"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio2-0"</span> <span class="na">class=</span><span class="s">"btn btn-outline-info"</span><span class="nt">&gt;</span>Radio 1<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radio2-1"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio2"</span> <span class="na">class=</span><span class="s">"btn-check-input"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio2-1"</span> <span class="na">class=</span><span class="s">"btn btn-outline-info"</span><span class="nt">&gt;</span>Radio 2<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radio2-2"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio2"</span> <span class="na">class=</span><span class="s">"btn-check-input"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio2-2"</span> <span class="na">class=</span><span class="s">"btn btn-outline-info"</span><span class="nt">&gt;</span>Radio 3<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="sass-reference">SASS Reference</h2>
+
+<h3 id="variables">Variables</h3>
+
+<p>The available <a href="/figuration-preview/4.0.0-alpha.5/get-started/options/">Customization options</a>, or Sass variables, that can be customized for the button component.</p>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$enable-btn</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the button component classes.
+                    Smaller segements of the button component classes can be disabled with the following <code>$enable-*</code> variables.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-btn-default</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the default button color variant.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-btn-colors</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the button contextual color variants.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-btn-outline</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the default outline button color variant.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-btn-outline-colors</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the outline button contextual color variants.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-btn-link</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the link button variant.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-btn-sizes</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the button size classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-btn-icon</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the icon button classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-btn-icon-sizes</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the icon button size classes.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-btn-bock</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the block button variant.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$enable-btn-check</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>
+                    Enable the generation of the checkbox and radio button variant.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-padding-y</code></td>
+                <td>string</td>
+                <td><code>.25em</code></td>
+                <td>
+                    Base button vertical padding.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-padding-x</code></td>
+                <td>string</td>
+                <td><code>.75em</code></td>
+                <td>
+                    Base button horizontal padding.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-font-family</code></td>
+                <td>string</td>
+                <td><code>null</code></td>
+                <td>
+                    Base button font family.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-font-size</code></td>
+                <td>string</td>
+                <td><code>$font-size-base</code></td>
+                <td>
+                    Base button font size.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-font-weight</code></td>
+                <td>string</td>
+                <td><code>$font-weight-normal</code></td>
+                <td>
+                    Base button font weight.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-line-height</code></td>
+                <td>string</td>
+                <td><code>1.5</code></td>
+                <td>
+                    Base button line height.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-border-width</code></td>
+                <td>string</td>
+                <td><code>$border-width</code></td>
+                <td>
+                    Button border width.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-border-radius</code></td>
+                <td>string</td>
+                <td><code>$border-radius</code></td>
+                <td>
+                    Base button border-radius.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-box-shadow</code></td>
+                <td>string</td>
+                <td><code>inset 0 .125em .25em rgba($white, .25), 0 .125em .125em rgba($black, .075)</code></td>
+                <td>
+                    Button inner box shadow for inactive state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-active-box-shadow</code></td>
+                <td>string</td>
+                <td><code>inset 0 .25em .3125em rgba($black, .125)</code></td>
+                <td>
+                    Button inner box shadow for active state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-focus-box-shadow-size</code></td>
+                <td>string</td>
+                <td><code>0 0 0 .1875rem</code></td>
+                <td>
+                    Button box shadow dimensions for focus state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-focus-box-shadow-alpha</code></td>
+                <td>string</td>
+                <td><code>.35</code></td>
+                <td>
+                    Button box shadow alpha, opacity, value for focus state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-focus-box-shadow</code></td>
+                <td>string</td>
+                <td><code>$btn-focus-box-shadow-size rgba($component-active-bg, $btn-focus-box-shadow-alpha)</code></td>
+                <td>
+                    Button box shadow for focus state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-outline-bg</code></td>
+                <td>string</td>
+                <td><code>transparent</code></td>
+                <td>
+                    Outline button background color override.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-disabled-opacity</code></td>
+                <td>string</td>
+                <td><code>.6</code></td>
+                <td>
+                    Opacity value for button disabled state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-sizes</code></td>
+                <td>map</td>
+                <td><code>$component-sizes</code></td>
+                <td>
+                    Button size variants.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-block-spacing-y</code></td>
+                <td>string</td>
+                <td><code>.25rem</code></td>
+                <td>
+                    Vertical spacing between consecutive sibling block variant buttons.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-icon-multiplier</code></td>
+                <td>string</td>
+                <td><code>.5</code></td>
+                <td>
+                    Multiplier for horizontal padding of icon button variants.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-default-bg</code></td>
+                <td>string</td>
+                <td><code>$white</code></td>
+                <td>
+                    Default button background color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-default-color</code></td>
+                <td>string</td>
+                <td><code>color-if-contrast($uibase-500, $btn-default-bg)</code></td>
+                <td>
+                    Default button text color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-default-border-color</code></td>
+                <td>string</td>
+                <td><code>$uibase-300</code></td>
+                <td>
+                    Default button border color.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-default-focus-box-shadow-color</code></td>
+                <td>string</td>
+                <td><code>$component-active-bg</code></td>
+                <td>
+                    Default button box shadow color for focus state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-default-hover-bg</code></td>
+                <td>string</td>
+                <td><code>$uibase-100</code></td>
+                <td>
+                    Default button background color for hover state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-default-hover-color</code></td>
+                <td>string</td>
+                <td><code>color-if-contrast($uibase-600, $btn-default-hover-bg)</code></td>
+                <td>
+                    Default button text color for hover state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-default-hover-border-color</code></td>
+                <td>string</td>
+                <td><code>$uibase-400</code></td>
+                <td>
+                    Default button border color for hover state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-default-active-bg</code></td>
+                <td>string</td>
+                <td><code>$uibase-200</code></td>
+                <td>
+                    Default button background color for active state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-default-active-color</code></td>
+                <td>string</td>
+                <td><code>color-if-contrast($btn-default-hover-color, $btn-default-active-bg)</code></td>
+                <td>
+                    Default button text color for active state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-default-active-border-color</code></td>
+                <td>string</td>
+                <td><code>$uibase-400</code></td>
+                <td>
+                    Default button border color for active state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-link-color</code></td>
+                <td>string</td>
+                <td><code>$link-color</code></td>
+                <td>
+                    Text color for link buttons.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-link-hover-color</code></td>
+                <td>string</td>
+                <td><code>$link-hover-color</code></td>
+                <td>
+                    Text color for link buttons in hover/focus state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-link-disabled-color</code></td>
+                <td>string</td>
+                <td><code>$btn-link-color</code></td>
+                <td>
+                    Text color for link buttons in disabled state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-themes</code></td>
+                <td>map</td>
+                <td><code>()</code></td>
+                <td>
+                    Map of color schemes for buttons.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-colors</code></td>
+                <td>list</td>
+                <td><code>$base-colors</code></td>
+                <td>
+                    Colors to mix and merge into <code>$btn-themes</code>
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-levels</code></td>
+                <td>map</td>
+                <td><code>$level-control</code></td>
+                <td>
+                    Levels to mix button colors with.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-outline-themes</code></td>
+                <td>map</td>
+                <td><code>()</code></td>
+                <td>
+                    Map of color schemes for outline buttons.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-outline-colors</code></td>
+                <td>list</td>
+                <td><code>$base-colors</code></td>
+                <td>
+                    Colors to mix and merge into <code>$btn-outline-themes</code>
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-outline-levels</code></td>
+                <td>map</td>
+                <td><code>$level-control</code></td>
+                <td>
+                    Levels to mix outline button colors with.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$btn-transition</code></td>
+                <td>map</td>
+                <td><code>color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out</code></td>
+                <td>
+                    Transition effect for buttons.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="mixins">Mixins</h3>
+
+<p>Here are the mixins related to buttons that we use to help generate our CSS.  You can also uses these mixins to generate your own custom components or utilities.</p>
+
+<h4 class="no_toc" id="button-variant">button-variant</h4>
+
+<p>Build a color variant to be applied to a button.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">button-variant</span><span class="p">(</span><span class="nv">$parent</span><span class="o">,</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$bg</span><span class="o">,</span> <span class="nv">$border</span><span class="o">,</span> <span class="nv">$focus-shadow</span><span class="o">,</span> <span class="nv">$hover-color</span><span class="o">,</span> <span class="nv">$hover-bg</span><span class="o">,</span> <span class="nv">$hover-border</span><span class="o">,</span> <span class="nv">$active-color</span><span class="o">,</span> <span class="nv">$active-bg</span><span class="o">,</span> <span class="nv">$active-border</span><span class="p">)</span><span class="err">;</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$parent</code></td>
+                <td>string</td>
+                <td><code>''</code></td>
+                <td>
+                    The value appended to generate the class <code>.btn-#{$parent}</code>.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$color</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    Text color for the inactive button state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$bg</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    Background color for the inactive button state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$border</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    Border color for the inactive button state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$focus-shadow</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    Box shadow, or focus-ring, effect the focused button state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$hover-color</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    Text color for the hovered button state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$hover-bg</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    Background color for the hovered button state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$hover-border</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    Border color for the hovered button state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$active-color</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    Text color for the active button state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$active-bg</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    Background color for the active button state.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$active-border</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    Border color for the active button state.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="button-variant-control">button-variant-control</h4>
+
+<p>Build a button color variant, using a pre-mixed color map.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">button-variant-control</span><span class="p">(</span><span class="nv">$parent</span><span class="o">,</span> <span class="nv">$colors</span><span class="p">)</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$parent</code></td>
+                <td>string</td>
+                <td><code>''</code></td>
+                <td>
+                    The value appended to generate the class <code>.btn-#{$parent}</code>.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$color</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    The pre-mixed color map.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="button-variant-control-outline">button-variant-control-outline</h4>
+
+<p>Build a outline button color variant, using a pre-mixed color map, with a special override for the inactive background color.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">button-variant-control-outline</span><span class="p">(</span><span class="nv">$parent</span><span class="o">,</span> <span class="nv">$colors</span><span class="o">,</span> <span class="nv">$bg</span><span class="p">)</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$parent</code></td>
+                <td>string</td>
+                <td><code>''</code></td>
+                <td>
+                    The value appended to generate the class <code>.btn-#{$parent}</code>.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$color</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    The pre-mixed color map.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$bg</code></td>
+                <td>string</td>
+                <td><code>$btn-outline-bg</code></td>
+                <td>
+                    Background color override for the inactive button state.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="no_toc" id="button-size">button-size</h4>
+
+<p>Build a button size variant.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="k">@include</span> <span class="nd">button-size</span><span class="p">(</span><span class="nv">$padding-y</span><span class="o">,</span> <span class="nv">$padding-x</span><span class="o">,</span> <span class="nv">$font-size</span><span class="o">,</span> <span class="nv">$line-height</span><span class="o">,</span> <span class="nv">$border-radius</span><span class="p">)</span></code></pre></figure>
+
+<div class="table-scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Argument</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 50px;">Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>$padding-y</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    Vertical padding.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$padding-x</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    Horizontal padding.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$font-size</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    Font size.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$line-height</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    Line height.
+                </td>
+            </tr>
+            <tr>
+                <td><code>$border-radius</code></td>
+                <td>string</td>
+                <td>none</td>
+                <td>
+                    Border radius.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+            </main>
+        </div>
+
+        <div class="toplink">
+            <a href="#content">Top of Page <span class="caret"></span></a>
+        </div>
+    </div>
+
+    <footer class="cf-footer">
+    <div class="container">
+        <p class="mb-0">
+            Current version: 4.0.0-alpha.5
+        </p>
+        <p>
+            <a href="/figuration-preview/4.0.0-alpha.5/migration/">Migration Notes (in progress)</a>
+        </p>
+        <ul class="footer-links d-inline-block d-sm-block mx-auto mx-sm-0">
+            <li><a href="/figuration-preview/about/overview/">About</a></li>
+            <li><a href="https://github.com/cast-org/figuration">GitHub Project</a></li>
+            <li><a href="https://github.com/cast-org/figuration/issues">Issues</a></li>
+            <li><a href="https://twitter.com/figuration_org">Twitter</a></li>
+        </ul>
+        <p>
+            &copy; 2013-2019 <a href="http://www.cast.org/">CAST, Inc.</a>
+            <br />
+            Portions: &copy; 2011-2019 the Bootstrap Authors and Twitter, Inc. Licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a> or <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+        </p>
+        <p>
+            Code licensed <a rel="license" href="https://github.com/cast-org/figuration/blob/master/LICENSE">MIT</a>,
+            docs <a rel="license" href="https://github.com/cast-org/figuration/blob/master/docs/LICENSE">CC BY 4.0</a>.
+        </p>
+
+        <hr />
+
+        <p class="font-weight-bold mb-0_25">Funding generously provided by:</p>
+        <div class="media footer-partners">
+            <div class="d-flex me-0_5">
+                <img src="/figuration-preview/4.0.0-alpha.5/assets/img/aem-logo.png" class="media-object" width="40" height="40" alt="AEM logo" />
+            </div>
+            <div class="media-body">
+                <span class="h6 partner-title"><a href="http://aem.cast.org/">National Center on Accessible Educational Materials at CAST, Inc.</a></span><br />
+                <small>Disclaimer: This does not necessarily represent endorsement by or the policies of the National Center on Accessible Educational Materials, the US Department of Education, and the US Federal Government.</small>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+    
+</body>
+</html>
