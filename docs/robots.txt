@@ -1,4 +1,4 @@
 # Allow crawling of all content
 User-agent: *
 Disallow:
-Sitemap: https://figuration-org.github.io/sitemap.xml
+Sitemap: http://figuration-org.github.io:80/sitemap.xml
